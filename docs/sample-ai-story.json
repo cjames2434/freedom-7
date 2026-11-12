@@ -1,0 +1,40 @@
+{
+  "_note": "FICTIONAL example for design work only: shows a story with the AI brief fields filled in. Places, people and outlets' headlines are invented. Real data comes from public/data/news.json.",
+  "id": "s_example0001",
+  "headline": "Riverton city council approves budget that raises transit fares",
+  "headlineFrom": { "kind": "ai", "model": "claude-opus-5-5" },
+  "snippet": "The council voted 6-3 on Tuesday night after a four-hour public hearing.",
+  "summary": "Riverton's city council voted 6-3 on Tuesday to approve a $2.1 billion budget that raises bus and rail fares by 25 cents, according to multiple outlets. Supporters on the council said the increase closes a transit deficit; opponents said it will burden lower-income riders. The mayor said she will sign the budget this week.",
+  "keyFacts": [
+    "The council vote was 6-3.",
+    "The budget totals $2.1 billion.",
+    "Bus and rail fares rise by 25 cents starting in March.",
+    "The mayor said she will sign it."
+  ],
+  "framing": {
+    "left": "Focused on riders and advocates who said the fare increase falls hardest on low-income commuters.",
+    "center": "Focused on the vote count, the size of the budget and the timeline for the fare change.",
+    "right": "Focused on the transit agency's deficit and council members who called for spending cuts instead of new revenue."
+  },
+  "disputed": [
+    "Council members disagree on whether the transit deficit is $40 million or $65 million; outlets report both figures."
+  ],
+  "ai": { "model": "claude-opus-5-5", "generatedAt": "2026-11-12T01:30:00.000Z", "basedOnSources": 6 },
+  "topic": "us",
+  "firstSeen": "2026-11-11T23:10:00.000Z",
+  "lastUpdated": "2026-11-12T01:05:00.000Z",
+  "sourceCount": 6,
+  "articleCount": 6,
+  "coverage": { "left": 2, "center": 2, "right": 2, "byLean": { "left": 1, "lean-left": 1, "center": 2, "lean-right": 1, "right": 1 } },
+  "mostlyCoveredBy": null,
+  "score": 3.9,
+  "image": null,
+  "articles": [
+    { "id": "ex1", "sourceId": "outlet-a", "sourceName": "Outlet A", "lean": "left", "title": "Council slams riders with fare hike as advocates cry foul", "url": "https://example.com/a", "published": "2026-11-12T00:10:00.000Z", "snippet": "Transit advocates said the vote ignores working families.", "flags": { "loaded": ["slams"], "contested": [], "clickbait": false } },
+    { "id": "ex2", "sourceId": "outlet-b", "sourceName": "Outlet B", "lean": "lean-left", "title": "Riverton approves budget with 25-cent transit fare increase", "url": "https://example.com/b", "published": "2026-11-11T23:40:00.000Z", "snippet": "The increase takes effect in March.", "flags": { "loaded": [], "contested": [], "clickbait": false } },
+    { "id": "ex3", "sourceId": "outlet-c", "sourceName": "Outlet C", "lean": "center", "title": "Riverton council passes $2.1B budget, 6-3", "url": "https://example.com/c", "published": "2026-11-11T23:10:00.000Z", "snippet": "The vote followed a four-hour public hearing.", "flags": { "loaded": [], "contested": [], "clickbait": false } },
+    { "id": "ex4", "sourceId": "outlet-d", "sourceName": "Outlet D", "lean": "center", "title": "What Riverton's new budget means for your commute", "url": "https://example.com/d", "published": "2026-11-12T01:05:00.000Z", "snippet": "Fares rise, service hours stay the same.", "flags": { "loaded": [], "contested": [], "clickbait": false } },
+    { "id": "ex5", "sourceId": "outlet-e", "sourceName": "Outlet E", "lean": "lean-right", "title": "Riverton raises fares rather than cut transit spending", "url": "https://example.com/e", "published": "2026-11-12T00:20:00.000Z", "snippet": "Three council members proposed cuts instead.", "flags": { "loaded": [], "contested": [], "clickbait": false } },
+    { "id": "ex6", "sourceId": "outlet-f", "sourceName": "Outlet F", "lean": "right", "title": "Here's why Riverton commuters are about to pay more!", "url": "https://example.com/f", "published": "2026-11-12T00:45:00.000Z", "snippet": "The transit agency faces a deficit.", "flags": { "loaded": [], "contested": [], "clickbait": true } }
+  ]
+}

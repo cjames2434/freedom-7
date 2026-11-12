@@ -1,0 +1,2500 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-12T02:08:01.130Z",
+  "site": {
+    "name": "Even Keel",
+    "tagline": "Every side of the story, side by side."
+  },
+  "topics": [
+    {
+      "id": "politics",
+      "label": "Politics"
+    },
+    {
+      "id": "world",
+      "label": "World"
+    },
+    {
+      "id": "us",
+      "label": "U.S."
+    },
+    {
+      "id": "business",
+      "label": "Business"
+    },
+    {
+      "id": "tech",
+      "label": "Tech"
+    },
+    {
+      "id": "science-health",
+      "label": "Science & Health"
+    },
+    {
+      "id": "sports",
+      "label": "Sports"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    }
+  ],
+  "stats": {
+    "outlets": 29,
+    "outletsReporting": 29,
+    "articlesInWindow": 629,
+    "windowHours": 48,
+    "stories": 52,
+    "aiBriefs": 0
+  },
+  "stories": [
+    {
+      "id": "s_60d3d05b3d2b",
+      "headline": "Democrat Scott Colom wins Mississippi Senate seat",
+      "headlineFrom": {
+        "sourceId": "newsnation",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Cindy Hyde-Smith conceded in a message on social media Wednesday evening.",
+      "topic": "politics",
+      "firstSeen": "2026-11-11T18:20:54.000Z",
+      "lastUpdated": "2026-11-12T01:48:37.000Z",
+      "sourceCount": 19,
+      "articleCount": 23,
+      "coverage": {
+        "left": 7,
+        "center": 6,
+        "right": 6,
+        "byLean": {
+          "left": 2,
+          "lean-left": 5,
+          "center": 6,
+          "lean-right": 3,
+          "right": 3
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 6.3629,
+      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/Mississippi-Senate-.jpeg?w=900",
+      "articles": [
+        {
+          "id": "6fca342395cc",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom wins Mississippi Senate race",
+          "url": "https://npr.org/2026/11/11/g-s1-151688/mississippi-senate-race-scott-colom",
+          "published": "2026-11-11T23:04:51.000Z",
+          "snippet": "Democrat Scott Colom has won election to the U.S. Senate in Mississippi, according to a race call by the Associated Press, defeating Republican Sen. Cindy Hyde-Smith.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "aa29dfd35b46",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom wins Mississippi Senate race in upset",
+          "url": "https://cbsnews.com/news/mississippi-2026-senate-scott-colom-cindy-hyde-smith",
+          "published": "2026-11-12T00:19:03.000Z",
+          "snippet": "Democrat Scott Colom defeated GOP Sen. Cindy Hyde-Smith in the Mississippi Senate race, delivering Democrats an eighth flipped Senate seat after the dramatic race had been up in the air for days.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "8984358636dd",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Democrat Scott Colom wins Mississippi Senate seat",
+          "url": "https://newsnationnow.com/us-news/southeast/democrat-scott-colom-wins-mississippi-senate-seat",
+          "published": "2026-11-11T23:38:48.000Z",
+          "snippet": "Cindy Hyde-Smith conceded in a message on social media Wednesday evening.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c0c9d4af6605",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Democrat Scott Colom wins Senate seat in Mississippi",
+          "url": "https://upi.com/Top_News/US/2026/11/11/alaska-mississippi-senate-races/5381794431319",
+          "published": "2026-11-11T23:46:49.000Z",
+          "snippet": "Incumbent Republican Cindy Hyde-Smith conceded to Democrat Scott Colom in the Mississippi Senate race Wednesday after sources projected his win.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c8ecbba91b9d",
+          "sourceId": "deseret",
+          "sourceName": "Deseret News",
+          "lean": "center",
+          "title": "Democrat Scott Colom wins Mississippi Senate race",
+          "url": "https://deseret.com/politics/2026/11/11/democrat-scott-colom-wins-mississippi-senate-race-in-midterm-elections",
+          "published": "2026-11-12T01:07:06.000Z",
+          "snippet": "Democratic nominee Scott Colom defeated incumbent Republican Sen. Cindy Hyde-Smith in the Mississippi Senate race after days of ballot counting. Colom is the state’s first Black U.S. senator since the Civil War…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b70133768ada",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom projected to win Mississippi Senate seat",
+          "url": "https://nbcnews.com/video/democrat-scott-colom-projected-to-win-mississippi-senate-seat-273301573841",
+          "published": "2026-11-11T23:10:11.000Z",
+          "snippet": "Democrat Scott Colom is projected to win the hotly contested Mississippi Senate seat, a significant upset for Republican Cindy Hyde-Smith. With Colom's win, Democrats will have a 55-seat majority in the Senate.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c8775b43264a",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Democrat Scott Colom Wins Mississippi Senate Seat",
+          "url": "https://dailycaller.com/2026/11/11/democrats-flip-yet-another-deep-red-seat",
+          "published": "2026-11-12T01:48:37.000Z",
+          "snippet": "Democrats Flip Yet Another Deep Red Senate Seat",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e85d826fbf19",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom wins Mississippi Senate seat, breaking GOP’s grip on the state",
+          "url": "https://nbcnews.com/politics/2026-election/scott-colom-mississippi-senate-election-win-democrat-hyde-smith-rcna605729",
+          "published": "2026-11-11T22:59:31.000Z",
+          "snippet": "Colom pulled off an upset over Republican Sen. Cindy Hyde-Smith, becoming the first Democrat elected to the Senate in Mississippi since 1982.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5d6e76bc473a",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "Mississippi Senate race: Democrat Scott Colom defeats Republican Cindy Hyde-Smith",
+          "url": "https://dw.com/en/mississippi-senate-race-democrat-scott-colom-defeats-republican-cindy-hyde-smith/a-79924938?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-11T23:33:00.000Z",
+          "snippet": "The southern US state of Mississippi has elected its first Black senator in more than 140 years. Democrat Scott Colom has won the seat in a historic upset, according to projections.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b8e983cf7890",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Scott Colom wins Mississippi Senate race in historic upset",
+          "url": "https://washingtonexaminer.com/news/campaigns/congressional/4788383/scott-colom-wins-mississippi-senate-race",
+          "published": "2026-11-11T23:11:34.000Z",
+          "snippet": "Democrat Scott Colom unseated Sen. Cindy Hyde-Smith (R-MS) in one of the biggest upsets in the 2026 midterm elections. Colom led with 49.2% when the Associated Press called the race at 5:58 p.m. EST. Hyde-Smith came in…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "60d3d05b3d2b",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "Democrat Scott Colom Flips Mississippi Senate Seat In Historic Upset",
+          "url": "https://dailywire.com/news/democrat-scott-colom-flips-mississippi-senate-seat-in-historic-upset",
+          "published": "2026-11-11T18:20:54.000Z",
+          "snippet": "Democrat Scott Colom defeated Republican Sen. Cindy Hyde-Smith in Mississippi’s closely contested Senate race, according to projections from The Associated Press and CNN, becoming the first Democrat elected to represent…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "0d03c8394b6c",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom unseats Cindy Hyde-Smith in stunning Mississippi Senate win",
+          "url": "https://theguardian.com/us-news/2026/nov/11/scott-colom-mississippi-senate-race",
+          "published": "2026-11-12T00:11:12.000Z",
+          "snippet": "Colom takes victory by razor-thin margin in state that has not elected a Democrat to the Senate since 1982 Democrat Scott Colom defeated Cindy Hyde-Smith, the incumbent Republican senator, to become the first Black…",
+          "flags": {
+            "loaded": [
+              "stunning"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "861fad170439",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Democrat Scott Colom seals historic win in Mississippi Senate race",
+          "url": "https://bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-12T01:00:04.000Z",
+          "snippet": "Colom is the first black person from the southern state elected to the US Senate in over 140 years.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "69d26422b7c3",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "Democrat Scott Colom Defeats Sen. Cindy Hyde-Smith In Mississippi Senate Race",
+          "url": "https://huffpost.com/entry/democrat-scott-colom-defeats-cindy-hyde-smith-mississippi-senate_n_6aeb6b09e4b0dcee62e2001c",
+          "published": "2026-11-11T23:02:41.000Z",
+          "snippet": "The district attorney ousted Cindy Hyde-Smith in a deep-red state after a viral ad and a late burst of attention from national Democrats.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "42f7ba3aeb9b",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "Scott Colom wins Mississippi Senate race in major victory for Democrats",
+          "url": "https://ms.now/news/scott-colom-mississippi-senate-race-defeat-hyde-smith",
+          "published": "2026-11-12T01:15:50.000Z",
+          "snippet": "The historic win marks the eighth Senate seat Democrats were able to flip from Republican control this cycle, giving the party a total of 55 seats in the chamber.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "245d66e84f15",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Democrat wins Mississippi Senate seat in upset defeat of GOP incumbent Hyde-Smith",
+          "url": "https://washingtontimes.com/news/2026/nov/11/democrat-wins-mississippi-senate-seat-upset-defeat-sen-cindy-hyde",
+          "published": "2026-11-11T23:28:41.000Z",
+          "snippet": "Democrat Scott Colom has won Mississippi's U.S. Senate race, building upon his party's wave of wins in states that have long favored Republicans.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "bc86796d98fc",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom defeats incumbent in Mississippi Senate race in major upset, CBS News projects",
+          "url": "https://cbsnews.com/video/democrat-scott-colom-wins-mississippi-senate-race-in-stunning-upset-cbs-news-projects",
+          "published": "2026-11-11T23:47:00.000Z",
+          "snippet": "Democrat Scott Colom will win his Senate race in Mississippi, defeating Republican incumbent Cindy Hyde-Smith, CBS News projects. CBS News' Mark Strassman has more.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c3a7bd6c3605",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Mississippi Senate stunner: Cindy Hyde-Smith concedes to Democrat Scott Colom",
+          "url": "https://thehill.com/homenews/campaign/6165685-colom-mississippi-senate-ousts-hyde-smith",
+          "published": "2026-11-11T23:26:19.000Z",
+          "snippet": "Democrat Scott Colom is set to become Mississippi's next senator after Republican Sen. Cindy Hyde-Smith conceded Wednesday, notching a major victory for his party in the ruby red state. \"While this is not the outcome we…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2a437126516d",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom wins the closest Senate race in the country",
+          "url": "https://npr.org/2026/11/11/nx-s1-6037840/democrat-scott-colom-wins-the-closest-senate-race-in-the-country",
+          "published": "2026-11-11T23:33:59.000Z",
+          "snippet": "Mississippi hadn't elected a Democrat to the U.S. Senate in more than 40 years.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "50c37507d805",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom to be first Black senator elected in Mississippi since 1874 after narrow win – US politics live",
+          "url": "https://theguardian.com/us-news/live/2026/nov/11/donald-trump-pete-hegseth-impeachment-democrats-republicans-arlington-latest-news-updates",
+          "published": "2026-11-12T01:39:21.000Z",
+          "snippet": "Colom beat Republican Cindy Hyde-Smith after race was called eight days after midterm election day Democrat Scott Colom wins race for US Senate in Mississippi How Colom won deep-red Mississippi with little help from…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "43cc41cb2dad",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Dem Colom Wins Tight Senate Race in Miss.: AP and CNN",
+          "url": "https://newsmax.com/newsfront/Dem-Colom-Wins-Tight-Senate-Race-in-Miss-AP-and-CNN/2026/11/11/id/1276008",
+          "published": "2026-11-11T22:17:57.000Z",
+          "snippet": "Democrat Scott Colom won a stunning upset in Mississippi's US Senate race on Wednesday after days of counting, U.S. media projected, defeating Republican incumbent Cindy Hyde-Smith to become the Southern state's first…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f6ae3f578ae5",
+          "sourceId": "politico",
+          "sourceName": "Politico",
+          "lean": "lean-left",
+          "title": "Mississippi elects Democrat Scott Colom to Senate in massive upset",
+          "url": "https://politico.com/news/2026/11/11/scott-colom-wins-mississippi-senate-01161555",
+          "published": "2026-11-11T23:01:13.000Z",
+          "snippet": "Colom's win is a boost to the Democratic Party as it seeks to gain a larger foothold in the South.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f4352887f4eb",
+          "sourceId": "nypost",
+          "sourceName": "New York Post",
+          "lean": "lean-right",
+          "title": "Dem Scott Colom defeats Mississippi Sen. Hyde-Smith after weeklong nailbiter",
+          "url": "https://nypost.com/2026/11/11/us-news/mississippi-dem-scott-colom-defeats-hyde-smith-in-senate-race",
+          "published": "2026-11-11T23:07:25.000Z",
+          "snippet": "Donald Trump won Mississippi by 22.9% in 2024.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_fedaf2695a80",
+      "headline": "Hegseth and advisers reprimanded by guard at Tomb of the Unknown Soldier",
+      "headlineFrom": {
+        "sourceId": "bbc",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Following a ceremony marking Veterans Day, a group that included Defence Secretary Pete Hegseth was shouted at to be quiet.",
+      "topic": "politics",
+      "firstSeen": "2026-11-11T21:08:51.000Z",
+      "lastUpdated": "2026-11-12T01:33:58.000Z",
+      "sourceCount": 13,
+      "articleCount": 15,
+      "coverage": {
+        "left": 7,
+        "center": 2,
+        "right": 4,
+        "byLean": {
+          "left": 3,
+          "lean-left": 4,
+          "center": 2,
+          "lean-right": 2,
+          "right": 2
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 5.5268,
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ff27/live/573e7b50-de18-11f1-93e1-3b657b665bcf.jpg",
+      "articles": [
+        {
+          "id": "444591805634",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Hegseth, Staff Reprimanded by Guard at Tomb of the Unknown Soldier",
+          "url": "https://newsmax.com/newsfront/hegseth-tomb-unknown/2026/11/11/id/1276019",
+          "published": "2026-11-12T00:41:49.000Z",
+          "snippet": "A soldier guarding the Tomb of the Unknown Soldier issued a verbal reprimand to a group of advisers and staffers with Defense Secretary Pete Hegseth following a Veterans Day ceremony at Arlington National Cemetery…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "fedaf2695a80",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Pete Hegseth and others reprimanded by guard at the Tomb of the Unknown Soldier",
+          "url": "https://nbcnews.com/politics/trump-administration/hegseth-reprimanded-arlington-cemetery-veterans-tomb-unknown-soldier-rcna608869",
+          "published": "2026-11-11T21:08:51.000Z",
+          "snippet": "An Arlington National Cemetery guard told the defense secretary and his companions to maintain a respectful atmosphere during a Veterans Day visit.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "21facef42ba3",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Hegseth's group reprimanded for noise at Tomb of Unknown Soldier",
+          "url": "https://cbsnews.com/news/hegseth-tomb-of-the-unknown-soldier-arlington-cemetery",
+          "published": "2026-11-12T01:33:58.000Z",
+          "snippet": "A guard at the Tomb of the Unknown Soldier reprimanded a group of people that included Defense Secretary Pete Hegseth for making noise at the site.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ab7ebe333253",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Hegseth and advisers reprimanded by guard at Tomb of the Unknown Soldier",
+          "url": "https://bbc.co.uk/news/videos/ck5y132yq1ymo?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T21:43:35.000Z",
+          "snippet": "Following a ceremony marking Veterans Day, a group that included Defence Secretary Pete Hegseth was shouted at to be quiet.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f4ffda5ddfd5",
+          "sourceId": "foxnews",
+          "sourceName": "Fox News",
+          "lean": "right",
+          "title": "Army sentinel sharply reprimands Hegseth's group at Tomb of the Unknown Soldier on Veterans Day",
+          "url": "https://foxnews.com/politics/army-sentinel-sharply-reprimands-hegseths-group-tomb-unknown-soldier-veterans-day",
+          "published": "2026-11-11T23:11:12.000Z",
+          "snippet": "Video captures the moment a Tomb of the Unknown Soldier sentinel called for silence and respect after laughter from Pete Hegseth's departing group.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a69f917c6f34",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "Guard scolds Hegseth’s group at Tomb of the Unknown Soldier on Veterans Day",
+          "url": "https://ms.now/news/guard-scolds-hegseths-group-tomb-the-unknown-soldier-arlington-cemetery-veterans-day",
+          "published": "2026-11-11T21:46:33.000Z",
+          "snippet": "A guard demanded silence after laughter was heard as the defense secretary and his group finished taking photos near the solemn memorial at Arlington National Cemetery.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5740b08aa8f0",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Tomb of the Unknown Soldier rules: Why a sentinel shouted 'silence and respect' at Hegseth's group",
+          "url": "https://washingtontimes.com/news/2026/nov/11/tomb-unknown-soldier-rules-sentinel-shouted-silence-respect-hegseths",
+          "published": "2026-11-11T22:42:28.000Z",
+          "snippet": "The warning a Tomb of the Unknown Soldier sentinel called out to Defense Secretary Pete Hegseth's group on Veterans Day reflects a standard of decorum every visitor to Arlington National Cemetery is expected to meet, no…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c45666117328",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Hegseth and aides scolded by guard for laughing at Tomb of the Unknown Soldier",
+          "url": "https://theguardian.com/us-news/2026/nov/11/hegseth-scolded-tomb-unknown-soldier",
+          "published": "2026-11-11T23:00:21.000Z",
+          "snippet": "Group attending Veterans Day ceremony sharply reminded by sentinel to maintain ‘silence and respect’ at sacred site A US army sentinel guarding the Tomb of the Unknown Soldier loudly reprimanded the embattled US defense…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "aca2680f11fd",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Hegseth's group warned by soldiers to maintain 'silence' at Tomb of the Unknown Soldier",
+          "url": "https://washingtontimes.com/news/2026/nov/11/hegseths-group-warned-soldiers-maintain-silence-tomb-unknown-soldier",
+          "published": "2026-11-11T21:51:00.000Z",
+          "snippet": "Defense Secretary Pete Hegseth and an accompanying group on Veterans Day were scolded for a breach of decorum by a soldier standing watch at the Tomb of the Unknown Soldier.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "72d6c22616b5",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Hegseth, group face reprimand at Tomb of the Unknown Soldier on Veterans Day",
+          "url": "https://newsnationnow.com/us-news/military/hegseth-tomg-unknown-soldier-veterans-day",
+          "published": "2026-11-11T21:38:10.000Z",
+          "snippet": "A Pentagon spokesman confirmed the incident in a statement to NewsNation.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2f491a18986a",
+          "sourceId": "motherjones",
+          "sourceName": "Mother Jones",
+          "lean": "left",
+          "title": "Pete Hegseth’s Crew Got Chewed Out at the Tomb of the Unknown Soldier",
+          "url": "https://motherjones.com/politics/2026/11/pete-hegseth-arlington-tomb-unknown-soldier-silence-respect-shushed",
+          "published": "2026-11-12T01:07:38.000Z",
+          "snippet": "Narrowly dodging impeachment yesterday might have put Pete Hegseth in too chipper a mood. After a Veterans Day ceremony at Arlington National Cemetery, Hegseth posed for photos in front of the Tomb of the Unknown…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "864c6254af56",
+          "sourceId": "nypost",
+          "sourceName": "New York Post",
+          "lean": "lean-right",
+          "title": "Army guard scolds Pentagon officials, including Pete Hegseth, heard laughing at Tomb of the Unknown Soldier",
+          "url": "https://nypost.com/2026/11/11/us-news/army-guard-scolds-pentagon-officials-including-pete-hegseth-heard-laughing-at-tomb-of-the-unknown-soldier",
+          "published": "2026-11-11T23:58:11.000Z",
+          "snippet": "\"All visitors will maintain an atmosphere of silence and respect at all times!\" a soldier from the 3rd US Infantry Regiment, known as \"The Old Guard,\" immediately barked at the group.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "40f47b9c6971",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Soldier Shouts Toward Hegseth to Show ‘Respect’ at Tomb of the Unknown Soldier",
+          "url": "https://nytimes.com/2026/11/11/us/politics/hegseth-tomb-unknown-solider-shout.html",
+          "published": "2026-11-12T00:53:14.000Z",
+          "snippet": "A Pentagon spokesman said the sentinel had “reminded everyone to maintain decorum” after laughter was heard from a group visiting the burial site with the Defense Secretary on Wednesday.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "94cbb7977593",
+          "sourceId": "dailybeast",
+          "sourceName": "The Daily Beast",
+          "lean": "left",
+          "title": "Arlington Sentinel Gives Rowdy Hegseth Humiliating Reprimand",
+          "url": "https://thedailybeast.com/arlington-sentinel-gives-rowdy-hegseth-humiliating-reprimand",
+          "published": "2026-11-11T21:29:32.000Z",
+          "snippet": "Evelyn Hockstein/REUTERS Defense Secretary Pete Hegseth and his group were reprimanded during their visit to the Tomb of the Unknown Soldier. The group was spotted taking photos and laughing at Arlington National…",
+          "flags": {
+            "loaded": [
+              "humiliating"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "cf326b0b4a34",
+          "sourceId": "dailybeast",
+          "sourceName": "The Daily Beast",
+          "lean": "left",
+          "title": "Republican in Damage Control After Pete Hegseth Comments",
+          "url": "https://thedailybeast.com/republican-in-damage-control-after-pete-hegseth-comments",
+          "published": "2026-11-12T00:59:51.000Z",
+          "snippet": "NewsNation A Florida Republican has gone into damage-control mode after appearing to criticize an Army sentinel who reprimanded Pete Hegseth. Hegseth and his group visited the Tomb of the Unknown Soldier at Arlington…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_99d46090999f",
+      "headline": "At least two people dead in Brooklyn building collapse",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "A three-story building in the Flatbush area of Brooklyn collapsed Wednesday afternoon, killing at least two people and injuring at least 10.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T21:55:13.000Z",
+      "lastUpdated": "2026-11-12T01:40:00.000Z",
+      "sourceCount": 8,
+      "articleCount": 8,
+      "coverage": {
+        "left": 2,
+        "center": 3,
+        "right": 3,
+        "byLean": {
+          "left": 0,
+          "lean-left": 2,
+          "center": 3,
+          "lean-right": 2,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 4.6283,
+      "image": "https://cdnph.upi.com/ph/st/th/7421794444373/2026/upi_com/796b38143faf659172d249ebfdf52da2/v1.5/At-least-two-people-dead-in-Brooklyn-building-collapse.jpg",
+      "articles": [
+        {
+          "id": "99d46090999f",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "At Least 1 Dead in Brooklyn Building Collapse",
+          "url": "https://newsmax.com/newsfront/nyc-building-collapse-brooklyn/2026/11/11/id/1276006",
+          "published": "2026-11-11T21:55:13.000Z",
+          "snippet": "At least one person was killed and two others seriously injured Wednesday afternoon when a three-story building partially collapsed into an adjacent construction site in Brooklyn, leaving another person trapped beneath…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "dde87b071033",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "At least two people dead in Brooklyn building collapse",
+          "url": "https://upi.com/Top_News/US/2026/11/11/building-in-flatbush-brooklyn-collapses/7421794444373",
+          "published": "2026-11-12T01:38:58.000Z",
+          "snippet": "A three-story building in the Flatbush area of Brooklyn collapsed Wednesday afternoon, killing at least two people and injuring at least 10.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6c625037d71f",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Brooklyn building collapse kills at least two people and traps others in wreckage",
+          "url": "https://theguardian.com/us-news/2026/nov/11/deadly-brooklyn-building-collapse",
+          "published": "2026-11-12T01:22:13.000Z",
+          "snippet": "Four critical in hospital as firefighters dig through rubble in Flatbush after building next to construction site collapses Firefighters dug through the rubble of a three-story building in Brooklyn on Wednesday after it…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7c878f3f25ca",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Building partially collapses in Brooklyn, killing one with others injured",
+          "url": "https://washingtontimes.com/news/2026/nov/11/building-partially-collapses-brooklyn-killing-one-others-injured",
+          "published": "2026-11-11T23:48:18.000Z",
+          "snippet": "A three-story building in Brooklyn partially collapsed into a hole at an adjacent construction site Wednesday, leaving at least one person dead and several others injured.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f9e991382d3d",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Two dead and 19 injured after Brooklyn apartment building collapses",
+          "url": "https://washingtonexaminer.com/policy/infrastructure/4800858/brooklyn-nyc-apartment-building-collapses",
+          "published": "2026-11-12T01:40:00.000Z",
+          "snippet": "Two people are dead and 19 people were injured after a building in New York City collapsed on Wednesday, according to authorities. It is unknown how many people are still trapped after the three-story building on 1321…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "015c2b4ad208",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "New York building collapse kills one person and injures 12",
+          "url": "https://bbc.co.uk/news/videos/c60rkwjj7x7go?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-12T01:34:58.000Z",
+          "snippet": "Rescuers are searching for people who may be trapped under the rubble of the three-story building in Brooklyn.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b84c3f7ae178",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Building collapses in Brooklyn, leaving 2 dead and several hurt",
+          "url": "https://newsnationnow.com/us-news/northeast/building-collapses-brooklyn-leaving-4-hurt-report",
+          "published": "2026-11-11T22:23:31.000Z",
+          "snippet": "Officials said four individuals were hospitalized in critical condition, while 15 others sustained minor or major injuries.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "d5d165760034",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "2 dead, at least 12 hurt in New York City building collapse, authorities say",
+          "url": "https://nbcnews.com/news/us-news/new-york-brooklyn-building-collapse-rcna608909",
+          "published": "2026-11-12T00:04:59.000Z",
+          "snippet": "The collapse occurred around 4 p.m. in the Flatbush neighborhood. Rescuers were trying to reach people trapped in the rubble.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_06a03f318a5d",
+      "headline": "Nvidia board reportedly weighs ousting Huang amid alleged affairs with exec and suspected Chinese spy",
+      "headlineFrom": {
+        "sourceId": "dw",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Nvidia's board is reportedly preparing to oust Jensen Huang amid reports of an affair with a suspected Chinese spy. The shake-up would leave the world's leading AI chip supplier without the co-founder who built it.",
+      "topic": "tech",
+      "firstSeen": "2026-11-11T07:44:24.000Z",
+      "lastUpdated": "2026-11-12T01:57:34.000Z",
+      "sourceCount": 7,
+      "articleCount": 10,
+      "coverage": {
+        "left": 3,
+        "center": 2,
+        "right": 2,
+        "byLean": {
+          "left": 0,
+          "lean-left": 3,
+          "center": 2,
+          "lean-right": 1,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 4.4549,
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2521/live/6ba67640-dc03-11f1-b441-2b33b063138f.jpg",
+      "articles": [
+        {
+          "id": "2722c4b91e77",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Nvidia's board preparing to oust CEO Jensen Huang, sources say",
+          "url": "https://cbsnews.com/news/nvidia-board-ceo-jensen-huang-china",
+          "published": "2026-11-12T00:42:00.000Z",
+          "snippet": "Nvidia's board of directors is preparing to oust CEO Jensen Huang soon, according to two sources, amid allegations Huang had an affair with a woman U.S. intelligence agencies believe was a Chinese asset.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "996592b02daf",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Nvidia's board preparing to oust CEO Jensen Huang, sources say",
+          "url": "https://cbsnews.com/video/nvidias-board-preparing-oust-ceo-jensen-huang-sources-say",
+          "published": "2026-11-11T23:48:52.000Z",
+          "snippet": "The board of Nvidia, the world's largest artificial intelligence chipmaker whose stock makes up a major portion of many retirement programs, is preparing to force out its CEO after his affair with a suspected Chinese…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5f71be20ef92",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "WSJ: Nvidia Board Preparing to Oust CEO Jensen Huang",
+          "url": "https://newsmax.com/newsfront/nvidia-jensen-huang-spy/2026/11/11/id/1276005",
+          "published": "2026-11-11T21:48:10.000Z",
+          "snippet": "Nvidia's board of directors is preparing to oust co-founder and CEO Jensen Huang following revelations of two extramarital affairs, including one involving a woman suspected of working for Chinese intelligence, The Wall…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "3baa31182242",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Nvidia preparing to fire CEO Jensen Huang after affair with suspected Chinese spy, sources say",
+          "url": "https://cbsnews.com/video/nvidia-board-preparing-to-oust-ceo-jensen-huang-amid-affair-with-suspected-chinese-spy-sources-say",
+          "published": "2026-11-11T23:55:00.000Z",
+          "snippet": "Nvidia's board is preparing to oust CEO Jensen Huang after Huang admitted to an affair with a suspected Chinese spy, sources tell CBS News. The company's stock tanked on Wednesday following the news. CBS News' Kelly…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "bec6a74e7337",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Nvidia board preparing to remove CEO Jensen Huang: Report",
+          "url": "https://washingtonexaminer.com/policy/technology/4800920/nvidia-board-oust-ceo-jensen-huang",
+          "published": "2026-11-12T01:23:53.000Z",
+          "snippet": "Nvidia is preparing to oust CEO Jensen Huang after he confessed to having an affair with a suspected spy for China, according to multiple reports. Earlier this month, Huang apologized to his company, wife, and family…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "846c41f9c8d5",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+          "url": "https://nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html",
+          "published": "2026-11-11T23:32:14.000Z",
+          "snippet": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an executive at his A.I. chip company.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e8396ec15b2e",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Nvidia shares drop after hours amid reports of meeting over CEO Jensen Huang’s future",
+          "url": "https://nbcnews.com/business/business-news/nvidia-shares-drop-hours-reports-meeting-ceo-jensen-huangs-future-rcna608906",
+          "published": "2026-11-11T23:51:15.000Z",
+          "snippet": "The New York Times reported that Huang had a relationship with an Nvidia executive following reports that he’d had a relationship with a suspected Chinese spy.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "8e5f1df4bf3d",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Jensen Huang Said to Have Had Relationship With Nvidia Executive Who Reports to Him",
+          "url": "https://nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+          "published": "2026-11-12T01:57:34.000Z",
+          "snippet": "Mr. Huang, Nvidia’s chief executive, is already facing scrutiny over an affair with a Chinese businesswoman who U.S. intelligence determined was a Chinese spy.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ab1e4172b8e3",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "Nvidia board reportedly weighs ousting Huang amid alleged affairs with exec and suspected Chinese spy",
+          "url": "https://dw.com/en/nvidia-board-reportedly-weighs-ousting-huang-amid-alleged-affairs-with-exec-and-suspected-chinese-spy/a-79925002?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-12T00:01:00.000Z",
+          "snippet": "Nvidia's board is reportedly preparing to oust Jensen Huang amid reports of an affair with a suspected Chinese spy. The shake-up would leave the world's leading AI chip supplier without the co-founder who built it.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "06a03f318a5d",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "What we know so far about Jensen Huang's affair with suspected Chinese spy",
+          "url": "https://bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T07:44:24.000Z",
+          "snippet": "The billionaire tech executive finds himself mired in a personal and national security scandal.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_af5a65498a0e",
+      "headline": "Russian ambassador to the U.S. Alexander Darchiev dies suddenly, officials say",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Russia's ambassador to the United States, Alexander Darchiev, has died suddenly at age 66, the Russian Foreign Ministry said Wednesday.",
+      "topic": "world",
+      "firstSeen": "2026-11-11T14:03:20.000Z",
+      "lastUpdated": "2026-11-11T23:20:00.000Z",
+      "sourceCount": 6,
+      "articleCount": 6,
+      "coverage": {
+        "left": 1,
+        "center": 3,
+        "right": 2,
+        "byLean": {
+          "left": 1,
+          "lean-left": 0,
+          "center": 3,
+          "lean-right": 0,
+          "right": 2
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 3.5821,
+      "image": "https://cdnph.upi.com/ph/st/th/5421794422852/2026/upi/35c3660d4b60684b094b35650ddf0330/v1.5/Russian-ambassador-to-the-US-Alexander-Darchiev-dies-suddenly.jpg",
+      "articles": [
+        {
+          "id": "ae0c47b3073a",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Russian ambassador to the U.S. Alexander Darchiev dies suddenly, officials say",
+          "url": "https://upi.com/Top_News/US/2026/11/11/russia-ambassador-dies-suddenly/5421794422852",
+          "published": "2026-11-11T19:03:24.000Z",
+          "snippet": "Russia's ambassador to the United States, Alexander Darchiev, has died suddenly at age 66, the Russian Foreign Ministry said Wednesday.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f0ff1809199a",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "Russia’s Ambassador To U.S. Dies ‘Suddenly,’ Russian Foreign Ministry Says",
+          "url": "https://huffpost.com/entry/russia-us-ambassador-dies-suddenly_n_6af4accde4b09e0b5c5391a8",
+          "published": "2026-11-11T18:05:17.000Z",
+          "snippet": "Alexander Darchiev was 66.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "179503fb1b6d",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Russian Ambassador To US Alexander Darchiev Dies At Age 66",
+          "url": "https://dailycaller.com/2026/11/11/russian-ambassador-to-us-died-alexander-darchiev",
+          "published": "2026-11-11T17:11:37.000Z",
+          "snippet": "The Russian Foreign Ministry confirmed the death",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7498f5525805",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "Russian Foreign Ministry says its ambassador to US has died",
+          "url": "https://dw.com/en/russian-foreign-ministry-says-its-ambassador-to-us-has-died/a-79924829?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-11T23:20:00.000Z",
+          "snippet": "Russia's Foreign Ministry has said that Alexander Darchiev died from a chronic illness at the age of 66. The long-time diplomat had been in the Washington post since early 2025.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "af5a65498a0e",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "Russian Ambassador To U.S., A Fierce Critic Of The West, Dies Suddenly",
+          "url": "https://dailywire.com/news/russian-ambassador-to-u-s-a-fierce-critic-of-the-west-dies-suddenly",
+          "published": "2026-11-11T14:03:20.000Z",
+          "snippet": "Russia’s ambassador to the United States, Alexander Darchiev, died suddenly on Wednesday at 66 after about 20 months in the post, the Russian Foreign Ministry announced. Darchiev, whom the Russian government praised as…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "4eef7563e52e",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Russia’s ambassador to the United States dies 'suddenly' at 66",
+          "url": "https://newsnationnow.com/world/russia-ambassador-dies",
+          "published": "2026-11-11T16:48:23.000Z",
+          "snippet": "In a short statement, Russia's Foreign Ministry called him \"an outstanding diplomat, experienced leader, kind colleague and mentor.\"",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_e2288be32a7c",
+      "headline": "Attempted murder charge after baby found buried alive in dog crate",
+      "headlineFrom": {
+        "sourceId": "newsnation",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "A towel wrapped around the wire crate created an air pocket that likely helped the baby survive, the sheriff said.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T10:12:56.000Z",
+      "lastUpdated": "2026-11-11T23:36:14.000Z",
+      "sourceCount": 5,
+      "articleCount": 5,
+      "coverage": {
+        "left": 2,
+        "center": 2,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 2,
+          "center": 2,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 3.3503,
+      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/Untitled-August-23-2026-at-23.27.37-5-Exclusive-Bug-20.png?w=900",
+      "articles": [
+        {
+          "id": "2c2ea714cc2f",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Baby found buried alive, father charged with attempted murder",
+          "url": "https://cbsnews.com/news/baby-found-alive-buried-dog-crate-24-hours-south-carolina",
+          "published": "2026-11-11T22:01:00.000Z",
+          "snippet": "An infant was found alive after apparently being buried in a dog crate for about 24 hours, authorities in South Carolina said.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e2288be32a7c",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Attempted murder charge after baby found buried alive in dog crate",
+          "url": "https://newsnationnow.com/crime/koah-sharpe-michael-comer-buried-alive",
+          "published": "2026-11-11T10:12:56.000Z",
+          "snippet": "A towel wrapped around the wire crate created an air pocket that likely helped the baby survive, the sheriff said.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "463124d17233",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "11-Month-Old Found Buried Alive In Dog Crate",
+          "url": "https://dailywire.com/news/11-month-old-found-buried-alive-in-dog-crate",
+          "published": "2026-11-11T11:39:53.000Z",
+          "snippet": "An 11-month-old South Carolina baby who was buried alive for roughly 24 hours in a dog crate was found “clinging to life” Tuesday following an extensive search and rescue effort. Koah Sharpe was reported missing on…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2984671250ba",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Father charged with attempted murder after baby survives being buried in crate",
+          "url": "https://nbcnews.com/news/us-news/father-charged-attempted-murder-baby-survives-buried-crate-rcna608896",
+          "published": "2026-11-11T23:36:14.000Z",
+          "snippet": "Koah Sharp, an 11-month-old boy, was found alive Tuesday after being buried in a wire crate, which was wrapped in a towel, for around 24 hours, police said.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2fdf28cc4d0e",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Missing 11-month-old baby rescued after being buried alive in a crate in South Carolina",
+          "url": "https://bbc.co.uk/news/articles/c8e391xzg6z2o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T18:10:57.000Z",
+          "snippet": "Officials say the child was found close to his father's home on Tuesday, a day after he was taken, and is being cared for in hospital.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_2a81dbb6ebfb",
+      "headline": "Former NFL coach Rex Ryan accused of running over Nashville pedestrians' feet",
+      "headlineFrom": {
+        "sourceId": "washtimes",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Former NFL coach Rex Ryan turned himself in to Nashville police Wednesday on misdemeanor charges after he allegedly hit two pedestrians with his truck in a popular area downtown last week and then drove off after an argument, police said.",
+      "topic": "sports",
+      "firstSeen": "2026-11-11T14:48:46.000Z",
+      "lastUpdated": "2026-11-12T00:08:00.000Z",
+      "sourceCount": 7,
+      "articleCount": 7,
+      "coverage": {
+        "left": 4,
+        "center": 0,
+        "right": 3,
+        "byLean": {
+          "left": 1,
+          "lean-left": 3,
+          "center": 0,
+          "lean-right": 1,
+          "right": 2
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 3.3408,
+      "image": "https://twt-thumbs.washtimes.com/media/image/2026/11/11/Rex_Ryan_Arrest_Football__2721_s1440x960.jpg?f72536d07237fdd262042ae8f5e6e6de3b865f3c",
+      "articles": [
+        {
+          "id": "ff4a533099d8",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Former NFL coach Rex Ryan accused of running over Nashville pedestrians' feet",
+          "url": "https://washingtontimes.com/news/2026/nov/11/former-nfl-coach-rex-ryan-accused-running-nashville-pedestrians-feet",
+          "published": "2026-11-11T22:30:25.000Z",
+          "snippet": "Former NFL coach Rex Ryan turned himself in to Nashville police Wednesday on misdemeanor charges after he allegedly hit two pedestrians with his truck in a popular area downtown last week and then drove off after an…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "236519486dbe",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Former NFL coach Rex Ryan charged after allegedly hitting pedestrians with car in Nashville",
+          "url": "https://theguardian.com/sport/2026/nov/11/rex-ryan-charged-hit-and-run-pedestrians-nashville",
+          "published": "2026-11-11T17:35:54.000Z",
+          "snippet": "Former Jets and Bills coach turned himself in Ryan faces six misdemeanor charges over incident Two pedestrians allegedly struck in Nashville ESPN analyst and former NFL coach Rex Ryan turned himself in to police on…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "68105aca0624",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Former New York Jets coach Rex Ryan charged with running over feet of two pedestrians with truck",
+          "url": "https://nbcnews.com/news/us-news/rex-ryan-charged-striking-pedestrians-truck-rcna608813",
+          "published": "2026-11-11T18:07:43.000Z",
+          "snippet": "Former NFL head coach Rex Ryan, who led the New York Jets and the Buffalo Bills, is accused of striking two pedestrians with his pickup truck last week in Nashville, Tennessee.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e8734c7067b3",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Ex-NFL coach Rex Ryan surrenders to Nashville police on hit-and-run charges",
+          "url": "https://cbsnews.com/video/ex-nfl-coach-rex-ryan-surrenders-nashville-police-hit-and-run-charges",
+          "published": "2026-11-12T00:08:00.000Z",
+          "snippet": "Former NFL head coach Rex Ryan turned himself in to Nashville police on Wednesday on allegations he was involved in a hit-and-run in which authorities said he struck two pedestrians. Tom Hanson reports.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "4d8b54ccde33",
+          "sourceId": "dailybeast",
+          "sourceName": "The Daily Beast",
+          "lean": "left",
+          "title": "NFL Coach Turns Himself in for Nashville Hit-and-Run",
+          "url": "https://thedailybeast.com/nfl-coach-turns-himself-in-for-nashville-hit-and-run",
+          "published": "2026-11-11T20:32:53.000Z",
+          "snippet": "Rich Barnes / Getty Images NFL analyst and former New York Jets head coach Rex Ryan turned himself in to authorities Wednesday morning for running two people over in his truck in downtown Nashville and fleeing the…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2a81dbb6ebfb",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "Former NFL Coach In Trouble With The Law After Trouble With The Feet",
+          "url": "https://dailywire.com/news/former-nfl-coach-in-trouble-with-the-law-after-trouble-with-the-feet",
+          "published": "2026-11-11T14:48:46.000Z",
+          "snippet": "Former NFL coach Rex Ryan finds himself playing footsie with the law after turning himself in for allegedly running over two pedestrians’ feet last week in Nashville. Ryan, who currently works for ESPN as an analyst on…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2238fb2e6b5b",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Rex Ryan Arrested For Running Over Feet Of Two Pedestrians In Pickup Truck",
+          "url": "https://dailycaller.com/2026/11/11/former-nfl-new-york-jets-coach-rex-ryan-arrested-running-over-pedstrians-feet-pickup-truck-nashville",
+          "published": "2026-11-11T19:31:03.000Z",
+          "snippet": "‘The pedestrians said the vehicle kept going’",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_12e89d0f198d",
+      "headline": "Reports: Treasury Secretary Scott Bessent moved to military base after Iranian threats",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Authorities have relocated Treasury Secretary Scott Bessent from his home in Washington, D.C., to a military base after receiving threats from Iran.",
+      "topic": "politics",
+      "firstSeen": "2026-11-11T09:11:30.000Z",
+      "lastUpdated": "2026-11-12T01:32:08.000Z",
+      "sourceCount": 5,
+      "articleCount": 7,
+      "coverage": {
+        "left": 3,
+        "center": 2,
+        "right": 0,
+        "byLean": {
+          "left": 1,
+          "lean-left": 2,
+          "center": 2,
+          "lean-right": 0,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": "left",
+      "score": 3.1215,
+      "image": "https://cdnph.upi.com/ph/st/th/8491794413557/2026/upi/d7ec3244a9de6d87074c06721f7fd412/v1.5/Reports-Treasury-Secretary-Bessent-moved-to-base-after-Iran-threats.jpg",
+      "articles": [
+        {
+          "id": "3961c136055e",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Reports: Treasury Secretary Scott Bessent moved to military base after Iranian threats",
+          "url": "https://upi.com/Top_News/US/2026/11/11/scott-bessent-threats/8491794413557",
+          "published": "2026-11-11T17:26:49.000Z",
+          "snippet": "Authorities have relocated Treasury Secretary Scott Bessent from his home in Washington, D.C., to a military base after receiving threats from Iran.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f4dce3ddac87",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Treasury Secretary Scott Bessent moves into military housing due to Iranian threats",
+          "url": "https://cbsnews.com/video/treasury-secretary-scott-bessent-moves-military-housing-iranian-threats",
+          "published": "2026-11-12T01:05:24.000Z",
+          "snippet": "Treasury Secretary Scott Bessent has moved out of his home in Washington, D.C., and onto a military base out of concern for his safety, including Iranian threats to his life, officials said. Nancy Cordes has more.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "43eb487775fd",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "US Treasury Secretary Scott Bessent relocated after alleged Iranian threats",
+          "url": "https://bbc.co.uk/news/articles/cqr7gr0010r2o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T16:45:11.000Z",
+          "snippet": "Bessent is now one of several Trump administration officials to live on military bases due to safety concerns.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "12e89d0f198d",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "US Treasury chief Scott Bessent is reportedly latest Trump official to move to military base",
+          "url": "https://theguardian.com/us-news/2026/nov/11/us-treasury-chief-scott-bessent-moves-military-base-iran-threats",
+          "published": "2026-11-11T09:11:30.000Z",
+          "snippet": "Bessent, driving force behind US push to cripple Iran’s economy, relocates over alleged threat to his life The US Treasury secretary, Scott Bessent, has relocated from his home in the Washington area to a military base…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "155dce7075bb",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Bessent relocates from home to military base after Iran threats",
+          "url": "https://cbsnews.com/news/bessent-relocate-dc-area-home-military-base-iran-threats-to-kill-him",
+          "published": "2026-11-12T01:32:08.000Z",
+          "snippet": "Treasury Secretary Scott Bessent has relocated from his home in the Washington, D.C., area to a U.S. military base.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "1e946b0687a5",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "Scott Bessent Moves To Military Base Over Safety Concerns, AP Source Says",
+          "url": "https://huffpost.com/entry/scott-bessent-move-military-base-iran_n_6af4a54ce4b0a8468d8c66f0",
+          "published": "2026-11-11T17:36:28.000Z",
+          "snippet": "The move comes after the Treasury Department pledged an “economic D-Day” against Iran.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ef5c95c8879c",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "11/11: The Takeout with Major Garrett",
+          "url": "https://cbsnews.com/video/111126-the-takeout-with-major-garrett",
+          "published": "2026-11-11T22:00:00.000Z",
+          "snippet": "Details on the vote count in Mississippi's Senate race; Treasury Secretary Scott Bessent moved to military base after Iran threats.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_f2610090c326",
+      "headline": "Pro-Palestinian protesters pelt Joe Biden during visit to Ireland",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Three men were arrested for throwing objects at former President Joe Biden during a protest in Ireland Tuesday.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T06:02:52.000Z",
+      "lastUpdated": "2026-11-11T21:08:18.000Z",
+      "sourceCount": 5,
+      "articleCount": 5,
+      "coverage": {
+        "left": 2,
+        "center": 2,
+        "right": 1,
+        "byLean": {
+          "left": 1,
+          "lean-left": 1,
+          "center": 2,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.9056,
+      "image": "https://cdnph.upi.com/ph/st/th/6161794415989/2026/upi/b1429799147b32179398de9d0b7a31c7/v1.5/Pro-Palestinian-protesters-pelt-Joe-Biden-during-visit-to-Ireland.jpg",
+      "articles": [
+        {
+          "id": "0332148b46ab",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Pro-Palestinian protesters pelt Joe Biden during visit to Ireland",
+          "url": "https://upi.com/Top_News/US/2026/11/11/ireland-protesters-pelt-joe-biden/6161794415989",
+          "published": "2026-11-11T17:23:57.000Z",
+          "snippet": "Three men were arrested for throwing objects at former President Joe Biden during a protest in Ireland Tuesday.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f2610090c326",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "WATCH: Protesters Hurl Objects At Joe Biden After Hunter Receives Award",
+          "url": "https://dailywire.com/news/watch-protesters-hurl-objects-at-joe-biden-after-hunter-receives-award",
+          "published": "2026-11-11T06:02:52.000Z",
+          "snippet": "Two people were arrested Tuesday after pro-Palestinian protesters confronted former President Joe Biden during a surprise visit to Trinity College Dublin, where his son Hunter Biden was receiving an award. Biden…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "0ac15ac54d29",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Biden faces protests during visit to Ireland",
+          "url": "https://nbcnews.com/video/biden-faces-protests-during-visit-to-ireland-273258565700",
+          "published": "2026-11-11T09:04:32.000Z",
+          "snippet": "Former President Biden was met with protests while at Trinity College in Dublin, where his son Hunter was receiving an award. At least two people were arrested after throwing objects at the former president and his…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "9ab1cf78bbbf",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Joe Biden pelted with objects by protesters in Ireland",
+          "url": "https://newsnationnow.com/world/joe-biden-pelted-objects-protesters-ireland",
+          "published": "2026-11-11T14:10:25.000Z",
+          "snippet": "Ireland has a long history of support for Palestine, rooted in the country's shared historical parallels of oppression and colonization.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2144900a700d",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "3 men arrested in unruly Dublin protest of Biden, Irish police say",
+          "url": "https://ms.now/news/joe-biden-dublin-ireland-protest-arrest",
+          "published": "2026-11-11T21:08:18.000Z",
+          "snippet": "One of the men faces charges after pro-Palestinian protesters chanted “blood on your hands” and one ran toward the former president’s car outside Trinity College Dublin.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_ade6bd4d84e4",
+      "headline": "University of Mississippi student leaves school amid racist gesture investigation",
+      "headlineFrom": {
+        "sourceId": "newsnation",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The law firm said reports that Kunes left the school due to harassment from other students and the local community are not true.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T21:50:29.000Z",
+      "lastUpdated": "2026-11-12T01:20:47.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 1,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 1,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.8666,
+      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/student-withdraws-from-u-of-ms.png?w=584",
+      "articles": [
+        {
+          "id": "d4cad7e15b38",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Black University of Mississippi students wrestle with forgiveness in wake of racist gestures",
+          "url": "https://washingtontimes.com/news/2026/nov/11/wake-racist-gestures-black-university-mississippi-students-wrestle",
+          "published": "2026-11-12T00:20:38.000Z",
+          "snippet": "Three Black University of Mississippi students who shared a now-viral Ring camera video of two white students making monkey-like sounds and gestures outside their front door say they received an apology from one woman.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ade6bd4d84e4",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "University of Mississippi student leaves school amid racist gesture investigation",
+          "url": "https://newsnationnow.com/race-in-america/university-of-mississippi-student-racist-gesture-video",
+          "published": "2026-11-11T21:50:29.000Z",
+          "snippet": "The law firm said reports that Kunes left the school due to harassment from other students and the local community are not true.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "fa9fa6164f05",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Black students speak about racist incident caught on video: \"It was like a slap in the face\"",
+          "url": "https://cbsnews.com/video/black-students-speak-racist-incident-caught-video-slap-face",
+          "published": "2026-11-12T01:20:47.000Z",
+          "snippet": "Two University of Mississippi students were caught on a Ring camera outside the apartment of several Black students making monkey gestures and sounds. Jericka Duncan spoke with the students in the apartment.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_a28bfde8dede",
+      "headline": "Trump White House threatens Democrats over upcoming oversight investigations",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "White House officials have threatened Democrats with criminal investigation over upcoming oversight probes into the Trump administration.",
+      "topic": "politics",
+      "firstSeen": "2026-11-11T14:47:49.000Z",
+      "lastUpdated": "2026-11-11T21:40:36.000Z",
+      "sourceCount": 6,
+      "articleCount": 6,
+      "coverage": {
+        "left": 5,
+        "center": 1,
+        "right": 0,
+        "byLean": {
+          "left": 3,
+          "lean-left": 2,
+          "center": 1,
+          "lean-right": 0,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": "left",
+      "score": 2.7127,
+      "image": "https://cdnph.upi.com/ph/st/th/9011794427084/2026/upi/a31d0ccab6bdd7e7df838782e03bb6bc/v1.5/White-House-threatens-Democrats-over-oversight-investigations.jpg",
+      "articles": [
+        {
+          "id": "f6f9256d9e8f",
+          "sourceId": "motherjones",
+          "sourceName": "Mother Jones",
+          "lean": "left",
+          "title": "Investigate Trump? The White House Says That Might Be a Crime.",
+          "url": "https://motherjones.com/politics/2026/11/investigate-trump-the-white-house-says-that-might-be-a-crime",
+          "published": "2026-11-11T18:00:53.000Z",
+          "snippet": "The White House on Wednesday threatened Democrats with criminal investigations for talking about investigating Trump. Will Scharf, the White House counsel, wrote to remind incoming House Oversight Committee Chair Rep…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a28bfde8dede",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "White House Threatens Oversight Democrats With Criminal Investigation",
+          "url": "https://huffpost.com/entry/white-house-robert-garcia-threat_n_6af46188e4b09e0b5c535542",
+          "published": "2026-11-11T14:47:49.000Z",
+          "snippet": "White House counsel Will Scharf warned Rep. Robert Garcia (D-Calif.) his forthcoming subpoenas are illegal and “may warrant further investigation.”",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c00fb88050ec",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Trump White House threatens Democrats over upcoming oversight investigations",
+          "url": "https://upi.com/Top_News/US/2026/11/11/white-house-threatens-democrats-over-oversight-investigations/9011794427084",
+          "published": "2026-11-11T20:13:48.000Z",
+          "snippet": "White House officials have threatened Democrats with criminal investigation over upcoming oversight probes into the Trump administration.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "77fbc8f2d2ed",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Democrat says Trump has ‘something to hide’ after White House threatens oversight efforts",
+          "url": "https://theguardian.com/us-news/2026/nov/11/democrat-investigation-white-house-letter-garcia",
+          "published": "2026-11-11T16:54:36.000Z",
+          "snippet": "White House warns Democratic pledges to investigate president ‘may cross line into blatant criminality’ The incoming Democratic chair of the powerful congressional oversight committee said it appears Donald Trump has…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "cec14a8001e3",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "White House warns congressional Democrats: Investigating us may be a crime",
+          "url": "https://nbcnews.com/politics/white-house/white-house-warns-congressional-democrats-investigating-us-may-crime-rcna608752",
+          "published": "2026-11-11T18:34:45.000Z",
+          "snippet": "Rep. Robert Garcia, the incoming House Oversight Committee chair, noted that the Constitution grants Congress “latitude to conduct investigations.”",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f1392deba28f",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "Top Oversight Democrat rejects Trump White House ‘threat’: ‘We’re not bending the knee’",
+          "url": "https://ms.now/news/democrats-house-oversight-robert-garcia-trump-corruption",
+          "published": "2026-11-11T21:40:36.000Z",
+          "snippet": "“It’s shocking that the White House would send a letter that is clearly a threat to the Congress,” Rep. Robert Garcia, D-Calif., told MS NOW.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_c7a8ad251e4d",
+      "headline": "Famed ship SS United States to be sunk off coast of Florida",
+      "headlineFrom": {
+        "sourceId": "bbc",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Activists unsuccessfully fought for the historic liner to be preserved and turned into a museum, but it will now become the world's largest artificial ocean reef.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T18:14:57.000Z",
+      "lastUpdated": "2026-11-12T00:15:56.000Z",
+      "sourceCount": 4,
+      "articleCount": 5,
+      "coverage": {
+        "left": 3,
+        "center": 1,
+        "right": 0,
+        "byLean": {
+          "left": 0,
+          "lean-left": 3,
+          "center": 1,
+          "lean-right": 0,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": "left",
+      "score": 2.6055,
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5661/live/7c6e9130-ddeb-11f1-9204-cdcddf7d901c.jpg",
+      "articles": [
+        {
+          "id": "a1fd3f9d89e2",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "SS United States to be sunk to become the world’s largest artificial reef - watch live",
+          "url": "https://theguardian.com/us-news/video/2026/nov/11/ss-united-states-to-be-sunk-to-become-the-worlds-largest-artificial-reef-watch-live",
+          "published": "2026-11-11T19:22:06.000Z",
+          "snippet": "The SS United States will sink off the coast of Destin, Florida to become an artificial reef, ending long-running wrangle over its fate Historic ocean liner to ‘live on’ beneath waves as world’s biggest artificial reef",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b032d9f047f5",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "SS United States to become world's largest artificial reef",
+          "url": "https://cbsnews.com/news/ss-united-states-sinking-ocean-floor-largest-artificial-reef-world-florida-gulf-coast",
+          "published": "2026-11-12T00:04:00.000Z",
+          "snippet": "The 1,000-foot long SS United States is being sent to the bottom of the ocean in a controlled, explosive-free sinking that is taking place about 20 nautical miles off the Gulf Coast of Florida.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f4acaf4c90c7",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Famed ship SS United States to be sunk off coast of Florida",
+          "url": "https://bbc.co.uk/news/articles/c3x298n87rn2o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T18:42:27.000Z",
+          "snippet": "Activists unsuccessfully fought for the historic liner to be preserved and turned into a museum, but it will now become the world's largest artificial ocean reef.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c7a8ad251e4d",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Recalling the S.S. United States as It Becomes a Florida Reef",
+          "url": "https://nytimes.com/2026/11/11/insider/ss-united-states-destin-florida-memories.html",
+          "published": "2026-11-11T18:14:57.000Z",
+          "snippet": "A New York Times editor has had a lifelong connection to the S.S. United States, which is becoming an artificial reef off the Florida coast.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7ea94bd16c3e",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "The S.S. United States, a Historic Supership, Heads to the Ocean Floor",
+          "url": "https://nytimes.com/2026/11/11/climate/ss-united-states-ship-sinking-artificial-reef-florida.html",
+          "published": "2026-11-12T00:15:56.000Z",
+          "snippet": "The 20th-century ocean liner will become an artificial reef, ending efforts to save a ship that was fast, luxurious and (almost) indestructible. Watch the livestream.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_e74dec2a1f93",
+      "headline": "Wes Moore wants immigration reform. Can he work with Stephen Miller?",
+      "headlineFrom": {
+        "sourceId": "politico",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The possible 2028 contender told POLITICO that Democrats should try to work with the president’s new chief of staff despite a “well of distrust.”",
+      "topic": "politics",
+      "firstSeen": "2026-11-10T13:49:19.000Z",
+      "lastUpdated": "2026-11-11T23:42:26.000Z",
+      "sourceCount": 4,
+      "articleCount": 4,
+      "coverage": {
+        "left": 3,
+        "center": 0,
+        "right": 1,
+        "byLean": {
+          "left": 2,
+          "lean-left": 1,
+          "center": 0,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.5228,
+      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=C3DE5CBD-9F04-446A-96D7-17518EA9F413",
+      "articles": [
+        {
+          "id": "f1ff3e7f055e",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "MAHA Energized by Stephen Miller Appointment",
+          "url": "https://newsmax.com/newsfront/maha-stephen-miller/2026/11/11/id/1276013",
+          "published": "2026-11-11T23:42:26.000Z",
+          "snippet": "Many in the Make America Healthy Again movement were supportive of the new White House chief of staff, Stephen Miller.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e74dec2a1f93",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "House Dem Congratulates Stephen Miller For 1 Spicy Reason: 'He's Going To Need It'",
+          "url": "https://huffpost.com/entry/sam-liccardo-congratulates-warns-stephen-miller-subpoenas_n_6af2f8d0e4b0a8468d8a8b7e",
+          "published": "2026-11-10T13:49:19.000Z",
+          "snippet": "Stephen Miller was promoted by President Donald Trump to White House chief of staff after last week’s Democratic midterms sweep.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "caceee18ff9c",
+          "sourceId": "dailybeast",
+          "sourceName": "The Daily Beast",
+          "lean": "left",
+          "title": "Republican Calls for Stephen Miller’s Head After GOP Wipeout",
+          "url": "https://thedailybeast.com/republican-marlin-stutzman-calls-for-stephen-millers-head-after-gop-wipeout",
+          "published": "2026-11-11T21:07:01.000Z",
+          "snippet": "Kylie Cooper / Kylie Cooper/REUTERS A GOP representative has made repeated calls for Stephen Miller’s firing in the wake of Republicans’ trouncing in the midterms. On Sunday, just two days after Miller was announced as…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7f3bb765747b",
+          "sourceId": "politico",
+          "sourceName": "Politico",
+          "lean": "lean-left",
+          "title": "Wes Moore wants immigration reform. Can he work with Stephen Miller?",
+          "url": "https://politico.com/news/2026/11/10/gov-wes-moore-sees-an-opportunity-to-work-with-stephen-miller-01158571",
+          "published": "2026-11-10T17:06:50.000Z",
+          "snippet": "The possible 2028 contender told POLITICO that Democrats should try to work with the president’s new chief of staff despite a “well of distrust.”",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_58c05f40c6c6",
+      "headline": "Haitian PM praises El Salvador after joint strike on alleged home of gang leader",
+      "headlineFrom": {
+        "sourceId": "bbc",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The 400 Mawozo gang was targeted by El Salvador's military, which has deployed thousands of troops to combat Haiti's gang violence crisis.",
+      "topic": "world",
+      "firstSeen": "2026-11-11T12:14:12.000Z",
+      "lastUpdated": "2026-11-12T01:04:45.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 0,
+        "center": 2,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 0,
+          "center": 2,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.3523,
+      "image": "https://cdnph.upi.com/ph/st/th/4941794411502/2026/i/17944128287151/v1.5/Bukele-Salvadoran-troops-destroyed-Haitian-gang-headquarters.jpg",
+      "articles": [
+        {
+          "id": "8330d3ca9076",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Watch: Bukele: Salvadoran troops destroyed Haitian gang headquarters",
+          "url": "https://upi.com/Top_News/World-News/2026/11/11/latam-haiti-salvadoran-troops-gang-headquarters/4941794411502",
+          "published": "2026-11-11T16:05:02.000Z",
+          "snippet": "El Salvador's president, Nayib Bukele, said his forces destroyed the headquarters of Haiti's 400 Mawozo gang in an operation outside Port-au-Prince.",
+          "flags": {
+            "loaded": [
+              "destroyed"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2f0b1533f7b2",
+          "sourceId": "foxnews",
+          "sourceName": "Fox News",
+          "lean": "right",
+          "title": "El Salvador-backed air assault destroys Haiti gang headquarters amid search for missing troops",
+          "url": "https://foxnews.com/world/el-salvador-air-assault-destroys-haiti-gang-headquarters-search-missing-troops",
+          "published": "2026-11-12T01:04:45.000Z",
+          "snippet": "Helicopters struck Haiti gang compound, dozens fled and President Bukele touted the assault amid a search for four missing Salvadoran personnel.",
+          "flags": {
+            "loaded": [
+              "destroys"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "58c05f40c6c6",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Haitian PM praises El Salvador after joint strike on alleged home of gang leader",
+          "url": "https://bbc.co.uk/news/articles/cmvg2xdwnwezo?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T12:14:12.000Z",
+          "snippet": "The 400 Mawozo gang was targeted by El Salvador's military, which has deployed thousands of troops to combat Haiti's gang violence crisis.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_6fc90d37d9e9",
+      "headline": "Nvidia stock tanks after report of second Huang affair",
+      "headlineFrom": {
+        "sourceId": "thehill",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Shares of Nvidia tanked early Wednesday evening, after The New York Times reported that CEO Jensen Huang had a second affair. The company’s stock was down roughly 8.3 percent during after hours trading, dipping below $160 per share. Nvidia shares had not fallen below that…",
+      "topic": "business",
+      "firstSeen": "2026-11-11T23:48:26.000Z",
+      "lastUpdated": "2026-11-12T00:53:16.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 2,
+        "center": 1,
+        "right": 0,
+        "byLean": {
+          "left": 0,
+          "lean-left": 2,
+          "center": 1,
+          "lean-right": 0,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.3264,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/06/6a31d615188665.55605695-e1785164164264.jpeg?w=900",
+      "articles": [
+        {
+          "id": "df9eb8397668",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Nvidia's stock dives as board weighs move to oust Jensen Huang",
+          "url": "https://cbsnews.com/news/nvidia-stock-dives-report-board-prepares-oust-jensen-huang",
+          "published": "2026-11-12T00:18:00.000Z",
+          "snippet": "Nvidia shares fall sharply in after-hours trading as the company's board considers whether to remove Jensen Huang as CEO.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "51af4bf026ee",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Nvidia Shares Plummet as Board Is Said to Consider C.E.O.’s Future",
+          "url": "https://nytimes.com/2026/11/11/business/nvidia-stock-jensen-huang-ceo.html",
+          "published": "2026-11-12T00:53:16.000Z",
+          "snippet": "News of the board’s deliberations about Jensen Huang’s job drove Nvidia’s stock down more than 8 percent in after-hours trading.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6fc90d37d9e9",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Nvidia stock tanks after report of second Huang affair",
+          "url": "https://thehill.com/business/6214833-nvidia-ceo-jesen-huang-affair",
+          "published": "2026-11-11T23:48:26.000Z",
+          "snippet": "Shares of Nvidia tanked early Wednesday evening, after The New York Times reported that CEO Jensen Huang had a second affair. The company’s stock was down roughly 8.3 percent during after hours trading, dipping below…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_826361a61aff",
+      "headline": "Mississippi elects Democrat Scott Colom as state's first Black U.S. senator since Reconstruction",
+      "headlineFrom": {
+        "sourceId": "washtimes",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Democratic nominee Scott Colom has defeated Republican Sen. Cindy Hyde-Smith in Mississippi's closely contested U.S. Senate race after a prolonged ballot counting process, giving the state its first Black U.S. senator since post-Civil War Reconstruction.",
+      "topic": "politics",
+      "firstSeen": "2026-11-11T23:02:20.000Z",
+      "lastUpdated": "2026-11-12T00:33:30.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 2,
+        "center": 0,
+        "right": 1,
+        "byLean": {
+          "left": 1,
+          "lean-left": 1,
+          "center": 0,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.2826,
+      "image": "https://twt-thumbs.washtimes.com/media/image/2026/11/11/Election_2_26_Mississippi_Senate_23953_s1440x960.jpg?f72536d07237fdd262042ae8f5e6e6de3b865f3c",
+      "articles": [
+        {
+          "id": "c9558f4fc1c9",
+          "sourceId": "motherjones",
+          "sourceName": "Mother Jones",
+          "lean": "left",
+          "title": "Mississippi, Once the Epicenter of Jim Crow, Elects Its First Black Senator Since Reconstruction",
+          "url": "https://motherjones.com/politics/2026/11/mississippi-jim-crow-epicenter-elects-scott-colom-first-black-senator-since-reconstruction",
+          "published": "2026-11-11T23:03:54.000Z",
+          "snippet": "For the closing ad of his US Senate campaign, Democrat Scott Colom stood in the driveway of the house that once belonged to Medgar Evers, the civil rights leader who was assassinated by a white supremacist in 1963 while…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "826361a61aff",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Mississippi elects Democrat Scott Colom as state's first Black U.S. senator since Reconstruction",
+          "url": "https://washingtontimes.com/news/2026/nov/11/scott-colom-elected-mississippis-first-black-us-senator-since",
+          "published": "2026-11-11T23:02:20.000Z",
+          "snippet": "Democratic nominee Scott Colom has defeated Republican Sen. Cindy Hyde-Smith in Mississippi's closely contested U.S. Senate race after a prolonged ballot counting process, giving the state its first Black U.S. senator…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e02308c61b06",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Scott Colom Will Be Mississippi’s Third Black Senator. Who Were the First Two?",
+          "url": "https://nytimes.com/2026/11/11/us/elections/scott-colom-mississippi-black-senators.html",
+          "published": "2026-11-12T00:33:30.000Z",
+          "snippet": "Mr. Revels took his seat two days after Mississippi was readmitted to the union after the Civil War. Mr. Bruce served just before white leaders ushered in the Jim Crow era.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_9cb7bd4343ce",
+      "headline": "Hundreds of schools in Europe receive bomb threats",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Hundreds of schools across Europe received bomb threats, targeting schools in Italy, Northern Ireland, Scotland and the Republic of Ireland.",
+      "topic": "world",
+      "firstSeen": "2026-11-11T13:43:00.000Z",
+      "lastUpdated": "2026-11-11T21:19:38.000Z",
+      "sourceCount": 4,
+      "articleCount": 4,
+      "coverage": {
+        "left": 0,
+        "center": 3,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 0,
+          "center": 3,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 2.1988,
+      "image": "https://cdnph.upi.com/ph/st/th/9571794409682/2026/upi_com/1867d72cda59386c26d09e2a6884151b/v1.5/Hundreds-of-schools-in-Europe-receive-bomb-threats.jpg",
+      "articles": [
+        {
+          "id": "39ad6a88bed2",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Hundreds of schools in Europe receive bomb threats",
+          "url": "https://upi.com/Top_News/World-News/2026/11/11/italy-northern-ireland-republic-scotland-email-bomb-threats-schools/9571794409682",
+          "published": "2026-11-11T15:23:26.000Z",
+          "snippet": "Hundreds of schools across Europe received bomb threats, targeting schools in Italy, Northern Ireland, Scotland and the Republic of Ireland.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "9cb7bd4343ce",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "Italy: Hundreds of schools evacuated after bomb threats",
+          "url": "https://dw.com/en/italy-hundreds-of-schools-evacuated-after-bomb-threats/a-79918034?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-11T13:43:00.000Z",
+          "snippet": "Although the government believes the threat to be a hoax, it has nevertheless prompted concerns about \"hybrid warfare\" in Europe. Similar messages were sent in Northern Ireland, Ireland, and Bulgaria.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "65f5ce0b0326",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Schools in Italy, Scotland and Northern Ireland hit by threats in suspected bomb hoax",
+          "url": "https://bbc.co.uk/news/articles/cwz0k79pr8z2o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T18:38:45.000Z",
+          "snippet": "More than 6,000 Italian schools received a threat. Authorities in all three countries say there appears to be no risk to the public.",
+          "flags": {
+            "loaded": [
+              "hoax"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "503c44b98fe3",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Italy's Meloni says bomb hoaxes aim to stoke fear as schools in Italy, Ireland, Scotland threatened",
+          "url": "https://washingtontimes.com/news/2026/nov/11/italys-meloni-says-bomb-hoaxes-aim-stoke-fear-schools-italy-ireland",
+          "published": "2026-11-11T21:19:38.000Z",
+          "snippet": "Italian Premier Giorgia Meloni said law enforcement found no concrete threat during checks of thousands of school buildings that were evacuated Wednesday after an emailed bomb threat, the latest in a series of…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_36bd37841430",
+      "headline": "Driver faces DUI and murder charges after three killed in LA crash, officials say",
+      "headlineFrom": {
+        "sourceId": "guardian",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Driver, 61, faces DUI and murder charges after Tuesday crash critically injuring two others in North Hollywood A driver who reportedly crashed into pedestrians on a Los Angeles corner during Tuesday rush hour, killing three people and critically injuring two more, was arrested…",
+      "topic": "us",
+      "firstSeen": "2026-11-11T20:30:56.000Z",
+      "lastUpdated": "2026-11-12T02:05:04.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 1,
+        "center": 0,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 0,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "mostlyCoveredBy": null,
+      "score": 1.9756,
+      "image": "https://i.guim.co.uk/img/media/8fde15c86b519c9c53c59fafa627004379fc5d30/844_0_2832_2268/master/2832.jpg?width=140&quality=85&auto=format&fit=max&s=98a149a8585cfc9d556ee213c81593a3",
+      "articles": [
+        {
+          "id": "36bd37841430",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Driver faces DUI and murder charges after three killed in LA crash, officials say",
+          "url": "https://theguardian.com/us-news/2026/nov/10/los-angeles-vehicle-crash",
+          "published": "2026-11-11T20:30:56.000Z",
+          "snippet": "Driver, 61, faces DUI and murder charges after Tuesday crash critically injuring two others in North Hollywood A driver who reportedly crashed into pedestrians on a Los Angeles corner during Tuesday rush hour, killing…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "cd0f1baf1ec0",
+          "sourceId": "foxnews",
+          "sourceName": "Fox News",
+          "lean": "right",
+          "title": "Suspected DUI driver arrested on 3 murder counts after deadly North Hollywood crash, police say",
+          "url": "https://foxnews.com/us/suspected-dui-driver-arrested-3-murder-counts-after-deadly-north-hollywood-crash-police-say",
+          "published": "2026-11-12T02:05:04.000Z",
+          "snippet": "A suspected DUI driver was arrested on three murder counts after a North Hollywood crash killed three women and injured two others.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    }
+  ],
+  "blindspots": [
+    "s_12e89d0f198d",
+    "s_a28bfde8dede",
+    "s_c7a8ad251e4d"
+  ]
+}

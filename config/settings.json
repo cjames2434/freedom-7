@@ -1,0 +1,30 @@
+{
+  "siteName": "Even Keel",
+  "tagline": "Every side of the story, side by side.",
+
+  "windowHours": 48,
+  "maxItemsPerFeed": 40,
+  "fetchTimeoutMs": 15000,
+  "fetchConcurrency": 6,
+
+  "cluster": {
+    "threshold": 0.22,
+    "maxHoursApart": 36,
+    "sameSourcePenalty": 0.8
+  },
+
+  "minSourcesForStory": 2,
+  "minPartisanSourcesForBlindspot": 3,
+  "blindspotShare": 0.8,
+  "maxStories": 150,
+  "recencyHalfLifeHours": 12,
+
+  "ai": {
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "minSources": 3,
+    "maxPerRun": 12,
+    "concurrency": 3,
+    "regenerateAfterHours": 3
+  }
+}

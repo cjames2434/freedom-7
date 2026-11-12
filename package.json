@@ -1,0 +1,23 @@
+{
+  "name": "even-keel-news",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A free, balanced news reader: clusters the same story across outlets from left to right, shows who covered it, and picks the least loaded headline.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node pipeline/index.js",
+    "dev": "node scripts/serve.js",
+    "start": "node pipeline/index.js && node scripts/serve.js",
+    "check:feeds": "node scripts/check-feeds.js",
+    "check:balance": "node scripts/check-balance.js",
+    "sample": "node scripts/make-sample.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "rss-parser": "^3.13.0"
+  }
+}

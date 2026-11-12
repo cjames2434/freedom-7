@@ -1,0 +1,172 @@
+# Even Keel
+
+A free news site that tries to be as close to unbiased as possible. Instead
+of telling you what to think, it shows you every story the way outlets
+across the political spectrum reported it, side by side, with the plainest
+version on top.
+
+Built for a few friends: no ads, no accounts, no tracking, and it costs
+nothing to run (an optional AI feature costs a little; see below).
+
+## How it stays neutral
+
+- **Balanced roster.** 29 outlets: 5 left, 6 lean-left, 7 center, 6
+  lean-right, 5 right ([`config/sources.json`](config/sources.json)). The
+  roster must mirror itself; the build refuses to run if it doesn't.
+- **Opinion filtered out.** Op-eds, columns, editorials, podcasts and
+  newsletters are dropped. Only straight news gets grouped.
+- **Same event, every side.** Articles about the same event are grouped
+  into one story, so you can see who covered it and how each side headlined it.
+- **Plainest headline wins.** The headline shown is the one with the least
+  loaded wording ("slams", "destroys", "bombshell"), preferring outlets nearer
+  the center. The word lists are side-neutral and symmetric
+  ([`pipeline/language.js`](pipeline/language.js)).
+- **Ranking without outrage.** Stories rank by how many outlets cover them,
+  how much of the spectrum covers them, and recency. Never by clicks.
+- **Blindspots.** Stories covered mostly by one side are called out, so you
+  can see what the other side's readers are hearing about.
+- **Optional AI briefs.** With an API key, Claude writes a short neutral
+  summary for bigger stories, using only what the outlets reported, with
+  claims attributed and a "how each side framed it" section.
+
+## Run it on your PC
+
+Needs [Node.js](https://nodejs.org) 20 or newer.
+
+```bash
+npm install
+```
+
+```bash
+npm run build
+```
+
+```bash
+npm run dev
+```
+
+Then open http://localhost:8080. Run `npm run build` again any time to pull
+the latest news.
+
+| Command | What it does |
+|---|---|
+| `npm run build` | Fetch all feeds, group stories, write `public/data/*.json` |
+| `npm run dev` | Serve the site at http://localhost:8080 |
+| `npm start` | Build, then serve |
+| `npm test` | Run the tests |
+| `npm run check:feeds` | Check every outlet's feed is alive and fresh |
+| `npm run check:balance` | Show the roster by lean and confirm it's mirrored |
+| `npm run sample` | Refresh the sample data in `docs/` for design work |
+
+## How it works
+
+```
+config/sources.json ─► fetch RSS ─► clean ─► drop opinion ─► group same-event articles
+                                                                   │
+public/data/news.json ◄─ (optional AI briefs) ◄─ rank ◄─ pick plainest headline
+```
+
+| Path | Purpose |
+|---|---|
+| `config/sources.json` | Outlets, their lean, and feed URLs |
+| `config/settings.json` | Site name, time window, clustering threshold, AI settings |
+| `pipeline/` | The build: `fetch`, `normalize`, `opinion`, `cluster`, `stories`, `language`, `topics`, `summarize` |
+| `public/` | The website (placeholder UI) plus generated `data/` |
+| `docs/` | Data contract, Claude Design brief, sample data |
+| `.github/workflows/update.yml` | Hourly rebuild and deploy to GitHub Pages |
+| `data/` | Local working state (last 48h of articles, AI brief cache). Not committed. |
+
+The site is fully static: the build writes JSON, and the front end only reads
+JSON. That's what makes it free to host.
+
+## Designing the UI with Claude Design
+
+The current UI in `public/` is a working placeholder. To replace it:
+
+1. Run `npm run build` then `npm run sample` so the sample data is fresh.
+2. Open [`docs/DESIGN_BRIEF.md`](docs/DESIGN_BRIEF.md), paste it into Claude
+   Design, and attach `docs/sample-news.json`, `docs/sample-sources.json`,
+   `docs/sample-ai-story.json` and `docs/DATA_CONTRACT.md`.
+3. Hand the result off to Claude Code in this folder. It replaces
+   `public/index.html`, `public/css/styles.css` and `public/js/app.js`; the
+   pipeline doesn't change.
+
+## Put it online (free)
+
+GitHub Pages hosts it and GitHub Actions rebuilds it every hour.
+
+1. Create a **public** GitHub repository (Pages is free for public repos) and
+   push this folder to its `main` branch.
+2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. **Actions → Update news → Run workflow** for the first build. After that it
+   runs every hour on its own.
+4. Your site is at `https://<your-username>.github.io/<repo-name>/`.
+
+Notes:
+- GitHub pauses scheduled workflows in public repos after 60 days with no
+  commits. If updates stop, push any commit or re-enable it under Actions.
+- To get AI briefs online, add your key under **Settings → Secrets and
+  variables → Actions → New repository secret** named `ANTHROPIC_API_KEY`.
+  Optionally add a variable `SUMMARY_MODEL` to change the model.
+
+## AI briefs and cost
+
+Off by default. Everything else is free.
+
+To turn them on locally, copy `.env.example` to `.env` and set
+`ANTHROPIC_API_KEY` (get one at https://console.anthropic.com). Briefs are
+written only for stories covered by 3+ outlets, at most 12 new ones per
+build, and cached so each story is paid for once (refreshed only if coverage
+grows a lot).
+
+Rough cost, assuming ~30 new briefs a day (estimates, depends on news volume):
+
+| Model (`SUMMARY_MODEL`) | Per brief | Per month |
+|---|---|---|
+| `claude-opus-5-5` (default) | ~2 cents | ~$10–25 |
+| `claude-haiku-5-5` | ~0.05 cents | under $1 |
+
+The default is Opus 5.5 for the best writing quality; Haiku 5.5 is the
+budget option and is fine for short summaries. Requests opt in to
+server-side fallback, so if a model ever declines a story the API retries it
+on a fallback model automatically.
+
+The brief only sees headlines and short excerpts, not full articles, and is
+told to use nothing else. The prompt is in
+[`pipeline/summarize.js`](pipeline/summarize.js).
+
+## Editing the outlets
+
+Edit [`config/sources.json`](config/sources.json). Each outlet has a `lean`:
+`left`, `lean-left`, `center`, `lean-right` or `right`. The starting leans
+approximate the consensus of public media-bias raters (AllSides, Ad Fontes
+Media, Media Bias/Fact Check). They're judgment calls: review them with your
+friends and change what you disagree with.
+
+Keep it mirrored (same count of `left` and `right`, and of `lean-left` and
+`lean-right`), then run `npm run check:balance` and `npm run check:feeds`.
+
+AP and Reuters are not included because they don't offer public RSS feeds;
+their stories arrive through the outlets that run them.
+
+## Tuning
+
+[`config/settings.json`](config/settings.json):
+
+- `windowHours`: how long stories stay (default 48).
+- `cluster.threshold`: how similar articles must be to count as one story.
+  Lower merges more (risk: unrelated stories grouped); higher splits more.
+  0.22 was tuned on live data.
+- `minSourcesForStory`: outlets needed before a story appears (default 2).
+- `minPartisanSourcesForBlindspot`, `blindspotShare`: when a story counts
+  as a blindspot (default: 3+ partisan outlets, 80% from one side).
+
+## Etiquette and limits
+
+- The site shows headlines, short feed excerpts and links. It never copies
+  full articles; readers click through to the publisher.
+- Feeds are fetched once an hour with an honest user agent, which is what
+  RSS is for. Keep it non-commercial.
+- Story grouping is automatic and sometimes wrong (it may split one event
+  or merge two related ones). Every outlet's headline is listed so readers
+  can see for themselves.
