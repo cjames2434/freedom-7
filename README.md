@@ -55,13 +55,17 @@ npm run build
 npm run dev
 ```
 
-Then open http://localhost:8080. Run `npm run build` again any time to pull
-the latest news.
+Then open http://localhost:8080. While `npm run dev` is running, the news
+keeps itself fresh: whenever someone loads the site and the news is more
+than 15 minutes old, a refresh starts in the background (visitors never
+wait for it), and an open page checks every couple of minutes and offers
+the new stories. Set `REFRESH_MINUTES` to change the 15, or to `0` to turn
+it off. `npm run build` still pulls the latest news by hand.
 
 | Command | What it does |
 |---|---|
 | `npm run build` | Fetch all feeds, group stories, write `public/data/*.json` |
-| `npm run dev` | Serve the site at http://localhost:8080 |
+| `npm run dev` | Serve the site at http://localhost:8080, refreshing the news on visits |
 | `npm start` | Build, then serve |
 | `npm test` | Run the tests |
 | `npm run check:feeds` | Check every outlet's feed is alive and fresh |

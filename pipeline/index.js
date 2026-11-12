@@ -4,7 +4,7 @@
 //
 // Run: npm run build
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, renameSync, statSync, unlinkSync, writeFileSync } from "node:fs";
 import { fetchAllSources } from "./fetch.js";
 import { normalizeItem } from "./normalize.js";
 import { nonNewsKind } from "./opinion.js";
@@ -18,8 +18,69 @@ import { leanGroup } from "./util.js";
 
 const STORE_PATH = "data/store.json";
 const OUT_DIR = "public/data";
+const LOCK_PATH = "data/.build.lock";
+const LOCK_STALE_MINUTES = 10;
+/** Exit code when another build already holds the lock (EX_TEMPFAIL). scripts/refresh.js relies on it. */
+const EXIT_BUSY = 75;
 
 if (existsSync(".env")) process.loadEnvFile(".env");
+
+/**
+ * Only one build at a time across all processes (two local servers, a server
+ * plus a manual `npm run build`): they share data/store.json and public/data.
+ * A lock older than LOCK_STALE_MINUTES is assumed to be left over from a
+ * crashed build and is taken over.
+ */
+function acquireLock() {
+  mkdirSync("data", { recursive: true });
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      writeFileSync(LOCK_PATH, `${process.pid} ${new Date().toISOString()}`, { flag: "wx" });
+      process.on("exit", () => {
+        try {
+          unlinkSync(LOCK_PATH);
+        } catch {}
+      });
+      // Ctrl+C or a kill skips the "exit" event unless we turn it into a normal exit.
+      for (const signal of ["SIGINT", "SIGTERM"]) process.once(signal, () => process.exit(130));
+      return true;
+    } catch (err) {
+      if (err.code !== "EEXIST") throw err;
+      let ageMinutes = Infinity;
+      try {
+        ageMinutes = (Date.now() - statSync(LOCK_PATH).mtimeMs) / 60000;
+      } catch {}
+      if (ageMinutes < LOCK_STALE_MINUTES) return false;
+      try {
+        unlinkSync(LOCK_PATH);
+      } catch {}
+    }
+  }
+  return false;
+}
+
+/**
+ * Write via a temp file + rename so a server reading the file mid-build never
+ * sees half of it. Windows can briefly refuse the rename while the old file is
+ * being read, so retry a few times before falling back to a plain write.
+ */
+function writeAtomic(path, data) {
+  const tmp = `${path}.tmp-${process.pid}`;
+  writeFileSync(tmp, data);
+  for (let attempt = 0; attempt < 10; attempt++) {
+    try {
+      renameSync(tmp, path);
+      return;
+    } catch (err) {
+      if (err.code !== "EPERM" && err.code !== "EBUSY" && err.code !== "EACCES") throw err;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50); // sleep 50ms
+    }
+  }
+  writeFileSync(path, data);
+  try {
+    unlinkSync(tmp);
+  } catch {}
+}
 
 function loadStore() {
   if (!existsSync(STORE_PATH)) return {};
@@ -57,7 +118,10 @@ async function main() {
     process.exit(1);
   }
 
-  mkdirSync("data", { recursive: true });
+  if (!acquireLock()) {
+    console.log("Another build is already running, so this one is skipping. Its results will show up shortly.");
+    process.exit(EXIT_BUSY);
+  }
   mkdirSync(OUT_DIR, { recursive: true });
   const now = new Date();
 
@@ -126,7 +190,7 @@ async function main() {
   if (news.length < (settings.safety?.minArticles ?? 30)) {
     fail(`only ${news.length} news articles in the window, which looks like a fetch problem.`);
   }
-  writeFileSync(STORE_PATH, JSON.stringify({ savedAt: now.toISOString(), articles: store }));
+  writeAtomic(STORE_PATH, JSON.stringify({ savedAt: now.toISOString(), articles: store }));
   console.log(
     `In the ${settings.windowHours}h window: ${news.length} news + ${opinion.length} opinion articles (${fresh} new this run; ${dropped} podcasts/newsletters/live blogs dropped)`
   );
@@ -184,7 +248,7 @@ async function main() {
       .map((s) => s.id),
     perspectives: stories.filter((s) => s.perspectives).map((s) => s.id),
   };
-  writeFileSync(`${OUT_DIR}/news.json`, JSON.stringify(out));
+  writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));
 
   const sourcesOut = {
     version: 1,
@@ -202,7 +266,7 @@ async function main() {
       itemsThisRun: feedHealth[s.id]?.items ?? 0,
     })),
   };
-  writeFileSync(`${OUT_DIR}/sources.json`, JSON.stringify(sourcesOut, null, 2));
+  writeAtomic(`${OUT_DIR}/sources.json`, JSON.stringify(sourcesOut, null, 2));
 
   if (downNews.length) console.warn(`News outlets with no working feed this run: ${downNews.map((s) => s.name).join(", ")}`);
   console.log(`Wrote ${OUT_DIR}/news.json and ${OUT_DIR}/sources.json in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
