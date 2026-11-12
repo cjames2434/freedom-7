@@ -1,4 +1,6 @@
-# Even Keel
+# Freedom 7
+
+(Formerly "Even Keel". The site name and tagline live in `config/settings.json`.)
 
 A free news site that tries to be as close to unbiased as possible. Instead
 of telling you what to think, it shows you every story the way outlets
@@ -10,11 +12,17 @@ nothing to run (an optional AI feature costs a little; see below).
 
 ## How it stays neutral
 
-- **Balanced roster.** 29 outlets: 5 left, 6 lean-left, 7 center, 6
+- **Balanced roster.** 29 news outlets: 5 left, 6 lean-left, 7 center, 6
   lean-right, 5 right ([`config/sources.json`](config/sources.json)). The
   roster must mirror itself; the build refuses to run if it doesn't.
-- **Opinion filtered out.** Op-eds, columns, editorials, podcasts and
-  newsletters are dropped. Only straight news gets grouped.
+- **Opinion kept separate.** Op-eds, columns, editorials and commentary
+  never count as news coverage. Outlets whose feeds are mostly commentary
+  (National Review's main feed, The Free Press, The Atlantic's Ideas
+  section, The New Republic, Slate) are marked as opinion feeds. Podcasts,
+  newsletters and live blogs are dropped.
+- **Perspectives, always in pairs.** Opinion pieces are matched to the news
+  story they're about and shown only when both the left and the right wrote
+  about it, in equal numbers. The opinion roster is mirrored too.
 - **Same event, every side.** Articles about the same event are grouped
   into one story, so you can see who covered it and how each side headlined it.
 - **Plainest headline wins.** The headline shown is the one with the least
@@ -25,6 +33,8 @@ nothing to run (an optional AI feature costs a little; see below).
   how much of the spectrum covers them, and recency. Never by clicks.
 - **Blindspots.** Stories covered mostly by one side are called out, so you
   can see what the other side's readers are hearing about.
+- **Developing.** Stories that several outlets published on in the last 3
+  hours are flagged, for a Live-style view.
 - **Optional AI briefs.** With an API key, Claude writes a short neutral
   summary for bigger stories, using only what the outlets reported, with
   claims attributed and a "how each side framed it" section.
@@ -61,16 +71,16 @@ the latest news.
 ## How it works
 
 ```
-config/sources.json ─► fetch RSS ─► clean ─► drop opinion ─► group same-event articles
-                                                                   │
-public/data/news.json ◄─ (optional AI briefs) ◄─ rank ◄─ pick plainest headline
+config/sources.json ─► fetch RSS ─► clean ─► split news / opinion ─► group same-event news
+                                                                          │
+public/data/news.json ◄─ (optional AI briefs) ◄─ match opinion in pairs ◄─ rank ◄─ pick plainest headline
 ```
 
 | Path | Purpose |
 |---|---|
 | `config/sources.json` | Outlets, their lean, and feed URLs |
 | `config/settings.json` | Site name, time window, clustering threshold, AI settings |
-| `pipeline/` | The build: `fetch`, `normalize`, `opinion`, `cluster`, `stories`, `language`, `topics`, `summarize` |
+| `pipeline/` | The build: `fetch`, `normalize`, `opinion`, `cluster`, `stories`, `perspectives`, `language`, `topics`, `summarize` |
 | `public/` | The website (placeholder UI) plus generated `data/` |
 | `docs/` | Data contract, Claude Design brief, sample data |
 | `.github/workflows/update.yml` | Hourly rebuild and deploy to GitHub Pages |
@@ -143,7 +153,12 @@ approximate the consensus of public media-bias raters (AllSides, Ad Fontes
 Media, Media Bias/Fact Check). They're judgment calls: review them with your
 friends and change what you disagree with.
 
-Keep it mirrored (same count of `left` and `right`, and of `lean-left` and
+A feed is either a plain URL (news) or `{ "url": "...", "kind": "opinion" }`
+for a feed that is mostly commentary. Opinion feeds never count as coverage;
+they only supply Perspectives.
+
+Keep both rosters mirrored (outlets with a news feed, and outlets with an
+opinion feed: same count of `left` and `right`, and of `lean-left` and
 `lean-right`), then run `npm run check:balance` and `npm run check:feeds`.
 
 AP and Reuters are not included because they don't offer public RSS feeds;
@@ -160,6 +175,12 @@ their stories arrive through the outlets that run them.
 - `minSourcesForStory`: outlets needed before a story appears (default 2).
 - `minPartisanSourcesForBlindspot`, `blindspotShare`: when a story counts
   as a blindspot (default: 3+ partisan outlets, 80% from one side).
+- `developing`: how many outlets in how many hours flags a story as developing.
+- `perspectives.threshold`: how closely an opinion piece must match a story.
+  Pieces must also name a person, place or company from the story.
+- `safety`: the build stops without publishing if fewer than half the news
+  outlets respond or there are under 30 articles, so an outage never
+  replaces the live site with an empty one.
 
 ## Etiquette and limits
 

@@ -3,76 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Even Keel</title>
-  <meta name="description" content="Every side of the story, side by side. Free, no ads, no tracking.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23222'/%3E%3Cpath d='M6 20h20M16 8v12' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>Freedom 7</title>
+  <meta name="description" content="Every side of the story, side by side. Free, no ads, no accounts, no tracking.">
+  <meta name="theme-color" content="#F3F1EC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B1630" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!--
-    PLACEHOLDER UI. This is a plain, working front end so the data pipeline
-    can be tested end to end. Replace it with the Claude Design version; see
-    docs/DESIGN_BRIEF.md and docs/DATA_CONTRACT.md. Keep reading from
-    data/news.json and data/sources.json and the rest keeps working.
+    Front end for the data in data/news.json and data/sources.json
+    (shape: docs/DATA_CONTRACT.md). Design: the Freedom 7 newspaper look,
+    mapped onto this data per docs/DESIGN_BRIEF.md. Plain HTML/CSS/JS,
+    self-hosted fonts, no third-party requests except publisher images.
   -->
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="#/">
-        <span class="brand-name" id="site-name">Even Keel</span>
-        <span class="brand-tagline" id="site-tagline">Every side of the story, side by side.</span>
-      </a>
+  <a class="skip-link" href="#app">Skip to the news</a>
+
+  <div class="utility">
+    <div class="wrap utility-row">
+      <p class="dateline"><span id="dateline"></span><span id="updated"></span></p>
+      <nav class="utility-nav" aria-label="Site">
+        <a href="#/about" data-nav="about">How it works</a>
+        <a href="#/sources" data-nav="sources">Sources</a>
+        <a href="#/saved" data-nav="saved">Saved<span class="saved-count" id="saved-count"></span></a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="wordmark" href="#/" id="wordmark">Freedom <span class="wm-accent">7</span></a>
+      <p class="tagline">
+        <svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.245 6.91h7.266l-5.878 4.27 2.245 6.91L12 16.82l-5.878 4.27 2.245-6.91-5.878-4.27h7.266z"/></svg>
+        <span id="site-tagline">Every side of the story, side by side.</span>
+        <svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.245 6.91h7.266l-5.878 4.27 2.245 6.91L12 16.82l-5.878 4.27 2.245-6.91-5.878-4.27h7.266z"/></svg>
+      </p>
+    </div>
+    <div class="wrap">
+      <div class="double-rule" aria-hidden="true"></div>
       <nav class="main-nav" aria-label="Main">
         <a href="#/" data-nav="home">Top stories</a>
+        <a href="#/live" data-nav="live">Developing</a>
         <a href="#/blindspots" data-nav="blindspots">Blindspots</a>
+        <a href="#/perspectives" data-nav="perspectives">Perspectives</a>
         <a href="#/sources" data-nav="sources">Sources</a>
         <a href="#/about" data-nav="about">How it works</a>
       </nav>
+      <nav class="topic-row" id="topic-row" aria-label="Topics"></nav>
     </div>
-    <div class="wrap topic-row" id="topic-row" role="navigation" aria-label="Topics"></div>
   </header>
 
-  <main class="wrap" id="app" tabindex="-1">
-    <p class="loading">Loading the news&hellip;</p>
+  <main id="app" tabindex="-1">
+    <div class="wrap"><p class="loading">Loading the news&hellip;</p></div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p id="footer-stats"></p>
-      <p>Free to use. No ads, no accounts, no tracking. Headlines link to the original publishers.</p>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="wordmark wordmark-footer" id="footer-wordmark">Freedom <span class="wm-accent">7</span></span>
+        <p class="footer-tagline" id="footer-tagline">Every side of the story, side by side.</p>
+      </div>
+      <div class="footer-text">
+        <p id="footer-stats"></p>
+        <p>Free. No ads, no accounts, no tracking. Every headline links to the original publisher.</p>
+        <p class="footer-links"><a href="#/about">How it works</a><a href="#/sources">Sources</a><a href="#/perspectives">Perspectives</a><a href="#/blindspots">Blindspots</a></p>
+      </div>
     </div>
   </footer>
 
   <template id="about-template">
-    <article class="prose">
-      <h1>How it works</h1>
-      <p>Every story on this site is built from the same event as reported by many outlets across the political spectrum. You see who covered it, how each side headlined it, and a plain-language version on top.</p>
+    <div class="wrap">
+      <article class="prose">
+        <p class="page-kicker">Methodology</p>
+        <h1 class="page-title">How it works</h1>
+        <p class="lede">Every story on this site is built from the same event as reported by many outlets across the political spectrum. You see who covered it, how each side headlined it, and a plain-language version on top.</p>
 
-      <h2>1. A balanced set of outlets</h2>
-      <p>We read the public RSS feeds of news outlets rated left, lean-left, center, lean-right and right by public media-bias raters. The roster is mirrored: the same number of outlets on the left as on the right, and the build refuses to run if that ever drifts. The full list is on the <a href="#/sources">Sources</a> page.</p>
+        <h2><span class="step">1</span>A balanced set of outlets</h2>
+        <p>We read the public RSS feeds of news outlets rated left, lean-left, center, lean-right and right by public media-bias raters. The roster is mirrored: the same number of outlets on the left as on the right, and the build refuses to run if that ever drifts. The full list is on the <a href="#/sources">Sources</a> page.</p>
 
-      <h2>2. Opinion is filtered out</h2>
-      <p>Opinion columns, editorials, podcasts and newsletters are dropped before anything else happens. Those are where slant lives; we only group straight news.</p>
+        <h2><span class="step">2</span>Opinion is kept separate</h2>
+        <p>Opinion columns, editorials and commentary never count as news coverage; that's where slant lives. Podcasts, newsletters and live blogs are dropped. Opinion only appears in <a href="#/perspectives">Perspectives</a>, and only when both the left and the right have written about a story, in equal numbers.</p>
 
-      <h2>3. Same event, grouped together</h2>
-      <p>Articles about the same event are grouped automatically by comparing their headlines and excerpts. Each story shows how many outlets on each side covered it.</p>
+        <h2><span class="step">3</span>Same event, grouped together</h2>
+        <p>Articles about the same event are grouped automatically by comparing their headlines and excerpts. Each story shows how many outlets on each side covered it.</p>
 
-      <h2>4. The plainest headline wins</h2>
-      <p>For each story we show the headline with the least loaded wording (words like "slams", "destroys" or "bombshell", which every side uses), preferring outlets nearer the center. When AI briefs are switched on, a short neutral summary is written using only what the outlets reported, with claims attributed to whoever made them. Every outlet's own headline is always listed underneath.</p>
+        <h2><span class="step">4</span>The plainest headline wins</h2>
+        <p>For each story we show the headline with the least loaded wording (words like "slams", "destroys" or "bombshell", which every side uses), preferring outlets nearer the center. When AI briefs are switched on, a short neutral summary is written using only what the outlets reported, with claims attributed to whoever made them. Every outlet's own headline is always listed underneath.</p>
 
-      <h2>5. Ranking without outrage</h2>
-      <p>Stories rank higher when more outlets cover them, when outlets from more of the spectrum cover them, and when they are recent. There is no personalisation and nothing is ranked by clicks, shares or engagement.</p>
+        <h2><span class="step">5</span>Ranking without outrage</h2>
+        <p>Stories rank higher when more outlets cover them, when outlets from more of the spectrum cover them, and when they are recent. There is no personalisation and nothing is ranked by clicks, shares or engagement.</p>
 
-      <h2>6. Blindspots</h2>
-      <p>A blindspot is a story mostly covered by one side. Reading them is the quickest way to see what the other side's readers are hearing about.</p>
+        <h2><span class="step">6</span>Blindspots</h2>
+        <p>A blindspot is a story mostly covered by one side. Reading them is the quickest way to see what the other side's readers are hearing about.</p>
 
-      <h2>Limits</h2>
-      <ul>
-        <li>Bias ratings are judgments, and outlets change. They are editable and listed openly.</li>
-        <li>Automatic grouping sometimes splits one event into two stories or groups two related events together.</li>
-        <li>We only see headlines and short excerpts, never full articles. Read the originals for the full picture.</li>
-        <li>AP and Reuters don't offer public feeds, so wire stories reach us through the outlets that run them.</li>
-      </ul>
-    </article>
+        <h2>Limits</h2>
+        <ul>
+          <li>Bias ratings are judgments, and outlets change. They are editable and listed openly.</li>
+          <li>Automatic grouping sometimes splits one event into two stories or groups two related events together.</li>
+          <li>We only see headlines and short excerpts, never full articles. Read the originals for the full picture.</li>
+          <li>AP and Reuters don't offer public feeds, so wire stories reach us through the outlets that run them.</li>
+        </ul>
+      </article>
+    </div>
   </template>
 
   <script src="js/app.js" type="module"></script>

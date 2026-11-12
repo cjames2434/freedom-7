@@ -6,6 +6,12 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["scripts/serve.js"],
       "port": 8080
+    },
+    {
+      "name": "news-site-8081",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "process.env.PORT='8081'; import('./scripts/serve.js')"],
+      "port": 8081
     }
   ]
 }

@@ -4,9 +4,11 @@ Guidance for Claude Code in this repository.
 
 ## What this is
 
-Even Keel: a free, static, balanced news site for a small group of friends.
+Freedom 7 (formerly Even Keel; the name comes from `siteName` in
+`config/settings.json`): a free, static, balanced news site for a small
+group of friends.
 A Node build (`pipeline/`) reads RSS feeds from a mirrored roster of outlets
-(left to right), drops opinion pieces, groups articles about the same event,
+(left to right), keeps opinion separate from news, groups articles about the same event,
 picks the least loaded headline, optionally adds a neutral Claude-written
 brief, and writes `public/data/news.json` + `public/data/sources.json`. The
 front end in `public/` only reads those two files. Hosted on GitHub Pages,
@@ -21,8 +23,12 @@ rebuilt hourly by `.github/workflows/update.yml`.
 
 ## Rules that protect neutrality (don't break these)
 
-- The roster in `config/sources.json` must stay mirrored: equal `left` and
-  `right`, equal `lean-left` and `lean-right`. A test and the build enforce it.
+- Two rosters in `config/sources.json` must stay mirrored (outlets with a
+  news feed, and outlets with an opinion feed): equal `left` and `right`,
+  equal `lean-left` and `lean-right`. A test and the build enforce it.
+- Opinion never counts as coverage. It is only shown via `perspectives`
+  (`pipeline/perspectives.js`), which requires both sides and trims them to
+  equal counts.
 - Word lists in `pipeline/language.js` must stay side-neutral; every
   contested term needs a counterpart from the other side.
 - Ranking (`pipeline/stories.js`) must not use engagement signals.
@@ -33,9 +39,47 @@ rebuilt hourly by `.github/workflows/update.yml`.
 
 `public/` is a placeholder meant to be replaced by a Claude Design export.
 The contract it must honour is `docs/DATA_CONTRACT.md`; the design brief is
-`docs/DESIGN_BRIEF.md`. Keep hash routes (`#/`, `#/topic/<id>`,
-`#/story/<id>`, `#/blindspots`, `#/sources`, `#/about`), escape all feed text,
-and only render http(s) links.
+`docs/DESIGN_BRIEF.md` (its "Fitting an existing design" table maps
+newspaper-style designs onto this data). Keep hash routes (`#/`,
+`#/topic/<id>`, `#/story/<id>`, `#/blindspots`, `#/perspectives`,
+`#/sources`, `#/about`), escape all feed text, and only render http(s) links.
+
+The front end in `public/` is now the Freedom 7 newspaper design (from the
+"USA Patriot news app" design session), ported onto this data with the
+mapping table: no staff-written articles, "Most covered" instead of "Most
+read", opinion only via Perspectives, "Developing" instead of a red Live
+banner. Brand colours (navy, red) are for the wordmark only; the spectrum
+uses teal / stone / ochre tokens (`--left`, `--center`, `--right`). Fonts
+are self-hosted in `public/fonts/` (OFL). Extra routes beyond the list
+above: `#/live` (developing timelines) and `#/saved` (localStorage).
+
+The design session keeps `public/` in step with the Freedom 7 design canvas:
+it checks the canvas for edits every few hours while it's open, and a canvas
+comment that mentions @claude reaches it directly. Local preview for that
+session runs on port 8081 (`news-site-8081` in `.claude/launch.json`) so it
+doesn't collide with `npm run dev` on 8080. Routine build/test/read-only git
+commands are pre-approved in `.claude/settings.local.json` (git-ignored).
+
+## Two sessions work in this folder
+
+The user runs two Claude Code sessions here at once and wants them to talk
+to each other directly, without the user relaying or approving messages:
+
+- **Data/pipeline session** ("Unbiased news application") owns `pipeline/`,
+  `config/sources.json`, `config/settings.json` (except `siteName` and
+  `tagline`), `test/`, `scripts/` (except `serve.js`), `docs/DATA_CONTRACT.md`,
+  `docs/sample-*.json`, `.github/workflows/`.
+- **Design/UI session** ("USA Patriot news app") owns `public/`,
+  `scripts/serve.js`, `docs/DESIGN_BRIEF.md`, `.claude/launch.json`, and the
+  `siteName`/`tagline` lines.
+- Shared (`README.md`, this file): re-read right before editing, change only
+  your own sections, and tell the other session what you changed.
+
+To change something the other session owns, or to need a new data field,
+send it a message (`ListAgents`, then `SendMessage`; reply by copying the
+`from` attribute). Never `git add -A`: stage only your own paths, and commit
+only when the user has OK'd it. Ask the user only for product decisions
+(names, look, cost), not to pass messages along.
 
 ## AI briefs
 
