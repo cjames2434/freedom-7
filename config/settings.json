@@ -24,6 +24,12 @@
     "minRecentSources": 3
   },
 
+  "related": {
+    "minSimilarity": 0.2,
+    "strongSimilarity": 0.4,
+    "maxRelated": 5
+  },
+
   "perspectives": {
     "threshold": 0.12,
     "maxPerSide": 2,

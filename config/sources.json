@@ -80,6 +80,32 @@
       "notes": "Commentary and analysis magazine, used for Perspectives only."
     },
     {
+      "id": "thenation",
+      "name": "The Nation",
+      "lean": "left",
+      "homepage": "https://www.thenation.com",
+      "feeds": [
+        {
+          "url": "https://www.thenation.com/feed/?post_type=article",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Opinion magazine, used for Perspectives only."
+    },
+    {
+      "id": "jacobin",
+      "name": "Jacobin",
+      "lean": "left",
+      "homepage": "https://jacobin.com",
+      "feeds": [
+        {
+          "url": "https://jacobin.com/feed/",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Opinion magazine, used for Perspectives only."
+    },
+    {
       "id": "nytimes",
       "name": "The New York Times",
       "lean": "lean-left",
@@ -153,6 +179,19 @@
         }
       ],
       "notes": "Ideas section (commentary), used for Perspectives only."
+    },
+    {
+      "id": "washpost",
+      "name": "The Washington Post",
+      "lean": "lean-left",
+      "homepage": "https://www.washingtonpost.com",
+      "feeds": [
+        {
+          "url": "https://feeds.washingtonpost.com/rss/opinions",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Opinions section, used for Perspectives only."
     },
     {
       "id": "bbc",
@@ -254,7 +293,11 @@
       "lean": "lean-right",
       "homepage": "https://www.washingtontimes.com",
       "feeds": [
-        "https://www.washingtontimes.com/rss/headlines/news/"
+        "https://www.washingtontimes.com/rss/headlines/news/",
+        {
+          "url": "https://www.washingtontimes.com/rss/headlines/opinion/commentary/",
+          "kind": "opinion"
+        }
       ]
     },
     {
@@ -351,6 +394,32 @@
         }
       ],
       "notes": "News feed counts as coverage; the main feed (mostly commentary) is used for Perspectives only."
+    },
+    {
+      "id": "federalist",
+      "name": "The Federalist",
+      "lean": "right",
+      "homepage": "https://thefederalist.com",
+      "feeds": [
+        {
+          "url": "https://thefederalist.com/feed/",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Opinion magazine, used for Perspectives only."
+    },
+    {
+      "id": "townhall",
+      "name": "Townhall",
+      "lean": "right",
+      "homepage": "https://townhall.com",
+      "feeds": [
+        {
+          "url": "https://townhall.com/columnists/feed",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Columnists feed, used for Perspectives only."
     }
   ]
 }

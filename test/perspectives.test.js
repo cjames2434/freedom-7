@@ -53,7 +53,7 @@ test("Perspectives: equal numbers from each side, only when both sides wrote", (
     art("C1", "Unrelated column about baseball", "The season ended."),
   ];
   // Tiny corpus, so similarities are low; the name requirement does the real filtering here.
-  const count = attachPerspectives([story], newsArticles, opinion, sourcesById, { threshold: 0.01 });
+  const count = attachPerspectives([story], newsArticles, opinion, sourcesById, { threshold: 0.01 }).length;
   assert.equal(count, 1);
   assert.equal(story.perspectives.left.length, 1, "left is trimmed to match the right");
   assert.equal(story.perspectives.right.length, 1);
@@ -66,7 +66,7 @@ test("Perspectives: one-sided opinion is never shown", () => {
     art("L1", "Delgado Is the Wrong Pick for Treasury", "Maria Delgado's record at the Treasury."),
     art("L2", "Delgado and the Treasury", "Maria Delgado confirmed by the Senate."),
   ];
-  assert.equal(attachPerspectives([story], newsArticles, opinion, sourcesById, { threshold: 0.05 }), 0);
+  assert.equal(attachPerspectives([story], newsArticles, opinion, sourcesById, { threshold: 0.05 }).length, 0);
   assert.equal(story.perspectives, null);
 });
 
@@ -76,7 +76,7 @@ test("Perspectives: a headline must name something from the story", () => {
     art("L1", "The Senate Has Lost Its Way", "The Senate voted again on Tuesday."),
     art("R2", "Why the Senate Still Matters", "Senators voted on Tuesday."),
   ];
-  assert.equal(attachPerspectives([story], newsArticles, opinion, sourcesById, { threshold: 0.01 }), 0);
+  assert.equal(attachPerspectives([story], newsArticles, opinion, sourcesById, { threshold: 0.01 }).length, 0);
 });
 
 test("developing flag needs several outlets in the last few hours", () => {

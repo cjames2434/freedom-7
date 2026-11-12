@@ -11,6 +11,8 @@ import { nonNewsKind } from "./opinion.js";
 import { clusterArticles } from "./cluster.js";
 import { buildStories } from "./stories.js";
 import { attachPerspectives } from "./perspectives.js";
+import { linkRelated } from "./related.js";
+import { buildStoryIndex } from "./storyindex.js";
 import { addSummaries, aiEnabled } from "./summarize.js";
 import { checkBalance, hasKind, loadSources } from "./sources.js";
 import { TOPICS } from "./topics.js";
@@ -200,9 +202,14 @@ async function main() {
   const stories = buildStories(clusters, news, sourcesById, settings, now);
   console.log(`Clusters: ${clusters.length}; stories with ${settings.minSourcesForStory}+ outlets: ${stories.length}`);
 
-  // 5. Balanced opinion
-  const withPerspectives = attachPerspectives(stories, news, opinion, sourcesById, settings.perspectives);
-  console.log(`Perspectives (opinion from both sides): ${withPerspectives} stories`);
+  // 5. Related stories (one subject split across several stories), then
+  //    balanced opinion pooled across each group of related stories
+  const storyIndex = buildStoryIndex(stories, news, opinion, { maxEntityShare: settings.perspectives?.maxEntityShare });
+  const families = linkRelated(stories, storyIndex, settings.related);
+  const grouped = families.filter((f) => f.length > 1);
+  console.log(`Related: ${grouped.length} groups covering ${grouped.reduce((n, f) => n + f.length, 0)} stories`);
+  const perspectiveLeads = attachPerspectives(stories, news, opinion, sourcesById, { ...settings.perspectives, index: storyIndex });
+  console.log(`Perspectives (opinion from both sides): ${perspectiveLeads.length} subjects`);
 
   // 6. Optional AI briefs
   const ai = await addSummaries(stories, settings);
@@ -246,7 +253,7 @@ async function main() {
       .filter((s) => s.developing)
       .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
       .map((s) => s.id),
-    perspectives: stories.filter((s) => s.perspectives).map((s) => s.id),
+    perspectives: perspectiveLeads, // one id per group of related stories
   };
   writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));
 

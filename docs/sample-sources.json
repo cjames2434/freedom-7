@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T04:26:49.305Z",
+  "generatedAt": "2026-11-12T18:43:36.366Z",
   "balance": {
     "left": 5,
     "lean-left": 6,
@@ -9,11 +9,11 @@
     "right": 5
   },
   "opinionBalance": {
-    "left": 2,
-    "lean-left": 3,
+    "left": 4,
+    "lean-left": 4,
     "center": 1,
-    "lean-right": 3,
-    "right": 2
+    "lean-right": 4,
+    "right": 4
   },
   "sources": [
     {
@@ -101,6 +101,30 @@
       "itemsThisRun": 25
     },
     {
+      "id": "thenation",
+      "name": "The Nation",
+      "lean": "left",
+      "homepage": "https://www.thenation.com",
+      "notes": "Opinion magazine, used for Perspectives only.",
+      "roles": [
+        "opinion"
+      ],
+      "status": "ok",
+      "itemsThisRun": 40
+    },
+    {
+      "id": "jacobin",
+      "name": "Jacobin",
+      "lean": "left",
+      "homepage": "https://jacobin.com",
+      "notes": "Opinion magazine, used for Perspectives only.",
+      "roles": [
+        "opinion"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
+    },
+    {
       "id": "nytimes",
       "name": "The New York Times",
       "lean": "lean-left",
@@ -111,7 +135,7 @@
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 57
+      "itemsThisRun": 62
     },
     {
       "id": "npr",
@@ -187,6 +211,18 @@
       "itemsThisRun": 25
     },
     {
+      "id": "washpost",
+      "name": "The Washington Post",
+      "lean": "lean-left",
+      "homepage": "https://www.washingtonpost.com",
+      "notes": "Opinions section, used for Perspectives only.",
+      "roles": [
+        "opinion"
+      ],
+      "status": "ok",
+      "itemsThisRun": 26
+    },
+    {
       "id": "bbc",
       "name": "BBC News",
       "lean": "center",
@@ -196,7 +232,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 54
+      "itemsThisRun": 53
     },
     {
       "id": "thehill",
@@ -221,7 +257,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 18
+      "itemsThisRun": 13
     },
     {
       "id": "csmonitor",
@@ -257,7 +293,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 25
+      "itemsThisRun": 24
     },
     {
       "id": "dw",
@@ -304,10 +340,11 @@
       "homepage": "https://www.washingtontimes.com",
       "notes": null,
       "roles": [
-        "news"
+        "news",
+        "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 20
+      "itemsThisRun": 40
     },
     {
       "id": "dispatch",
@@ -418,6 +455,30 @@
       ],
       "status": "ok",
       "itemsThisRun": 40
+    },
+    {
+      "id": "federalist",
+      "name": "The Federalist",
+      "lean": "right",
+      "homepage": "https://thefederalist.com",
+      "notes": "Opinion magazine, used for Perspectives only.",
+      "roles": [
+        "opinion"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
+    },
+    {
+      "id": "townhall",
+      "name": "Townhall",
+      "lean": "right",
+      "homepage": "https://townhall.com",
+      "notes": "Columnists feed, used for Perspectives only.",
+      "roles": [
+        "opinion"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
     }
   ]
 }

@@ -107,13 +107,15 @@ The current UI in `public/` is a working placeholder. To replace it:
 
 ## Put it online (free)
 
-GitHub Pages hosts it and GitHub Actions rebuilds it every hour.
+GitHub Pages hosts it and GitHub Actions rebuilds it every 15 minutes.
 
 1. Create a **public** GitHub repository (Pages is free for public repos) and
    push this folder to its `main` branch.
 2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 3. **Actions → Update news → Run workflow** for the first build. After that it
-   runs every hour on its own.
+   runs every 15 minutes on its own (GitHub sometimes starts scheduled runs a
+   few minutes late). Keep the repository public: on a private one, runs this
+   often would use up the free monthly Actions minutes in about two weeks.
 4. Your site is at `https://<your-username>.github.io/<repo-name>/`.
 
 Notes:
@@ -180,6 +182,9 @@ their stories arrive through the outlets that run them.
 - `minPartisanSourcesForBlindspot`, `blindspotShare`: when a story counts
   as a blindspot (default: 3+ partisan outlets, 80% from one side).
 - `developing`: how many outlets in how many hours flags a story as developing.
+- `related`: how similar two stories must be to count as the same ongoing
+  subject (they must also share a person, place or company name, unless very
+  similar). Related stories are listed together, and share Perspectives.
 - `perspectives.threshold`: how closely an opinion piece must match a story.
   Pieces must also name a person, place or company from the story.
 - `safety`: the build stops without publishing if fewer than half the news
@@ -190,7 +195,7 @@ their stories arrive through the outlets that run them.
 
 - The site shows headlines, short feed excerpts and links. It never copies
   full articles; readers click through to the publisher.
-- Feeds are fetched once an hour with an honest user agent, which is what
+- Feeds are fetched every 15 minutes with an honest user agent, which is what
   RSS is for. Keep it non-commercial.
 - Story grouping is automatic and sometimes wrong (it may split one event
   or merge two related ones). Every outlet's headline is listed so readers

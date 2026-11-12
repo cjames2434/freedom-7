@@ -30,7 +30,7 @@ All times are ISO 8601 UTC strings. Arrays are never `null` (they may be empty).
   "stats": {
     "outlets": 29,            // news outlets in the roster
     "outletsReporting": 29,   // news outlets whose feeds worked this build
-    "opinionOutlets": 11,     // outlets with an opinion feed (Perspectives)
+    "opinionOutlets": 17,     // outlets with an opinion feed (Perspectives)
     "articlesInWindow": 661,  // news articles considered
     "opinionInWindow": 214,   // opinion pieces considered for Perspectives
     "windowHours": 48,        // how far back stories go
@@ -42,7 +42,7 @@ All times are ISO 8601 UTC strings. Arrays are never `null` (they may be empty).
   "stories": [ Story, ... ],      // already sorted by rank, best first
   "blindspots": [ "s_abc123" ],   // ids of stories that are blindspots
   "developing": [ "s_def456" ],   // ids of developing stories, most recently updated first
-  "perspectives": [ "s_ghi789" ]  // ids of stories that have balanced opinion, in rank order
+  "perspectives": [ "s_ghi789" ]  // stories with balanced opinion: one id per group of related stories (the group's top story), in rank order
 }
 ```
 
@@ -70,7 +70,9 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `mostlyCoveredBy` | `"left"` \| `"right"` \| null | Set when it's a blindspot: the side doing most of the covering. |
 | `developing` | boolean | 3+ outlets published on it in the last 3 hours. Use for a "Developing" or "Live" treatment. |
 | `recentSourceCount` | number | Outlets that published on it in the last 3 hours. |
-| `perspectives` | object \| null | Balanced opinion: `{ "left": Article[], "center": Article[], "right": Article[] }`. `left` and `right` always have the same length (1 or 2); `center` has 0 to that many. `null` unless both sides wrote opinion about the story. These are opinion pieces, never reporting; label them that way. |
+| `perspectives` | object \| null | Balanced opinion: `{ "left": Article[], "center": Article[], "right": Article[] }`. `left` and `right` always have the same length (1 or 2); `center` has 0 to that many. `null` unless both sides wrote opinion about the subject. Shared by every story in the same related group (same `familyId`), since opinion is about the subject more than one update. These are opinion pieces, never reporting; label them that way. |
+| `related` | string[] | Ids of other stories about the same ongoing subject (e.g. several updates on one scandal), most similar first, at most 5. Often empty. Every id is in `stories`. |
+| `familyId` | string | Id of the top-ranked story in this story's related group (its own id if it leads the group or has no related stories). A front page can show one card per `familyId` with "N related updates" to avoid near-duplicate cards. |
 | `score` | number | Rank score. Already applied to ordering; usually don't show it. |
 | `image` | string \| null | Publisher's image from the feed. Optional; may fail to load (hotlink). |
 | `articles` | Article[] | Every outlet's version, most on-topic first. |
@@ -99,7 +101,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
   "version": 1,
   "generatedAt": "...",
   "balance": { "left": 5, "lean-left": 6, "center": 7, "lean-right": 6, "right": 5 },        // news outlets
-  "opinionBalance": { "left": 2, "lean-left": 3, "center": 1, "lean-right": 3, "right": 2 }, // opinion outlets
+  "opinionBalance": { "left": 4, "lean-left": 4, "center": 1, "lean-right": 4, "right": 4 }, // opinion outlets
   "sources": [
     {
       "id": "npr",

@@ -11,9 +11,14 @@ const keep = new Set(news.stories.slice(0, 18).map((s) => s.id));
 for (const id of news.blindspots.slice(0, 4)) keep.add(id);
 for (const id of (news.developing || []).slice(0, 3)) keep.add(id);
 for (const id of (news.perspectives || []).slice(0, 4)) keep.add(id);
+// Keep whole related groups so every `related` / `familyId` id resolves.
+for (const s of news.stories) if (keep.has(s.id) && s.familyId) keep.add(s.familyId);
+for (const s of news.stories) if (keep.has(s.familyId)) keep.add(s.id);
 const sample = {
   ...news,
-  stories: news.stories.filter((s) => keep.has(s.id)),
+  stories: news.stories
+    .filter((s) => keep.has(s.id))
+    .map((s) => ({ ...s, related: (s.related || []).filter((id) => keep.has(id)) })),
   blindspots: news.blindspots.filter((id) => keep.has(id)),
   developing: (news.developing || []).filter((id) => keep.has(id)),
   perspectives: (news.perspectives || []).filter((id) => keep.has(id)),

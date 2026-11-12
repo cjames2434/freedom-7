@@ -24,6 +24,14 @@ const KEYWORDS = {
     "attorney general", "fbi director", "hegseth", "vance", "mamdani", "newsom", "desantis",
     "pelosi", "schumer", "thune", "jeffries", "mayor", "tariff", "tariffs",
   ],
+  // General U.S. news: crime, courts, accidents, rescues. Without these, any
+  // passing political word ("mayor", "Washington") pulled such stories into Politics.
+  us: [
+    "shooting", "shot", "gunman", "stabbing", "police", "officers", "arrested", "arrest", "charged with",
+    "murder", "homicide", "manslaughter", "suspect", "sheriff", "jury", "sentenced", "convicted", "trial",
+    "building collapse", "collapse", "missing", "rescued", "rescue", "fire", "firefighters", "crash",
+    "killed", "injured", "dead", "victims", "hijacking", "emergency landing",
+  ],
   world: [
     "ukraine", "russia", "russian", "putin", "zelensky", "kyiv", "moscow", "israel", "israeli", "gaza",
     "hamas", "hezbollah", "netanyahu", "iran", "iranian", "tehran", "china", "chinese", "beijing", "xi jinping",
@@ -91,12 +99,62 @@ function scoreText(text) {
   return scores;
 }
 
+// The section an outlet filed an article under, read from its URL
+// (/politics/..., /us-news/..., /world/...). Editors chose it, so it's a
+// stronger signal than keywords; each article's section counts as URL_WEIGHT
+// keyword hits. When several segments match (/us/politics/, /policy/defense/)
+// the later, more specific one wins.
+const URL_WEIGHT = 4;
+// Catch-all sections ("/us-news/" at The Guardian and the New York Post holds
+// politics, crime and weather alike) only count half as much.
+const BROAD_SECTIONS = new Set(["us", "us-news", "national", "nation"]);
+const URL_SECTIONS = {
+  politics: [
+    "politics", "us-politics", "elections", "election", "campaign", "campaigns", "senate", "house", "congress",
+    "administration", "white-house", "supreme-court", "immigration", "policy",
+  ],
+  world: ["world", "world-news", "international", "world-politics", "europe", "asia", "africa", "americas", "middle-east", "middleeast", "global"],
+  us: ["us", "us-news", "national", "nation", "nyregion", "metro", "crime", "crime-justice", "local", "northeast", "midwest"],
+  military: ["military", "defense", "national-security", "veterans"],
+  business: ["business", "economy", "markets", "finance", "money", "personal-finance", "real-estate", "economics", "companies"],
+  tech: ["technology", "tech", "science-tech", "artificial-intelligence", "internet", "gadgets"],
+  "science-health": ["health", "science", "climate", "environment", "energy-environment", "healthcare", "medical", "wellness", "space", "weather"],
+  sports: ["sports", "sport", "outkick-sports", "outkick", "nfl", "nba", "mlb", "nhl", "soccer", "college-football", "golf", "tennis", "olympics"],
+  culture: ["entertainment", "arts", "culture", "movies", "film", "music", "tv", "tv-and-radio", "celebrity", "books", "style", "lifestyle", "lifeandstyle", "fashion", "food", "travel"],
+};
+const SECTION_TO_TOPIC = new Map(Object.entries(URL_SECTIONS).flatMap(([topic, segs]) => segs.map((s) => [s, topic])));
+
+/** Topic implied by the article's URL section, or null. Use urlSection() for the weight. */
+export function urlTopic(url) {
+  return urlSection(url)?.topic ?? null;
+}
+
+/** { topic, broad } for the article's URL section, or null. */
+export function urlSection(url) {
+  let path;
+  try {
+    path = new URL(url).pathname.toLowerCase();
+  } catch {
+    return null;
+  }
+  const segments = path.split("/").filter((p) => p && !/^\d+$/.test(p)).slice(0, 4);
+  let found = null;
+  // Skip the last segment when there are several: it's usually the article slug.
+  for (const seg of segments.length > 1 ? segments.slice(0, -1) : segments) {
+    const topic = SECTION_TO_TOPIC.get(seg);
+    if (topic) found = { topic, broad: BROAD_SECTIONS.has(seg) };
+  }
+  return found;
+}
+
 /** Pick a topic for a group of articles. Falls back to "us" (general news). */
 export function classifyTopic(articles) {
   const total = {};
   for (const a of articles) {
     const s = scoreText(`${a.title} ${a.title} ${a.snippet || ""} ${(a.categories || []).join(" ")}`);
     for (const [k, v] of Object.entries(s)) total[k] = (total[k] || 0) + v;
+    const section = a.url ? urlSection(a.url) : null;
+    if (section) total[section.topic] = (total[section.topic] || 0) + (section.broad ? URL_WEIGHT / 2 : URL_WEIGHT);
   }
   let best = "us";
   let bestScore = 0;
