@@ -10,7 +10,7 @@
     {
       "name": "news-site-8081",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["-e", "process.env.PORT='8081'; import('./scripts/serve.js')"],
+      "runtimeArgs": ["-e", "process.env.PORT='8081'; process.env.REFRESH_MINUTES='0'; import('./scripts/serve.js')"],
       "port": 8081
     }
   ]

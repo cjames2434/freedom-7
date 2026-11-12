@@ -621,6 +621,25 @@ a.tl-title:hover { color: var(--accent); }
 .footer-links a { color: var(--on-night); min-height: 32px; display: inline-flex; align-items: center; }
 .footer-links a:hover { color: #FFFFFF; text-decoration: underline; }
 
+/* ---------- "New stories · Update" pill ---------- */
+.update-bar {
+  position: fixed; left: 0; right: 0; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 20;
+  display: flex; justify-content: center; pointer-events: none;
+}
+.update-pill {
+  pointer-events: auto; display: inline-flex; align-items: center; gap: 10px;
+  min-height: 44px; padding: 0 20px 0 16px; border: 0; border-radius: 999px;
+  background: var(--button-bg); color: var(--button-fg);
+  font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 6px 22px rgba(11, 22, 48, 0.24);
+}
+.update-pill:hover { opacity: 0.94; }
+.update-pill svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.update-pill .up-label { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.update-pill .up-sep { opacity: 0.55; }
+
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
+  .update-pill { animation: pill-in 220ms ease-out; }
+  @keyframes pill-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 }

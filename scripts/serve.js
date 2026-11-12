@@ -1,9 +1,16 @@
 // Tiny zero-dependency static server for local development.
 // Usage: npm run dev   (then open http://localhost:8080)
+//
+// Visiting the page (or the page checking data/news.json) starts a background
+// news build when the data is stale; see scripts/refresh.js.
 
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize, resolve } from "node:path";
+import { createRefresher } from "./refresh.js";
+
+const refresher = createRefresher();
+const VISIT_PATHS = new Set(["/", "/index.html", "/data/news.json"]);
 
 const ROOT = resolve("public");
 const PORT = Number(process.env.PORT || 8080);
@@ -24,6 +31,8 @@ const TYPES = {
 createServer(async (req, res) => {
   try {
     const urlPath = decodeURIComponent(new URL(req.url, "http://x").pathname);
+    // Never awaited: the visitor gets the current files straight away.
+    if (VISIT_PATHS.has(urlPath)) refresher.onVisit().catch(() => {});
     let file = normalize(join(ROOT, urlPath));
     if (!file.startsWith(ROOT)) {
       res.writeHead(403).end("Forbidden");
@@ -41,4 +50,9 @@ createServer(async (req, res) => {
   }
 }).listen(PORT, () => {
   console.log(`Serving ./public at http://localhost:${PORT}  (Ctrl+C to stop)`);
+  console.log(
+    refresher.enabled
+      ? `News refreshes when someone visits and it's over ${Number(process.env.REFRESH_MINUTES ?? 15)} minutes old (REFRESH_MINUTES=0 turns this off)`
+      : "Refresh on visit is off"
+  );
 });

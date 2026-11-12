@@ -81,6 +81,7 @@ const ICON = {
   share: svg('<path d="M12 3.5v11M7.5 8L12 3.5 16.5 8M5 13v7h14v-7"/>'),
   source: svg('<path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/>'),
   ai: svg('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'),
+  refresh: svg('<path d="M20 11a8 8 0 1 0-2.34 5.66"/><path d="M20 4v7h-7"/>'),
 };
 
 // ---------- saved stories (this device only) ----------
@@ -682,8 +683,10 @@ function setActiveNav(key, topic) {
   );
 }
 
-function route() {
-  if (speakingId && canSpeak) {
+// inPlace: re-render the current page with new data, without jumping to the
+// top or moving focus (used when fresh news arrives).
+function route({ inPlace = false } = {}) {
+  if (!inPlace && speakingId && canSpeak) {
     window.speechSynthesis.cancel();
     speakingId = null;
   }
@@ -754,7 +757,7 @@ function route() {
   setActiveNav(nav, topic);
   syncActionButtons();
   document.title = title ? `${title} · ${news.site.name}` : `${news.site.name}: ${news.site.tagline}`;
-  if (!firstRender) {
+  if (!firstRender && !inPlace) {
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
@@ -810,18 +813,124 @@ function renderChrome() {
   document.getElementById("footer-wordmark").innerHTML = wordmarkHtml(name);
   document.getElementById("site-tagline").textContent = news.site.tagline;
   document.getElementById("footer-tagline").textContent = news.site.tagline;
-  document.getElementById("updated").textContent = `Updated ${timeAgo(news.generatedAt)}`;
   document.getElementById("topic-row").innerHTML =
     `<a data-topic="all" href="#/">All</a>` +
     news.topics
       .filter((t) => news.stories.some((s) => s.topic === t.id))
       .map((t) => `<a data-topic="${esc(t.id)}" href="${topicHref(t.id)}">${esc(t.label)}</a>`)
       .join("");
+  renderStamps();
+}
+
+// "Updated X ago" lines; refreshed on every check so they don't go stale.
+function renderStamps() {
+  document.getElementById("updated").textContent = `Updated ${timeAgo(news.generatedAt)}`;
   const st = news.stats;
   document.getElementById("footer-stats").textContent =
     `Updated ${timeAgo(news.generatedAt)} · ${plural(st.stories, "story", "stories")} from ${st.outletsReporting} of ${plural(st.outlets, "outlet")} over the last ${st.windowHours} hours.` +
     (st.balanceWarning ? ` Note: ${st.balanceWarning}` : "");
 }
+
+// ---------- staying current ----------
+// While the tab is visible the page re-checks data/news.json every 2 minutes
+// and whenever the tab comes back into view. New stories never re-render under
+// the reader: a "New stories · Update" pill appears instead, except on the
+// front page at the very top, where the update is applied quietly. On the
+// local server each check also counts as a visit (scripts/refresh.js).
+const POLL_MS = 2 * 60 * 1000;
+const FIRST_RUN_POLL_MS = 10 * 1000;
+const updateBar = document.getElementById("update-bar");
+let pending = null; // { news, sources } waiting for the reader
+let pollInFlight = false;
+let started = false;
+
+async function fetchNews() {
+  const r = await fetch("data/news.json", { cache: "no-cache" });
+  if (!r.ok) throw new Error(String(r.status));
+  return r.json();
+}
+
+async function fetchSources() {
+  try {
+    const r = await fetch("data/sources.json", { cache: "no-cache" });
+    return r.ok ? await r.json() : null;
+  } catch {
+    return null;
+  }
+}
+
+function setData(n, s) {
+  news = n;
+  if (s) sources = s;
+  byId = new Map(news.stories.map((x) => [x.id, x]));
+  renderChrome();
+}
+
+function start() {
+  if (started) return;
+  started = true;
+  window.addEventListener("hashchange", () => route());
+  route();
+}
+
+const onFrontPage = () => location.hash.replace(/^#\/?/, "") === "";
+
+async function poll() {
+  if (pollInFlight || document.visibilityState !== "visible") return;
+  pollInFlight = true;
+  try {
+    const n = await fetchNews();
+    if (!news) {
+      // First run: the data just appeared.
+      setData(n, await fetchSources());
+      start();
+      return;
+    }
+    const latest = pending?.news.generatedAt ?? news.generatedAt;
+    if (n.generatedAt !== latest) {
+      pending = { news: n, sources: await fetchSources() };
+      if (onFrontPage() && window.scrollY < 80 && !speakingId) applyUpdate();
+      else showUpdatePill();
+    }
+  } catch {
+    /* offline, or no data yet: try again on the next check */
+  } finally {
+    pollInFlight = false;
+    if (news) renderStamps();
+  }
+}
+
+function applyUpdate() {
+  if (!pending) return;
+  const { news: n, sources: s } = pending;
+  pending = null;
+  hideUpdatePill();
+  const y = window.scrollY;
+  const home = onFrontPage();
+  setData(n, s);
+  route({ inPlace: true });
+  // The front page reorders, so start it from the top; elsewhere stay put.
+  window.scrollTo(0, home ? 0 : y);
+}
+
+function showUpdatePill() {
+  updateBar.innerHTML = `
+    <button type="button" class="update-pill" data-action="apply-update">
+      ${ICON.refresh}<span class="up-label">New stories</span><span class="up-sep" aria-hidden="true">·</span><span>Update</span>
+    </button>`;
+}
+
+function hideUpdatePill() {
+  updateBar.innerHTML = "";
+}
+
+updateBar.addEventListener("click", (e) => {
+  if (e.target.closest('[data-action="apply-update"]')) applyUpdate();
+});
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") poll();
+});
+setInterval(poll, POLL_MS);
 
 async function init() {
   document.getElementById("dateline").textContent = new Date().toLocaleDateString([], {
@@ -832,29 +941,19 @@ async function init() {
   });
   updateSavedCount();
   try {
-    const [n, s] = await Promise.all([
-      fetch("data/news.json", { cache: "no-cache" }).then((r) => {
-        if (!r.ok) throw new Error(String(r.status));
-        return r.json();
-      }),
-      fetch("data/sources.json", { cache: "no-cache" })
-        .then((r) => (r.ok ? r.json() : null))
-        .catch(() => null),
-    ]);
-    news = n;
-    sources = s;
+    const [n, s] = await Promise.all([fetchNews(), fetchSources()]);
+    setData(n, s);
   } catch {
     app.innerHTML = `<div class="wrap">${emptyState(
-      "No news data yet",
-      "Run <code>npm run build</code> to fetch the latest stories, then reload this page.",
+      "Getting the first batch of news",
+      "This page fills in by itself as soon as the news is ready, usually within a minute. If nothing happens, run <code>npm run build</code>.",
       { heading: "h1" }
     )}</div>`;
+    // Check more often until the first data arrives, then fall back to the normal pace.
+    const firstRun = setInterval(() => (news ? clearInterval(firstRun) : poll()), FIRST_RUN_POLL_MS);
     return;
   }
-  byId = new Map(news.stories.map((s) => [s.id, s]));
-  renderChrome();
-  window.addEventListener("hashchange", route);
-  route();
+  start();
 }
 
 init();
