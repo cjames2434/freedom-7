@@ -19,10 +19,15 @@ to persuade anyone toward any party. It gets there by showing, for every
 story, how outlets from the left, center and right each reported it, and by
 putting the plainest version on top.
 
-Each story is built automatically from ~29 outlets' RSS feeds (5 left, 6
+Each story is built automatically from 29 news outlets' RSS feeds (5 left, 6
 lean-left, 7 center, 6 lean-right, 5 right). For each story we know which
 outlets covered it, each outlet's own headline, whether a headline uses
-loaded wording, and optionally a short AI-written neutral brief.
+loaded wording, whether it's developing right now, and optionally a short
+AI-written neutral brief. Separately, opinion pieces from a mirrored set of
+outlets are matched to stories and shown only in balanced pairs.
+
+The site does not write its own articles. Every headline links out to the
+publisher. Design for an aggregator, not a newspaper with staff bylines.
 
 ## Design principles (these matter more than style)
 
@@ -73,22 +78,38 @@ loaded wording, and optionally a short AI-written neutral brief.
    - Design the page so it also looks complete without the AI brief, which
      is the common case.
 
-3. **Blindspots.** Stories covered mostly by one side, split into "Mostly
+   - When `perspectives` is set: a **Perspectives** block below the
+     headlines: Left / Center / Right columns of opinion pieces. Label it
+     clearly as opinion ("Arguments, not reporting"). Left and right always
+     have the same number of pieces.
+
+3. **Perspectives page.** Stories that have opinion from both sides (ids in
+   `perspectives`), each with its paired opinion pieces. This replaces a
+   typical "Opinion" section: there is never one-sided opinion on the site.
+
+4. **Developing.** Stories in `developing` (several outlets published in the
+   last 3 hours). Can be a strip on the front page or a "Live" tab that lists
+   the story's articles as a timeline by `published` time, newest first. The
+   data has no live-blog entries of its own; the timeline is the outlets'
+   headlines.
+
+5. **Blindspots.** Stories covered mostly by one side, split into "Mostly
    covered by left-leaning outlets" and "Mostly covered by right-leaning
    outlets". Same cards as the front page. Framing copy: this is what the
    other side's readers are hearing about. Needs a friendly empty state.
 
-4. **Sources.** The outlet roster grouped by lean (Left, Lean left, Center,
+6. **Sources.** The outlet roster grouped by lean (Left, Lean left, Center,
    Lean right, Right) with a link to each homepage and a small feed status
    (OK / down). Show the balance counts at the top.
 
-5. **How it works.** A plain-language methodology page: balanced roster,
-   opinion filtered out, same event grouped, plainest headline wins, ranking
+7. **How it works.** A plain-language methodology page: balanced roster,
+   opinion kept separate and only shown in balanced pairs, same event
+   grouped, plainest headline wins, ranking
    by coverage breadth and recency (never by clicks), blindspots, and
    honest limits. The current text is in `public/index.html` inside
    `<template id="about-template">`; restyle and tighten it.
 
-Shared: a simple header (name, tagline, nav: Top stories, Blindspots,
+Shared: a simple header (name, tagline, nav: Top stories, Blindspots, Perspectives,
 Sources, How it works) and a footer with "Updated X ago · N stories from N
 outlets" and "Free. No ads, no accounts, no tracking."
 
@@ -115,7 +136,7 @@ the samples as content; don't invent fields that aren't in the contract.
 - The site loads `data/news.json` and `data/sources.json` with `fetch` at a
   relative path.
 - Hash routing: `#/`, `#/topic/<id>`, `#/story/<id>`, `#/blindspots`,
-  `#/sources`, `#/about`.
+  `#/perspectives`, `#/sources`, `#/about`.
 - Escape all text from the JSON before inserting it as HTML (it comes from
   third-party feeds). Only render links that start with `http://` or `https://`,
   opened in a new tab with `rel="noopener noreferrer"`.
@@ -123,6 +144,23 @@ the samples as content; don't invent fields that aren't in the contract.
   System fonts or a self-hostable font are fine.
 - Colours as CSS custom properties on `:root`, with a dark-mode set under
   `@media (prefers-color-scheme: dark)`.
+
+## Fitting an existing design to this data
+
+If a design already exists (for example a newspaper-style app with Today,
+Live, Listen and Saved tabs), map it like this rather than inventing data:
+
+| Design element | Use from the data |
+|---|---|
+| Top / Rundown list | `stories` in order (already ranked) |
+| Section tabs | `topics` (Politics, World, U.S., Military, Business, ...) |
+| Live / breaking strip | `developing` stories; a timeline is the story's `articles` sorted by `published` |
+| Opinion section | Perspectives page (`perspectives`), always left and right together |
+| "Most read" | Not available, by design (no tracking). Use "Most covered": top stories by `sourceCount` |
+| Article page with full text and a staff byline | Not available. The story page is the article page: brief or snippet, coverage bar, every outlet's headline linking out |
+| Listen | Free in the browser: read `headline` + `summary` (or `snippet`) aloud with the Web Speech API (`speechSynthesis`) |
+| Saved | Store saved story ids in `localStorage` on the device (stories roll off after `windowHours`, so save the headline and links too) |
+| Accounts / "You", Follow, reader submissions, newsletter | Need a server or third-party service; leave out for now |
 
 ## Handing it back
 

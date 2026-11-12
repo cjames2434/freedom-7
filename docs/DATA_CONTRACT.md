@@ -28,20 +28,26 @@ All times are ISO 8601 UTC strings. Arrays are never `null` (they may be empty).
   "site": { "name": "Even Keel", "tagline": "Every side of the story, side by side." },
   "topics": [ { "id": "politics", "label": "Politics" }, ... ],
   "stats": {
-    "outlets": 29,            // outlets in the roster
-    "outletsReporting": 29,   // outlets whose feeds worked this build
-    "articlesInWindow": 583,  // articles considered
+    "outlets": 29,            // news outlets in the roster
+    "outletsReporting": 29,   // news outlets whose feeds worked this build
+    "opinionOutlets": 11,     // outlets with an opinion feed (Perspectives)
+    "articlesInWindow": 661,  // news articles considered
+    "opinionInWindow": 214,   // opinion pieces considered for Perspectives
     "windowHours": 48,        // how far back stories go
-    "stories": 51,
-    "aiBriefs": 0             // stories that have an AI brief
+    "stories": 63,
+    "aiBriefs": 0,            // stories that have an AI brief
+    "outletsDown": [],        // news outlets whose feed failed this build
+    "balanceWarning": null    // a sentence to show when outages tilt one side, else null
   },
-  "stories": [ Story, ... ],  // already sorted by rank, best first
-  "blindspots": [ "s_abc123", ... ]  // ids of stories in `stories` that are blindspots
+  "stories": [ Story, ... ],      // already sorted by rank, best first
+  "blindspots": [ "s_abc123" ],   // ids of stories that are blindspots
+  "developing": [ "s_def456" ],   // ids of developing stories, most recently updated first
+  "perspectives": [ "s_ghi789" ]  // ids of stories that have balanced opinion, in rank order
 }
 ```
 
-Topic ids: `politics`, `world`, `us` (general U.S. news), `business`, `tech`,
-`science-health`, `sports`, `culture`.
+Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
+`business`, `tech`, `science-health`, `sports`, `culture`.
 
 ### Story
 
@@ -62,6 +68,9 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `business`, `tech`,
 | `articleCount` | number | Articles (an outlet can have more than one). |
 | `coverage` | object | `{ "left": n, "center": n, "right": n, "byLean": { "left", "lean-left", "center", "lean-right", "right" } }`. Counts of distinct outlets. `left` = left + lean-left; `right` = right + lean-right. |
 | `mostlyCoveredBy` | `"left"` \| `"right"` \| null | Set when it's a blindspot: the side doing most of the covering. |
+| `developing` | boolean | 3+ outlets published on it in the last 3 hours. Use for a "Developing" or "Live" treatment. |
+| `recentSourceCount` | number | Outlets that published on it in the last 3 hours. |
+| `perspectives` | object \| null | Balanced opinion: `{ "left": Article[], "center": Article[], "right": Article[] }`. `left` and `right` always have the same length (1 or 2); `center` has 0 to that many. `null` unless both sides wrote opinion about the story. These are opinion pieces, never reporting; label them that way. |
 | `score` | number | Rank score. Already applied to ordering; usually don't show it. |
 | `image` | string \| null | Publisher's image from the feed. Optional; may fail to load (hotlink). |
 | `articles` | Article[] | Every outlet's version, most on-topic first. |
@@ -89,7 +98,8 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `business`, `tech`,
 {
   "version": 1,
   "generatedAt": "...",
-  "balance": { "left": 5, "lean-left": 6, "center": 7, "lean-right": 6, "right": 5 },
+  "balance": { "left": 5, "lean-left": 6, "center": 7, "lean-right": 6, "right": 5 },        // news outlets
+  "opinionBalance": { "left": 2, "lean-left": 3, "center": 1, "lean-right": 3, "right": 2 }, // opinion outlets
   "sources": [
     {
       "id": "npr",
@@ -97,6 +107,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `business`, `tech`,
       "lean": "lean-left",
       "homepage": "https://www.npr.org",
       "notes": null,            // or a short note, e.g. "Formerly MSNBC."
+      "roles": ["news"],        // "news", "opinion", or both
       "status": "ok",           // "ok" | "down" (feed failed this build)
       "itemsThisRun": 10
     }

@@ -5,6 +5,7 @@ export const TOPICS = [
   { id: "politics", label: "Politics" },
   { id: "world", label: "World" },
   { id: "us", label: "U.S." },
+  { id: "military", label: "Military" },
   { id: "business", label: "Business" },
   { id: "tech", label: "Tech" },
   { id: "science-health", label: "Science & Health" },
@@ -20,7 +21,7 @@ const KEYWORDS = {
     "midterms", "campaign", "primary", "ballot", "voter", "voters", "governor", "legislation", "bill",
     "filibuster", "impeach", "cabinet", "secretary", "supreme court", "justice department", "doj",
     "executive order", "veto", "shutdown", "poll", "polls", "redistricting", "gerrymander", "partisan",
-    "attorney general", "fbi director", "pentagon", "hegseth", "vance", "mamdani", "newsom", "desantis",
+    "attorney general", "fbi director", "hegseth", "vance", "mamdani", "newsom", "desantis",
     "pelosi", "schumer", "thune", "jeffries", "mayor", "tariff", "tariffs",
   ],
   world: [
@@ -32,6 +33,13 @@ const KEYWORDS = {
     "french", "germany", "german", "italy", "spain", "poland", "turkey", "africa", "nigeria", "sudan",
     "congo", "ethiopia", "australia", "philippines", "indonesia", "prime minister", "parliament", "kremlin",
     "ceasefire", "foreign minister", "embassy", "cuba", "haiti", "colombia",
+  ],
+  military: [
+    "military", "pentagon", "department of war", "secretary of war", "war secretary", "defense secretary",
+    "army", "navy", "marines", "marine corps", "air force", "space force", "coast guard", "national guard",
+    "troops", "soldier", "soldiers", "sailor", "sailors", "service members", "servicemembers", "veteran",
+    "veterans", "veterans affairs", "arlington", "tomb of the unknown", "military base", "deployment",
+    "deployed", "warship", "aircraft carrier", "fighter jet", "drone strike", "airstrike", "west point",
   ],
   business: [
     "stocks", "stock market", "dow", "s&p", "nasdaq", "wall street", "economy", "economic", "inflation",

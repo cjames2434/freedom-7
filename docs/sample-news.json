@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T02:08:01.130Z",
+  "generatedAt": "2026-11-12T04:26:49.305Z",
   "site": {
     "name": "Even Keel",
     "tagline": "Every side of the story, side by side."
@@ -17,6 +17,10 @@
     {
       "id": "us",
       "label": "U.S."
+    },
+    {
+      "id": "military",
+      "label": "Military"
     },
     {
       "id": "business",
@@ -42,10 +46,14 @@
   "stats": {
     "outlets": 29,
     "outletsReporting": 29,
-    "articlesInWindow": 629,
+    "opinionOutlets": 11,
+    "articlesInWindow": 661,
+    "opinionInWindow": 214,
     "windowHours": 48,
-    "stories": 52,
-    "aiBriefs": 0
+    "stories": 63,
+    "aiBriefs": 0,
+    "outletsDown": [],
+    "balanceWarning": null
   },
   "stories": [
     {
@@ -63,23 +71,26 @@
       "snippet": "Cindy Hyde-Smith conceded in a message on social media Wednesday evening.",
       "topic": "politics",
       "firstSeen": "2026-11-11T18:20:54.000Z",
-      "lastUpdated": "2026-11-12T01:48:37.000Z",
-      "sourceCount": 19,
-      "articleCount": 23,
+      "lastUpdated": "2026-11-12T02:02:37.000Z",
+      "sourceCount": 18,
+      "articleCount": 24,
       "coverage": {
         "left": 7,
         "center": 6,
-        "right": 6,
+        "right": 5,
         "byLean": {
           "left": 2,
           "lean-left": 5,
           "center": 6,
-          "lean-right": 3,
+          "lean-right": 2,
           "right": 3
         }
       },
+      "developing": true,
+      "recentSourceCount": 3,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 6.3629,
+      "score": 5.546,
       "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/Mississippi-Senate-.jpeg?w=900",
       "articles": [
         {
@@ -158,6 +169,21 @@
           }
         },
         {
+          "id": "c8775b43264a",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Democrat Scott Colom Wins Mississippi Senate Seat",
+          "url": "https://dailycaller.com/2026/11/11/democrats-flip-yet-another-deep-red-seat",
+          "published": "2026-11-12T01:48:37.000Z",
+          "snippet": "Democrats Flip Yet Another Deep Red Senate Seat",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "b70133768ada",
           "sourceId": "nbcnews",
           "sourceName": "NBC News",
@@ -173,14 +199,14 @@
           }
         },
         {
-          "id": "c8775b43264a",
-          "sourceId": "dailycaller",
-          "sourceName": "The Daily Caller",
-          "lean": "right",
-          "title": "Democrat Scott Colom Wins Mississippi Senate Seat",
-          "url": "https://dailycaller.com/2026/11/11/democrats-flip-yet-another-deep-red-seat",
-          "published": "2026-11-12T01:48:37.000Z",
-          "snippet": "Democrats Flip Yet Another Deep Red Senate Seat",
+          "id": "02a9a22fda88",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Why Democrat Scott Colom’s win in Mississippi Senate race is so significant",
+          "url": "https://bbc.co.uk/news/videos/cjy5x42p3qzko?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-12T02:02:37.000Z",
+          "snippet": "Colom's victory makes him the first black person from the state to be elected to the US Senate in more than 140 years.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -248,23 +274,6 @@
           }
         },
         {
-          "id": "0d03c8394b6c",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Democrat Scott Colom unseats Cindy Hyde-Smith in stunning Mississippi Senate win",
-          "url": "https://theguardian.com/us-news/2026/nov/11/scott-colom-mississippi-senate-race",
-          "published": "2026-11-12T00:11:12.000Z",
-          "snippet": "Colom takes victory by razor-thin margin in state that has not elected a Democrat to the Senate since 1982 Democrat Scott Colom defeated Cindy Hyde-Smith, the incumbent Republican senator, to become the first Black…",
-          "flags": {
-            "loaded": [
-              "stunning"
-            ],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "861fad170439",
           "sourceId": "bbc",
           "sourceName": "BBC News",
@@ -273,21 +282,6 @@
           "url": "https://bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
           "published": "2026-11-12T01:00:04.000Z",
           "snippet": "Colom is the first black person from the southern state elected to the US Senate in over 140 years.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "69d26422b7c3",
-          "sourceId": "huffpost",
-          "sourceName": "HuffPost",
-          "lean": "left",
-          "title": "Democrat Scott Colom Defeats Sen. Cindy Hyde-Smith In Mississippi Senate Race",
-          "url": "https://huffpost.com/entry/democrat-scott-colom-defeats-cindy-hyde-smith-mississippi-senate_n_6aeb6b09e4b0dcee62e2001c",
-          "published": "2026-11-11T23:02:41.000Z",
-          "snippet": "The district attorney ousted Cindy Hyde-Smith in a deep-red state after a viral ad and a late burst of attention from national Democrats.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -310,6 +304,38 @@
           }
         },
         {
+          "id": "0d03c8394b6c",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Democrat Scott Colom unseats Cindy Hyde-Smith in stunning Mississippi Senate win",
+          "url": "https://theguardian.com/us-news/2026/nov/11/scott-colom-mississippi-senate-race",
+          "published": "2026-11-12T00:11:12.000Z",
+          "snippet": "Colom takes victory by razor-thin margin in state that has not elected a Democrat to the Senate since 1982 Democrat Scott Colom defeated Cindy Hyde-Smith, the incumbent Republican senator, to become the first Black…",
+          "flags": {
+            "loaded": [
+              "stunning"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c1e8733fbe04",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Democrat wins Mississippi Senate race",
+          "url": "https://nbcnews.com/nightly-news/video/democrat-wins-mississippi-senate-race-273303621688",
+          "published": "2026-11-12T00:01:47.000Z",
+          "snippet": "NBC News is projecting Democrat Scott Colom has won the Senate race in Mississippi. NBC News’ Ryan Nobles reports.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "245d66e84f15",
           "sourceId": "washtimes",
           "sourceName": "The Washington Times",
@@ -318,6 +344,21 @@
           "url": "https://washingtontimes.com/news/2026/nov/11/democrat-wins-mississippi-senate-seat-upset-defeat-sen-cindy-hyde",
           "published": "2026-11-11T23:28:41.000Z",
           "snippet": "Democrat Scott Colom has won Mississippi's U.S. Senate race, building upon his party's wave of wins in states that have long favored Republicans.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "69d26422b7c3",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "Democrat Scott Colom Defeats Sen. Cindy Hyde-Smith In Mississippi Senate Race",
+          "url": "https://huffpost.com/entry/democrat-scott-colom-defeats-cindy-hyde-smith-mississippi-senate_n_6aeb6b09e4b0dcee62e2001c",
+          "published": "2026-11-11T23:02:41.000Z",
+          "snippet": "The district attorney ousted Cindy Hyde-Smith in a deep-red state after a viral ad and a late burst of attention from national Democrats.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -340,21 +381,6 @@
           }
         },
         {
-          "id": "c3a7bd6c3605",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Mississippi Senate stunner: Cindy Hyde-Smith concedes to Democrat Scott Colom",
-          "url": "https://thehill.com/homenews/campaign/6165685-colom-mississippi-senate-ousts-hyde-smith",
-          "published": "2026-11-11T23:26:19.000Z",
-          "snippet": "Democrat Scott Colom is set to become Mississippi's next senator after Republican Sen. Cindy Hyde-Smith conceded Wednesday, notching a major victory for his party in the ruby red state. \"While this is not the outcome we…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "2a437126516d",
           "sourceId": "npr",
           "sourceName": "NPR",
@@ -370,14 +396,14 @@
           }
         },
         {
-          "id": "50c37507d805",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Democrat Scott Colom to be first Black senator elected in Mississippi since 1874 after narrow win – US politics live",
-          "url": "https://theguardian.com/us-news/live/2026/nov/11/donald-trump-pete-hegseth-impeachment-democrats-republicans-arlington-latest-news-updates",
-          "published": "2026-11-12T01:39:21.000Z",
-          "snippet": "Colom beat Republican Cindy Hyde-Smith after race was called eight days after midterm election day Democrat Scott Colom wins race for US Senate in Mississippi How Colom won deep-red Mississippi with little help from…",
+          "id": "c3a7bd6c3605",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Mississippi Senate stunner: Cindy Hyde-Smith concedes to Democrat Scott Colom",
+          "url": "https://thehill.com/homenews/campaign/6165685-colom-mississippi-senate-ousts-hyde-smith",
+          "published": "2026-11-11T23:26:19.000Z",
+          "snippet": "Democrat Scott Colom is set to become Mississippi's next senator after Republican Sen. Cindy Hyde-Smith conceded Wednesday, notching a major victory for his party in the ruby red state. \"While this is not the outcome we…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -400,6 +426,21 @@
           }
         },
         {
+          "id": "a9ad0152a158",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "How Scott Colom won Mississippi’s Senate race",
+          "url": "https://ms.now/news/news-analysis/scott-colom-mississippi-analysis",
+          "published": "2026-11-12T01:32:53.000Z",
+          "snippet": "A changed electorate, a sliver of Trump voters and backlash against the president helped a Democrat win a state Trump carried by 23 points.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "f6ae3f578ae5",
           "sourceId": "politico",
           "sourceName": "Politico",
@@ -413,26 +454,11 @@
             "contested": [],
             "clickbait": false
           }
-        },
-        {
-          "id": "f4352887f4eb",
-          "sourceId": "nypost",
-          "sourceName": "New York Post",
-          "lean": "lean-right",
-          "title": "Dem Scott Colom defeats Mississippi Sen. Hyde-Smith after weeklong nailbiter",
-          "url": "https://nypost.com/2026/11/11/us-news/mississippi-dem-scott-colom-defeats-hyde-smith-in-senate-race",
-          "published": "2026-11-11T23:07:25.000Z",
-          "snippet": "Donald Trump won Mississippi by 22.9% in 2024.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
         }
       ]
     },
     {
-      "id": "s_fedaf2695a80",
+      "id": "s_653c451e19ff",
       "headline": "Hegseth and advisers reprimanded by guard at Tomb of the Unknown Soldier",
       "headlineFrom": {
         "sourceId": "bbc",
@@ -444,11 +470,11 @@
       "disputed": [],
       "ai": null,
       "snippet": "Following a ceremony marking Veterans Day, a group that included Defence Secretary Pete Hegseth was shouted at to be quiet.",
-      "topic": "politics",
-      "firstSeen": "2026-11-11T21:08:51.000Z",
+      "topic": "military",
+      "firstSeen": "2026-11-11T20:52:50.000Z",
       "lastUpdated": "2026-11-12T01:33:58.000Z",
       "sourceCount": 13,
-      "articleCount": 15,
+      "articleCount": 14,
       "coverage": {
         "left": 7,
         "center": 2,
@@ -461,8 +487,11 @@
           "right": 2
         }
       },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 5.5268,
+      "score": 4.8355,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ff27/live/573e7b50-de18-11f1-93e1-3b657b665bcf.jpg",
       "articles": [
         {
@@ -474,21 +503,6 @@
           "url": "https://newsmax.com/newsfront/hegseth-tomb-unknown/2026/11/11/id/1276019",
           "published": "2026-11-12T00:41:49.000Z",
           "snippet": "A soldier guarding the Tomb of the Unknown Soldier issued a verbal reprimand to a group of advisers and staffers with Defense Secretary Pete Hegseth following a Veterans Day ceremony at Arlington National Cemetery…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "fedaf2695a80",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Pete Hegseth and others reprimanded by guard at the Tomb of the Unknown Soldier",
-          "url": "https://nbcnews.com/politics/trump-administration/hegseth-reprimanded-arlington-cemetery-veterans-tomb-unknown-soldier-rcna608869",
-          "published": "2026-11-11T21:08:51.000Z",
-          "snippet": "An Arlington National Cemetery guard told the defense secretary and his companions to maintain a respectful atmosphere during a Veterans Day visit.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -511,6 +525,21 @@
           }
         },
         {
+          "id": "fedaf2695a80",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Pete Hegseth and others reprimanded by guard at the Tomb of the Unknown Soldier",
+          "url": "https://nbcnews.com/politics/trump-administration/hegseth-reprimanded-arlington-cemetery-veterans-tomb-unknown-soldier-rcna608869",
+          "published": "2026-11-11T21:08:51.000Z",
+          "snippet": "An Arlington National Cemetery guard told the defense secretary and his companions to maintain a respectful atmosphere during a Veterans Day visit.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "ab7ebe333253",
           "sourceId": "bbc",
           "sourceName": "BBC News",
@@ -519,21 +548,6 @@
           "url": "https://bbc.co.uk/news/videos/ck5y132yq1ymo?at_medium=RSS&at_campaign=rss",
           "published": "2026-11-11T21:43:35.000Z",
           "snippet": "Following a ceremony marking Veterans Day, a group that included Defence Secretary Pete Hegseth was shouted at to be quiet.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "f4ffda5ddfd5",
-          "sourceId": "foxnews",
-          "sourceName": "Fox News",
-          "lean": "right",
-          "title": "Army sentinel sharply reprimands Hegseth's group at Tomb of the Unknown Soldier on Veterans Day",
-          "url": "https://foxnews.com/politics/army-sentinel-sharply-reprimands-hegseths-group-tomb-unknown-soldier-veterans-day",
-          "published": "2026-11-11T23:11:12.000Z",
-          "snippet": "Video captures the moment a Tomb of the Unknown Soldier sentinel called for silence and respect after laughter from Pete Hegseth's departing group.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -556,14 +570,29 @@
           }
         },
         {
-          "id": "5740b08aa8f0",
+          "id": "f4ffda5ddfd5",
+          "sourceId": "foxnews",
+          "sourceName": "Fox News",
+          "lean": "right",
+          "title": "Army sentinel sharply reprimands Hegseth's group at Tomb of the Unknown Soldier on Veterans Day",
+          "url": "https://foxnews.com/politics/army-sentinel-sharply-reprimands-hegseths-group-tomb-unknown-soldier-veterans-day",
+          "published": "2026-11-11T23:11:12.000Z",
+          "snippet": "Video captures the moment a Tomb of the Unknown Soldier sentinel called for silence and respect after laughter from Pete Hegseth's departing group.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "aca2680f11fd",
           "sourceId": "washtimes",
           "sourceName": "The Washington Times",
           "lean": "lean-right",
-          "title": "Tomb of the Unknown Soldier rules: Why a sentinel shouted 'silence and respect' at Hegseth's group",
-          "url": "https://washingtontimes.com/news/2026/nov/11/tomb-unknown-soldier-rules-sentinel-shouted-silence-respect-hegseths",
-          "published": "2026-11-11T22:42:28.000Z",
-          "snippet": "The warning a Tomb of the Unknown Soldier sentinel called out to Defense Secretary Pete Hegseth's group on Veterans Day reflects a standard of decorum every visitor to Arlington National Cemetery is expected to meet, no…",
+          "title": "Hegseth's group warned by soldiers to maintain 'silence' at Tomb of the Unknown Soldier",
+          "url": "https://washingtontimes.com/news/2026/nov/11/hegseths-group-warned-soldiers-maintain-silence-tomb-unknown-soldier",
+          "published": "2026-11-11T21:51:00.000Z",
+          "snippet": "Defense Secretary Pete Hegseth and an accompanying group on Veterans Day were scolded for a breach of decorum by a soldier standing watch at the Tomb of the Unknown Soldier.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -586,14 +615,14 @@
           }
         },
         {
-          "id": "aca2680f11fd",
+          "id": "5740b08aa8f0",
           "sourceId": "washtimes",
           "sourceName": "The Washington Times",
           "lean": "lean-right",
-          "title": "Hegseth's group warned by soldiers to maintain 'silence' at Tomb of the Unknown Soldier",
-          "url": "https://washingtontimes.com/news/2026/nov/11/hegseths-group-warned-soldiers-maintain-silence-tomb-unknown-soldier",
-          "published": "2026-11-11T21:51:00.000Z",
-          "snippet": "Defense Secretary Pete Hegseth and an accompanying group on Veterans Day were scolded for a breach of decorum by a soldier standing watch at the Tomb of the Unknown Soldier.",
+          "title": "Tomb of the Unknown Soldier rules: Why a sentinel shouted 'silence and respect' at Hegseth's group",
+          "url": "https://washingtontimes.com/news/2026/nov/11/tomb-unknown-soldier-rules-sentinel-shouted-silence-respect-hegseths",
+          "published": "2026-11-11T22:42:28.000Z",
+          "snippet": "The warning a Tomb of the Unknown Soldier sentinel called out to Defense Secretary Pete Hegseth's group on Veterans Day reflects a standard of decorum every visitor to Arlington National Cemetery is expected to meet, no…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -631,6 +660,21 @@
           }
         },
         {
+          "id": "653c451e19ff",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "VIDEO: Soldier Rebukes Hegseth’s Group For Laughing During Visit To Tomb Of The Unknown Soldier",
+          "url": "https://huffpost.com/entry/hegseth-tomb-unknown-soldier-laugh_n_6af4cda1e4b01d00edaa5b56",
+          "published": "2026-11-11T20:52:50.000Z",
+          "snippet": "The incident occurred during a Veterans Day ceremony.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "864c6254af56",
           "sourceId": "nypost",
           "sourceName": "New York Post",
@@ -659,46 +703,14 @@
             "contested": [],
             "clickbait": false
           }
-        },
-        {
-          "id": "94cbb7977593",
-          "sourceId": "dailybeast",
-          "sourceName": "The Daily Beast",
-          "lean": "left",
-          "title": "Arlington Sentinel Gives Rowdy Hegseth Humiliating Reprimand",
-          "url": "https://thedailybeast.com/arlington-sentinel-gives-rowdy-hegseth-humiliating-reprimand",
-          "published": "2026-11-11T21:29:32.000Z",
-          "snippet": "Evelyn Hockstein/REUTERS Defense Secretary Pete Hegseth and his group were reprimanded during their visit to the Tomb of the Unknown Soldier. The group was spotted taking photos and laughing at Arlington National…",
-          "flags": {
-            "loaded": [
-              "humiliating"
-            ],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "cf326b0b4a34",
-          "sourceId": "dailybeast",
-          "sourceName": "The Daily Beast",
-          "lean": "left",
-          "title": "Republican in Damage Control After Pete Hegseth Comments",
-          "url": "https://thedailybeast.com/republican-in-damage-control-after-pete-hegseth-comments",
-          "published": "2026-11-12T00:59:51.000Z",
-          "snippet": "NewsNation A Florida Republican has gone into damage-control mode after appearing to criticize an Army sentinel who reprimanded Pete Hegseth. Hegseth and his group visited the Tomb of the Unknown Soldier at Arlington…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
         }
       ]
     },
     {
-      "id": "s_99d46090999f",
-      "headline": "At least two people dead in Brooklyn building collapse",
+      "id": "s_bf2dcec61720",
+      "headline": "Nvidia stock tanks after report of second Jensen Huang affair",
       "headlineFrom": {
-        "sourceId": "upi",
+        "sourceId": "thehill",
         "kind": "selected"
       },
       "summary": null,
@@ -706,183 +718,66 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "A three-story building in the Flatbush area of Brooklyn collapsed Wednesday afternoon, killing at least two people and injuring at least 10.",
-      "topic": "us",
-      "firstSeen": "2026-11-11T21:55:13.000Z",
-      "lastUpdated": "2026-11-12T01:40:00.000Z",
-      "sourceCount": 8,
-      "articleCount": 8,
-      "coverage": {
-        "left": 2,
-        "center": 3,
-        "right": 3,
-        "byLean": {
-          "left": 0,
-          "lean-left": 2,
-          "center": 3,
-          "lean-right": 2,
-          "right": 1
-        }
-      },
-      "mostlyCoveredBy": null,
-      "score": 4.6283,
-      "image": "https://cdnph.upi.com/ph/st/th/7421794444373/2026/upi_com/796b38143faf659172d249ebfdf52da2/v1.5/At-least-two-people-dead-in-Brooklyn-building-collapse.jpg",
-      "articles": [
-        {
-          "id": "99d46090999f",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "At Least 1 Dead in Brooklyn Building Collapse",
-          "url": "https://newsmax.com/newsfront/nyc-building-collapse-brooklyn/2026/11/11/id/1276006",
-          "published": "2026-11-11T21:55:13.000Z",
-          "snippet": "At least one person was killed and two others seriously injured Wednesday afternoon when a three-story building partially collapsed into an adjacent construction site in Brooklyn, leaving another person trapped beneath…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "dde87b071033",
-          "sourceId": "upi",
-          "sourceName": "UPI",
-          "lean": "center",
-          "title": "At least two people dead in Brooklyn building collapse",
-          "url": "https://upi.com/Top_News/US/2026/11/11/building-in-flatbush-brooklyn-collapses/7421794444373",
-          "published": "2026-11-12T01:38:58.000Z",
-          "snippet": "A three-story building in the Flatbush area of Brooklyn collapsed Wednesday afternoon, killing at least two people and injuring at least 10.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "6c625037d71f",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Brooklyn building collapse kills at least two people and traps others in wreckage",
-          "url": "https://theguardian.com/us-news/2026/nov/11/deadly-brooklyn-building-collapse",
-          "published": "2026-11-12T01:22:13.000Z",
-          "snippet": "Four critical in hospital as firefighters dig through rubble in Flatbush after building next to construction site collapses Firefighters dug through the rubble of a three-story building in Brooklyn on Wednesday after it…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "7c878f3f25ca",
-          "sourceId": "washtimes",
-          "sourceName": "The Washington Times",
-          "lean": "lean-right",
-          "title": "Building partially collapses in Brooklyn, killing one with others injured",
-          "url": "https://washingtontimes.com/news/2026/nov/11/building-partially-collapses-brooklyn-killing-one-others-injured",
-          "published": "2026-11-11T23:48:18.000Z",
-          "snippet": "A three-story building in Brooklyn partially collapsed into a hole at an adjacent construction site Wednesday, leaving at least one person dead and several others injured.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "f9e991382d3d",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "title": "Two dead and 19 injured after Brooklyn apartment building collapses",
-          "url": "https://washingtonexaminer.com/policy/infrastructure/4800858/brooklyn-nyc-apartment-building-collapses",
-          "published": "2026-11-12T01:40:00.000Z",
-          "snippet": "Two people are dead and 19 people were injured after a building in New York City collapsed on Wednesday, according to authorities. It is unknown how many people are still trapped after the three-story building on 1321…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "015c2b4ad208",
-          "sourceId": "bbc",
-          "sourceName": "BBC News",
-          "lean": "center",
-          "title": "New York building collapse kills one person and injures 12",
-          "url": "https://bbc.co.uk/news/videos/c60rkwjj7x7go?at_medium=RSS&at_campaign=rss",
-          "published": "2026-11-12T01:34:58.000Z",
-          "snippet": "Rescuers are searching for people who may be trapped under the rubble of the three-story building in Brooklyn.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "b84c3f7ae178",
-          "sourceId": "newsnation",
-          "sourceName": "NewsNation",
-          "lean": "center",
-          "title": "Building collapses in Brooklyn, leaving 2 dead and several hurt",
-          "url": "https://newsnationnow.com/us-news/northeast/building-collapses-brooklyn-leaving-4-hurt-report",
-          "published": "2026-11-11T22:23:31.000Z",
-          "snippet": "Officials said four individuals were hospitalized in critical condition, while 15 others sustained minor or major injuries.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "d5d165760034",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "2 dead, at least 12 hurt in New York City building collapse, authorities say",
-          "url": "https://nbcnews.com/news/us-news/new-york-brooklyn-building-collapse-rcna608909",
-          "published": "2026-11-12T00:04:59.000Z",
-          "snippet": "The collapse occurred around 4 p.m. in the Flatbush neighborhood. Rescuers were trying to reach people trapped in the rubble.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ]
-    },
-    {
-      "id": "s_06a03f318a5d",
-      "headline": "Nvidia board reportedly weighs ousting Huang amid alleged affairs with exec and suspected Chinese spy",
-      "headlineFrom": {
-        "sourceId": "dw",
-        "kind": "selected"
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Nvidia's board is reportedly preparing to oust Jensen Huang amid reports of an affair with a suspected Chinese spy. The shake-up would leave the world's leading AI chip supplier without the co-founder who built it.",
+      "snippet": "Shares of Nvidia tanked early Wednesday evening, after The New York Times reported that the tech firm’s CEO Jensen Huang had a second affair. The company’s stock was down roughly 8.3 percent during after-hours trading, dipping below $160 per share. Nvidia shares had not fallen…",
       "topic": "tech",
-      "firstSeen": "2026-11-11T07:44:24.000Z",
-      "lastUpdated": "2026-11-12T01:57:34.000Z",
-      "sourceCount": 7,
-      "articleCount": 10,
+      "firstSeen": "2026-11-11T20:51:22.000Z",
+      "lastUpdated": "2026-11-12T03:55:11.000Z",
+      "sourceCount": 8,
+      "articleCount": 15,
       "coverage": {
         "left": 3,
         "center": 2,
-        "right": 2,
+        "right": 3,
         "byLean": {
           "left": 0,
           "lean-left": 3,
           "center": 2,
-          "lean-right": 1,
+          "lean-right": 2,
           "right": 1
         }
       },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": {
+        "left": [
+          {
+            "id": "b3c93dd537fd",
+            "sourceId": "newrepublic",
+            "sourceName": "The New Republic",
+            "lean": "left",
+            "title": "Nvidia’s in Bed With a Chinese Spy—and Trump’s in Bed With Nvidia",
+            "url": "https://newrepublic.com/article/217854/nvidia-jensen-huang-trump-honeypot",
+            "published": "2026-11-11T11:00:00.000Z",
+            "snippet": "On November 8, Jensen Huang, founder and chief executive of the AI chip company Nvidia, admitted publicly that he got caught in a Chinese honeytrap. Huang had an extramarital affair with Alice Huang (no relation; she’s…",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "center": [],
+        "right": [
+          {
+            "id": "4f23f4048cda",
+            "sourceId": "freepress",
+            "sourceName": "The Free Press",
+            "lean": "lean-right",
+            "title": "Jensen Huang and the Honeypot. Plus. . .",
+            "url": "https://thefp.com/p/jensen-huang-and-the-honeypot-plus-democrats-telling-trump-lawyer-up",
+            "published": "2026-11-10T11:19:44.000Z",
+            "snippet": "In today’s Front Page, Tyler Cowen and Patrick McGee on Jensen Huang. Joe Nocera on the Democrats telling Trump to “lawyer up.” River Page on NYC’s e-bike wars. And more.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ]
+      },
       "mostlyCoveredBy": null,
-      "score": 4.4549,
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2521/live/6ba67640-dc03-11f1-b441-2b33b063138f.jpg",
+      "score": 4.6122,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/06/6a31d615188665.55605695-e1785164164264.jpeg?w=900",
       "articles": [
         {
           "id": "2722c4b91e77",
@@ -915,6 +810,21 @@
           }
         },
         {
+          "id": "bec6a74e7337",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Nvidia board preparing to remove CEO Jensen Huang: Report",
+          "url": "https://washingtonexaminer.com/policy/technology/4800920/nvidia-board-oust-ceo-jensen-huang",
+          "published": "2026-11-12T01:23:53.000Z",
+          "snippet": "Nvidia is preparing to oust CEO Jensen Huang after he confessed to having an affair with a suspected spy for China, according to multiple reports. Earlier this month, Huang apologized to his company, wife, and family…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "5f71be20ef92",
           "sourceId": "newsmax",
           "sourceName": "Newsmax",
@@ -923,6 +833,21 @@
           "url": "https://newsmax.com/newsfront/nvidia-jensen-huang-spy/2026/11/11/id/1276005",
           "published": "2026-11-11T21:48:10.000Z",
           "snippet": "Nvidia's board of directors is preparing to oust co-founder and CEO Jensen Huang following revelations of two extramarital affairs, including one involving a woman suspected of working for Chinese intelligence, The Wall…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6de51e8dff93",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "What to Know About Nvidia’s Investigation of CEO Jensen Huang",
+          "url": "https://nytimes.com/article/nvidia-investigation-jensen-huang.html",
+          "published": "2026-11-12T03:55:11.000Z",
+          "snippet": "Nvidia’s board is weighing the future of Jensen Huang, the company’s chief executive, admitted to an affair with a woman who U.S. intelligence says was spying for China.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -945,14 +870,29 @@
           }
         },
         {
-          "id": "bec6a74e7337",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
+          "id": "e8396ec15b2e",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Nvidia shares drop after hours as board meets over CEO Jensen Huang’s future",
+          "url": "https://nbcnews.com/business/business-news/nvidia-shares-drop-hours-reports-meeting-ceo-jensen-huangs-future-rcna608906",
+          "published": "2026-11-11T23:51:15.000Z",
+          "snippet": "The New York Times reported that Huang had a relationship with an Nvidia executive following reports that he’d had a relationship with a suspected Chinese spy.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e52da01069d3",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
           "lean": "lean-right",
-          "title": "Nvidia board preparing to remove CEO Jensen Huang: Report",
-          "url": "https://washingtonexaminer.com/policy/technology/4800920/nvidia-board-oust-ceo-jensen-huang",
-          "published": "2026-11-12T01:23:53.000Z",
-          "snippet": "Nvidia is preparing to oust CEO Jensen Huang after he confessed to having an affair with a suspected spy for China, according to multiple reports. Earlier this month, Huang apologized to his company, wife, and family…",
+          "title": "Nvidia preparing to replace CEO Jensen Huang as second alleged affair emerges: report",
+          "url": "https://foxbusiness.com/markets/nvidia-preparing-replace-ceo-jensen-huang-second-alleged-affair-emerges-report",
+          "published": "2026-11-12T00:13:21.000Z",
+          "snippet": "Nvidia CEO Jensen Huang faces a reported push to remove him from the company as allegations of a second extramarital affair emerge, adding to an ongoing board investigation.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -975,14 +915,59 @@
           }
         },
         {
-          "id": "e8396ec15b2e",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
+          "id": "bf2dcec61720",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "Nvidia stock faces rare downgrades as board investigates CEO Jensen Huang's admitted affair",
+          "url": "https://foxbusiness.com/markets/nvidia-stock-faces-rare-downgrades-board-investigates-ceo-jensen-huangs-admitted-affair",
+          "published": "2026-11-11T20:51:22.000Z",
+          "snippet": "Baird issued a rare downgrade of Nvidia stock to neutral as CEO Jensen Huang's affair with an alleged Chinese spy clouds the AI giant's outlook.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "df9eb8397668",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
           "lean": "lean-left",
-          "title": "Nvidia shares drop after hours amid reports of meeting over CEO Jensen Huang’s future",
-          "url": "https://nbcnews.com/business/business-news/nvidia-shares-drop-hours-reports-meeting-ceo-jensen-huangs-future-rcna608906",
-          "published": "2026-11-11T23:51:15.000Z",
-          "snippet": "The New York Times reported that Huang had a relationship with an Nvidia executive following reports that he’d had a relationship with a suspected Chinese spy.",
+          "title": "Nvidia's stock dives as board weighs move to oust Jensen Huang",
+          "url": "https://cbsnews.com/news/nvidia-stock-dives-report-board-prepares-oust-jensen-huang",
+          "published": "2026-11-12T00:18:00.000Z",
+          "snippet": "Nvidia shares fall sharply in after-hours trading as the company's board considers whether to remove Jensen Huang as CEO.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6fc90d37d9e9",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Nvidia stock tanks after report of second Jensen Huang affair",
+          "url": "https://thehill.com/business/6214833-nvidia-ceo-jesen-huang-affair",
+          "published": "2026-11-11T23:48:26.000Z",
+          "snippet": "Shares of Nvidia tanked early Wednesday evening, after The New York Times reported that the tech firm’s CEO Jensen Huang had a second affair. The company’s stock was down roughly 8.3 percent during after-hours trading…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "51af4bf026ee",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Nvidia’s Stock Price Plummets as Board Is Said to Consider Jensen Huang, CEO’s, Future",
+          "url": "https://nytimes.com/2026/11/11/business/nvidia-stock-jensen-huang-ceo.html",
+          "published": "2026-11-12T00:53:16.000Z",
+          "snippet": "News of the board’s deliberations about Jensen Huang’s job drove Nvidia’s stock down more than 8 percent in after-hours trading.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -1018,16 +1003,364 @@
             "contested": [],
             "clickbait": false
           }
+        }
+      ]
+    },
+    {
+      "id": "s_1738b00e835d",
+      "headline": "At least two people dead, 17 injured in Brooklyn building collapse",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "A three-story building in the Flatbush area of Brooklyn collapsed Wednesday afternoon, killing at least two people and injuring at least 17.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T20:19:50.000Z",
+      "lastUpdated": "2026-11-12T02:14:59.000Z",
+      "sourceCount": 9,
+      "articleCount": 12,
+      "coverage": {
+        "left": 3,
+        "center": 2,
+        "right": 4,
+        "byLean": {
+          "left": 0,
+          "lean-left": 3,
+          "center": 2,
+          "lean-right": 2,
+          "right": 2
+        }
+      },
+      "developing": true,
+      "recentSourceCount": 5,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 4.3889,
+      "image": "https://cdnph.upi.com/ph/st/th/7421794444373/2026/upi_com/796b38143faf659172d249ebfdf52da2/v1.5/At-least-two-people-dead-17-injured-in-Brooklyn-building-collapse.jpg",
+      "articles": [
+        {
+          "id": "99d46090999f",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "At Least 1 Dead in Brooklyn Building Collapse",
+          "url": "https://newsmax.com/newsfront/nyc-building-collapse-brooklyn/2026/11/11/id/1276006",
+          "published": "2026-11-11T21:55:13.000Z",
+          "snippet": "At least one person was killed and two others seriously injured Wednesday afternoon when a three-story building partially collapsed into an adjacent construction site in Brooklyn, leaving another person trapped beneath…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         },
         {
-          "id": "06a03f318a5d",
+          "id": "9faa1b3d62c9",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Building collapses in Brooklyn, killing two with others injured",
+          "url": "https://washingtontimes.com/news/2026/nov/11/building-partially-collapses-brooklyn-killing-two-others-injured",
+          "published": "2026-11-11T23:48:18.000Z",
+          "snippet": "A three-story building in Brooklyn partially collapsed into a hole at an adjacent construction site Wednesday, leaving at least two people dead and several others injured.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6c625037d71f",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Brooklyn building collapse kills at least two people and traps others in wreckage",
+          "url": "https://theguardian.com/us-news/2026/nov/11/deadly-brooklyn-building-collapse",
+          "published": "2026-11-12T01:22:13.000Z",
+          "snippet": "Four critical in hospital as firefighters dig through rubble in Flatbush after building next to construction site collapses Firefighters dug through the rubble of a three-story building in Brooklyn on Wednesday after it…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "dde87b071033",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "At least two people dead, 17 injured in Brooklyn building collapse",
+          "url": "https://upi.com/Top_News/US/2026/11/11/building-in-flatbush-brooklyn-collapses/7421794444373",
+          "published": "2026-11-12T01:38:58.000Z",
+          "snippet": "A three-story building in the Flatbush area of Brooklyn collapsed Wednesday afternoon, killing at least two people and injuring at least 17.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7c878f3f25ca",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Building partially collapses in Brooklyn, killing one with others injured",
+          "url": "https://washingtontimes.com/news/2026/nov/11/building-partially-collapses-brooklyn-killing-one-others-injured",
+          "published": "2026-11-11T23:48:18.000Z",
+          "snippet": "A three-story building in Brooklyn partially collapsed into a hole at an adjacent construction site Wednesday, leaving at least one person dead and several others injured.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6060f6d0ca56",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Firefighters Dig After NYC Building Collapse Kills 2, Traps Others",
+          "url": "https://newsmax.com/newsfront/Firefighters-Dig-After-NYC-Building-Collapse-Kills-2-Traps-Others/2026/11/11/id/1276023",
+          "published": "2026-11-12T01:00:55.000Z",
+          "snippet": "Firefighters dug through the rubble of a three-story building in Brooklyn after it collapsed at the edge of a construction site Wednesday afternoon, killing at least two people and trapping others beneath the…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "9be559ae5b07",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "At least two people dead in Brooklyn partial building collapse",
+          "url": "https://nbcnews.com/video/at-least-two-people-dead-in-brooklyn-partial-building-collapse-273311813538",
+          "published": "2026-11-12T02:14:59.000Z",
+          "snippet": "Mayor Zohran Mamdani and the NYC fire commissioner provided an update following a partial building collapse at the edge of a construction site in New York City, which killed two people and injured dozens. Law…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f9e991382d3d",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Two dead and 19 injured after Brooklyn apartment building collapses",
+          "url": "https://washingtonexaminer.com/policy/infrastructure/4800858/brooklyn-nyc-apartment-building-collapses",
+          "published": "2026-11-12T01:40:00.000Z",
+          "snippet": "Two people are dead and 19 people were injured after a building in New York City collapsed on Wednesday, according to authorities. It is unknown how many people are still trapped after the three-story building on 1321…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ca667a3d35ef",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Firefighters dig through rubble of collapsed Brooklyn building",
+          "url": "https://cbsnews.com/video/firefighters-dig-rubble-collapsed-brooklyn-building",
+          "published": "2026-11-12T00:50:00.000Z",
+          "snippet": "Several people were killed and more than a dozen were injured Wednesday when a building collapsed in New York City. Fire officials said many others had been pulled from the rubble in a major rescue operation. Lilia…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "015c2b4ad208",
           "sourceId": "bbc",
           "sourceName": "BBC News",
           "lean": "center",
-          "title": "What we know so far about Jensen Huang's affair with suspected Chinese spy",
-          "url": "https://bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss",
-          "published": "2026-11-11T07:44:24.000Z",
-          "snippet": "The billionaire tech executive finds himself mired in a personal and national security scandal.",
+          "title": "Survivor pulled from rubble of deadly building collapse in New York",
+          "url": "https://bbc.co.uk/news/videos/c60rkwjj7x7go?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-12T01:34:58.000Z",
+          "snippet": "Two people are dead and several others injured as rescuers scour the debris in Brooklyn.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "1738b00e835d",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "Deadly NYC Building Collapse Leaves Crews Searching For Survivors",
+          "url": "https://dailywire.com/news/deadly-nyc-building-collapse-leaves-crews-searching-for-survivors",
+          "published": "2026-11-11T20:19:50.000Z",
+          "snippet": "At least two people were killed, and 17 others were injured, four critically, when a three-story mixed-use building in Brooklyn collapsed just after 4 p.m. Wednesday, according to the New York Times. The building, built…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b79756fdff3d",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "2 killed in New York building collapse, Mamdani says",
+          "url": "https://cbsnews.com/video/mamdani-fire-officials-give-update-brooklyn-building-collapse",
+          "published": "2026-11-12T02:10:09.000Z",
+          "snippet": "New York City Mayor Zohran Mamdani and FDNY Commissioner Lillian Bonsignore gave an update Wednesday night on a deadly building collapse in Brooklyn as rescuers continued to search for survivors underneath the rubble.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_a28bfde8dede",
+      "headline": "Trump White House threatens Democrats over upcoming oversight investigations",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "White House officials have threatened Democrats with criminal investigation over upcoming oversight probes into the Trump administration.",
+      "topic": "politics",
+      "firstSeen": "2026-11-11T14:47:49.000Z",
+      "lastUpdated": "2026-11-12T01:09:07.000Z",
+      "sourceCount": 7,
+      "articleCount": 7,
+      "coverage": {
+        "left": 5,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 3,
+          "lean-left": 2,
+          "center": 1,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": "left",
+      "score": 3.7201,
+      "image": "https://cdnph.upi.com/ph/st/th/9011794427084/2026/upi/a31d0ccab6bdd7e7df838782e03bb6bc/v1.5/White-House-threatens-Democrats-over-oversight-investigations.jpg",
+      "articles": [
+        {
+          "id": "f6f9256d9e8f",
+          "sourceId": "motherjones",
+          "sourceName": "Mother Jones",
+          "lean": "left",
+          "title": "Investigate Trump? The White House Says That Might Be a Crime.",
+          "url": "https://motherjones.com/politics/2026/11/investigate-trump-the-white-house-says-that-might-be-a-crime",
+          "published": "2026-11-11T18:00:53.000Z",
+          "snippet": "The White House on Wednesday threatened Democrats with criminal investigations for talking about investigating Trump. Will Scharf, the White House counsel, wrote to remind incoming House Oversight Committee Chair Rep…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a28bfde8dede",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "White House Threatens Oversight Democrats With Criminal Investigation",
+          "url": "https://huffpost.com/entry/white-house-robert-garcia-threat_n_6af46188e4b09e0b5c535542",
+          "published": "2026-11-11T14:47:49.000Z",
+          "snippet": "White House counsel Will Scharf warned Rep. Robert Garcia (D-Calif.) his forthcoming subpoenas are illegal and “may warrant further investigation.”",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c00fb88050ec",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Trump White House threatens Democrats over upcoming oversight investigations",
+          "url": "https://upi.com/Top_News/US/2026/11/11/white-house-threatens-democrats-over-oversight-investigations/9011794427084",
+          "published": "2026-11-11T20:13:48.000Z",
+          "snippet": "White House officials have threatened Democrats with criminal investigation over upcoming oversight probes into the Trump administration.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "77fbc8f2d2ed",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Democrat says Trump has ‘something to hide’ after White House threatens oversight efforts",
+          "url": "https://theguardian.com/us-news/2026/nov/11/democrat-investigation-white-house-letter-garcia",
+          "published": "2026-11-11T16:54:36.000Z",
+          "snippet": "White House warns Democratic pledges to investigate president ‘may cross line into blatant criminality’ The incoming Democratic chair of the powerful congressional oversight committee said it appears Donald Trump has…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "cec14a8001e3",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "White House warns congressional Democrats: Investigating us may be a crime",
+          "url": "https://nbcnews.com/politics/white-house/white-house-warns-congressional-democrats-investigating-us-may-crime-rcna608752",
+          "published": "2026-11-11T18:34:45.000Z",
+          "snippet": "Rep. Robert Garcia, the incoming House Oversight Committee chair, noted that the Constitution grants Congress “latitude to conduct investigations.”",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f1392deba28f",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "Top Oversight Democrat rejects Trump White House ‘threat’: ‘We’re not bending the knee’",
+          "url": "https://ms.now/news/democrats-house-oversight-robert-garcia-trump-corruption",
+          "published": "2026-11-11T21:40:36.000Z",
+          "snippet": "“It’s shocking that the White House would send a letter that is clearly a threat to the Congress,” Rep. Robert Garcia, D-Calif., told MS NOW.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "58db8d65b2f4",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Rep. Garcia: Trump Is Threatening Congress",
+          "url": "https://newsmax.com/newsfront/robert-garcia-donald-trump-congress/2026/11/11/id/1276024",
+          "published": "2026-11-12T01:09:07.000Z",
+          "snippet": "Rep. Robert Garcia, D-Calif., is pushing back after a letter from the White House said that congressional investigations into the Trump administration could lead to criminal charges.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -1066,8 +1399,11 @@
           "right": 2
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.5821,
+      "score": 3.1341,
       "image": "https://cdnph.upi.com/ph/st/th/5421794422852/2026/upi/35c3660d4b60684b094b35650ddf0330/v1.5/Russian-ambassador-to-the-US-Alexander-Darchiev-dies-suddenly.jpg",
       "articles": [
         {
@@ -1163,6 +1499,150 @@
       ]
     },
     {
+      "id": "s_c7a8ad251e4d",
+      "headline": "Famed ship SS United States sunk off coast of Florida",
+      "headlineFrom": {
+        "sourceId": "bbc",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Activists unsuccessfully fought for the historic liner to be preserved and turned into a museum, but it will now become the world's largest artificial ocean reef.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T18:14:57.000Z",
+      "lastUpdated": "2026-11-12T03:10:32.000Z",
+      "sourceCount": 5,
+      "articleCount": 7,
+      "coverage": {
+        "left": 4,
+        "center": 1,
+        "right": 0,
+        "byLean": {
+          "left": 0,
+          "lean-left": 4,
+          "center": 1,
+          "lean-right": 0,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 2,
+      "perspectives": null,
+      "mostlyCoveredBy": "left",
+      "score": 3.0024,
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5661/live/7c6e9130-ddeb-11f1-9204-cdcddf7d901c.jpg",
+      "articles": [
+        {
+          "id": "a1fd3f9d89e2",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "SS United States to be sunk to become the world’s largest artificial reef - watch live",
+          "url": "https://theguardian.com/us-news/video/2026/nov/11/ss-united-states-to-be-sunk-to-become-the-worlds-largest-artificial-reef-watch-live",
+          "published": "2026-11-11T19:22:06.000Z",
+          "snippet": "The SS United States will sink off the coast of Destin, Florida to become an artificial reef, ending long-running wrangle over its fate Historic ocean liner to ‘live on’ beneath waves as world’s biggest artificial reef",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b032d9f047f5",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "SS United States sinks, will become world's largest artificial reef",
+          "url": "https://cbsnews.com/news/ss-united-states-sinking-ocean-floor-largest-artificial-reef-world-florida-gulf-coast",
+          "published": "2026-11-12T00:04:00.000Z",
+          "snippet": "The 1,000-foot-long SS United States was sent to the bottom of the ocean in a controlled, explosive-free sinking that is taking place about 20 nautical miles off the Gulf Coast of Florida.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "3cb48a953375",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Historic US ocean liner sinks near Florida to become world’s largest artificial reef",
+          "url": "https://theguardian.com/us-news/2026/nov/11/ss-united-states-sinks-florida-reef",
+          "published": "2026-11-12T03:07:16.000Z",
+          "snippet": "SS United States, which set transatlantic speed record during maiden voyage in 1952, is sunk off coast of Destin The historic SS United States has reached the end of its journey at sea, sinking Wednesday off the coast…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f4acaf4c90c7",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Famed ship SS United States sunk off coast of Florida",
+          "url": "https://bbc.co.uk/news/articles/c3x298n87rn2o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T18:42:27.000Z",
+          "snippet": "Activists unsuccessfully fought for the historic liner to be preserved and turned into a museum, but it will now become the world's largest artificial ocean reef.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c7a8ad251e4d",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Recalling the S.S. United States as It Becomes a Florida Reef",
+          "url": "https://nytimes.com/2026/11/11/insider/ss-united-states-destin-florida-memories.html",
+          "published": "2026-11-11T18:14:57.000Z",
+          "snippet": "A New York Times editor has had a lifelong connection to the S.S. United States, which is becoming an artificial reef off the Florida coast.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f8eefa869245",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "World's fastest ocean liner is sunk to break another record: largest artificial reef",
+          "url": "https://npr.org/2026/11/11/nx-s1-6030853/ss-united-states-artificial-reef-sinking",
+          "published": "2026-11-12T03:10:32.000Z",
+          "snippet": "The SS United States broke trans-Atlantic speed records. On Wednesday, it was sunk off the Florida coast and will become a diving destination and home for marine life.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7ea94bd16c3e",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "The S.S. United States, a Historic Supership, Sinks to the Ocean Floor",
+          "url": "https://nytimes.com/2026/11/11/climate/ss-united-states-ship-sinking-artificial-reef-florida.html",
+          "published": "2026-11-12T00:15:56.000Z",
+          "snippet": "The 20th-century ocean liner will become an artificial reef, ending efforts to save a ship that was fast, luxurious and (almost) indestructible.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
       "id": "s_e2288be32a7c",
       "headline": "Attempted murder charge after baby found buried alive in dog crate",
       "headlineFrom": {
@@ -1192,8 +1672,11 @@
           "right": 1
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.3503,
+      "score": 2.9312,
       "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/Untitled-August-23-2026-at-23.27.37-5-Exclusive-Bug-20.png?w=900",
       "articles": [
         {
@@ -1303,8 +1786,11 @@
           "right": 2
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.3408,
+      "score": 2.9229,
       "image": "https://twt-thumbs.washtimes.com/media/image/2026/11/11/Rex_Ryan_Arrest_Football__2721_s1440x960.jpg?f72536d07237fdd262042ae8f5e6e6de3b865f3c",
       "articles": [
         {
@@ -1427,7 +1913,7 @@
       "disputed": [],
       "ai": null,
       "snippet": "Authorities have relocated Treasury Secretary Scott Bessent from his home in Washington, D.C., to a military base after receiving threats from Iran.",
-      "topic": "politics",
+      "topic": "military",
       "firstSeen": "2026-11-11T09:11:30.000Z",
       "lastUpdated": "2026-11-12T01:32:08.000Z",
       "sourceCount": 5,
@@ -1444,8 +1930,11 @@
           "right": 0
         }
       },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
       "mostlyCoveredBy": "left",
-      "score": 3.1215,
+      "score": 2.731,
       "image": "https://cdnph.upi.com/ph/st/th/8491794413557/2026/upi/d7ec3244a9de6d87074c06721f7fd412/v1.5/Reports-Treasury-Secretary-Bessent-moved-to-base-after-Iran-threats.jpg",
       "articles": [
         {
@@ -1556,6 +2045,90 @@
       ]
     },
     {
+      "id": "s_36bd37841430",
+      "headline": "Man arrested on murder counts after deadly North Hollywood crash",
+      "headlineFrom": {
+        "sourceId": "upi",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "A 61-year-old man faces murder charges on accusations of driving a minivan under the influence into a group of pedestrians in North Hollywood.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T20:30:56.000Z",
+      "lastUpdated": "2026-11-12T02:47:37.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 1,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 1,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 2,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 2.7267,
+      "image": "https://cdnph.upi.com/ph/st/th/7571794448965/2026/upi/9bfecaa391ba415c2e080da9874af942/v1.5/Man-arrested-on-murder-counts-after-deadly-North-Hollywood-crash.jpg",
+      "articles": [
+        {
+          "id": "cd0f1baf1ec0",
+          "sourceId": "foxnews",
+          "sourceName": "Fox News",
+          "lean": "right",
+          "title": "Suspected DUI driver arrested on 3 murder counts after deadly North Hollywood crash, police say",
+          "url": "https://foxnews.com/us/suspected-dui-driver-arrested-3-murder-counts-after-deadly-north-hollywood-crash-police-say",
+          "published": "2026-11-12T02:05:04.000Z",
+          "snippet": "A suspected 61-year-old DUI driver was arrested on three murder counts after a North Hollywood crash killed three women and injured two others.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a68297e2e5fb",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Man arrested on murder counts after deadly North Hollywood crash",
+          "url": "https://upi.com/Top_News/US/2026/11/11/man-charged-murder-North-Hollywood-crash/7571794448965",
+          "published": "2026-11-12T02:47:37.000Z",
+          "snippet": "A 61-year-old man faces murder charges on accusations of driving a minivan under the influence into a group of pedestrians in North Hollywood.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "36bd37841430",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Driver faces DUI and murder charges after three killed in LA crash, officials say",
+          "url": "https://theguardian.com/us-news/2026/nov/10/los-angeles-vehicle-crash",
+          "published": "2026-11-11T20:30:56.000Z",
+          "snippet": "Driver, 61, faces DUI and murder charges after Tuesday crash critically injuring two others in North Hollywood A driver who reportedly crashed into pedestrians on a Los Angeles corner during Tuesday rush hour, killing…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
       "id": "s_f2610090c326",
       "headline": "Pro-Palestinian protesters pelt Joe Biden during visit to Ireland",
       "headlineFrom": {
@@ -1585,8 +2158,11 @@
           "right": 1
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.9056,
+      "score": 2.5421,
       "image": "https://cdnph.upi.com/ph/st/th/6161794415989/2026/upi/b1429799147b32179398de9d0b7a31c7/v1.5/Pro-Palestinian-protesters-pelt-Joe-Biden-during-visit-to-Ireland.jpg",
       "articles": [
         {
@@ -1667,6 +2243,90 @@
       ]
     },
     {
+      "id": "s_06a03f318a5d",
+      "headline": "What we know as pressure builds on embattled Nvidia CEO Jensen Huang",
+      "headlineFrom": {
+        "sourceId": "bbc",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The billionaire tech executive's future is in question after reports of a second extramarital affair.",
+      "topic": "business",
+      "firstSeen": "2026-11-11T07:44:24.000Z",
+      "lastUpdated": "2026-11-12T01:33:24.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 1,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 1,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 2.5387,
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2521/live/6ba67640-dc03-11f1-b441-2b33b063138f.jpg",
+      "articles": [
+        {
+          "id": "f2b9d334918e",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Report: Nvidia CEO Had Affair With Subordinate",
+          "url": "https://newsmax.com/newsfront/jensen-huang-nvidia-extramarital-affair/2026/11/11/id/1276026",
+          "published": "2026-11-12T01:19:26.000Z",
+          "snippet": "Nvidia CEO Jensen Huang, whose reported ties to a suspected Chinese intelligence asset have prompted an independent investigation, also had an extramarital relationship with an executive who reports to him, The New York…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "f06bb76cde92",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "NYT reports Nvidia CEO had second extramarital relationship",
+          "url": "https://nbcnews.com/nightly-news/video/nyt-reports-nvidia-ceo-had-second-extramarital-relationship-273310789756",
+          "published": "2026-11-12T01:33:24.000Z",
+          "snippet": "Questions are growing about Jensen Huang’s ability to hang on as CEO of Nvidia after the New York Times reported he had an extramarital relationship with an executive at the company who reported to him. NBC News’ Hallie…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "06a03f318a5d",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "What we know as pressure builds on embattled Nvidia CEO Jensen Huang",
+          "url": "https://bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-11T07:44:24.000Z",
+          "snippet": "The billionaire tech executive's future is in question after reports of a second extramarital affair.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
       "id": "s_ade6bd4d84e4",
       "headline": "University of Mississippi student leaves school amid racist gesture investigation",
       "headlineFrom": {
@@ -1696,8 +2356,11 @@
           "right": 0
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.8666,
+      "score": 2.5081,
       "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/student-withdraws-from-u-of-ms.png?w=584",
       "articles": [
         {
@@ -1748,10 +2411,10 @@
       ]
     },
     {
-      "id": "s_a28bfde8dede",
-      "headline": "Trump White House threatens Democrats over upcoming oversight investigations",
+      "id": "s_44cccbe0353e",
+      "headline": "Alaska judge denies Peltola campaign request for list of rejected absentee ballots",
       "headlineFrom": {
-        "sourceId": "upi",
+        "sourceId": "thehill",
         "kind": "selected"
       },
       "summary": null,
@@ -1759,178 +2422,124 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "White House officials have threatened Democrats with criminal investigation over upcoming oversight probes into the Trump administration.",
+      "snippet": "An Alaska judge denied former Rep. Mary Peltola’s (D-Alaska) campaign request for a list of rejected absentee ballots amid the state’s competitive Senate election that is yet to be called. Superior Court Judge Thomas Matthew ruled that Alaska’s Division of Election (DOE) is…",
       "topic": "politics",
-      "firstSeen": "2026-11-11T14:47:49.000Z",
-      "lastUpdated": "2026-11-11T21:40:36.000Z",
-      "sourceCount": 6,
-      "articleCount": 6,
+      "firstSeen": "2026-11-12T00:02:34.000Z",
+      "lastUpdated": "2026-11-12T03:57:22.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
       "coverage": {
-        "left": 5,
+        "left": 0,
+        "center": 1,
+        "right": 2,
+        "byLean": {
+          "left": 0,
+          "lean-left": 0,
+          "center": 1,
+          "lean-right": 2,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 2,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 2.4301,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Peltola-reax_102926_Huiskes_AP_Becky-Bohrer.jpg?w=900",
+      "articles": [
+        {
+          "id": "44cccbe0353e",
+          "sourceId": "washtimes",
+          "sourceName": "The Washington Times",
+          "lean": "lean-right",
+          "title": "Alaska judge rules request by Peltola campaign for ballot data in Senate race 'not reasonable'",
+          "url": "https://washingtontimes.com/news/2026/nov/11/request-peltola-campaign-ballot-data-senate-race-not-reasonable",
+          "published": "2026-11-12T00:02:34.000Z",
+          "snippet": "A judge in Alaska ruled Wednesday that a request by Democratic U.S. Senate candidate Mary Peltola's campaign for a list of absentee voters whose ballots have been rejected is \"not reasonable,\" particularly given the…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a2e33e6d624c",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Judge rules Peltola request for ballot data in Alaska Senate race ‘not reasonable’",
+          "url": "https://washingtonexaminer.com/news/campaigns/congressional/4800965/judge-mary-peltola-ballot-data-alaska-senate-race",
+          "published": "2026-11-12T02:31:05.000Z",
+          "snippet": "An Alaska judge on Wednesday denied Democratic Senate candidate Mary Peltola’s attempt to force election officials to hand over data for rejected absentee ballots cast in her race against Sen. Dan Sullivan (R-AK)…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "94ebacd328cf",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Alaska judge denies Peltola campaign request for list of rejected absentee ballots",
+          "url": "https://thehill.com/regulation/court-battles/6215086-judge-denies-peltola-ballot-request",
+          "published": "2026-11-12T03:57:22.000Z",
+          "snippet": "An Alaska judge denied former Rep. Mary Peltola’s (D-Alaska) campaign request for a list of rejected absentee ballots amid the state’s competitive Senate election that is yet to be called. Superior Court Judge Thomas…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_b84c3f7ae178",
+      "headline": "Building collapses in Brooklyn, leaving 2 dead and several hurt",
+      "headlineFrom": {
+        "sourceId": "newsnation",
+        "kind": "selected"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Officials said four individuals were hospitalized in critical condition, while 15 others sustained minor or major injuries.",
+      "topic": "us",
+      "firstSeen": "2026-11-11T22:23:31.000Z",
+      "lastUpdated": "2026-11-12T03:45:26.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 2,
         "center": 1,
         "right": 0,
         "byLean": {
-          "left": 3,
+          "left": 0,
           "lean-left": 2,
           "center": 1,
           "lean-right": 0,
           "right": 0
         }
       },
-      "mostlyCoveredBy": "left",
-      "score": 2.7127,
-      "image": "https://cdnph.upi.com/ph/st/th/9011794427084/2026/upi/a31d0ccab6bdd7e7df838782e03bb6bc/v1.5/White-House-threatens-Democrats-over-oversight-investigations.jpg",
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 2.4023,
+      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/GettyImages-2304175024.jpg?w=900",
       "articles": [
         {
-          "id": "f6f9256d9e8f",
-          "sourceId": "motherjones",
-          "sourceName": "Mother Jones",
-          "lean": "left",
-          "title": "Investigate Trump? The White House Says That Might Be a Crime.",
-          "url": "https://motherjones.com/politics/2026/11/investigate-trump-the-white-house-says-that-might-be-a-crime",
-          "published": "2026-11-11T18:00:53.000Z",
-          "snippet": "The White House on Wednesday threatened Democrats with criminal investigations for talking about investigating Trump. Will Scharf, the White House counsel, wrote to remind incoming House Oversight Committee Chair Rep…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "a28bfde8dede",
-          "sourceId": "huffpost",
-          "sourceName": "HuffPost",
-          "lean": "left",
-          "title": "White House Threatens Oversight Democrats With Criminal Investigation",
-          "url": "https://huffpost.com/entry/white-house-robert-garcia-threat_n_6af46188e4b09e0b5c535542",
-          "published": "2026-11-11T14:47:49.000Z",
-          "snippet": "White House counsel Will Scharf warned Rep. Robert Garcia (D-Calif.) his forthcoming subpoenas are illegal and “may warrant further investigation.”",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c00fb88050ec",
-          "sourceId": "upi",
-          "sourceName": "UPI",
-          "lean": "center",
-          "title": "Trump White House threatens Democrats over upcoming oversight investigations",
-          "url": "https://upi.com/Top_News/US/2026/11/11/white-house-threatens-democrats-over-oversight-investigations/9011794427084",
-          "published": "2026-11-11T20:13:48.000Z",
-          "snippet": "White House officials have threatened Democrats with criminal investigation over upcoming oversight probes into the Trump administration.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "77fbc8f2d2ed",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Democrat says Trump has ‘something to hide’ after White House threatens oversight efforts",
-          "url": "https://theguardian.com/us-news/2026/nov/11/democrat-investigation-white-house-letter-garcia",
-          "published": "2026-11-11T16:54:36.000Z",
-          "snippet": "White House warns Democratic pledges to investigate president ‘may cross line into blatant criminality’ The incoming Democratic chair of the powerful congressional oversight committee said it appears Donald Trump has…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "cec14a8001e3",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "White House warns congressional Democrats: Investigating us may be a crime",
-          "url": "https://nbcnews.com/politics/white-house/white-house-warns-congressional-democrats-investigating-us-may-crime-rcna608752",
-          "published": "2026-11-11T18:34:45.000Z",
-          "snippet": "Rep. Robert Garcia, the incoming House Oversight Committee chair, noted that the Constitution grants Congress “latitude to conduct investigations.”",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "f1392deba28f",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "title": "Top Oversight Democrat rejects Trump White House ‘threat’: ‘We’re not bending the knee’",
-          "url": "https://ms.now/news/democrats-house-oversight-robert-garcia-trump-corruption",
-          "published": "2026-11-11T21:40:36.000Z",
-          "snippet": "“It’s shocking that the White House would send a letter that is clearly a threat to the Congress,” Rep. Robert Garcia, D-Calif., told MS NOW.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ]
-    },
-    {
-      "id": "s_c7a8ad251e4d",
-      "headline": "Famed ship SS United States to be sunk off coast of Florida",
-      "headlineFrom": {
-        "sourceId": "bbc",
-        "kind": "selected"
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Activists unsuccessfully fought for the historic liner to be preserved and turned into a museum, but it will now become the world's largest artificial ocean reef.",
-      "topic": "us",
-      "firstSeen": "2026-11-11T18:14:57.000Z",
-      "lastUpdated": "2026-11-12T00:15:56.000Z",
-      "sourceCount": 4,
-      "articleCount": 5,
-      "coverage": {
-        "left": 3,
-        "center": 1,
-        "right": 0,
-        "byLean": {
-          "left": 0,
-          "lean-left": 3,
-          "center": 1,
-          "lean-right": 0,
-          "right": 0
-        }
-      },
-      "mostlyCoveredBy": "left",
-      "score": 2.6055,
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5661/live/7c6e9130-ddeb-11f1-9204-cdcddf7d901c.jpg",
-      "articles": [
-        {
-          "id": "a1fd3f9d89e2",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "SS United States to be sunk to become the world’s largest artificial reef - watch live",
-          "url": "https://theguardian.com/us-news/video/2026/nov/11/ss-united-states-to-be-sunk-to-become-the-worlds-largest-artificial-reef-watch-live",
-          "published": "2026-11-11T19:22:06.000Z",
-          "snippet": "The SS United States will sink off the coast of Destin, Florida to become an artificial reef, ending long-running wrangle over its fate Historic ocean liner to ‘live on’ beneath waves as world’s biggest artificial reef",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "b032d9f047f5",
+          "id": "22c1222aa01c",
           "sourceId": "cbsnews",
           "sourceName": "CBS News",
           "lean": "lean-left",
-          "title": "SS United States to become world's largest artificial reef",
-          "url": "https://cbsnews.com/news/ss-united-states-sinking-ocean-floor-largest-artificial-reef-world-florida-gulf-coast",
-          "published": "2026-11-12T00:04:00.000Z",
-          "snippet": "The 1,000-foot long SS United States is being sent to the bottom of the ocean in a controlled, explosive-free sinking that is taking place about 20 nautical miles off the Gulf Coast of Florida.",
+          "title": "At least 2 killed, 17 hurt in Brooklyn building collapse",
+          "url": "https://cbsnews.com/news/brooklyn-building-collapse-bedford-avenue",
+          "published": "2026-11-12T03:45:26.000Z",
+          "snippet": "A major technical rescue operation was ongoing, involving hundreds of firefighters.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -1938,140 +2547,29 @@
           }
         },
         {
-          "id": "f4acaf4c90c7",
-          "sourceId": "bbc",
-          "sourceName": "BBC News",
+          "id": "d5d165760034",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "2 dead, at least 17 hurt in NYC building collapse, authorities say",
+          "url": "https://nbcnews.com/news/us-news/new-york-brooklyn-building-collapse-rcna608909",
+          "published": "2026-11-12T00:04:59.000Z",
+          "snippet": "The collapse occurred around 4 p.m. in the Flatbush neighborhood. Rescuers were trying to reach people trapped in the rubble.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b84c3f7ae178",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
           "lean": "center",
-          "title": "Famed ship SS United States to be sunk off coast of Florida",
-          "url": "https://bbc.co.uk/news/articles/c3x298n87rn2o?at_medium=RSS&at_campaign=rss",
-          "published": "2026-11-11T18:42:27.000Z",
-          "snippet": "Activists unsuccessfully fought for the historic liner to be preserved and turned into a museum, but it will now become the world's largest artificial ocean reef.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c7a8ad251e4d",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "Recalling the S.S. United States as It Becomes a Florida Reef",
-          "url": "https://nytimes.com/2026/11/11/insider/ss-united-states-destin-florida-memories.html",
-          "published": "2026-11-11T18:14:57.000Z",
-          "snippet": "A New York Times editor has had a lifelong connection to the S.S. United States, which is becoming an artificial reef off the Florida coast.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "7ea94bd16c3e",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "The S.S. United States, a Historic Supership, Heads to the Ocean Floor",
-          "url": "https://nytimes.com/2026/11/11/climate/ss-united-states-ship-sinking-artificial-reef-florida.html",
-          "published": "2026-11-12T00:15:56.000Z",
-          "snippet": "The 20th-century ocean liner will become an artificial reef, ending efforts to save a ship that was fast, luxurious and (almost) indestructible. Watch the livestream.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ]
-    },
-    {
-      "id": "s_e74dec2a1f93",
-      "headline": "Wes Moore wants immigration reform. Can he work with Stephen Miller?",
-      "headlineFrom": {
-        "sourceId": "politico",
-        "kind": "selected"
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "The possible 2028 contender told POLITICO that Democrats should try to work with the president’s new chief of staff despite a “well of distrust.”",
-      "topic": "politics",
-      "firstSeen": "2026-11-10T13:49:19.000Z",
-      "lastUpdated": "2026-11-11T23:42:26.000Z",
-      "sourceCount": 4,
-      "articleCount": 4,
-      "coverage": {
-        "left": 3,
-        "center": 0,
-        "right": 1,
-        "byLean": {
-          "left": 2,
-          "lean-left": 1,
-          "center": 0,
-          "lean-right": 0,
-          "right": 1
-        }
-      },
-      "mostlyCoveredBy": null,
-      "score": 2.5228,
-      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=C3DE5CBD-9F04-446A-96D7-17518EA9F413",
-      "articles": [
-        {
-          "id": "f1ff3e7f055e",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "MAHA Energized by Stephen Miller Appointment",
-          "url": "https://newsmax.com/newsfront/maha-stephen-miller/2026/11/11/id/1276013",
-          "published": "2026-11-11T23:42:26.000Z",
-          "snippet": "Many in the Make America Healthy Again movement were supportive of the new White House chief of staff, Stephen Miller.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e74dec2a1f93",
-          "sourceId": "huffpost",
-          "sourceName": "HuffPost",
-          "lean": "left",
-          "title": "House Dem Congratulates Stephen Miller For 1 Spicy Reason: 'He's Going To Need It'",
-          "url": "https://huffpost.com/entry/sam-liccardo-congratulates-warns-stephen-miller-subpoenas_n_6af2f8d0e4b0a8468d8a8b7e",
-          "published": "2026-11-10T13:49:19.000Z",
-          "snippet": "Stephen Miller was promoted by President Donald Trump to White House chief of staff after last week’s Democratic midterms sweep.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "caceee18ff9c",
-          "sourceId": "dailybeast",
-          "sourceName": "The Daily Beast",
-          "lean": "left",
-          "title": "Republican Calls for Stephen Miller’s Head After GOP Wipeout",
-          "url": "https://thedailybeast.com/republican-marlin-stutzman-calls-for-stephen-millers-head-after-gop-wipeout",
-          "published": "2026-11-11T21:07:01.000Z",
-          "snippet": "Kylie Cooper / Kylie Cooper/REUTERS A GOP representative has made repeated calls for Stephen Miller’s firing in the wake of Republicans’ trouncing in the midterms. On Sunday, just two days after Miller was announced as…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "7f3bb765747b",
-          "sourceId": "politico",
-          "sourceName": "Politico",
-          "lean": "lean-left",
-          "title": "Wes Moore wants immigration reform. Can he work with Stephen Miller?",
-          "url": "https://politico.com/news/2026/11/10/gov-wes-moore-sees-an-opportunity-to-work-with-stephen-miller-01158571",
-          "published": "2026-11-10T17:06:50.000Z",
-          "snippet": "The possible 2028 contender told POLITICO that Democrats should try to work with the president’s new chief of staff despite a “well of distrust.”",
+          "title": "Building collapses in Brooklyn, leaving 2 dead and several hurt",
+          "url": "https://newsnationnow.com/us-news/northeast/building-collapses-brooklyn-leaving-4-hurt-report",
+          "published": "2026-11-11T22:23:31.000Z",
+          "snippet": "Officials said four individuals were hospitalized in critical condition, while 15 others sustained minor or major injuries.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -2093,7 +2591,7 @@
       "disputed": [],
       "ai": null,
       "snippet": "The 400 Mawozo gang was targeted by El Salvador's military, which has deployed thousands of troops to combat Haiti's gang violence crisis.",
-      "topic": "world",
+      "topic": "military",
       "firstSeen": "2026-11-11T12:14:12.000Z",
       "lastUpdated": "2026-11-12T01:04:45.000Z",
       "sourceCount": 3,
@@ -2110,8 +2608,11 @@
           "right": 1
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.3523,
+      "score": 2.058,
       "image": "https://cdnph.upi.com/ph/st/th/4941794411502/2026/i/17944128287151/v1.5/Bukele-Salvadoran-troops-destroyed-Haitian-gang-headquarters.jpg",
       "articles": [
         {
@@ -2166,87 +2667,6 @@
       ]
     },
     {
-      "id": "s_6fc90d37d9e9",
-      "headline": "Nvidia stock tanks after report of second Huang affair",
-      "headlineFrom": {
-        "sourceId": "thehill",
-        "kind": "selected"
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Shares of Nvidia tanked early Wednesday evening, after The New York Times reported that CEO Jensen Huang had a second affair. The company’s stock was down roughly 8.3 percent during after hours trading, dipping below $160 per share. Nvidia shares had not fallen below that…",
-      "topic": "business",
-      "firstSeen": "2026-11-11T23:48:26.000Z",
-      "lastUpdated": "2026-11-12T00:53:16.000Z",
-      "sourceCount": 3,
-      "articleCount": 3,
-      "coverage": {
-        "left": 2,
-        "center": 1,
-        "right": 0,
-        "byLean": {
-          "left": 0,
-          "lean-left": 2,
-          "center": 1,
-          "lean-right": 0,
-          "right": 0
-        }
-      },
-      "mostlyCoveredBy": null,
-      "score": 2.3264,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/06/6a31d615188665.55605695-e1785164164264.jpeg?w=900",
-      "articles": [
-        {
-          "id": "df9eb8397668",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Nvidia's stock dives as board weighs move to oust Jensen Huang",
-          "url": "https://cbsnews.com/news/nvidia-stock-dives-report-board-prepares-oust-jensen-huang",
-          "published": "2026-11-12T00:18:00.000Z",
-          "snippet": "Nvidia shares fall sharply in after-hours trading as the company's board considers whether to remove Jensen Huang as CEO.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "51af4bf026ee",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "Nvidia Shares Plummet as Board Is Said to Consider C.E.O.’s Future",
-          "url": "https://nytimes.com/2026/11/11/business/nvidia-stock-jensen-huang-ceo.html",
-          "published": "2026-11-12T00:53:16.000Z",
-          "snippet": "News of the board’s deliberations about Jensen Huang’s job drove Nvidia’s stock down more than 8 percent in after-hours trading.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "6fc90d37d9e9",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Nvidia stock tanks after report of second Huang affair",
-          "url": "https://thehill.com/business/6214833-nvidia-ceo-jesen-huang-affair",
-          "published": "2026-11-11T23:48:26.000Z",
-          "snippet": "Shares of Nvidia tanked early Wednesday evening, after The New York Times reported that CEO Jensen Huang had a second affair. The company’s stock was down roughly 8.3 percent during after hours trading, dipping below…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ]
-    },
-    {
       "id": "s_826361a61aff",
       "headline": "Mississippi elects Democrat Scott Colom as state's first Black U.S. senator since Reconstruction",
       "headlineFrom": {
@@ -2276,8 +2696,11 @@
           "right": 0
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.2826,
+      "score": 1.997,
       "image": "https://twt-thumbs.washtimes.com/media/image/2026/11/11/Election_2_26_Mississippi_Senate_23953_s1440x960.jpg?f72536d07237fdd262042ae8f5e6e6de3b865f3c",
       "articles": [
         {
@@ -2328,10 +2751,10 @@
       ]
     },
     {
-      "id": "s_9cb7bd4343ce",
-      "headline": "Hundreds of schools in Europe receive bomb threats",
+      "id": "s_e74dec2a1f93",
+      "headline": "Republican Calls for Stephen Miller’s Head After GOP Wipeout",
       "headlineFrom": {
-        "sourceId": "upi",
+        "sourceId": "dailybeast",
         "kind": "selected"
       },
       "summary": null,
@@ -2339,37 +2762,92 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "Hundreds of schools across Europe received bomb threats, targeting schools in Italy, Northern Ireland, Scotland and the Republic of Ireland.",
-      "topic": "world",
-      "firstSeen": "2026-11-11T13:43:00.000Z",
-      "lastUpdated": "2026-11-11T21:19:38.000Z",
-      "sourceCount": 4,
-      "articleCount": 4,
+      "snippet": "Kylie Cooper / Kylie Cooper/REUTERS A GOP representative has made repeated calls for Stephen Miller’s firing in the wake of Republicans’ trouncing in the midterms. On Sunday, just two days after Miller was announced as Susie Wiles’ replacement as White House chief of staff, U.S…",
+      "topic": "politics",
+      "firstSeen": "2026-11-10T13:49:19.000Z",
+      "lastUpdated": "2026-11-11T23:42:26.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
       "coverage": {
-        "left": 0,
-        "center": 3,
+        "left": 2,
+        "center": 0,
         "right": 1,
         "byLean": {
-          "left": 0,
+          "left": 2,
           "lean-left": 0,
-          "center": 3,
-          "lean-right": 1,
-          "right": 0
+          "center": 0,
+          "lean-right": 0,
+          "right": 1
         }
       },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": {
+        "left": [
+          {
+            "id": "d6d345f8f47e",
+            "sourceId": "nytimes",
+            "sourceName": "The New York Times",
+            "lean": "lean-left",
+            "title": "Republicans Lost Everywhere. Except for Stephen Miller.",
+            "url": "https://nytimes.com/2026/11/10/opinion/trump-stephen-miller-republicans.html",
+            "published": "2026-11-10T17:02:07.000Z",
+            "snippet": "No one is safe when Miller is the guiding hand behind the president’s agenda.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "center": [
+          {
+            "id": "251df4f445ae",
+            "sourceId": "thehill",
+            "sourceName": "The Hill",
+            "lean": "center",
+            "title": "Stephen Miller's White House will test Mexico's red lines",
+            "url": "https://thehill.com/opinion/international/6211857-miller-white-house-chief-staff",
+            "published": "2026-11-11T17:00:00.000Z",
+            "snippet": "Mexico's security chief, Omar García Harfuch, should already be preparing for a White House that acts alone, possibly in opposition to Congress.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "right": [
+          {
+            "id": "4dad0d766d16",
+            "sourceId": "nypost",
+            "sourceName": "New York Post",
+            "lean": "lean-right",
+            "title": "Michael Goodwin: It’s Stephen Miller time in the Trump admin — threatened media and Dems are already spreading misinformation",
+            "url": "https://nypost.com/2026/11/10/opinion/michael-goodwin-its-stephen-miller-time-in-the-trump-admin-threatened-media-and-dems-are-already-spreading-misinformation",
+            "published": "2026-11-11T03:16:53.000Z",
+            "snippet": "In making Stephen Miller his new chief of staff, President Trump unleashed an avalanche of pent-up resentment toward his new top aide.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ]
+      },
       "mostlyCoveredBy": null,
-      "score": 2.1988,
-      "image": "https://cdnph.upi.com/ph/st/th/9571794409682/2026/upi_com/1867d72cda59386c26d09e2a6884151b/v1.5/Hundreds-of-schools-in-Europe-receive-bomb-threats.jpg",
+      "score": 1.9012,
+      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=C3DE5CBD-9F04-446A-96D7-17518EA9F413",
       "articles": [
         {
-          "id": "39ad6a88bed2",
-          "sourceId": "upi",
-          "sourceName": "UPI",
-          "lean": "center",
-          "title": "Hundreds of schools in Europe receive bomb threats",
-          "url": "https://upi.com/Top_News/World-News/2026/11/11/italy-northern-ireland-republic-scotland-email-bomb-threats-schools/9571794409682",
-          "published": "2026-11-11T15:23:26.000Z",
-          "snippet": "Hundreds of schools across Europe received bomb threats, targeting schools in Italy, Northern Ireland, Scotland and the Republic of Ireland.",
+          "id": "f1ff3e7f055e",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "MAHA Energized by Stephen Miller Appointment",
+          "url": "https://newsmax.com/newsfront/maha-stephen-miller/2026/11/11/id/1276013",
+          "published": "2026-11-11T23:42:26.000Z",
+          "snippet": "Many in the Make America Healthy Again movement were supportive of the new White House chief of staff, Stephen Miller.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -2377,46 +2855,29 @@
           }
         },
         {
-          "id": "9cb7bd4343ce",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "title": "Italy: Hundreds of schools evacuated after bomb threats",
-          "url": "https://dw.com/en/italy-hundreds-of-schools-evacuated-after-bomb-threats/a-79918034?maca=en-rss-en-all-1573-rdf",
-          "published": "2026-11-11T13:43:00.000Z",
-          "snippet": "Although the government believes the threat to be a hoax, it has nevertheless prompted concerns about \"hybrid warfare\" in Europe. Similar messages were sent in Northern Ireland, Ireland, and Bulgaria.",
+          "id": "e74dec2a1f93",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "House Dem Congratulates Stephen Miller For 1 Spicy Reason: 'He's Going To Need It'",
+          "url": "https://huffpost.com/entry/sam-liccardo-congratulates-warns-stephen-miller-subpoenas_n_6af2f8d0e4b0a8468d8a8b7e",
+          "published": "2026-11-10T13:49:19.000Z",
+          "snippet": "Stephen Miller was promoted by President Donald Trump to White House chief of staff after last week’s Democratic midterms sweep.",
           "flags": {
             "loaded": [],
             "contested": [],
-            "clickbait": false
+            "clickbait": true
           }
         },
         {
-          "id": "65f5ce0b0326",
-          "sourceId": "bbc",
-          "sourceName": "BBC News",
-          "lean": "center",
-          "title": "Schools in Italy, Scotland and Northern Ireland hit by threats in suspected bomb hoax",
-          "url": "https://bbc.co.uk/news/articles/cwz0k79pr8z2o?at_medium=RSS&at_campaign=rss",
-          "published": "2026-11-11T18:38:45.000Z",
-          "snippet": "More than 6,000 Italian schools received a threat. Authorities in all three countries say there appears to be no risk to the public.",
-          "flags": {
-            "loaded": [
-              "hoax"
-            ],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "503c44b98fe3",
-          "sourceId": "washtimes",
-          "sourceName": "The Washington Times",
-          "lean": "lean-right",
-          "title": "Italy's Meloni says bomb hoaxes aim to stoke fear as schools in Italy, Ireland, Scotland threatened",
-          "url": "https://washingtontimes.com/news/2026/nov/11/italys-meloni-says-bomb-hoaxes-aim-stoke-fear-schools-italy-ireland",
-          "published": "2026-11-11T21:19:38.000Z",
-          "snippet": "Italian Premier Giorgia Meloni said law enforcement found no concrete threat during checks of thousands of school buildings that were evacuated Wednesday after an emailed bomb threat, the latest in a series of…",
+          "id": "caceee18ff9c",
+          "sourceId": "dailybeast",
+          "sourceName": "The Daily Beast",
+          "lean": "left",
+          "title": "Republican Calls for Stephen Miller’s Head After GOP Wipeout",
+          "url": "https://thedailybeast.com/republican-marlin-stutzman-calls-for-stephen-millers-head-after-gop-wipeout",
+          "published": "2026-11-11T21:07:01.000Z",
+          "snippet": "Kylie Cooper / Kylie Cooper/REUTERS A GOP representative has made repeated calls for Stephen Miller’s firing in the wake of Republicans’ trouncing in the midterms. On Sunday, just two days after Miller was announced as…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -2426,8 +2887,8 @@
       ]
     },
     {
-      "id": "s_36bd37841430",
-      "headline": "Driver faces DUI and murder charges after three killed in LA crash, officials say",
+      "id": "s_94cbb7977593",
+      "headline": "Hegseth and team reprimanded by Arlington national cemetery guard – video",
       "headlineFrom": {
         "sourceId": "guardian",
         "kind": "selected"
@@ -2437,37 +2898,40 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "Driver, 61, faces DUI and murder charges after Tuesday crash critically injuring two others in North Hollywood A driver who reportedly crashed into pedestrians on a Los Angeles corner during Tuesday rush hour, killing three people and critically injuring two more, was arrested…",
-      "topic": "us",
-      "firstSeen": "2026-11-11T20:30:56.000Z",
-      "lastUpdated": "2026-11-12T02:05:04.000Z",
-      "sourceCount": 2,
-      "articleCount": 2,
+      "snippet": "Defense secretary Pete Hegseth and members of his team were reprimanded by a US sentinel at Arlington national cemetery after the Veterans Day commemoration that Donald Trumped attended on 11 November",
+      "topic": "military",
+      "firstSeen": "2026-11-11T21:29:32.000Z",
+      "lastUpdated": "2026-11-12T00:52:36.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
       "coverage": {
-        "left": 1,
+        "left": 3,
         "center": 0,
-        "right": 1,
+        "right": 0,
         "byLean": {
-          "left": 0,
-          "lean-left": 1,
+          "left": 1,
+          "lean-left": 2,
           "center": 0,
           "lean-right": 0,
-          "right": 1
+          "right": 0
         }
       },
-      "mostlyCoveredBy": null,
-      "score": 1.9756,
-      "image": "https://i.guim.co.uk/img/media/8fde15c86b519c9c53c59fafa627004379fc5d30/844_0_2832_2268/master/2832.jpg?width=140&quality=85&auto=format&fit=max&s=98a149a8585cfc9d556ee213c81593a3",
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": "left",
+      "score": 1.6273,
+      "image": "https://i.guim.co.uk/img/media/4ed24a609a8fbf5b6b79ee4c6dfff419ce00eda0/308_0_3043_2435/master/3043.jpg?width=140&quality=85&auto=format&fit=max&s=d271fb785d520171bd89726dff101866",
       "articles": [
         {
-          "id": "36bd37841430",
+          "id": "0a09e901f15e",
           "sourceId": "guardian",
           "sourceName": "The Guardian",
           "lean": "lean-left",
-          "title": "Driver faces DUI and murder charges after three killed in LA crash, officials say",
-          "url": "https://theguardian.com/us-news/2026/nov/10/los-angeles-vehicle-crash",
-          "published": "2026-11-11T20:30:56.000Z",
-          "snippet": "Driver, 61, faces DUI and murder charges after Tuesday crash critically injuring two others in North Hollywood A driver who reportedly crashed into pedestrians on a Los Angeles corner during Tuesday rush hour, killing…",
+          "title": "Hegseth and team reprimanded by Arlington national cemetery guard – video",
+          "url": "https://theguardian.com/us-news/video/2026/nov/11/hegseth-and-team-reprimanded-by-arlington-national-cemetery-guard-video",
+          "published": "2026-11-11T21:53:22.000Z",
+          "snippet": "Defense secretary Pete Hegseth and members of his team were reprimanded by a US sentinel at Arlington national cemetery after the Veterans Day commemoration that Donald Trumped attended on 11 November",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -2475,16 +2939,33 @@
           }
         },
         {
-          "id": "cd0f1baf1ec0",
-          "sourceId": "foxnews",
-          "sourceName": "Fox News",
-          "lean": "right",
-          "title": "Suspected DUI driver arrested on 3 murder counts after deadly North Hollywood crash, police say",
-          "url": "https://foxnews.com/us/suspected-dui-driver-arrested-3-murder-counts-after-deadly-north-hollywood-crash-police-say",
-          "published": "2026-11-12T02:05:04.000Z",
-          "snippet": "A suspected DUI driver was arrested on three murder counts after a North Hollywood crash killed three women and injured two others.",
+          "id": "c741a05637fa",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Hegseth's group asked by soldier to maintain respect at Arlington National Cemetery",
+          "url": "https://cbsnews.com/video/hegseths-group-asked-soldier-maintain-respect-arlington-national-cemetery",
+          "published": "2026-11-12T00:52:36.000Z",
+          "snippet": "President Trump traveled to Arlington National Cemetery on Wednesday, laying a wreath in honor of fallen U.S. soldiers. But the cameras also captured a U.S. Army sentinel reprimanding a group that included Defense…",
           "flags": {
             "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "94cbb7977593",
+          "sourceId": "dailybeast",
+          "sourceName": "The Daily Beast",
+          "lean": "left",
+          "title": "Arlington Sentinel Gives Rowdy Hegseth Humiliating Reprimand",
+          "url": "https://thedailybeast.com/arlington-sentinel-gives-rowdy-hegseth-humiliating-reprimand",
+          "published": "2026-11-11T21:29:32.000Z",
+          "snippet": "Evelyn Hockstein/REUTERS Defense Secretary Pete Hegseth and his group were reprimanded during their visit to the Tomb of the Unknown Soldier. The group was spotted taking photos and laughing at Arlington National…",
+          "flags": {
+            "loaded": [
+              "humiliating"
+            ],
             "contested": [],
             "clickbait": false
           }
@@ -2493,8 +2974,17 @@
     }
   ],
   "blindspots": [
-    "s_12e89d0f198d",
     "s_a28bfde8dede",
-    "s_c7a8ad251e4d"
+    "s_c7a8ad251e4d",
+    "s_12e89d0f198d",
+    "s_94cbb7977593"
+  ],
+  "developing": [
+    "s_1738b00e835d",
+    "s_60d3d05b3d2b"
+  ],
+  "perspectives": [
+    "s_bf2dcec61720",
+    "s_e74dec2a1f93"
   ]
 }

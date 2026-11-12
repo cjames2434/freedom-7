@@ -59,6 +59,8 @@ const CLICKBAIT_RES = [
   /\bwhat happens next\b/i,
   /\bis this the\b/i,
   /\bthe internet (is|can'?t)\b/i,
+  /\bfor (1|one) \w+ reason\b/i,
+  /\b(spicy|wild|bizarre|jaw-dropping) (reason|moment|reaction|claim)\b/i,
   /!{1,}/,
 ];
 

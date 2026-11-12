@@ -1,5 +1,5 @@
 {
-  "siteName": "Even Keel",
+  "siteName": "Freedom 7",
   "tagline": "Every side of the story, side by side.",
 
   "windowHours": 48,
@@ -18,6 +18,22 @@
   "blindspotShare": 0.8,
   "maxStories": 150,
   "recencyHalfLifeHours": 12,
+
+  "developing": {
+    "windowHours": 3,
+    "minRecentSources": 3
+  },
+
+  "perspectives": {
+    "threshold": 0.12,
+    "maxPerSide": 2,
+    "maxEntityShare": 0.08
+  },
+
+  "safety": {
+    "minOutletShare": 0.5,
+    "minArticles": 30
+  },
 
   "ai": {
     "model": "claude-opus-5-5",

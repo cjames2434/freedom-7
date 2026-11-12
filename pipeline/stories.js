@@ -79,6 +79,13 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
     const lastUpdated = new Date(Math.max(...times));
     const hoursSinceUpdate = (now - lastUpdated) / 36e5;
 
+    // "Developing": several outlets have published on it in the last few hours.
+    const dev = settings.developing || { windowHours: 3, minRecentSources: 3 };
+    const recentCutoff = now.getTime() - dev.windowHours * 36e5;
+    const recentSources = new Set(
+      items.filter((it) => new Date(it.article.published).getTime() >= recentCutoff).map((it) => it.article.sourceId)
+    );
+
     // Order: most central first so the "primary" article per outlet is the most on-topic one.
     items.sort((a, b) => b.centrality - a.centrality);
     const chosen = pickHeadline(items);
@@ -102,6 +109,9 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
       sourceCount: sourceIds.size,
       articleCount: items.length,
       coverage,
+      developing: recentSources.size >= dev.minRecentSources,
+      recentSourceCount: recentSources.size,
+      perspectives: null,
       mostlyCoveredBy: mostlyCoveredBy(coverage, {
         minPartisan: settings.minPartisanSourcesForBlindspot,
         share: settings.blindspotShare,

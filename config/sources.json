@@ -1,9 +1,10 @@
 {
   "_readme": [
     "The outlet roster. 'lean' is one of: left, lean-left, center, lean-right, right.",
-    "Leans are starter values that approximate the consensus of public media-bias raters (AllSides, Ad Fontes Media, Media Bias/Fact Check) for each outlet's news coverage. Review and adjust them; they are not gospel.",
-    "Keep the roster symmetric: the same number of 'left' as 'right' outlets and of 'lean-left' as 'lean-right'. Run `npm run check:balance` after any edit; the build refuses to run if the roster is lopsided.",
-    "Feeds were last verified live on 2026-11-11. Run `npm run check:feeds` to re-test them."
+    "Leans are starter values that approximate the consensus of public media-bias raters (AllSides, Ad Fontes Media, Media Bias/Fact Check). Review and adjust them; they are not gospel.",
+    "Each feed is either a plain URL (a news feed) or { \"url\": ..., \"kind\": \"opinion\" } for a feed that is mostly commentary. Opinion feeds never count as news coverage; they only feed the balanced Perspectives section.",
+    "Two rosters must each mirror themselves: outlets with a news feed, and outlets with an opinion feed. Same number of 'left' as 'right', and of 'lean-left' as 'lean-right'. Run `npm run check:balance` after any edit; the build refuses to run if either is lopsided.",
+    "Feeds were last verified live on 2026-11-12. Run `npm run check:feeds` to re-test them."
   ],
   "sources": [
     {
@@ -11,14 +12,18 @@
       "name": "HuffPost",
       "lean": "left",
       "homepage": "https://www.huffpost.com",
-      "feeds": ["https://www.huffpost.com/section/politics/feed"]
+      "feeds": [
+        "https://www.huffpost.com/section/politics/feed"
+      ]
     },
     {
       "id": "msnow",
       "name": "MS NOW",
       "lean": "left",
       "homepage": "https://www.ms.now",
-      "feeds": ["https://www.ms.now/feed"],
+      "feeds": [
+        "https://www.ms.now/feed"
+      ],
       "notes": "Formerly MSNBC."
     },
     {
@@ -26,66 +31,129 @@
       "name": "The Daily Beast",
       "lean": "left",
       "homepage": "https://www.thedailybeast.com",
-      "feeds": ["https://www.thedailybeast.com/arc/outboundfeeds/rss/articles/"]
+      "feeds": [
+        "https://www.thedailybeast.com/arc/outboundfeeds/rss/articles/"
+      ]
     },
     {
       "id": "vox",
       "name": "Vox",
       "lean": "left",
       "homepage": "https://www.vox.com",
-      "feeds": ["https://www.vox.com/rss/index.xml"]
+      "feeds": [
+        "https://www.vox.com/rss/index.xml"
+      ]
     },
     {
       "id": "motherjones",
       "name": "Mother Jones",
       "lean": "left",
       "homepage": "https://www.motherjones.com",
-      "feeds": ["https://www.motherjones.com/feed/"]
+      "feeds": [
+        "https://www.motherjones.com/feed/"
+      ]
     },
-
+    {
+      "id": "newrepublic",
+      "name": "The New Republic",
+      "lean": "left",
+      "homepage": "https://newrepublic.com",
+      "feeds": [
+        {
+          "url": "https://newrepublic.com/rss.xml",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Opinion magazine, used for Perspectives only."
+    },
+    {
+      "id": "slate",
+      "name": "Slate",
+      "lean": "left",
+      "homepage": "https://slate.com",
+      "feeds": [
+        {
+          "url": "https://slate.com/feeds/all.rss",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Commentary and analysis magazine, used for Perspectives only."
+    },
     {
       "id": "nytimes",
       "name": "The New York Times",
       "lean": "lean-left",
       "homepage": "https://www.nytimes.com",
-      "feeds": ["https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"]
+      "feeds": [
+        "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+        {
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/Opinion.xml",
+          "kind": "opinion"
+        }
+      ]
     },
     {
       "id": "npr",
       "name": "NPR",
       "lean": "lean-left",
       "homepage": "https://www.npr.org",
-      "feeds": ["https://feeds.npr.org/1001/rss.xml"]
+      "feeds": [
+        "https://feeds.npr.org/1001/rss.xml"
+      ]
     },
     {
       "id": "cbsnews",
       "name": "CBS News",
       "lean": "lean-left",
       "homepage": "https://www.cbsnews.com",
-      "feeds": ["https://www.cbsnews.com/latest/rss/main"]
+      "feeds": [
+        "https://www.cbsnews.com/latest/rss/main"
+      ]
     },
     {
       "id": "nbcnews",
       "name": "NBC News",
       "lean": "lean-left",
       "homepage": "https://www.nbcnews.com",
-      "feeds": ["https://feeds.nbcnews.com/nbcnews/public/news"]
+      "feeds": [
+        "https://feeds.nbcnews.com/nbcnews/public/news"
+      ]
     },
     {
       "id": "guardian",
       "name": "The Guardian",
       "lean": "lean-left",
       "homepage": "https://www.theguardian.com/us",
-      "feeds": ["https://www.theguardian.com/us-news/rss"]
+      "feeds": [
+        "https://www.theguardian.com/us-news/rss",
+        {
+          "url": "https://www.theguardian.com/us/commentisfree/rss",
+          "kind": "opinion"
+        }
+      ]
     },
     {
       "id": "politico",
       "name": "Politico",
       "lean": "lean-left",
       "homepage": "https://www.politico.com",
-      "feeds": ["https://rss.politico.com/politics-news.xml"]
+      "feeds": [
+        "https://rss.politico.com/politics-news.xml"
+      ]
     },
-
+    {
+      "id": "atlantic",
+      "name": "The Atlantic",
+      "lean": "lean-left",
+      "homepage": "https://www.theatlantic.com",
+      "feeds": [
+        {
+          "url": "https://www.theatlantic.com/feed/channel/ideas/",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Ideas section (commentary), used for Perspectives only."
+    },
     {
       "id": "bbc",
       "name": "BBC News",
@@ -101,122 +169,188 @@
       "name": "The Hill",
       "lean": "center",
       "homepage": "https://thehill.com",
-      "feeds": ["https://thehill.com/news/feed/"]
+      "feeds": [
+        "https://thehill.com/news/feed/",
+        {
+          "url": "https://thehill.com/opinion/feed/",
+          "kind": "opinion"
+        }
+      ]
     },
     {
       "id": "newsnation",
       "name": "NewsNation",
       "lean": "center",
       "homepage": "https://www.newsnationnow.com",
-      "feeds": ["https://www.newsnationnow.com/feed/"]
+      "feeds": [
+        "https://www.newsnationnow.com/feed/"
+      ]
     },
     {
       "id": "csmonitor",
       "name": "The Christian Science Monitor",
       "lean": "center",
       "homepage": "https://www.csmonitor.com",
-      "feeds": ["https://rss.csmonitor.com/feeds/all"]
+      "feeds": [
+        "https://rss.csmonitor.com/feeds/all"
+      ]
     },
     {
       "id": "deseret",
       "name": "Deseret News",
       "lean": "center",
       "homepage": "https://www.deseret.com",
-      "feeds": ["https://www.deseret.com/arc/outboundfeeds/rss/?outputType=xml"]
+      "feeds": [
+        "https://www.deseret.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
     },
     {
       "id": "upi",
       "name": "UPI",
       "lean": "center",
       "homepage": "https://www.upi.com",
-      "feeds": ["https://rss.upi.com/news/top_news.rss"]
+      "feeds": [
+        "https://rss.upi.com/news/top_news.rss"
+      ]
     },
     {
       "id": "dw",
       "name": "DW",
       "lean": "center",
       "homepage": "https://www.dw.com/en",
-      "feeds": ["https://rss.dw.com/rdf/rss-en-all"]
+      "feeds": [
+        "https://rss.dw.com/rdf/rss-en-all"
+      ]
     },
-
     {
       "id": "nypost",
       "name": "New York Post",
       "lean": "lean-right",
       "homepage": "https://nypost.com",
-      "feeds": ["https://nypost.com/news/feed/"]
+      "feeds": [
+        "https://nypost.com/news/feed/",
+        {
+          "url": "https://nypost.com/opinion/feed/",
+          "kind": "opinion"
+        }
+      ]
     },
     {
       "id": "washexaminer",
       "name": "Washington Examiner",
       "lean": "lean-right",
       "homepage": "https://www.washingtonexaminer.com",
-      "feeds": ["https://www.washingtonexaminer.com/feed/"]
+      "feeds": [
+        "https://www.washingtonexaminer.com/feed/",
+        {
+          "url": "https://www.washingtonexaminer.com/section/opinion/feed/",
+          "kind": "opinion"
+        }
+      ]
     },
     {
       "id": "washtimes",
       "name": "The Washington Times",
       "lean": "lean-right",
       "homepage": "https://www.washingtontimes.com",
-      "feeds": ["https://www.washingtontimes.com/rss/headlines/news/"]
+      "feeds": [
+        "https://www.washingtontimes.com/rss/headlines/news/"
+      ]
     },
     {
       "id": "dispatch",
       "name": "The Dispatch",
       "lean": "lean-right",
       "homepage": "https://thedispatch.com",
-      "feeds": ["https://thedispatch.com/feed/"]
+      "feeds": [
+        "https://thedispatch.com/feed/"
+      ]
     },
     {
       "id": "reason",
       "name": "Reason",
       "lean": "lean-right",
       "homepage": "https://reason.com",
-      "feeds": ["https://reason.com/feed/"],
+      "feeds": [
+        "https://reason.com/feed/"
+      ],
       "notes": "Libertarian. Rated lean-right by most raters, though it often breaks with both parties."
+    },
+    {
+      "id": "foxbusiness",
+      "name": "Fox Business",
+      "lean": "lean-right",
+      "homepage": "https://www.foxbusiness.com",
+      "feeds": [
+        "https://moxie.foxbusiness.com/google-publisher/latest.xml"
+      ]
     },
     {
       "id": "freepress",
       "name": "The Free Press",
       "lean": "lean-right",
       "homepage": "https://www.thefp.com",
-      "feeds": ["https://www.thefp.com/feed"]
+      "feeds": [
+        {
+          "url": "https://www.thefp.com/feed",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "Mostly essays and commentary, so used for Perspectives only."
     },
-
     {
       "id": "foxnews",
       "name": "Fox News",
       "lean": "right",
       "homepage": "https://www.foxnews.com",
-      "feeds": ["https://moxie.foxnews.com/google-publisher/latest.xml"]
+      "feeds": [
+        "https://moxie.foxnews.com/google-publisher/latest.xml",
+        {
+          "url": "https://moxie.foxnews.com/google-publisher/opinion.xml",
+          "kind": "opinion"
+        }
+      ]
     },
     {
       "id": "newsmax",
       "name": "Newsmax",
       "lean": "right",
       "homepage": "https://www.newsmax.com",
-      "feeds": ["https://www.newsmax.com/rss/Newsfront/16/"]
+      "feeds": [
+        "https://www.newsmax.com/rss/Newsfront/16/"
+      ]
     },
     {
       "id": "dailycaller",
       "name": "The Daily Caller",
       "lean": "right",
       "homepage": "https://dailycaller.com",
-      "feeds": ["https://dailycaller.com/feed/"]
+      "feeds": [
+        "https://dailycaller.com/feed/"
+      ]
     },
     {
       "id": "dailywire",
       "name": "The Daily Wire",
       "lean": "right",
       "homepage": "https://www.dailywire.com",
-      "feeds": ["https://www.dailywire.com/feeds/rss.xml"]
+      "feeds": [
+        "https://www.dailywire.com/feeds/rss.xml"
+      ]
     },
     {
       "id": "nationalreview",
       "name": "National Review",
       "lean": "right",
       "homepage": "https://www.nationalreview.com",
-      "feeds": ["https://www.nationalreview.com/feed/"]
+      "feeds": [
+        "https://www.nationalreview.com/news/feed/",
+        {
+          "url": "https://www.nationalreview.com/feed/",
+          "kind": "opinion"
+        }
+      ],
+      "notes": "News feed counts as coverage; the main feed (mostly commentary) is used for Perspectives only."
     }
   ]
 }

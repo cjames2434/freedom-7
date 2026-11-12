@@ -51,11 +51,12 @@ export async function fetchFeed(url, { timeoutMs = 15000, maxItems = 40 } = {}) 
   }
 }
 
-/** Fetch every feed of every source. Returns [{ source, url, ok, items, error }]. */
+/** Fetch every feed of every source. Returns [{ source, kind, url, ok, items, error }]. */
 export async function fetchAllSources(sources, { concurrency = 6, timeoutMs, maxItems } = {}) {
-  const jobs = sources.flatMap((source) => source.feeds.map((url) => ({ source, url })));
-  return mapLimit(jobs, concurrency, async ({ source, url }) => ({
+  const jobs = sources.flatMap((source) => source.feeds.map((feed) => ({ source, feed })));
+  return mapLimit(jobs, concurrency, async ({ source, feed }) => ({
     source,
-    ...(await fetchFeed(url, { timeoutMs, maxItems })),
+    kind: feed.kind,
+    ...(await fetchFeed(feed.url, { timeoutMs, maxItems })),
   }));
 }
