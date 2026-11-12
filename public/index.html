@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Freedom 7</title>
   <meta name="description" content="Every side of the story, side by side. Free, no ads, no accounts, no tracking.">
-  <meta name="theme-color" content="#F3F1EC" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0B1630" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0B1630">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
@@ -40,9 +41,17 @@
         <span id="site-tagline">Every side of the story, side by side.</span>
         <svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.245 6.91h7.266l-5.878 4.27 2.245 6.91L12 16.82l-5.878 4.27 2.245-6.91-5.878-4.27h7.266z"/></svg>
       </p>
+      <!-- U.S. time zones, a nod to mission-control clocks. Decorative. -->
+      <p class="clocks" id="clocks" aria-hidden="true"></p>
     </div>
-    <div class="wrap">
-      <div class="double-rule" aria-hidden="true"></div>
+    <div class="wrap"><div class="double-rule" aria-hidden="true"></div></div>
+  </header>
+
+  <!-- The main nav sticks to the top once the masthead scrolls away. -->
+  <div class="nav-sentinel" id="nav-sentinel" aria-hidden="true"></div>
+  <div class="nav-bar" id="nav-bar">
+    <div class="wrap nav-bar-inner">
+      <a class="wordmark nav-brand" href="#/" id="nav-wordmark" tabindex="-1" aria-hidden="true">Freedom <span class="wm-accent">7</span></a>
       <nav class="main-nav" aria-label="Main">
         <a href="#/" data-nav="home">Top stories</a>
         <a href="#/live" data-nav="live">Developing</a>
@@ -51,15 +60,46 @@
         <a href="#/sources" data-nav="sources">Sources</a>
         <a href="#/about" data-nav="about">How it works</a>
       </nav>
-      <nav class="topic-row" id="topic-row" aria-label="Topics"></nav>
     </div>
-  </header>
+  </div>
+  <div class="wrap topic-wrap"><nav class="topic-row" id="topic-row" aria-label="Topics"></nav></div>
 
   <main id="app" tabindex="-1">
-    <div class="wrap"><p class="loading">Loading the news&hellip;</p></div>
+    <div class="wrap skeleton" aria-busy="true">
+      <p class="loading">Loading the news&hellip;</p>
+      <div class="skel-front" aria-hidden="true">
+        <div><div class="skel skel-media"></div><div class="skel skel-line skel-hed"></div><div class="skel skel-line skel-hed short"></div><div class="skel skel-line"></div></div>
+        <div><div class="skel skel-line skel-sub"></div><div class="skel skel-line"></div><div class="skel skel-line short"></div><div class="skel skel-line skel-sub gap"></div><div class="skel skel-line"></div><div class="skel skel-line short"></div></div>
+        <div><div class="skel skel-line skel-sub"></div><div class="skel skel-line"></div><div class="skel skel-line short"></div><div class="skel skel-line skel-sub gap"></div><div class="skel skel-line"></div><div class="skel skel-line short"></div></div>
+      </div>
+    </div>
   </main>
 
   <div class="update-bar" id="update-bar" aria-live="polite"></div>
+
+  <!-- Phones: an app-style tab bar replaces the top nav row. -->
+  <nav class="tabbar" aria-label="Quick navigation">
+    <a href="#/" data-nav="home">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 10.5l8-6.5 8 6.5V20h-5.5v-6h-5v6H4z"/></svg>
+      <span>Today</span>
+    </a>
+    <a href="#/live" data-nav="live">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2.2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></svg>
+      <span>Developing</span>
+    </a>
+    <a href="#/blindspots" data-nav="blindspots">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path class="fill" d="M12 4a8 8 0 0 1 0 16z"/></svg>
+      <span>Blindspots</span>
+    </a>
+    <a href="#/perspectives" data-nav="perspectives">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 5h4v14h-4zM10 5h4v14h-4zM15.5 5h4v14h-4z"/></svg>
+      <span>Perspectives</span>
+    </a>
+    <a href="#/saved" data-nav="saved">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 4h11v16l-5.5-4-5.5 4z"/></svg>
+      <span>Saved<span class="saved-count"></span></span>
+    </a>
+  </nav>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">

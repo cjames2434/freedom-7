@@ -15,11 +15,15 @@ const LEANS = ["left", "lean-left", "center", "lean-right", "right"];
 const LEAN_LABEL = { left: "Left", "lean-left": "Lean left", center: "Center", "lean-right": "Lean right", right: "Right" };
 const LEAN_GROUP = { left: "left", "lean-left": "left", center: "center", "lean-right": "right", right: "right" };
 const SAVED_KEY = "evenkeel:saved";
-const RUNDOWN_PAGE = 18;
+const RUNDOWN_PAGE = 12;
+const SECTION_MAX = 6; // topic columns under the Rundown
+const SECTION_SIZE = 3; // stories per topic column
+const TIMELINE_MAX = 20;
 
 let news = null;
 let sources = null;
 let byId = new Map();
+let families = new Map(); // familyId -> stories in that related group, rank order
 let showAllRundown = false;
 let speakingId = null;
 let firstRender = true;
@@ -34,6 +38,30 @@ const topicHref = (id) => `#/topic/${encodeURIComponent(id)}`;
 const blurb = (s) => s.summary || s.snippet || "";
 const topicLabel = (id) => news?.topics.find((t) => t.id === id)?.label ?? id;
 const fromIds = (list) => (list || []).map((id) => byId.get(id)).filter(Boolean);
+
+// Related stories: several updates on one subject share a familyId (the id of
+// the group's top-ranked story). Lists show one card per family so the same
+// subject doesn't fill the page with near-duplicates.
+const familyOf = (s) => s.familyId || s.id;
+function indexFamilies() {
+  families = new Map();
+  for (const s of news.stories) {
+    const f = familyOf(s);
+    if (!families.has(f)) families.set(f, []);
+    families.get(f).push(s);
+  }
+}
+const familyMembers = (s) => families.get(familyOf(s)) || [s];
+const relatedCount = (s) => familyMembers(s).length - 1;
+function onePerFamily(list) {
+  const seen = new Set();
+  return list.filter((s) => {
+    const f = familyOf(s);
+    if (seen.has(f)) return false;
+    seen.add(f);
+    return true;
+  });
+}
 
 function timeAgo(iso) {
   const t = new Date(iso).getTime();
@@ -82,6 +110,7 @@ const ICON = {
   source: svg('<path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/>'),
   ai: svg('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'),
   refresh: svg('<path d="M20 11a8 8 0 1 0-2.34 5.66"/><path d="M20 4v7h-7"/>'),
+  stack: svg('<path d="M4 8l8-4 8 4-8 4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/>'),
 };
 
 // ---------- saved stories (this device only) ----------
@@ -121,8 +150,7 @@ function toggleSaved(id) {
 }
 function updateSavedCount() {
   const n = readSaved().length;
-  const el = document.getElementById("saved-count");
-  if (el) el.textContent = n ? String(n) : "";
+  document.querySelectorAll(".saved-count").forEach((el) => (el.textContent = n ? String(n) : ""));
 }
 
 // ---------- listen (Web Speech API, free in the browser) ----------
@@ -248,6 +276,14 @@ function media(s) {
   return `<div class="media${img ? "" : " media-empty"}"><span class="media-fallback" aria-hidden="true">${esc(topicLabel(s.topic))}</span>${img}</div>`;
 }
 
+const coverageMeta = (s) =>
+  `${plural(s.sourceCount, "outlet")} · L ${Number(s.coverage.left)} · C ${Number(s.coverage.center)} · R ${Number(s.coverage.right)}`;
+
+function relatedNote(s) {
+  const n = relatedCount(s);
+  return n > 0 ? `<p class="related-note">${ICON.stack}${plural(n, "related update")}</p>` : "";
+}
+
 function card(s, { num = null, image = false, dek = true } = {}) {
   const text = blurb(s);
   return `
@@ -258,6 +294,7 @@ function card(s, { num = null, image = false, dek = true } = {}) {
         ${kicker(s)}
         <h3 class="card-hed"><a href="${storyHref(s)}">${esc(s.headline)}</a></h3>
         ${dek && text ? `<p class="card-dek">${esc(text)}</p>` : ""}
+        ${relatedNote(s)}
         ${blindspotBadge(s)}
         ${coverageBar(s.coverage)}
       </div>
@@ -316,7 +353,7 @@ const perspectiveColumns = (p) =>
 
 // ---------- views ----------
 function developingStrip() {
-  const dev = fromIds(news.developing);
+  const dev = onePerFamily(fromIds(news.developing));
   if (!dev.length) return "";
   const s = dev[0];
   return `
@@ -330,7 +367,7 @@ function developingStrip() {
 }
 
 function viewHome() {
-  const stories = news.stories;
+  const stories = onePerFamily(news.stories);
   if (!stories.length) {
     return `<div class="wrap">${emptyState("No stories right now", "The next hourly update will fill this page.")}</div>`;
   }
@@ -338,7 +375,7 @@ function viewHome() {
   const secondary = rest.slice(0, 3);
   const rundown = rest.slice(3);
   const shown = showAllRundown ? rundown : rundown.slice(0, RUNDOWN_PAGE);
-  const mostCovered = [...stories].sort((a, b) => b.sourceCount - a.sourceCount || b.score - a.score).slice(0, 5);
+  const mostCovered = onePerFamily([...news.stories].sort((a, b) => b.sourceCount - a.sourceCount || b.score - a.score)).slice(0, 5);
 
   return `
     ${news.stats.balanceWarning ? `<div class="wrap"><p class="notice">${esc(news.stats.balanceWarning)}</p></div>` : ""}
@@ -350,6 +387,7 @@ function viewHome() {
         <h1 class="lead-hed"><a href="${storyHref(lead)}">${esc(lead.headline)}</a></h1>
         ${blurb(lead) ? `<p class="lead-dek">${esc(blurb(lead))}</p>` : ""}
         ${provenanceLine(lead)}
+        ${relatedNote(lead)}
         ${blindspotBadge(lead)}
         ${coverageBar(lead.coverage, "md")}
       </article>
@@ -366,7 +404,7 @@ function viewHome() {
               <span class="mc-num" aria-hidden="true">${i + 1}</span>
               <div>
                 <a href="${storyHref(s)}">${esc(s.headline)}</a>
-                <span class="mc-meta">${plural(s.sourceCount, "outlet")} · L ${s.coverage.left} · C ${s.coverage.center} · R ${s.coverage.right}</span>
+                <span class="mc-meta">${coverageMeta(s)}</span>
               </div>
             </li>`
             )
@@ -385,11 +423,49 @@ function viewHome() {
     </section>`
         : ""
     }
+    ${showAllRundown ? "" : topicSections(rundown.slice(RUNDOWN_PAGE))}
     ${perspectivesTeaser()}`;
 }
 
+// Newspaper-style section columns under the Rundown: the next stories in rank
+// order, grouped by topic. Only stories not already shown above.
+function topicSections(pool) {
+  const ready = news.topics.map((t) => ({ t, list: pool.filter((s) => s.topic === t.id) })).filter((c) => c.list.length >= 2);
+  // Whole rows of three on a desktop: six columns, or three, or whatever there is.
+  const cols = ready.slice(0, ready.length >= SECTION_MAX ? SECTION_MAX : ready.length >= 3 ? 3 : ready.length);
+  if (!cols.length) return "";
+  return `
+    <section class="wrap sections" aria-label="More stories by topic">
+      <div class="section-grid">
+        ${cols
+          .map(({ t, list }) => {
+            const [first, ...rest] = list.slice(0, SECTION_SIZE);
+            return `
+          <section class="sec-col" aria-labelledby="sec-${esc(t.id)}">
+            <div class="section-head"><h2 id="sec-${esc(t.id)}" class="label">${esc(t.label)}</h2><a class="sec-more" href="${topicHref(t.id)}">All ${esc(t.label)} ${ICON.arrow}</a></div>
+            <article class="sec-lead">
+              <h3><a href="${storyHref(first)}">${esc(first.headline)}</a></h3>
+              ${blurb(first) ? `<p>${esc(blurb(first))}</p>` : ""}
+              <span class="mc-meta">${coverageMeta(first)} · ${esc(timeAgo(first.lastUpdated))}</span>
+            </article>
+            ${rest
+              .map(
+                (s) => `
+            <div class="sec-item">
+              <a href="${storyHref(s)}">${esc(s.headline)}</a>
+              <span class="mc-meta">${coverageMeta(s)} · ${esc(timeAgo(s.lastUpdated))}</span>
+            </div>`
+              )
+              .join("")}
+          </section>`;
+          })
+          .join("")}
+      </div>
+    </section>`;
+}
+
 function blindspotBand() {
-  const items = fromIds(news.blindspots);
+  const items = onePerFamily(fromIds(news.blindspots));
   if (!items.length) return "";
   const col = (side) => {
     const list = items.filter((s) => s.mostlyCoveredBy === side).slice(0, 2);
@@ -432,7 +508,7 @@ function perspectivesTeaser() {
 
 function viewTopic(id) {
   const known = news.topics.some((t) => t.id === id);
-  const list = news.stories.filter((s) => s.topic === id);
+  const list = onePerFamily(news.stories.filter((s) => s.topic === id));
   return `
     <div class="wrap">
       ${pageHead("Topic", known ? topicLabel(id) : "Unknown topic", known ? `${plural(list.length, "story", "stories")}, ranked by how widely they're covered.` : "")}
@@ -464,24 +540,31 @@ function viewStory(id) {
   return `
     <article class="wrap story">
       <a class="back" href="#/">${ICON.back}Top stories</a>
-      <header class="story-head">
-        ${kicker(s)}
-        <h1 class="story-hed">${esc(s.headline)}</h1>
-        ${provenanceLine(s)}
-        ${blurb(s) ? `<p class="story-dek">${esc(blurb(s))}</p>` : ""}
-        <p class="story-meta">First reported ${esc(timeAgo(s.firstSeen))} · Updated ${esc(timeAgo(s.lastUpdated))} · ${plural(s.articleCount, "article")} from ${plural(s.sourceCount, "outlet")}</p>
-        ${actionButtons(s)}
-        ${blindspotBadge(s)}
-      </header>
-      ${isHttp(s.image) ? `<figure class="story-figure">${media(s)}<figcaption>Image from a publisher's feed</figcaption></figure>` : ""}
-      <section class="panel coverage-panel" aria-labelledby="cov-h">
-        <div class="section-head"><h2 id="cov-h" class="label">Who covered it</h2><span class="mono-note">Distinct outlets</span></div>
-        ${coverageBar(s.coverage, "lg")}
-        <dl class="bylean">
-          ${LEANS.map((l) => `<div><dt>${LEAN_LABEL[l]}</dt><dd>${Number(s.coverage.byLean?.[l] ?? 0)}</dd></div>`).join("")}
-        </dl>
-      </section>
-      ${aiBrief(s)}
+      <div class="story-top">
+        <div class="story-main">
+          <header class="story-head">
+            ${kicker(s)}
+            <h1 class="story-hed">${esc(s.headline)}</h1>
+            ${provenanceLine(s)}
+            ${blurb(s) ? `<p class="story-dek">${esc(blurb(s))}</p>` : ""}
+            <p class="story-meta">First reported ${esc(timeAgo(s.firstSeen))} · Updated ${esc(timeAgo(s.lastUpdated))} · ${plural(s.articleCount, "article")} from ${plural(s.sourceCount, "outlet")}</p>
+            ${actionButtons(s)}
+            ${blindspotBadge(s)}
+          </header>
+          ${isHttp(s.image) ? `<figure class="story-figure">${media(s)}<figcaption>Image from a publisher's feed</figcaption></figure>` : ""}
+          ${aiBrief(s)}
+        </div>
+        <aside class="story-side" aria-label="Coverage and related updates">
+          <section class="panel coverage-panel" aria-labelledby="cov-h">
+            <div class="section-head"><h2 id="cov-h" class="label">Who covered it</h2><span class="mono-note">Distinct outlets</span></div>
+            ${coverageBar(s.coverage, "lg")}
+            <dl class="bylean">
+              ${LEANS.map((l) => `<div><dt>${LEAN_LABEL[l]}</dt><dd>${Number(s.coverage.byLean?.[l] ?? 0)}</dd></div>`).join("")}
+            </dl>
+          </section>
+          ${relatedSection(s)}
+        </aside>
+      </div>
       <section class="spectrum-section" aria-labelledby="hl-h">
         <div class="section-head"><h2 id="hl-h" class="label">Headlines across the spectrum</h2><span class="mono-note">Each outlet's own words</span></div>
         ${spectrumColumns(groups, (g) => `No ${GROUP_LONG[g]} outlets in our roster covered this.`)}
@@ -491,12 +574,32 @@ function viewStory(id) {
           ? `
       <section class="spectrum-section" aria-labelledby="op-h">
         <div class="section-head"><h2 id="op-h" class="label">Perspectives</h2><span class="mono-note">Arguments, not reporting</span></div>
-        <p class="note">Opinion pieces about this story, the same number from each side. They never count as coverage.</p>
+        <p class="note">${relatedCount(s) > 0 ? "Opinion pieces about this ongoing story and its related updates" : "Opinion pieces about this story"}, the same number from each side. They never count as coverage.</p>
         ${perspectiveColumns(s.perspectives)}
       </section>`
           : ""
       }
     </article>`;
+}
+
+function relatedSection(s) {
+  const rel = fromIds(s.related);
+  if (!rel.length) return "";
+  return `
+    <section class="panel related-panel" aria-labelledby="rel-h">
+      <div class="section-head"><h2 id="rel-h" class="label">More on this story</h2><span class="mono-note">${plural(rel.length, "related update")}</span></div>
+      <ul class="related-list">
+        ${rel
+          .map(
+            (r) => `
+          <li>
+            <a href="${storyHref(r)}">${esc(r.headline)}</a>
+            <span class="related-meta">${esc(timeAgo(r.lastUpdated))} · ${plural(r.sourceCount, "outlet")}${r.developing ? " · Developing" : ""}</span>
+          </li>`
+          )
+          .join("")}
+      </ul>
+    </section>`;
 }
 
 function aiBrief(s) {
@@ -526,10 +629,11 @@ function aiBrief(s) {
 }
 
 function viewLive() {
-  const dev = fromIds(news.developing);
+  // One timeline per subject: updates in the same related group are merged.
+  const dev = onePerFamily(fromIds(news.developing)).map(familyMembers);
   return `
     <div class="wrap">
-      ${pageHead("Developing", "Developing stories", "Stories that several outlets have published on in the last few hours. Each timeline is the outlets' own headlines, newest first.")}
+      ${pageHead("Developing", "Developing stories", "Stories that several outlets have published on in the last few hours. Each timeline is the outlets' own headlines, newest first, with related updates on the same subject merged.")}
       ${
         dev.length
           ? dev.map(timelinePanel).join("")
@@ -538,15 +642,29 @@ function viewLive() {
     </div>`;
 }
 
-function timelinePanel(s) {
-  const arts = [...s.articles].sort((a, b) => new Date(b.published) - new Date(a.published));
+function timelinePanel(fam) {
+  const s = fam[0]; // the group's top-ranked story names the subject
+  const seen = new Set();
+  const arts = fam
+    .flatMap((x) => x.articles)
+    .filter((a) => {
+      const key = a.url || a.id;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .sort((a, b) => new Date(b.published) - new Date(a.published));
+  const cutoff = new Date(news.generatedAt).getTime() - 3 * 3600 * 1000;
+  const recentOutlets = new Set(arts.filter((a) => new Date(a.published).getTime() >= cutoff).map((a) => a.sourceId)).size;
+  const shown = arts.slice(0, TIMELINE_MAX);
+  const more = arts.length - shown.length;
   return `
     <section class="timeline-panel on-night" aria-label="${esc(s.headline)}">
-      <span class="tp-kicker"><i class="dot"></i>${plural(Number(s.recentSourceCount), "outlet")} in the last 3 hours · ${esc(topicLabel(s.topic))}</span>
+      <span class="tp-kicker"><i class="dot"></i>${plural(recentOutlets, "outlet")} in the last 3 hours · ${esc(topicLabel(s.topic))}${fam.length > 1 ? ` · ${plural(fam.length, "update")} merged` : ""}</span>
       <h2 class="tp-hed"><a href="${storyHref(s)}">${esc(s.headline)}</a></h2>
       ${coverageBar(s.coverage)}
       <ol class="timeline">
-        ${arts
+        ${shown
           .map(
             (a) => `
           <li class="tl-item">
@@ -560,11 +678,12 @@ function timelinePanel(s) {
           )
           .join("")}
       </ol>
+      ${more > 0 ? `<p class="tl-more">${plural(more, "earlier headline")} on <a href="${storyHref(s)}">the story page</a>${fam.length > 1 ? " and its related updates" : ""}.</p>` : ""}
     </section>`;
 }
 
 function viewBlindspots() {
-  const items = fromIds(news.blindspots);
+  const items = onePerFamily(fromIds(news.blindspots));
   const section = (side) => {
     const list = items.filter((s) => s.mostlyCoveredBy === side);
     return `
@@ -614,9 +733,19 @@ function viewSources() {
         "Sources",
         "The outlets we read, with the political lean we assign each one. The news roster is mirrored so neither side outnumbers the other. Opinion-only outlets feed Perspectives and are mirrored the same way. Leans approximate the consensus of public media-bias raters and are open to correction."
       )}
+      <p class="balance-label">News outlets</p>
       <dl class="balance">
         ${LEANS.map((l) => `<div class="b-${l}"><dt>${LEAN_LABEL[l]}</dt><dd>${Number(bal[l] ?? 0)}</dd></div>`).join("")}
       </dl>
+      ${
+        sources.opinionBalance
+          ? `
+      <p class="balance-label">Opinion outlets, used only for Perspectives</p>
+      <dl class="balance">
+        ${LEANS.map((l) => `<div class="b-${l}"><dt>${LEAN_LABEL[l]}</dt><dd>${Number(sources.opinionBalance[l] ?? 0)}</dd></div>`).join("")}
+      </dl>`
+          : ""
+      }
       ${LEANS.map((lean) => {
         const list = sources.sources.filter((s) => s.lean === lean);
         if (!list.length) return "";
@@ -756,10 +885,17 @@ function route({ inPlace = false } = {}) {
   app.innerHTML = html;
   setActiveNav(nav, topic);
   syncActionButtons();
+  // The full masthead is for the front page; other pages get a compact one.
+  document.body.classList.toggle("is-inner", nav !== "home");
+  document.body.classList.toggle("show-topics", nav === "home" || page === "topic");
   document.title = title ? `${title} · ${news.site.name}` : `${news.site.name}: ${news.site.tagline}`;
   if (!firstRender && !inPlace) {
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
+    // Restart the short fade-in for the new page.
+    app.classList.remove("route-in");
+    void app.offsetWidth;
+    app.classList.add("route-in");
   }
   firstRender = false;
 }
@@ -811,6 +947,7 @@ function renderChrome() {
   wm.innerHTML = wordmarkHtml(name);
   wm.setAttribute("aria-label", `${name}, top stories`);
   document.getElementById("footer-wordmark").innerHTML = wordmarkHtml(name);
+  document.getElementById("nav-wordmark").innerHTML = wordmarkHtml(name);
   document.getElementById("site-tagline").textContent = news.site.tagline;
   document.getElementById("footer-tagline").textContent = news.site.tagline;
   document.getElementById("topic-row").innerHTML =
@@ -863,6 +1000,7 @@ function setData(n, s) {
   news = n;
   if (s) sources = s;
   byId = new Map(news.stories.map((x) => [x.id, x]));
+  indexFamilies();
   renderChrome();
 }
 
@@ -932,14 +1070,52 @@ document.addEventListener("visibilitychange", () => {
 });
 setInterval(poll, POLL_MS);
 
+// ---------- page chrome: sticky nav and masthead clocks ----------
+// The nav bar gets a small wordmark and a shadow once it sticks to the top.
+function watchStickyNav() {
+  const sentinel = document.getElementById("nav-sentinel");
+  const bar = document.getElementById("nav-bar");
+  if (!sentinel || !bar || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(([entry]) => {
+    bar.classList.toggle("is-stuck", !entry.isIntersecting && entry.boundingClientRect.top < 0);
+  }).observe(sentinel);
+}
+
+// U.S. time zones under the masthead, like a row of mission-control clocks.
+const CLOCK_ZONES = [
+  ["ET", "America/New_York"],
+  ["CT", "America/Chicago"],
+  ["MT", "America/Denver"],
+  ["PT", "America/Los_Angeles"],
+  ["AK", "America/Anchorage"],
+  ["HI", "Pacific/Honolulu"],
+];
+function renderClocks() {
+  const el = document.getElementById("clocks");
+  if (!el) return;
+  const now = new Date();
+  try {
+    el.innerHTML = CLOCK_ZONES.map(([label, timeZone]) => {
+      const t = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone }).format(now);
+      return `<span><b>${label}</b>${esc(t)}</span>`;
+    }).join("");
+  } catch {
+    el.textContent = ""; // a browser without time-zone data just shows no clocks
+  }
+}
+
 async function init() {
+  const narrow = window.matchMedia("(max-width: 600px)").matches;
   document.getElementById("dateline").textContent = new Date().toLocaleDateString([], {
-    weekday: "long",
-    month: "long",
+    weekday: narrow ? "short" : "long",
+    month: narrow ? "short" : "long",
     day: "numeric",
     year: "numeric",
   });
   updateSavedCount();
+  watchStickyNav();
+  renderClocks();
+  setInterval(renderClocks, 30 * 1000);
   try {
     const [n, s] = await Promise.all([fetchNews(), fetchSources()]);
     setData(n, s);

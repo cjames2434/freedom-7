@@ -12,7 +12,7 @@ A Node build (`pipeline/`) reads RSS feeds from a mirrored roster of outlets
 picks the least loaded headline, optionally adds a neutral Claude-written
 brief, and writes `public/data/news.json` + `public/data/sources.json`. The
 front end in `public/` only reads those two files. Hosted on GitHub Pages,
-rebuilt hourly by `.github/workflows/update.yml`.
+rebuilt every 15 minutes by `.github/workflows/update.yml`.
 
 ## Commands
 
@@ -59,6 +59,12 @@ comment that mentions @claude reaches it directly. Local preview for that
 session runs on port 8081 (`news-site-8081` in `.claude/launch.json`) so it
 doesn't collide with `npm run dev` on 8080. Routine build/test/read-only git
 commands are pre-approved in `.claude/settings.local.json` (git-ignored).
+
+Layout notes: the front page has the full masthead; other pages get a compact
+one (`body.is-inner`). The main nav sticks to the top on wider screens, and
+phones (700px and under) get a bottom tab bar instead. The site name is also
+hard-coded in `public/manifest.webmanifest` and drawn into `public/icons/`
+and `favicon.svg`, so a rename needs those updated too.
 
 ## Two sessions work in this folder
 
