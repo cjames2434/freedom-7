@@ -11,6 +11,8 @@
 // chain of loose links can't pull unrelated subjects together.
 
 import { cosine } from "./cluster.js";
+import { storyScore } from "./stories.js";
+import { leanGroup } from "./util.js";
 
 /**
  * Mutates `stories` (already sorted best first): sets `story.related` to ids
@@ -62,4 +64,61 @@ export function linkRelated(stories, index, { minSimilarity = 0.2, strongSimilar
     story.familyId = stories[families[familyOf[i]][0]].id;
   });
   return families;
+}
+
+/**
+ * Coverage and rank for each whole subject (family of related stories).
+ *
+ * A subject split across several stories (a shooting reported as "gunman
+ * kills 1", "suspect identified", "witnesses describe...") would otherwise be
+ * ranked by its lead story alone, with only a few outlets each. This counts
+ * the distinct outlets across the whole family, scores that with the same
+ * engagement-blind formula as a single story, and re-sorts `stories` in place:
+ * subjects by score, each subject's stories kept together in their own order
+ * (so the family lead still comes first).
+ *
+ * Sets `story.subject` = { storyCount, sourceCount, coverage, lastUpdated, score }
+ * on every story (the same object for all members of a family).
+ */
+export function rankSubjects(stories, families, { recencyHalfLifeHours = 12, now = new Date() } = {}) {
+  const order = new Map(); // story id -> [family index, rank within the old order]
+  families.forEach((fam, fi) => {
+    const members = fam.map((i) => stories[i]);
+    const leanBySource = new Map();
+    let last = 0;
+    for (const s of members) {
+      for (const a of s.articles) leanBySource.set(a.sourceId, a.lean);
+      last = Math.max(last, Date.parse(s.lastUpdated));
+    }
+    const byLean = { left: 0, "lean-left": 0, center: 0, "lean-right": 0, right: 0 };
+    const groups = { left: 0, center: 0, right: 0 };
+    for (const lean of leanBySource.values()) {
+      byLean[lean]++;
+      groups[leanGroup(lean)]++;
+    }
+    const breadth = ["left", "center", "right"].filter((g) => groups[g] > 0).length;
+    const score = storyScore(
+      { sourceCount: leanBySource.size, breadth, hoursSinceUpdate: (now.getTime() - last) / 36e5 },
+      recencyHalfLifeHours
+    );
+    const subject = {
+      storyCount: members.length,
+      sourceCount: leanBySource.size,
+      coverage: { ...groups, byLean },
+      lastUpdated: new Date(last).toISOString(),
+      score: Number(score.toFixed(4)),
+    };
+    for (const i of fam) {
+      stories[i].subject = subject;
+      order.set(stories[i].id, [fi, i]);
+    }
+  });
+  stories.sort((a, b) => {
+    const d = b.subject.score - a.subject.score;
+    if (d) return d;
+    const [fa, ia] = order.get(a.id);
+    const [fb, ib] = order.get(b.id);
+    return fa - fb || ia - ib;
+  });
+  return stories;
 }

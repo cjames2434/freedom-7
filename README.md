@@ -64,7 +64,7 @@ it off. `npm run build` still pulls the latest news by hand.
 
 | Command | What it does |
 |---|---|
-| `npm run build` | Fetch all feeds, group stories, write `public/data/*.json` |
+| `npm run build` | Fetch all feeds, group stories, write `public/data/` (news, sources, RSS feed) |
 | `npm run dev` | Serve the site at http://localhost:8080, refreshing the news on visits |
 | `npm start` | Build, then serve |
 | `npm test` | Run the tests |
@@ -124,6 +124,16 @@ Notes:
 - To get AI briefs online, add your key under **Settings → Secrets and
   variables → Actions → New repository secret** named `ANTHROPIC_API_KEY`.
   Optionally add a variable `SUMMARY_MODEL` to change the model.
+
+## Follow it in a news-reader app
+
+Every build also writes an RSS feed of the site: `data/feed.xml` (for example
+`https://<your-username>.github.io/<repo-name>/data/feed.xml` once it's
+online, or http://localhost:8080/data/feed.xml locally). Add that address to
+any feed reader. It has one item per subject, in the site's order, each
+linking back to the story page with every outlet's headline. Set `SITE_URL`
+(or `siteUrl` in `config/settings.json`) if the site lives somewhere other
+than GitHub Pages.
 
 ## AI briefs and cost
 

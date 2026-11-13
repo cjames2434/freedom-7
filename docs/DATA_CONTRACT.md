@@ -39,7 +39,7 @@ All times are ISO 8601 UTC strings. Arrays are never `null` (they may be empty).
     "outletsDown": [],        // news outlets whose feed failed this build
     "balanceWarning": null    // a sentence to show when outages tilt one side, else null
   },
-  "stories": [ Story, ... ],      // already sorted by rank, best first
+  "stories": [ Story, ... ],      // sorted by subject rank (see `subject`); a subject's stories are adjacent, its lead first
   "blindspots": [ "s_abc123" ],   // ids of stories that are blindspots
   "developing": [ "s_def456" ],   // ids of developing stories, most recently updated first
   "perspectives": [ "s_ghi789" ]  // stories with balanced opinion: one id per group of related stories (the group's top story), in rank order
@@ -73,6 +73,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `perspectives` | object \| null | Balanced opinion: `{ "left": Article[], "center": Article[], "right": Article[] }`. `left` and `right` always have the same length (1 or 2); `center` has 0 to that many. `null` unless both sides wrote opinion about the subject. Shared by every story in the same related group (same `familyId`), since opinion is about the subject more than one update. These are opinion pieces, never reporting; label them that way. |
 | `related` | string[] | Ids of other stories about the same ongoing subject (e.g. several updates on one scandal), most similar first, at most 5. Often empty. Every id is in `stories`. |
 | `familyId` | string | Id of the top-ranked story in this story's related group (its own id if it leads the group or has no related stories). A front page can show one card per `familyId` with "N related updates" to avoid near-duplicate cards. |
+| `subject` | object | The whole related group: `{ "storyCount", "sourceCount", "coverage", "lastUpdated", "score" }`, where `coverage` has the same shape as the story's but counts distinct outlets across every story in the group. Same object on every member. Stories are ranked by `subject.score`, so a subject split across several small stories ranks by its combined coverage. On a one-card-per-subject front page, show `subject.coverage` / `subject.sourceCount` ("across N stories") on the card; on the story page, the story's own `coverage`. Singletons have `storyCount: 1` and match the story. |
 | `score` | number | Rank score. Already applied to ordering; usually don't show it. |
 | `image` | string \| null | Publisher's image from the feed. Optional; may fail to load (hotlink). |
 | `articles` | Article[] | Every outlet's version, most on-topic first. |
@@ -93,6 +94,17 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `flags.clickbait` | boolean | Clickbait phrasing ("you won't believe", "here's why", "!"). |
 
 ---
+
+## `feed.xml`
+
+`public/data/feed.xml` is an RSS 2.0 feed of the site itself for news-reader
+apps: up to 30 items, one per subject (lead story), in rank order, each
+linking to `#/story/<id>` on the site, with the summary or snippet plus a
+coverage line ("Covered by 22 outlets across 4 related stories: 10
+left-leaning, 6 center, 6 right-leaning."). Links are absolute: `SITE_URL`,
+else `siteUrl` in `config/settings.json`, else the GitHub Pages address when
+built by GitHub Actions, else `http://localhost:8080/`. Link it from the page
+head with `<link rel="alternate" type="application/rss+xml" href="data/feed.xml">`.
 
 ## `sources.json`
 

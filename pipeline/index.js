@@ -11,11 +11,12 @@ import { nonNewsKind } from "./opinion.js";
 import { clusterArticles } from "./cluster.js";
 import { buildStories } from "./stories.js";
 import { attachPerspectives } from "./perspectives.js";
-import { linkRelated } from "./related.js";
+import { linkRelated, rankSubjects } from "./related.js";
 import { buildStoryIndex } from "./storyindex.js";
 import { addSummaries, aiEnabled } from "./summarize.js";
 import { checkBalance, hasKind, loadSources } from "./sources.js";
 import { TOPICS } from "./topics.js";
+import { buildFeed, resolveSiteUrl } from "./feed.js";
 import { leanGroup } from "./util.js";
 
 const STORE_PATH = "data/store.json";
@@ -208,6 +209,8 @@ async function main() {
   const families = linkRelated(stories, storyIndex, settings.related);
   const grouped = families.filter((f) => f.length > 1);
   console.log(`Related: ${grouped.length} groups covering ${grouped.reduce((n, f) => n + f.length, 0)} stories`);
+  // Rank whole subjects by their combined coverage (re-sorts `stories`; `families` indices are pre-sort).
+  rankSubjects(stories, families, { recencyHalfLifeHours: settings.recencyHalfLifeHours, now });
   const perspectiveLeads = attachPerspectives(stories, news, opinion, sourcesById, { ...settings.perspectives, index: storyIndex });
   console.log(`Perspectives (opinion from both sides): ${perspectiveLeads.length} subjects`);
 
@@ -256,6 +259,7 @@ async function main() {
     perspectives: perspectiveLeads, // one id per group of related stories
   };
   writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));
+  writeAtomic(`${OUT_DIR}/feed.xml`, buildFeed(out, { siteUrl: resolveSiteUrl(settings) }));
 
   const sourcesOut = {
     version: 1,
@@ -276,7 +280,7 @@ async function main() {
   writeAtomic(`${OUT_DIR}/sources.json`, JSON.stringify(sourcesOut, null, 2));
 
   if (downNews.length) console.warn(`News outlets with no working feed this run: ${downNews.map((s) => s.name).join(", ")}`);
-  console.log(`Wrote ${OUT_DIR}/news.json and ${OUT_DIR}/sources.json in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`Wrote ${OUT_DIR}/news.json, sources.json and feed.xml in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   if (!aiEnabled() && ai.cached === 0) console.log("Tip: the site works without AI; headlines shown are the least-loaded real ones.");
 }
 

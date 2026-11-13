@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T18:43:36.366Z",
+  "generatedAt": "2026-11-13T16:10:35.417Z",
   "balance": {
     "left": 5,
     "lean-left": 6,
@@ -135,7 +135,7 @@
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 62
+      "itemsThisRun": 60
     },
     {
       "id": "npr",
@@ -220,7 +220,7 @@
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 26
+      "itemsThisRun": 28
     },
     {
       "id": "bbc",
@@ -232,7 +232,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 53
+      "itemsThisRun": 51
     },
     {
       "id": "thehill",
@@ -257,7 +257,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 13
+      "itemsThisRun": 14
     },
     {
       "id": "csmonitor",

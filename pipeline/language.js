@@ -20,7 +20,7 @@ const LOADED = [
   "unhinged", "bombshell", "shocking", "stunning", "outrage", "outraged", "outrageous", "furious",
   "disgusting", "disgraceful", "insane", "crazy", "chaos", "chaotic", "savage", "savagely", "epic",
   "jaw-dropping", "mind-blowing", "nightmare", "horrifying", "terrifying",
-  "dunks on", "claps back", "goes off", "sounds the alarm", "fires back", "doubles down",
+  "dunks on", "claps back", "goes off", "sounds? (the )?alarms?", "fires back", "doubles down",
   "smackdown", "takedown", "mocks?", "mocked", "mocking", "trashes", "trashed",
   "lambasts?", "lambasted", "skewers?", "skewered", "cringe", "deranged", "lunatic",
   "radical", "extremist", "extremists", "woke", "far-left", "far-right", "ultra-maga",

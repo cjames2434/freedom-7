@@ -32,3 +32,32 @@ test("similar wording without a shared name isn't enough", () => {
   linkRelated(stories, index, { minSimilarity: 0.1, strongSimilarity: 0.99 });
   assert.deepEqual(stories[0].related, [], "Senate and House are generic institutions, not names");
 });
+
+test("a subject split across several small stories ranks by its combined coverage", async () => {
+  const { rankSubjects } = await import("../pipeline/related.js");
+  const now = new Date();
+  const t = now.toISOString();
+  const mk = (id, sources, score) => ({
+    id,
+    score,
+    lastUpdated: t,
+    articles: sources.map(([sourceId, lean]) => ({ sourceId, lean })),
+  });
+  // Ranked by single-story score: big (5 outlets) beats each part of the split subject (3 outlets each)...
+  const stories = [
+    mk("big", [["a", "left"], ["b", "center"], ["c", "right"], ["d", "lean-left"], ["e", "lean-right"]], 3),
+    mk("partA", [["f", "left"], ["g", "center"], ["h", "right"]], 2),
+    mk("partB", [["i", "lean-left"], ["j", "center"], ["k", "lean-right"]], 1.9),
+    mk("partC", [["l", "left"], ["m", "right"], ["n", "center"]], 1.8),
+  ];
+  for (const s of stories) s.familyId = s.id === "big" ? "big" : "partA";
+  const families = [[0], [1, 2, 3]];
+  rankSubjects(stories, families, { now });
+  // ...but the split subject has 9 distinct outlets in total, so it ranks first, lead story first.
+  assert.deepEqual(stories.map((s) => s.id), ["partA", "partB", "partC", "big"]);
+  assert.equal(stories[0].subject.sourceCount, 9);
+  assert.equal(stories[0].subject.storyCount, 3);
+  assert.deepEqual([stories[0].subject.coverage.left, stories[0].subject.coverage.center, stories[0].subject.coverage.right], [3, 3, 3]);
+  assert.equal(stories[1].subject, stories[0].subject, "family members share one subject object");
+  assert.equal(stories[3].subject.sourceCount, 5);
+});
