@@ -4,7 +4,7 @@
     "Leans are starter values that approximate the consensus of public media-bias raters (AllSides, Ad Fontes Media, Media Bias/Fact Check). Review and adjust them; they are not gospel.",
     "Each feed is either a plain URL (a news feed) or { \"url\": ..., \"kind\": \"opinion\" } for a feed that is mostly commentary. Opinion feeds never count as news coverage; they only feed the balanced Perspectives section.",
     "Two rosters must each mirror themselves: outlets with a news feed, and outlets with an opinion feed. Same number of 'left' as 'right', and of 'lean-left' as 'lean-right'. Run `npm run check:balance` after any edit; the build refuses to run if either is lopsided.",
-    "Feeds were last verified live on 2026-11-12. Run `npm run check:feeds` to re-test them."
+    "Feeds were last verified live on 2026-11-13, from GitHub's servers as well as at home (some publishers block hosting providers: The Washington Times does, so it is not in the roster). Run `npm run check:feeds`, or the Check feeds workflow on GitHub, to re-test them."
   ],
   "sources": [
     {
@@ -288,17 +288,26 @@
       ]
     },
     {
-      "id": "washtimes",
-      "name": "The Washington Times",
+      "id": "centersquare",
+      "name": "The Center Square",
       "lean": "lean-right",
-      "homepage": "https://www.washingtontimes.com",
+      "homepage": "https://www.thecentersquare.com",
       "feeds": [
-        "https://www.washingtontimes.com/rss/headlines/news/",
+        "https://www.thecentersquare.com/search/?f=rss&t=article&c=national&l=50&s=start_time&sd=desc"
+      ]
+    },
+    {
+      "id": "wsj",
+      "name": "The Wall Street Journal",
+      "lean": "lean-right",
+      "homepage": "https://www.wsj.com",
+      "feeds": [
         {
-          "url": "https://www.washingtontimes.com/rss/headlines/opinion/commentary/",
+          "url": "https://feeds.content.dowjones.io/public/rss/RSSOpinion",
           "kind": "opinion"
         }
-      ]
+      ],
+      "notes": "Opinion pages, used for Perspectives only. The lean is for the opinion pages; raters put the news side at center."
     },
     {
       "id": "dispatch",

@@ -228,9 +228,11 @@ async function main() {
   const downNews = newsOutlets.filter((s) => !(feedHealth[s.id]?.newsOk > 0));
   const downBySide = { left: 0, center: 0, right: 0 };
   for (const s of downNews) downBySide[leanGroup(s.lean)]++;
+  const downParts = ["left", "right"].filter((g) => downBySide[g] > 0).map((g) => `${downBySide[g]} ${g}-leaning`);
+  const downTotal = downBySide.left + downBySide.right;
   const balanceWarning =
     downBySide.left !== downBySide.right
-      ? `${downBySide.left} left-leaning and ${downBySide.right} right-leaning news outlets were unreachable this update, so coverage counts may tilt slightly.`
+      ? `${downParts.join(" and ")} news ${downTotal === 1 ? "outlet was" : "outlets were"} unreachable this update, so coverage counts may tilt slightly.`
       : null;
   if (balanceWarning) console.warn(`  ! ${balanceWarning}`);
 
