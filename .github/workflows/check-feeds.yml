@@ -1,0 +1,36 @@
+# Checks feeds from GitHub's servers, where the site is built. Some publishers
+# block hosting providers, so a feed that works at home can fail here.
+# Run by hand: Actions → Check feeds → Run workflow. Optionally paste extra
+# feed URLs (space-separated) to try outlets that aren't in the roster yet.
+
+name: Check feeds
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Extra feed URLs to try (space-separated, optional)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Roster feeds
+        run: npm run check:feeds
+        continue-on-error: true
+      - name: Extra feeds
+        run: node scripts/try-feeds.js
+        env:
+          FEED_URLS: ${{ inputs.urls }}
