@@ -227,12 +227,19 @@ button { font: inherit; color: inherit; }
 /* ---------- Masthead ---------- */
 .masthead-inner { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 34px; }
 .wordmark {
+  display: inline-flex; align-items: center; gap: 0.28em;
   font-family: var(--sans); font-weight: 900; font-stretch: 125%;
-  font-size: clamp(36px, 8.5vw, 104px); line-height: 0.9; letter-spacing: 0.02em;
+  font-size: clamp(28px, 7.4vw, 104px); line-height: 0.9; letter-spacing: 0.02em;
   text-transform: uppercase; color: var(--brand);
 }
 .wordmark:hover { color: var(--brand); }
 .wm-accent { color: var(--accent); }
+/* The round "7" mission-patch mark beside the name. Disc in the brand colour,
+   the 7 knocked out in the page colour, one star on the rim. */
+.mark { width: 1.06em; height: 1.06em; flex: none; }
+.mark-disc { fill: var(--brand); }
+.mark-seven, .mark-back { fill: var(--paper); }
+.mark-star { fill: var(--accent); }
 .tagline {
   display: flex; align-items: center; justify-content: center; gap: 12px; margin: 14px 0 0;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
@@ -672,6 +679,10 @@ a.tl-title:hover { color: var(--accent); }
 .footer-brand { flex: 1 1 280px; }
 .wordmark-footer { font-size: 32px; color: #FFFFFF; }
 .wordmark-footer .wm-accent { color: var(--night-accent); }
+.wordmark-footer .mark-disc { fill: #FFFFFF; }
+.wordmark-footer .mark-seven, .wordmark-footer .mark-back { fill: var(--night); }
+.wordmark-footer .mark-star { fill: var(--night-accent); }
+.footer-origin { margin: 14px 0 0; max-width: 34em; font-size: 13px; line-height: 1.5; color: var(--on-night-muted); }
 .footer-tagline { margin: 10px 0 0; font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--on-night-muted); }
 .footer-text { flex: 2 1 420px; font-size: 14px; line-height: 1.55; }
 .footer-text p { margin: 0 0 8px; }

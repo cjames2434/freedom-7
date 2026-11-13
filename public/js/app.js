@@ -91,6 +91,18 @@ function outLink(url, html, cls) {
   return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${html}${ICON.ext}<span class="sr-only"> (opens in a new tab)</span></a>`;
 }
 
+// The round "7" mission-patch mark that sits beside the wordmark. Its colours
+// come from CSS (.mark-*), so it flips for dark mode and the footer. The same
+// markup is in index.html so the logo shows before the data loads.
+const MARK =
+  `<svg class="mark" viewBox="3 3 58 58" aria-hidden="true" focusable="false">` +
+  `<circle class="mark-disc" cx="32" cy="32" r="27"/>` +
+  `<path class="mark-seven" d="M17 13h30v8L34.5 45H24l12-22.5H17z" transform="translate(32 32) scale(0.78) translate(-32 -29)"/>` +
+  `<circle class="mark-back" cx="51" cy="13" r="7.8"/>` +
+  `<polygon class="mark-star" points="51,7.5 52.23,11.3 56.23,11.3 53,13.65 54.23,17.45 51,15.1 47.77,17.45 49,13.65 45.77,11.3 49.77,11.3"/>` +
+  `</svg>`;
+const brandHtml = (name) => `${MARK}<span class="wm-text">${wordmarkHtml(name)}</span>`;
+
 function wordmarkHtml(name) {
   const parts = String(name || "").trim().split(/\s+/);
   if (parts.length < 2) return esc(name);
@@ -944,10 +956,10 @@ window.addEventListener("storage", (e) => {
 function renderChrome() {
   const name = news.site.name;
   const wm = document.getElementById("wordmark");
-  wm.innerHTML = wordmarkHtml(name);
+  wm.innerHTML = brandHtml(name);
   wm.setAttribute("aria-label", `${name}, top stories`);
-  document.getElementById("footer-wordmark").innerHTML = wordmarkHtml(name);
-  document.getElementById("nav-wordmark").innerHTML = wordmarkHtml(name);
+  document.getElementById("footer-wordmark").innerHTML = brandHtml(name);
+  document.getElementById("nav-wordmark").innerHTML = brandHtml(name);
   document.getElementById("site-tagline").textContent = news.site.tagline;
   document.getElementById("footer-tagline").textContent = news.site.tagline;
   document.getElementById("topic-row").innerHTML =

@@ -64,7 +64,10 @@ Layout notes: the front page has the full masthead; other pages get a compact
 one (`body.is-inner`). The main nav sticks to the top on wider screens, and
 phones (700px and under) get a bottom tab bar instead. The site name is also
 hard-coded in `public/manifest.webmanifest` and drawn into `public/icons/`
-and `favicon.svg`, so a rename needs those updated too.
+and `favicon.svg`, so a rename needs those updated too. The logo is the
+"mission patch": a round mark with a 7 and one star, beside the wordmark. The
+mark's markup is in `index.html` (three places) and `MARK` in `app.js`; its
+colours come from the `.mark-*` rules, and it also shows a 7 whatever the name.
 
 ## Two sessions work in this folder
 
