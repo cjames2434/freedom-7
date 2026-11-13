@@ -254,13 +254,24 @@ function coverageBar(c, size = "sm") {
     </div>`;
 }
 
-function kicker(s) {
+// A subject is the whole group of related stories, with each outlet counted
+// once across them (story.subject). Lists show one card per subject, so a
+// grouped card carries the subject's numbers ("22 outlets across 4 stories").
+// The story page keeps the story's own numbers.
+const groupOf = (s) => (s.subject && s.subject.storyCount > 1 && s.subject.coverage ? s.subject : null);
+// A blindspot card keeps its own numbers too: the skew is the point of it.
+const subjectFor = (s) => (s.mostlyCoveredBy ? null : groupOf(s));
+const outletsLine = (sub) => `${plural(Number(sub.sourceCount), "outlet")} across ${Number(sub.storyCount)} stories`;
+
+// list: true on cards that stand for a whole subject.
+function kicker(s, { list = false } = {}) {
+  const sub = list ? subjectFor(s) : null;
   return `
     <div class="kicker">
       <a class="tag" href="${topicHref(s.topic)}">${esc(topicLabel(s.topic))}</a>
       ${s.developing ? `<span class="dev"><i class="dot"></i>Developing</span>` : ""}
-      <span>${plural(s.sourceCount, "outlet")}</span>
-      <span>${esc(timeAgo(s.lastUpdated))}</span>
+      <span>${sub ? outletsLine(sub) : plural(s.sourceCount, "outlet")}</span>
+      <span>${esc(timeAgo(sub ? sub.lastUpdated : s.lastUpdated))}</span>
       ${s.ai ? `<span class="ai-tag" title="Neutral summary written by AI from the outlets' headlines and excerpts">AI brief</span>` : ""}
     </div>`;
 }
@@ -288,12 +299,18 @@ function media(s) {
   return `<div class="media${img ? "" : " media-empty"}"><span class="media-fallback" aria-hidden="true">${esc(topicLabel(s.topic))}</span>${img}</div>`;
 }
 
-const coverageMeta = (s) =>
-  `${plural(s.sourceCount, "outlet")} · L ${Number(s.coverage.left)} · C ${Number(s.coverage.center)} · R ${Number(s.coverage.right)}`;
+// One-line coverage for compact lists (Most covered, topic columns), which
+// show no blindspot badge, so they always use the subject's numbers.
+function coverageMeta(s) {
+  const sub = groupOf(s);
+  const c = sub ? sub.coverage : s.coverage;
+  return `${sub ? outletsLine(sub) : plural(s.sourceCount, "outlet")} · L ${Number(c.left)} · C ${Number(c.center)} · R ${Number(c.right)}`;
+}
 
+// Shown only where the kicker doesn't already say "across N stories".
 function relatedNote(s) {
   const n = relatedCount(s);
-  return n > 0 ? `<p class="related-note">${ICON.stack}${plural(n, "related update")}</p>` : "";
+  return n > 0 && !subjectFor(s) ? `<p class="related-note">${ICON.stack}${plural(n, "related update")}</p>` : "";
 }
 
 function card(s, { num = null, image = false, dek = true } = {}) {
@@ -303,12 +320,12 @@ function card(s, { num = null, image = false, dek = true } = {}) {
       ${image ? `<a class="card-media" href="${storyHref(s)}" tabindex="-1" aria-hidden="true">${media(s)}</a>` : ""}
       ${num != null ? `<span class="card-num" aria-hidden="true">${String(num).padStart(2, "0")}</span>` : ""}
       <div class="card-body">
-        ${kicker(s)}
+        ${kicker(s, { list: true })}
         <h3 class="card-hed"><a href="${storyHref(s)}">${esc(s.headline)}</a></h3>
         ${dek && text ? `<p class="card-dek">${esc(text)}</p>` : ""}
         ${relatedNote(s)}
         ${blindspotBadge(s)}
-        ${coverageBar(s.coverage)}
+        ${coverageBar(subjectFor(s)?.coverage ?? s.coverage)}
       </div>
     </article>`;
 }
@@ -387,7 +404,10 @@ function viewHome() {
   const secondary = rest.slice(0, 3);
   const rundown = rest.slice(3);
   const shown = showAllRundown ? rundown : rundown.slice(0, RUNDOWN_PAGE);
-  const mostCovered = onePerFamily([...news.stories].sort((a, b) => b.sourceCount - a.sourceCount || b.score - a.score)).slice(0, 5);
+  // Subjects (shown by their lead story) with the most outlets, counted across
+  // all of a subject's stories. Ties keep rank order.
+  const outletCount = (s) => Number(groupOf(s)?.sourceCount ?? s.sourceCount);
+  const mostCovered = [...stories].sort((a, b) => outletCount(b) - outletCount(a)).slice(0, 5);
 
   return `
     ${news.stats.balanceWarning ? `<div class="wrap"><p class="notice">${esc(news.stats.balanceWarning)}</p></div>` : ""}
@@ -395,13 +415,13 @@ function viewHome() {
     <div class="wrap front">
       <article class="lead">
         <a class="lead-media" href="${storyHref(lead)}" tabindex="-1" aria-hidden="true">${media(lead)}</a>
-        ${kicker(lead)}
+        ${kicker(lead, { list: true })}
         <h1 class="lead-hed"><a href="${storyHref(lead)}">${esc(lead.headline)}</a></h1>
         ${blurb(lead) ? `<p class="lead-dek">${esc(blurb(lead))}</p>` : ""}
         ${provenanceLine(lead)}
         ${relatedNote(lead)}
         ${blindspotBadge(lead)}
-        ${coverageBar(lead.coverage, "md")}
+        ${coverageBar(subjectFor(lead)?.coverage ?? lead.coverage, "md")}
       </article>
       <div class="front-secondary">
         ${secondary.map((s, i) => card(s, { image: i === 0 })).join("")}
@@ -599,7 +619,7 @@ function relatedSection(s) {
   if (!rel.length) return "";
   return `
     <section class="panel related-panel" aria-labelledby="rel-h">
-      <div class="section-head"><h2 id="rel-h" class="label">More on this story</h2><span class="mono-note">${plural(rel.length, "related update")}</span></div>
+      <div class="section-head"><h2 id="rel-h" class="label">More on this story</h2><span class="mono-note">${groupOf(s) ? outletsLine(groupOf(s)) : plural(rel.length, "related update")}</span></div>
       <ul class="related-list">
         ${rel
           .map(
@@ -674,7 +694,7 @@ function timelinePanel(fam) {
     <section class="timeline-panel on-night" aria-label="${esc(s.headline)}">
       <span class="tp-kicker"><i class="dot"></i>${plural(recentOutlets, "outlet")} in the last 3 hours · ${esc(topicLabel(s.topic))}${fam.length > 1 ? ` · ${plural(fam.length, "update")} merged` : ""}</span>
       <h2 class="tp-hed"><a href="${storyHref(s)}">${esc(s.headline)}</a></h2>
-      ${coverageBar(s.coverage)}
+      ${coverageBar(groupOf(s)?.coverage ?? s.coverage)}
       <ol class="timeline">
         ${shown
           .map(
@@ -722,7 +742,7 @@ function viewPerspectives() {
               .map(
                 (s) => `
         <article class="persp-item">
-          <div class="section-head">${kicker(s)}</div>
+          <div class="section-head">${kicker(s, { list: true })}</div>
           <h2 class="story-persp"><a href="${storyHref(s)}">${esc(s.headline)}</a></h2>
           ${perspectiveColumns(s.perspectives)}
         </article>`
