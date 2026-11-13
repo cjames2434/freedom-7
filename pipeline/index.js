@@ -17,9 +17,11 @@ import { addSummaries, aiEnabled } from "./summarize.js";
 import { checkBalance, hasKind, loadSources } from "./sources.js";
 import { TOPICS } from "./topics.js";
 import { buildFeed, resolveSiteUrl } from "./feed.js";
+import { balanceReport, updateHistory } from "./balance.js";
 import { leanGroup } from "./util.js";
 
 const STORE_PATH = "data/store.json";
+const BALANCE_HISTORY_PATH = "data/balance-history.json";
 const OUT_DIR = "public/data";
 const LOCK_PATH = "data/.build.lock";
 const LOCK_STALE_MINUTES = 10;
@@ -261,6 +263,19 @@ async function main() {
   writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));
   writeAtomic(`${OUT_DIR}/feed.xml`, buildFeed(out, { siteUrl: resolveSiteUrl(settings) }));
 
+  // Balance report: today's snapshot plus a 30-day daily history.
+  const report = balanceReport(stories, { perspectiveLeads, now });
+  const history = updateHistory(BALANCE_HISTORY_PATH, report);
+  writeAtomic(BALANCE_HISTORY_PATH, JSON.stringify({ days: history }));
+  writeAtomic(`${OUT_DIR}/balance.json`, JSON.stringify({ version: 1, generatedAt: now.toISOString(), today: report, history }));
+  const hp = report.headlinePicks;
+  console.log(
+    `Balance: headlines shown from left ${hp.left + hp["lean-left"]} / center ${hp.center} / right ${hp.right + hp["lean-right"]}; ` +
+      `blindspots left ${report.blindspots.left} / right ${report.blindspots.right}; ` +
+      `first to cover left ${report.firstToCover.left} / right ${report.firstToCover.right} / tie ${report.firstToCover.tie}`
+  );
+  for (const w of report.warnings) console.warn(`  ! Balance: ${w}`);
+
   const sourcesOut = {
     version: 1,
     generatedAt: now.toISOString(),
@@ -280,7 +295,7 @@ async function main() {
   writeAtomic(`${OUT_DIR}/sources.json`, JSON.stringify(sourcesOut, null, 2));
 
   if (downNews.length) console.warn(`News outlets with no working feed this run: ${downNews.map((s) => s.name).join(", ")}`);
-  console.log(`Wrote ${OUT_DIR}/news.json, sources.json and feed.xml in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`Wrote ${OUT_DIR}/news.json, sources.json, balance.json and feed.xml in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   if (!aiEnabled() && ai.cached === 0) console.log("Tip: the site works without AI; headlines shown are the least-loaded real ones.");
 }
 

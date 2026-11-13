@@ -22,6 +22,7 @@ const TIMELINE_MAX = 20;
 
 let news = null;
 let sources = null;
+let balance = null; // data/balance.json: how balanced the site itself is (optional)
 let byId = new Map();
 let families = new Map(); // familyId -> stories in that related group, rank order
 let showAllRundown = false;
@@ -807,7 +808,27 @@ function viewSources() {
 }
 
 function viewAbout() {
-  return document.getElementById("about-template").innerHTML;
+  const html = document.getElementById("about-template").innerHTML;
+  const t = balance?.today;
+  if (!t?.headlinePicks) return html;
+  const n = (v) => Number(v ?? 0);
+  const hp = t.headlinePicks, sc = t.storiesCovered || {}, bs = t.blindspots || {}, ft = t.firstToCover || {};
+  const section = `
+        <h2 id="balance-today">Today's balance check</h2>
+        <p>The site measures itself on every update. Of the ${plural(n(t.stories), "story", "stories")} on it right now, the headline shown came from outlets rated:</p>
+        <dl class="balance">
+          ${LEANS.map((l) => `<div class="b-${l}"><dt>${LEAN_LABEL[l]}</dt><dd>${n(hp[l])}</dd></div>`).join("")}
+        </dl>
+        <ul>
+          <li>Covered by both left and right: ${n(sc.bothSides)}. Only by the left: ${n(sc.leftOnly)}. Only by the right: ${n(sc.rightOnly)}.</li>
+          <li>Blindspots: ${n(bs.left)} covered mostly by the left, ${n(bs.right)} mostly by the right.</li>
+          <li>On stories both sides covered, the left published first ${n(ft.left)} times and the right ${n(ft.right)} times; ${n(ft.tie)} were within half an hour.</li>
+        </ul>
+        ${(t.warnings || []).map((w) => `<p class="notice">${esc(w)}</p>`).join("")}
+        <p class="note">These are counts, not verdicts on any outlet. They move with the day's news.</p>`;
+  return html
+    .replace("<!--balance-link-->", `<p><button type="button" class="text-link" data-action="see-balance">See today's balance check</button></p>`)
+    .replace("<!--balance-section-->", section);
 }
 
 function viewSaved() {
@@ -945,6 +966,7 @@ app.addEventListener("click", (e) => {
     toggleSaved(id);
     route();
   } else if (action === "share") shareStory(id, btn);
+  else if (action === "see-balance") document.getElementById("balance-today")?.scrollIntoView({ behavior: "smooth", block: "start" });
   else if (action === "show-all") {
     showAllRundown = true;
     const y = window.scrollY;
@@ -1028,9 +1050,20 @@ async function fetchSources() {
   }
 }
 
-function setData(n, s) {
+// Optional: the site's own balance numbers, shown on the How it works page.
+async function fetchBalance() {
+  try {
+    const r = await fetch("data/balance.json", { cache: "no-cache" });
+    return r.ok ? await r.json() : null;
+  } catch {
+    return null;
+  }
+}
+
+function setData(n, s, b) {
   news = n;
   if (s) sources = s;
+  if (b) balance = b;
   byId = new Map(news.stories.map((x) => [x.id, x]));
   indexFamilies();
   renderChrome();
@@ -1052,13 +1085,13 @@ async function poll() {
     const n = await fetchNews();
     if (!news) {
       // First run: the data just appeared.
-      setData(n, await fetchSources());
+      setData(n, await fetchSources(), await fetchBalance());
       start();
       return;
     }
     const latest = pending?.news.generatedAt ?? news.generatedAt;
     if (n.generatedAt !== latest) {
-      pending = { news: n, sources: await fetchSources() };
+      pending = { news: n, sources: await fetchSources(), balance: await fetchBalance() };
       if (onFrontPage() && window.scrollY < 80 && !speakingId) applyUpdate();
       else showUpdatePill();
     }
@@ -1072,12 +1105,12 @@ async function poll() {
 
 function applyUpdate() {
   if (!pending) return;
-  const { news: n, sources: s } = pending;
+  const { news: n, sources: s, balance: b } = pending;
   pending = null;
   hideUpdatePill();
   const y = window.scrollY;
   const home = onFrontPage();
-  setData(n, s);
+  setData(n, s, b);
   route({ inPlace: true });
   // The front page reorders, so start it from the top; elsewhere stay put.
   window.scrollTo(0, home ? 0 : y);
@@ -1149,8 +1182,8 @@ async function init() {
   renderClocks();
   setInterval(renderClocks, 30 * 1000);
   try {
-    const [n, s] = await Promise.all([fetchNews(), fetchSources()]);
-    setData(n, s);
+    const [n, s, b] = await Promise.all([fetchNews(), fetchSources(), fetchBalance()]);
+    setData(n, s, b);
   } catch {
     app.innerHTML = `<div class="wrap">${emptyState(
       "Getting the first batch of news",

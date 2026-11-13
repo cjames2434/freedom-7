@@ -81,6 +81,13 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
     const times = items.map((it) => new Date(it.article.published).getTime());
     const firstSeen = new Date(Math.min(...times));
     const lastUpdated = new Date(Math.max(...times));
+
+    // When each side first published on it (null if that side didn't cover it).
+    const firstBySide = { left: null, center: null, right: null };
+    for (const it of items) {
+      const g = leanGroup(it.lean);
+      if (!firstBySide[g] || it.article.published < firstBySide[g]) firstBySide[g] = it.article.published;
+    }
     const hoursSinceUpdate = (now - lastUpdated) / 36e5;
 
     // "Developing": several outlets have published on it in the last few hours.
@@ -109,6 +116,7 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
       snippet: truncate(chosen.article.snippet, 280) || null,
       topic: classifyTopic(items.map((it) => it.article)),
       firstSeen: firstSeen.toISOString(),
+      firstBySide,
       lastUpdated: lastUpdated.toISOString(),
       sourceCount: sourceIds.size,
       articleCount: items.length,

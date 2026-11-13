@@ -92,6 +92,10 @@ only when the user has OK'd it. Ask the user only for product decisions
 
 ## AI briefs
 
+The user has decided not to pay for AI summaries (2026-11-13): keep the site
+free to run, don't suggest API keys or paid services, and design every
+feature to work without briefs. The code below stays in place, off.
+
 `pipeline/summarize.js` uses `@anthropic-ai/sdk` (`client.beta.messages.create`
 with structured JSON output and server-side refusal fallbacks). Off unless
 `ANTHROPIC_API_KEY` is set. Model from `SUMMARY_MODEL` or

@@ -64,6 +64,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `ai` | object \| null | `{ "model", "generatedAt", "basedOnSources" }` when the brief is AI-written, else `null`. |
 | `topic` | string | One of the topic ids. |
 | `firstSeen` / `lastUpdated` | string | Earliest and latest article times in the story. |
+| `firstBySide` | object | `{ "left", "center", "right" }`: when each side's outlets first published on the story (ISO string), or `null` for a side that didn't cover it. `left` includes lean-left, `right` includes lean-right. Lets a page say, neutrally, which side picked a story up first and how much later the other did. |
 | `sourceCount` | number | Distinct outlets covering it. |
 | `articleCount` | number | Articles (an outlet can have more than one). |
 | `coverage` | object | `{ "left": n, "center": n, "right": n, "byLean": { "left", "lean-left", "center", "lean-right", "right" } }`. Counts of distinct outlets. `left` = left + lean-left; `right` = right + lean-right. |
@@ -94,6 +95,32 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `flags.clickbait` | boolean | Clickbait phrasing ("you won't believe", "here's why", "!"). |
 
 ---
+
+## `balance.json`
+
+`public/data/balance.json` shows how balanced the site itself is. Counts are
+descriptive, not verdicts on outlets:
+
+```jsonc
+{
+  "version": 1,
+  "generatedAt": "...",
+  "today": {
+    "date": "2026-11-13",
+    "stories": 150,
+    "headlinePicks": { "left": 6, "lean-left": 31, "center": 79, "lean-right": 29, "right": 5, "ai": 0 }, // whose headline is shown
+    "coverage": { "left": 203, "center": 129, "right": 190 },            // outlet appearances in stories
+    "storiesCovered": { "bothSides": 71, "leftOnly": 37, "rightOnly": 40, "centerOnly": 2 },
+    "blindspots": { "left": 5, "right": 3 },                             // stories covered mostly by that side
+    "firstToCover": { "left": 33, "right": 33, "tie": 5 },              // on stories both covered; tie = within 30 min
+    "perspectives": { "subjects": 6, "left": 8, "center": 1, "right": 8 },
+    "warnings": []                                                       // plain-language notes when something looks lopsided
+  },
+  "history": [ /* one `today`-shaped entry per day, up to 30, oldest first */ ]
+}
+```
+
+`npm run report` prints the same thing in plain words.
 
 ## `feed.xml`
 

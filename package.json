@@ -14,7 +14,8 @@
     "check:feeds": "node scripts/check-feeds.js",
     "check:balance": "node scripts/check-balance.js",
     "sample": "node scripts/make-sample.js",
-    "test": "node --test"
+    "test": "node --test",
+    "report": "node scripts/report.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

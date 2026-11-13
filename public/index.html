@@ -6,6 +6,11 @@
   <title>Freedom 7</title>
   <meta name="description" content="Every side of the story, side by side. Free, no ads, no accounts, no tracking.">
   <meta name="theme-color" content="#0B1630">
+  <!-- Only this site's own scripts, styles, fonts and data may load; images may come from publishers. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: http:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <!-- For a small group of friends: ask search engines not to list it. -->
+  <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -123,6 +128,7 @@
         <p class="page-kicker">Methodology</p>
         <h1 class="page-title">How it works</h1>
         <p class="lede">Every story on this site is built from the same event as reported by many outlets across the political spectrum. You see who covered it, how each side headlined it, and a plain-language version on top.</p>
+        <!--balance-link-->
 
         <h2><span class="step">1</span>A balanced set of outlets</h2>
         <p>We read the public RSS feeds of news outlets rated left, lean-left, center, lean-right and right by public media-bias raters. The roster is mirrored: the same number of outlets on the left as on the right, and the build refuses to run if that ever drifts. The full list is on the <a href="#/sources">Sources</a> page.</p>
@@ -134,13 +140,15 @@
         <p>Articles about the same event are grouped automatically by comparing their headlines and excerpts. Each story shows how many outlets on each side covered it.</p>
 
         <h2><span class="step">4</span>The plainest headline wins</h2>
-        <p>For each story we show the headline with the least loaded wording (words like "slams", "destroys" or "bombshell", which every side uses), preferring outlets nearer the center. When AI briefs are switched on, a short neutral summary is written using only what the outlets reported, with claims attributed to whoever made them. Every outlet's own headline is always listed underneath.</p>
+        <p>For each story we show the headline with the least loaded wording (words like "slams", "destroys" or "bombshell", which every side uses), preferring outlets nearer the center. Nothing is rewritten: the words are always an outlet's own, and every outlet's headline is listed underneath.</p>
 
         <h2><span class="step">5</span>Ranking without outrage</h2>
         <p>Stories rank higher when more outlets cover them, when outlets from more of the spectrum cover them, and when they are recent. There is no personalisation and nothing is ranked by clicks, shares or engagement.</p>
 
         <h2><span class="step">6</span>Blindspots</h2>
         <p>A blindspot is a story mostly covered by one side. Reading them is the quickest way to see what the other side's readers are hearing about.</p>
+
+        <!--balance-section-->
 
         <h2>Limits</h2>
         <ul>

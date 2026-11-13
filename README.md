@@ -71,6 +71,7 @@ it off. `npm run build` still pulls the latest news by hand.
 | `npm run check:feeds` | Check every outlet's feed is alive and fresh |
 | `npm run check:balance` | Show the roster by lean and confirm it's mirrored |
 | `npm run sample` | Refresh the sample data in `docs/` for design work |
+| `npm run report` | Show how balanced the site is today, with the daily trend |
 
 ## How it works
 
@@ -125,6 +126,16 @@ Notes:
   variables → Actions → New repository secret** named `ANTHROPIC_API_KEY`.
   Optionally add a variable `SUMMARY_MODEL` to change the model.
 
+## Checking that it stays balanced
+
+Every build measures the site itself: whose headlines get shown (left,
+center, right), how often each side's outlets appear, blindspots on each
+side, and which side covered shared stories first. It keeps a daily history
+for 30 days. Run `npm run report` to read it; the build also prints a one-line
+summary and warns when something looks lopsided, for example one side's
+headlines being shown far more than the other's. The same numbers are shown
+on the site's "How it works" page (from `data/balance.json`).
+
 ## Follow it in a news-reader app
 
 Every build also writes an RSS feed of the site: `data/feed.xml` (for example
@@ -137,7 +148,8 @@ than GitHub Pages.
 
 ## AI briefs and cost
 
-Off by default. Everything else is free.
+Off, and staying off: you decided not to pay for an API (2026-11-13), so the
+site runs entirely free. This section is kept only for reference.
 
 To turn them on locally, copy `.env.example` to `.env` and set
 `ANTHROPIC_API_KEY` (get one at https://console.anthropic.com). Briefs are
