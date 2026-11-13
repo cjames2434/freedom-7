@@ -2,6 +2,8 @@ import { analyzeHeadline } from "./language.js";
 import { classifyTopic } from "./topics.js";
 import { leanDistance, leanGroup, truncate } from "./util.js";
 
+const MEDIA_PREFIX = /^\s*(watch|video|listen|photos?|gallery|in pictures)\s*[:|—–-]/i;
+
 /**
  * Pick the headline to show for a story: the one with the least loaded
  * wording, preferring outlets nearer the center and headlines that read like
@@ -18,7 +20,9 @@ export function pickHeadline(items) {
       leanDistance(it.lean) * 0.6 +
       (1 - it.centrality) * 1.5 +
       lengthPenalty +
-      (it.article.title.endsWith("?") ? 0.5 : 0);
+      (it.article.title.endsWith("?") ? 0.5 : 0) +
+      // "Watch: ..." / "Video: ..." titles describe a clip, not the news.
+      (MEDIA_PREFIX.test(it.article.title) ? 2 : 0);
     if (!best || cost < best.cost) best = { cost, it };
   }
   return best.it;

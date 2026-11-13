@@ -104,3 +104,12 @@ test("the shipped source roster is balanced", () => {
   const result = checkBalance(loadSources("config/sources.json"));
   assert.ok(result.ok, result.problems.join("; "));
 });
+
+test("headline pick avoids 'Watch:' and 'Video:' clip titles when a plain headline exists", () => {
+  const item = (title, lean) => ({ article: { title }, lean, centrality: 0.9, analysis: analyzeHeadline(title) });
+  const chosen = pickHeadline([
+    item("Watch: How a server outage took down Microsoft Outlook across the US", "center"),
+    item("Microsoft Outlook outage disrupts email for users across the U.S.", "lean-left"),
+  ]);
+  assert.equal(chosen.article.title, "Microsoft Outlook outage disrupts email for users across the U.S.");
+});
