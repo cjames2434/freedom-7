@@ -36,6 +36,9 @@ const OTHER_TITLE = [
   /^\s*(the (morning|evening|weekend)|morning|evening) (briefing|dispatch|roundup|report)\b/i,
   /\b(podcast|newsletter)\s*:/i,
   /^(watch live|live|listen)\s*[:|]/i,
+  /^live (updates?|blog|coverage)\b/i, // live blogs change all day and cover several events
+  /^you vote\s*:/i, // reader polls
+  /\b(crossword|quiz)\s*:/i,
   /\bfrom the politics desk\b/i,
   /\bmailbag\b/i,
 ];

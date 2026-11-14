@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T16:32:11.608Z",
+  "generatedAt": "2026-11-14T16:39:23.635Z",
   "site": {
     "name": "Freedom 7",
     "tagline": "Every side of the story, side by side."
@@ -47,8 +47,8 @@
     "outlets": 39,
     "outletsReporting": 39,
     "opinionOutlets": 17,
-    "articlesInWindow": 1783,
-    "opinionInWindow": 424,
+    "articlesInWindow": 1774,
+    "opinionInWindow": 422,
     "windowHours": 48,
     "stories": 150,
     "aiBriefs": 0,
@@ -140,7 +140,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 5.6528,
+      "score": 5.6137,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP23011620271107-e1793293310517.jpg?w=900",
       "articles": [
         {
@@ -249,21 +249,6 @@
           }
         },
         {
-          "id": "e3d49c8543b9",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "title": "FAA issues US national ground stop on all flights",
-          "url": "https://dw.com/en/faa-issues-us-national-ground-stop-on-all-flights/a-79945062?maca=en-rss-en-all-1573-rdf",
-          "published": "2026-11-13T22:57:00.000Z",
-          "snippet": "The US federal aviation regulator announced a nationwide ground stop for all airports. Federal officials blamed a communications outage and said technicians are investigating.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "db32800903de",
           "sourceId": "cbsnews",
           "sourceName": "CBS News",
@@ -272,6 +257,21 @@
           "url": "https://cbsnews.com/video/nationwide-ground-stop-ordered-by-faa",
           "published": "2026-11-13T21:58:24.000Z",
           "snippet": "The FAA issues a nationwide ground stop at airports \"due to extraordinary circumstances and for reasons of safety.\"",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e3d49c8543b9",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "FAA issues US national ground stop on all flights",
+          "url": "https://dw.com/en/faa-issues-us-national-ground-stop-on-all-flights/a-79945062?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-13T22:57:00.000Z",
+          "snippet": "The US federal aviation regulator announced a nationwide ground stop for all airports. Federal officials blamed a communications outage and said technicians are investigating.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -400,15 +400,15 @@
         }
       ],
       "related": [
-        "s_869d144f66b8",
-        "s_e8c38895520b",
+        "s_e807210b9dcc",
+        "s_e793bc484fc3",
         "s_a5bbc5a57404",
         "s_c548896e6d88",
-        "s_e793bc484fc3"
+        "s_055804ec6244"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -423,11 +423,11 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
-      "id": "s_869d144f66b8",
+      "id": "s_e807210b9dcc",
       "headline": "FAA lifts nationwide ground stop after telecommunications outage",
       "headlineFrom": {
         "sourceId": "upi",
@@ -456,7 +456,7 @@
           "url": "https://cnbc.com/2026/11/13/faa-ground-stop.html"
         },
         {
-          "text": "Thousands of travelers remained stranded on Nov. 14 as airlines worked to restore service after a nationwide ground stop halted departures for more than four hours, disrupting travel across the United States and beyond.",
+          "text": "More than 3,600 flights within, into, or out of the United States were canceled Saturday morning, with more than 1,600 delayed, according to FlightAware data at around 8:45 a.m. ET.",
           "sourceId": "epochtimes",
           "sourceName": "The Epoch Times",
           "lean": "lean-right",
@@ -478,32 +478,32 @@
         }
       ],
       "topic": "us",
-      "firstSeen": "2026-11-13T17:43:00.000Z",
+      "firstSeen": "2026-11-13T21:35:13.000Z",
       "firstBySide": {
         "left": "2026-11-13T21:35:13.000Z",
         "center": "2026-11-13T23:01:34.000Z",
-        "right": "2026-11-13T17:43:00.000Z"
+        "right": "2026-11-14T01:51:00.000Z"
       },
       "lastUpdated": "2026-11-14T13:35:20.000Z",
       "sourceCount": 10,
       "articleCount": 10,
       "coverage": {
-        "left": 4,
+        "left": 5,
         "center": 2,
-        "right": 4,
+        "right": 3,
         "byLean": {
           "left": 2,
-          "lean-left": 2,
+          "lean-left": 3,
           "center": 2,
           "lean-right": 3,
-          "right": 1
+          "right": 0
         }
       },
       "developing": false,
-      "recentSourceCount": 1,
+      "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 4.3767,
+      "score": 4.3465,
       "image": "https://cdnph.upi.com/ph/st/th/9251794604658/2026/upi/53fc7aafc8e5f3ed73ca4c2927aa92d6/v1.5/FAA-lifts-nationwide-ground-stop-after-telecommunications-outage.jpg",
       "articles": [
         {
@@ -517,23 +517,6 @@
           "snippet": "Transportation Secretary Sean Duffy blamed aging air traffic control equipment for the communications outage that prompted the rare nationwide halt.",
           "flags": {
             "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "869d144f66b8",
-          "sourceId": "dailywire",
-          "sourceName": "The Daily Wire",
-          "lean": "right",
-          "title": "LIVE UPDATES: FAA Lifts Nationwide Ground Stop After Four-Hour Travel Chaos",
-          "url": "https://dailywire.com/news/live-updates-nationwide-groundstop-shuts-down-all-flights-for-first-time-since-9-11",
-          "published": "2026-11-13T17:43:00.000Z",
-          "snippet": null,
-          "flags": {
-            "loaded": [
-              "chaos"
-            ],
             "contested": [],
             "clickbait": false
           }
@@ -584,6 +567,21 @@
           }
         },
         {
+          "id": "a1c4f4ee13fd",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "FAA lifts nationwide ground stop as thousands of flights canceled",
+          "url": "https://nbcnews.com/video/faa-lifts-nationwide-ground-stop-as-thousands-of-flights-canceled-273497669740",
+          "published": "2026-11-14T02:28:51.000Z",
+          "snippet": "The Federal Aviation Administration has lifted its nationwide ground stop that has caused cancellations for thousands of flights across the country. It is still unsure when airports will be fully back up and running. NBC News' Tom Costello reviews the White House briefing on the topic.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "d8dc753675d8",
           "sourceId": "washexaminer",
           "sourceName": "Washington Examiner",
@@ -594,6 +592,23 @@
           "snippet": "The Federal Aviation Administration has lifted a nationwide ground stop on all flights Friday evening following an hourslong halt on air travel that left millions of airline passengers stranded. The ground stop was lifted shortly after 8 p.m. EST, just before Transportation Secretary Sean Duffy and…",
           "flags": {
             "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5cb54f92b0d0",
+          "sourceId": "nypost",
+          "sourceName": "New York Post",
+          "lean": "lean-right",
+          "title": "FAA lifts nationwide ground stop, 4 hours after air traffic chaos began — but thousands of NYC travelers left stranded",
+          "url": "https://nypost.com/2026/11/13/us-news/faa-lifts-nationwide-ground-stop-4-hours-after-air-traffic-chaos-began",
+          "published": "2026-11-14T02:24:16.000Z",
+          "snippet": "The Federal Aviation Administration announced the unprecedented move just before 4 p.m. to ground all flights.",
+          "flags": {
+            "loaded": [
+              "chaos"
+            ],
             "contested": [],
             "clickbait": false
           }
@@ -629,23 +644,6 @@
           }
         },
         {
-          "id": "5cb54f92b0d0",
-          "sourceId": "nypost",
-          "sourceName": "New York Post",
-          "lean": "lean-right",
-          "title": "FAA lifts nationwide ground stop, 4 hours after air traffic chaos began — but thousands of NYC travelers left stranded",
-          "url": "https://nypost.com/2026/11/13/us-news/faa-lifts-nationwide-ground-stop-4-hours-after-air-traffic-chaos-began",
-          "published": "2026-11-14T02:24:16.000Z",
-          "snippet": "The Federal Aviation Administration announced the unprecedented move just before 4 p.m. to ground all flights.",
-          "flags": {
-            "loaded": [
-              "chaos"
-            ],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "f3b476aee78a",
           "sourceId": "washpost",
           "sourceName": "The Washington Post",
@@ -672,7 +670,7 @@
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -687,11 +685,11 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
-      "id": "s_99c855d4bf03",
+      "id": "s_e8c38895520b",
       "headline": "3,000+ flights canceled after FAA's ground stop",
       "headlineFrom": {
         "sourceId": "thehill",
@@ -728,22 +726,22 @@
         }
       ],
       "topic": "us",
-      "firstSeen": "2026-11-13T23:15:13.000Z",
+      "firstSeen": "2026-11-13T21:09:53.000Z",
       "firstBySide": {
-        "left": "2026-11-13T23:15:13.000Z",
+        "left": "2026-11-13T21:09:53.000Z",
         "center": "2026-11-14T14:54:46.000Z",
         "right": "2026-11-14T14:41:46.000Z"
       },
       "lastUpdated": "2026-11-14T16:11:03.000Z",
-      "sourceCount": 4,
-      "articleCount": 4,
+      "sourceCount": 5,
+      "articleCount": 5,
       "coverage": {
-        "left": 2,
+        "left": 3,
         "center": 1,
         "right": 1,
         "byLean": {
           "left": 0,
-          "lean-left": 2,
+          "lean-left": 3,
           "center": 1,
           "lean-right": 1,
           "right": 0
@@ -753,7 +751,7 @@
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.4127,
+      "score": 3.7731,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318479850151-e1794667324516.jpg?w=900",
       "articles": [
         {
@@ -765,6 +763,21 @@
           "url": "https://thehill.com/policy/transportation/6220654-us-air-traffic-cancellations-delays",
           "published": "2026-11-14T14:54:46.000Z",
           "snippet": "U.S. air traffic is slowly returning to normal after a nationwide ground stop Friday halted flights and left thousands canceled and delayed. As of Saturday morning, nearly 2,000 flights within, into or out of the U.S. are delayed, and nearly 3,800 have been canceled, according to flight tracking…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e8c38895520b",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Thousands of flights canceled or delayed Saturday after FAA’s nationwide ground stop",
+          "url": "https://nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+          "published": "2026-11-13T21:09:53.000Z",
+          "snippet": "Thousands of flights were canceled or delayed Saturday morning as airlines struggled to recover from a nationwide ground stop that halted U.S. departures for more than four hours Friday.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -818,15 +831,15 @@
         }
       ],
       "related": [
+        "s_e807210b9dcc",
         "s_4eb29016b60a",
+        "s_e793bc484fc3",
         "s_055804ec6244",
-        "s_869d144f66b8",
-        "s_e8c38895520b",
         "s_84968006a874"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -841,7 +854,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -893,7 +906,7 @@
       "recentSourceCount": 2,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.0855,
+      "score": 3.0642,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26317803128196-e1794608832141.jpg?w=900",
       "articles": [
         {
@@ -974,14 +987,14 @@
       ],
       "related": [
         "s_d84fe726182c",
-        "s_e793bc484fc3",
         "s_a5bbc5a57404",
+        "s_e793bc484fc3",
         "s_4eb29016b60a",
         "s_84968006a874"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -996,7 +1009,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -1062,7 +1075,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.7065,
+      "score": 2.6878,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26269583561962-e1794615179172.jpg?w=900",
       "articles": [
         {
@@ -1144,13 +1157,13 @@
       "related": [
         "s_85064c46e0d6",
         "s_4eb29016b60a",
-        "s_869d144f66b8",
-        "s_e8c38895520b",
-        "s_99c855d4bf03"
+        "s_e807210b9dcc",
+        "s_e793bc484fc3",
+        "s_e8c38895520b"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -1165,7 +1178,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -1238,7 +1251,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.668,
+      "score": 2.6496,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/13/id6124994-1772688602dbda2b8af96442-copy.jpg",
       "articles": [
         {
@@ -1304,14 +1317,14 @@
       ],
       "related": [
         "s_4eb29016b60a",
-        "s_869d144f66b8",
+        "s_e807210b9dcc",
+        "s_e793bc484fc3",
         "s_2f54424c946a",
-        "s_84968006a874",
-        "s_e8c38895520b"
+        "s_84968006a874"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -1326,14 +1339,14 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
-      "id": "s_84968006a874",
-      "headline": "Live updates: US air travel recovers from ground stop; Federalist Society gathers following blue wave",
+      "id": "s_e793bc484fc3",
+      "headline": "FAA says flights can resume following nationwide ground stop",
       "headlineFrom": {
-        "sourceId": "thehill",
+        "sourceId": "csmonitor",
         "kind": "selected",
         "turn": null
       },
@@ -1342,46 +1355,75 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "U.S. airports and airlines are still playing catch up on Saturday following Friday's four hour long nationwide ground, with travelers across the country scrambling to get to their destinations after facing delays and cancellations.",
-      "digest": [],
+      "snippet": "The Federal Aviation Administration said Friday night that airplane departures can resume after an unusual halt tied to communications problems.",
+      "digest": [
+        {
+          "text": "The Federal Aviation Administration (FAA) lifted a nationwide ground stop about four hours after it was declared on Friday afternoon, delaying or canceling more than 11,000 US flights, according to aviation tracker FlightAware , and throwing airports into sudden chaos.",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights"
+        },
+        {
+          "text": "\"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference that began at around 8:30 p.m. EST.",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop"
+        },
+        {
+          "text": "Some flights have resumed in the United States after an hours-long ground stop that began late Friday afternoon by the Federal Aviation Administration, just the second time since the Sept. 11, 2001, terrorist attacks.",
+          "sourceId": "centersquare",
+          "sourceName": "The Center Square",
+          "lean": "lean-right",
+          "url": "https://thecentersquare.com/national/article_dfa42c13-9557-4bcc-95ca-8694749617cd.html?a"
+        },
+        {
+          "text": "Officials cited “extraordinary circumstances” caused by communications problems at regional air traffic control centers.",
+          "sourceId": "deseret",
+          "sourceName": "Deseret News",
+          "lean": "center",
+          "url": "https://deseret.com/business/2026/11/13/faa-grounds-flights-across-us"
+        }
+      ],
       "topic": "us",
-      "firstSeen": "2026-11-14T13:59:10.000Z",
+      "firstSeen": "2026-11-13T00:00:00.000Z",
       "firstBySide": {
-        "left": "2026-11-14T14:13:24.000Z",
-        "center": "2026-11-14T14:00:00.000Z",
-        "right": "2026-11-14T13:59:10.000Z"
+        "left": "2026-11-14T00:09:06.000Z",
+        "center": "2026-11-13T21:45:35.000Z",
+        "right": "2026-11-13T00:00:00.000Z"
       },
-      "lastUpdated": "2026-11-14T14:13:24.000Z",
-      "sourceCount": 3,
-      "articleCount": 3,
+      "lastUpdated": "2026-11-14T03:35:43.000Z",
+      "sourceCount": 6,
+      "articleCount": 7,
       "coverage": {
         "left": 1,
-        "center": 1,
-        "right": 1,
+        "center": 3,
+        "right": 2,
         "byLean": {
           "left": 0,
           "lean-left": 1,
-          "center": 1,
-          "lean-right": 0,
-          "right": 1
+          "center": 3,
+          "lean-right": 2,
+          "right": 0
         }
       },
-      "developing": true,
-      "recentSourceCount": 3,
+      "developing": false,
+      "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.6248,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318067855910-e1794659074612.jpg?w=900",
+      "score": 1.9803,
+      "image": "https://www.deseret.com/resizer/v2/FM5QT3U4Y5HMJJS3HMU7OKCVTI.jpeg?auth=02da2ba7a75c99305c05c53d397170b35e6eb85238023294d63af782acd77ed1&smart=true&width=980&height=600",
       "articles": [
         {
-          "id": "84968006a874",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "Duffy: Flights Resume, but Delays Persist After FAA Ground Stop",
-          "url": "https://newsmax.com/newsfront/airline-shutdown-faa-sean-duffy/2026/11/14/id/1276297",
-          "published": "2026-11-14T13:59:10.000Z",
-          "snippet": "Transportation Secretary Sean Duffy said Saturday morning that air travel was gradually returning to normal after a nationwide ground stop Friday, but warned that passengers should expect continued delays and cancellations as airlines recover from the disruption.",
+          "id": "5665473d41d6",
+          "sourceId": "csmonitor",
+          "sourceName": "The Christian Science Monitor",
+          "lean": "center",
+          "title": "FAA says flights can resume following nationwide ground stop",
+          "url": "https://csmonitor.com/Business/2026/1113/faa-duffy-ground-stop-lifted?icid=rss",
+          "published": "2026-11-14T03:35:43.000Z",
+          "snippet": "The Federal Aviation Administration said Friday night that airplane departures can resume after an unusual halt tied to communications problems.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -1389,31 +1431,89 @@
           }
         },
         {
-          "id": "0f13441ad153",
-          "sourceId": "washpost",
-          "sourceName": "The Washington Post",
-          "lean": "lean-left",
-          "title": "Travel chaos, flight cancellations continue following nationwide ground stop",
-          "url": "https://washingtonpost.com/transportation/2026/11/14/ground-stop-aftermath-sees-thousands-flights-canceled-delayed-saturday",
-          "published": "2026-11-14T14:13:24.000Z",
-          "snippet": "Officials blamed the outage on aging air-control systems. Transportation Secretary Sean Duffy said Saturday operations are “slowly returning to normal” but passengers would continue to see delays and cancellations.",
+          "id": "913c1d96a498",
+          "sourceId": "deseret",
+          "sourceName": "Deseret News",
+          "lean": "center",
+          "title": "Federal Aviation Administration says airplane departures can resume following nationwide ground stop",
+          "url": "https://deseret.com/business/2026/11/13/faa-grounds-flights-across-us",
+          "published": "2026-11-13T21:45:35.000Z",
+          "snippet": "The Federal Aviation Administration says airplane departures can resume after the agency lifted a nationwide ground stop caused by communications problems. The FAA had grounded all flights nationwide Friday afternoon, causing hundreds of flights to be diverted. Officials cited “extraordinary…",
           "flags": {
-            "loaded": [
-              "chaos"
-            ],
+            "loaded": [],
             "contested": [],
             "clickbait": false
           }
         },
         {
-          "id": "5d2f1e05d6d3",
+          "id": "e793bc484fc3",
+          "sourceId": "justthenews",
+          "sourceName": "Just the News",
+          "lean": "lean-right",
+          "title": "FAA lifts hours-long ground stop, says flights can resume",
+          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume",
+          "published": "2026-11-13T00:00:00.000Z",
+          "snippet": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e624abb4c769",
+          "sourceId": "centersquare",
+          "sourceName": "The Center Square",
+          "lean": "lean-right",
+          "title": "Some flights resume after nationwide ground stop, travelers stranded",
+          "url": "https://thecentersquare.com/national/article_dfa42c13-9557-4bcc-95ca-8694749617cd.html?a",
+          "published": "2026-11-13T21:31:00.000Z",
+          "snippet": "(The Center Square) – Some flights have resumed in the United States after an hours-long ground stop that began late Friday afternoon by the Federal Aviation Administration, just the second time since the Sept. 11, 2001, terrorist attacks.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ad8a34c39225",
+          "sourceId": "centersquare",
+          "sourceName": "The Center Square",
+          "lean": "lean-right",
+          "title": "Flights resume after several hour ground stop across U.S.",
+          "url": "https://thecentersquare.com/issues/general/article_be800f00-a795-402d-bf6f-424e55713fd4.html?a",
+          "published": "2026-11-14T01:28:00.000Z",
+          "snippet": "(The Center Square) – The Federal Aviation Administration lifted a nationwide ground stop Friday night on flights after more than a four-hour pause brought air traffic to a screeching halt across the U.S.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "278129543407",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Flights slowly resume after US aviation agency lifts nationwide ground stop",
+          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights",
+          "published": "2026-11-14T00:09:06.000Z",
+          "snippet": "Transportation secretary Sean Duffy says the airspace is now open and the problem has been identified Chaos at US airports as stoppage grinds travel plans to a halt What to know about the rare nationwide ground stop issued by the FAA Flights in the US have slowly started resuming after being…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c570c31172b8",
           "sourceId": "thehill",
           "sourceName": "The Hill",
           "lean": "center",
-          "title": "Live updates: US air travel recovers from ground stop; Federalist Society gathers following blue wave",
-          "url": "https://thehill.com/homenews/administration/6220447-live-trump-admin-faa-federalist-society",
-          "published": "2026-11-14T14:00:00.000Z",
-          "snippet": "U.S. airports and airlines are still playing catch up on Saturday following Friday's four hour long nationwide ground, with travelers across the country scrambling to get to their destinations after facing delays and cancellations. Transportation Secretary Sean Duffy said Friday night he expects…",
+          "title": "Airspace reopened after nationwide ground stop",
+          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop",
+          "published": "2026-11-14T01:56:50.000Z",
+          "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed. \"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -1422,15 +1522,15 @@
         }
       ],
       "related": [
-        "s_e793bc484fc3",
+        "s_4eb29016b60a",
+        "s_e807210b9dcc",
+        "s_84968006a874",
         "s_a5bbc5a57404",
-        "s_869d144f66b8",
-        "s_2f54424c946a",
-        "s_4eb29016b60a"
+        "s_c548896e6d88"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -1445,7 +1545,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -1504,7 +1604,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.7713,
+      "score": 1.7591,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/14/id6125054-US_Nationwide_Ground_Stop_GettyImages-2304497421-1080x720.jpg",
       "articles": [
         {
@@ -1556,13 +1656,13 @@
       "related": [
         "s_81c410d47314",
         "s_4eb29016b60a",
-        "s_869d144f66b8",
-        "s_e8c38895520b",
+        "s_e807210b9dcc",
+        "s_e793bc484fc3",
         "s_c548896e6d88"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -1577,7 +1677,111 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
+      }
+    },
+    {
+      "id": "s_84968006a874",
+      "headline": "Duffy: Flights Resume, but Delays Persist After FAA Ground Stop",
+      "headlineFrom": {
+        "sourceId": "newsmax",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Transportation Secretary Sean Duffy said Saturday morning that air travel was gradually returning to normal after a nationwide ground stop Friday, but warned that passengers should expect continued delays and cancellations as airlines recover from the disruption.",
+      "digest": [],
+      "topic": "us",
+      "firstSeen": "2026-11-14T13:59:10.000Z",
+      "firstBySide": {
+        "left": "2026-11-14T14:13:24.000Z",
+        "center": null,
+        "right": "2026-11-14T13:59:10.000Z"
+      },
+      "lastUpdated": "2026-11-14T14:13:24.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 1,
+        "center": 0,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 0,
+          "lean-right": 0,
+          "right": 1
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 2,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 1.7214,
+      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=AD029AF6-3E29-48CF-9997-3CE052EAE0D6",
+      "articles": [
+        {
+          "id": "0f13441ad153",
+          "sourceId": "washpost",
+          "sourceName": "The Washington Post",
+          "lean": "lean-left",
+          "title": "Travel chaos, flight cancellations continue following nationwide ground stop",
+          "url": "https://washingtonpost.com/transportation/2026/11/14/ground-stop-aftermath-sees-thousands-flights-canceled-delayed-saturday",
+          "published": "2026-11-14T14:13:24.000Z",
+          "snippet": "Officials blamed the outage on aging air-control systems. Transportation Secretary Sean Duffy said Saturday operations are “slowly returning to normal” but passengers would continue to see delays and cancellations.",
+          "flags": {
+            "loaded": [
+              "chaos"
+            ],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "84968006a874",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Duffy: Flights Resume, but Delays Persist After FAA Ground Stop",
+          "url": "https://newsmax.com/newsfront/airline-shutdown-faa-sean-duffy/2026/11/14/id/1276297",
+          "published": "2026-11-14T13:59:10.000Z",
+          "snippet": "Transportation Secretary Sean Duffy said Saturday morning that air travel was gradually returning to normal after a nationwide ground stop Friday, but warned that passengers should expect continued delays and cancellations as airlines recover from the disruption.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_e793bc484fc3",
+        "s_a5bbc5a57404",
+        "s_e807210b9dcc",
+        "s_2f54424c946a",
+        "s_4eb29016b60a"
+      ],
+      "familyId": "s_4eb29016b60a",
+      "subject": {
+        "storyCount": 13,
+        "sourceCount": 27,
+        "coverage": {
+          "left": 10,
+          "center": 7,
+          "right": 10,
+          "byLean": {
+            "left": 3,
+            "lean-left": 7,
+            "center": 7,
+            "lean-right": 6,
+            "right": 4
+          }
+        },
+        "lastUpdated": "2026-11-14T16:11:03.000Z",
+        "score": 7.0169
       }
     },
     {
@@ -1636,7 +1840,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.7151,
+      "score": 1.7032,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/14/id6125022-IMG_9349-1080x720.jpeg",
       "articles": [
         {
@@ -1687,14 +1891,14 @@
       ],
       "related": [
         "s_4eb29016b60a",
+        "s_e807210b9dcc",
         "s_e8c38895520b",
-        "s_99c855d4bf03",
-        "s_869d144f66b8",
+        "s_e793bc484fc3",
         "s_a5bbc5a57404"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -1709,176 +1913,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
-      }
-    },
-    {
-      "id": "s_e8c38895520b",
-      "headline": "FAA says flights can resume following nationwide ground stop",
-      "headlineFrom": {
-        "sourceId": "csmonitor",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "The Federal Aviation Administration said Friday night that airplane departures can resume after an unusual halt tied to communications problems.",
-      "digest": [
-        {
-          "text": "U.S. air traffic was brought to a standstill Friday after the Federal Aviation Administration ordered a nationwide ground stop for departing flights that lasted more than five hours.",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "url": "https://nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247"
-        },
-        {
-          "text": "Officials cited “extraordinary circumstances” caused by communications problems at regional air traffic control centers.",
-          "sourceId": "deseret",
-          "sourceName": "Deseret News",
-          "lean": "center",
-          "url": "https://deseret.com/business/2026/11/13/faa-grounds-flights-across-us"
-        },
-        {
-          "text": "Some flights have resumed in the United States after an hours-long ground stop that began late Friday afternoon by the Federal Aviation Administration, just the second time since the Sept. 11, 2001, terrorist attacks.",
-          "sourceId": "centersquare",
-          "sourceName": "The Center Square",
-          "lean": "lean-right",
-          "url": "https://thecentersquare.com/national/article_dfa42c13-9557-4bcc-95ca-8694749617cd.html?a"
-        }
-      ],
-      "topic": "us",
-      "firstSeen": "2026-11-13T21:09:53.000Z",
-      "firstBySide": {
-        "left": "2026-11-13T21:09:53.000Z",
-        "center": "2026-11-13T21:45:35.000Z",
-        "right": "2026-11-13T21:31:00.000Z"
-      },
-      "lastUpdated": "2026-11-14T03:35:43.000Z",
-      "sourceCount": 4,
-      "articleCount": 5,
-      "coverage": {
-        "left": 1,
-        "center": 2,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 1,
-          "center": 2,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 1.6493,
-      "image": "https://www.deseret.com/resizer/v2/FM5QT3U4Y5HMJJS3HMU7OKCVTI.jpeg?auth=02da2ba7a75c99305c05c53d397170b35e6eb85238023294d63af782acd77ed1&smart=true&width=980&height=600",
-      "articles": [
-        {
-          "id": "5665473d41d6",
-          "sourceId": "csmonitor",
-          "sourceName": "The Christian Science Monitor",
-          "lean": "center",
-          "title": "FAA says flights can resume following nationwide ground stop",
-          "url": "https://csmonitor.com/Business/2026/1113/faa-duffy-ground-stop-lifted?icid=rss",
-          "published": "2026-11-14T03:35:43.000Z",
-          "snippet": "The Federal Aviation Administration said Friday night that airplane departures can resume after an unusual halt tied to communications problems.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "913c1d96a498",
-          "sourceId": "deseret",
-          "sourceName": "Deseret News",
-          "lean": "center",
-          "title": "Federal Aviation Administration says airplane departures can resume following nationwide ground stop",
-          "url": "https://deseret.com/business/2026/11/13/faa-grounds-flights-across-us",
-          "published": "2026-11-13T21:45:35.000Z",
-          "snippet": "The Federal Aviation Administration says airplane departures can resume after the agency lifted a nationwide ground stop caused by communications problems. The FAA had grounded all flights nationwide Friday afternoon, causing hundreds of flights to be diverted. Officials cited “extraordinary…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "ad8a34c39225",
-          "sourceId": "centersquare",
-          "sourceName": "The Center Square",
-          "lean": "lean-right",
-          "title": "Flights resume after several hour ground stop across U.S.",
-          "url": "https://thecentersquare.com/issues/general/article_be800f00-a795-402d-bf6f-424e55713fd4.html?a",
-          "published": "2026-11-14T01:28:00.000Z",
-          "snippet": "(The Center Square) – The Federal Aviation Administration lifted a nationwide ground stop Friday night on flights after more than a four-hour pause brought air traffic to a screeching halt across the U.S.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e624abb4c769",
-          "sourceId": "centersquare",
-          "sourceName": "The Center Square",
-          "lean": "lean-right",
-          "title": "Some flights resume after nationwide ground stop, travelers stranded",
-          "url": "https://thecentersquare.com/national/article_dfa42c13-9557-4bcc-95ca-8694749617cd.html?a",
-          "published": "2026-11-13T21:31:00.000Z",
-          "snippet": "(The Center Square) – Some flights have resumed in the United States after an hours-long ground stop that began late Friday afternoon by the Federal Aviation Administration, just the second time since the Sept. 11, 2001, terrorist attacks.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e8c38895520b",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Ground stop lifted hours after stranding thousands of flights across the U.S.",
-          "url": "https://nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
-          "published": "2026-11-13T21:09:53.000Z",
-          "snippet": "U.S. air traffic was brought to a standstill Friday after the Federal Aviation Administration ordered a nationwide ground stop for departing flights that lasted more than five hours.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_4eb29016b60a",
-        "s_e793bc484fc3",
-        "s_869d144f66b8",
-        "s_a5bbc5a57404",
-        "s_c548896e6d88"
-      ],
-      "familyId": "s_4eb29016b60a",
-      "subject": {
-        "storyCount": 14,
-        "sourceCount": 27,
-        "coverage": {
-          "left": 10,
-          "center": 7,
-          "right": 10,
-          "byLean": {
-            "left": 3,
-            "lean-left": 7,
-            "center": 7,
-            "lean-right": 6,
-            "right": 4
-          }
-        },
-        "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -1937,24 +1972,9 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.4935,
-      "image": "https://img.theepochtimes.com/assets/uploads/2026/11/14/id6125019-Nationwide_Ground_Stop_26317818708518-1080x720.jpg",
+      "score": 1.4832,
+      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=E61B8B33-F878-483A-B40A-FD7DF15E880D",
       "articles": [
-        {
-          "id": "756c3c18923a",
-          "sourceId": "epochtimes",
-          "sourceName": "The Epoch Times",
-          "lean": "lean-right",
-          "title": "Duffy Asks Congress for $50 Billion After Nationwide Flight Halt",
-          "url": "https://theepochtimes.com/us/duffy-asks-congress-for-50-billion-after-nationwide-flight-halt-6125044",
-          "published": "2026-11-14T15:30:27.000Z",
-          "snippet": "Duffy sought emergency funding after what he said was an old-equipment failure Friday that led the FAA to halt flights nationwide until 8:15 p.m. ET.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "7bf474a75016",
           "sourceId": "newsmax",
@@ -1969,18 +1989,33 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "756c3c18923a",
+          "sourceId": "epochtimes",
+          "sourceName": "The Epoch Times",
+          "lean": "lean-right",
+          "title": "Duffy Asks Congress for $50 Billion After Nationwide Flight Halt",
+          "url": "https://theepochtimes.com/us/duffy-asks-congress-for-50-billion-after-nationwide-flight-halt-6125044",
+          "published": "2026-11-14T15:30:27.000Z",
+          "snippet": "Duffy sought emergency funding after what he said was an old-equipment failure Friday that led the FAA to halt flights nationwide until 8:15 p.m. ET.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
         "s_2f54424c946a",
+        "s_e807210b9dcc",
         "s_a5bbc5a57404",
-        "s_869d144f66b8",
-        "s_4eb29016b60a",
-        "s_e8c38895520b"
+        "s_e793bc484fc3",
+        "s_4eb29016b60a"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -1995,146 +2030,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
-      }
-    },
-    {
-      "id": "s_e793bc484fc3",
-      "headline": "Airspace reopened after nationwide ground stop",
-      "headlineFrom": {
-        "sourceId": "thehill",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed.",
-      "digest": [
-        {
-          "text": "The Federal Aviation Administration (FAA) lifted a nationwide ground stop about four hours after it was declared on Friday afternoon, delaying or canceling more than 11,000 US flights, according to aviation tracker FlightAware , and throwing airports into sudden chaos.",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights"
-        },
-        {
-          "text": "\"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference that began at around 8:30 p.m. EST.",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop"
-        },
-        {
-          "text": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
-          "sourceId": "justthenews",
-          "sourceName": "Just the News",
-          "lean": "lean-right",
-          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume"
-        }
-      ],
-      "topic": "politics",
-      "firstSeen": "2026-11-13T00:00:00.000Z",
-      "firstBySide": {
-        "left": "2026-11-14T00:09:06.000Z",
-        "center": "2026-11-14T01:56:50.000Z",
-        "right": "2026-11-13T00:00:00.000Z"
-      },
-      "lastUpdated": "2026-11-14T01:56:50.000Z",
-      "sourceCount": 3,
-      "articleCount": 3,
-      "coverage": {
-        "left": 1,
-        "center": 1,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 1,
-          "center": 1,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 1.2916,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318067446961-e1794621687755.jpg?w=900",
-      "articles": [
-        {
-          "id": "e793bc484fc3",
-          "sourceId": "justthenews",
-          "sourceName": "Just the News",
-          "lean": "lean-right",
-          "title": "FAA lifts hours-long ground stop, says flights can resume",
-          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume",
-          "published": "2026-11-13T00:00:00.000Z",
-          "snippet": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "278129543407",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Flights slowly resume after US aviation agency lifts nationwide ground stop",
-          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights",
-          "published": "2026-11-14T00:09:06.000Z",
-          "snippet": "Transportation secretary Sean Duffy says the airspace is now open and the problem has been identified Chaos at US airports as stoppage grinds travel plans to a halt What to know about the rare nationwide ground stop issued by the FAA Flights in the US have slowly started resuming after being…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c570c31172b8",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Airspace reopened after nationwide ground stop",
-          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop",
-          "published": "2026-11-14T01:56:50.000Z",
-          "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed. \"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_869d144f66b8",
-        "s_4eb29016b60a",
-        "s_e8c38895520b",
-        "s_2f54424c946a",
-        "s_84968006a874"
-      ],
-      "familyId": "s_4eb29016b60a",
-      "subject": {
-        "storyCount": 14,
-        "sourceCount": 27,
-        "coverage": {
-          "left": 10,
-          "center": 7,
-          "right": 10,
-          "byLean": {
-            "left": 3,
-            "lean-left": 7,
-            "center": 7,
-            "lean-right": 6,
-            "right": 4
-          }
-        },
-        "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -2193,7 +2089,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.0511,
+      "score": 1.0439,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/08/HDSShockGloves_AP_JuliaDemareeNikhinson.jpg?w=900",
       "articles": [
         {
@@ -2291,12 +2187,12 @@
         "s_2f54424c946a",
         "s_4eb29016b60a",
         "s_a5bbc5a57404",
-        "s_869d144f66b8",
+        "s_e807210b9dcc",
         "s_81c410d47314"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -2311,7 +2207,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
       }
     },
     {
@@ -2355,7 +2251,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.7857,
+      "score": 0.7803,
       "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=6A90C698-6B08-4469-899D-377212C912F1",
       "articles": [
         {
@@ -2393,14 +2289,14 @@
       ],
       "related": [
         "s_4eb29016b60a",
-        "s_869d144f66b8",
-        "s_e8c38895520b",
+        "s_e807210b9dcc",
+        "s_e793bc484fc3",
         "s_a5bbc5a57404",
-        "s_e793bc484fc3"
+        "s_e8c38895520b"
       ],
       "familyId": "s_4eb29016b60a",
       "subject": {
-        "storyCount": 14,
+        "storyCount": 13,
         "sourceCount": 27,
         "coverage": {
           "left": 10,
@@ -2415,7 +2311,895 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.0657
+        "score": 7.0169
+      }
+    },
+    {
+      "id": "s_63a35e964e0e",
+      "headline": "Van Hollen says he will challenge Schumer for majority leader",
+      "headlineFrom": {
+        "sourceId": "newsnation",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Sen. Chris Van Hollen said he would challenge Senate Minority Leader Chuck Schumer for the role of majority leader.",
+      "digest": [
+        {
+          "text": "After a week of speculation about his intentions, Maryland Democratic Sen. Chris Van Hollen announced on Thursday that he plans to challenge Sen. Chuck Schumer (D-N.Y.) for the position of Senate Majority Leader in the 120th Congress.",
+          "sourceId": "motherjones",
+          "sourceName": "Mother Jones",
+          "lean": "left",
+          "url": "https://motherjones.com/politics/2026/11/van-hollen-senate-majority-leader-campaign-schumer-congress-democrats"
+        },
+        {
+          "text": "Sen. Jeff Merkley (D-Ore.), the ranking member of the Senate Budget Committee and an influential progressive voice in the Senate Democratic caucus, announced Friday that he will support Sen. Chris Van Hollen (D-Md.) over Sen. Chuck Schumer (D-N.Y.) to serve as majority leader next year.",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "url": "https://thehill.com/the-120/6219652-merkley-supports-van-hollen-majority-leader"
+        },
+        {
+          "text": "In response, Schumer said he welcomes discussion about the future of the caucus, noting the party will hold at least 55 seats next term.",
+          "sourceId": "dailysignal",
+          "sourceName": "The Daily Signal",
+          "lean": "right",
+          "url": "https://dailysignal.com/2026/11/13/schumer-challenged-for-senate-majority-leader"
+        },
+        {
+          "text": "The Maryland senator says Democrats need a new strategy and a new leader, even after a midterm wave that gave the party a large majority in the upper chamber that few saw coming.",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "url": "https://ms.now/news/van-hollen-schumer-senate-majority-leader"
+        },
+        {
+          "text": "Maryland Senator Van Hollen says \"new leadership\" is needed for Democrats following the party's recent midterm successes.",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "url": "https://bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "text": "Allies of Senate Democratic Leader Chuck Schumer, D-N.Y., predict he will win more than 40 votes against leadership challenger Sen. Chris Van Hollen, D-Md., and are weighing an earlier caucus vote.",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "url": "https://newsmax.com/newsfront/schumer-allies-votes/2026/11/14/id/1276299"
+        }
+      ],
+      "topic": "politics",
+      "firstSeen": "2026-11-12T18:13:23.000Z",
+      "firstBySide": {
+        "left": "2026-11-12T18:13:23.000Z",
+        "center": "2026-11-13T02:43:20.000Z",
+        "right": "2026-11-13T02:07:30.000Z"
+      },
+      "lastUpdated": "2026-11-14T14:27:05.000Z",
+      "sourceCount": 20,
+      "articleCount": 37,
+      "coverage": {
+        "left": 11,
+        "center": 4,
+        "right": 5,
+        "byLean": {
+          "left": 4,
+          "lean-left": 7,
+          "center": 4,
+          "lean-right": 2,
+          "right": 3
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 5.8005,
+      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/vanhollenchris_062526gn03_w.jpg?w=900",
+      "articles": [
+        {
+          "id": "986f5bc76aef",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Van Hollen will challenge Schumer for Senate majority leader",
+          "url": "https://cbsnews.com/news/chris-van-hollen-challenge-chuck-schumer-senate-majority-leader-democrat",
+          "published": "2026-11-13T03:58:38.000Z",
+          "snippet": "Democratic Sen. Chris Van Hollen of Maryland announced Thursday that he will challenge Sen. Chuck Schumer for Senate majority leader.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c13906b19a6d",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Van Hollen challenges Schumer for Senate majority leader",
+          "url": "https://cbsnews.com/video/van-hollen-challenges-schumer-for-senate",
+          "published": "2026-11-13T17:47:00.000Z",
+          "snippet": "Sen. Chris Van Hollen says he plans to challenge Sen. Chuck Schumer for Senate majority leader.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "8bd1ca3007b9",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Van Hollen says he will challenge Schumer for majority leader",
+          "url": "https://newsnationnow.com/politics/van-hollen-says-he-will-challenge-schumer-for-majority-leader",
+          "published": "2026-11-13T02:45:10.000Z",
+          "snippet": "Sen. Chris Van Hollen said he would challenge Senate Minority Leader Chuck Schumer for the role of majority leader.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "2d2a1d6a1823",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Chris Van Hollen to challenge Chuck Schumer for Senate majority leader",
+          "url": "https://theguardian.com/us-news/2026/nov/12/chris-van-hollen-chuck-schumer-senate-majority-leader",
+          "published": "2026-11-13T02:30:07.000Z",
+          "snippet": "Maryland Democrat challenges party leader after midterms sweep, saying: ‘The American people called for change’ Chris Van Hollen, the Democratic senator of Maryland, announced on Thursday that he is challenging Chuck Schumer for the role of Senate majority leader when Democrats regain the chamber’s…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "cd458a66cc7e",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Van Hollen says he'll challenge Schumer for Senate majority leader",
+          "url": "https://cbsnews.com/video/van-hollen-says-hell-challenge-schumer-for-senate-majority-leader",
+          "published": "2026-11-13T14:31:59.000Z",
+          "snippet": "Democratic Sen. Chris Van Hollen said he'll challenge Sen. Chuck Schumer for Senate majority leader. CBS News' Fin Gómez has more.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "49f98ea62350",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Van Hollen Challenges Schumer for Senate Majority Leader",
+          "url": "https://today.com/video/van-hollen-challenges-schumer-for-senate-majority-leader-273441349510",
+          "published": "2026-11-13T12:22:50.000Z",
+          "snippet": "Maryland Sen. Chris Van Hollen announced Thursday he will run for Senate majority leader, becoming the first to challenge Sen. Chuck Schumer for the position. NBC’s Garrett Haake reports for TODAY.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "bedad5e35459",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Chris Van Hollen Set to Challenge Chuck Schumer for Senate Majority Leader",
+          "url": "https://nytimes.com/2026/11/12/us/politics/van-hollen-schumer-democrats-majority-leader.html",
+          "published": "2026-11-13T04:11:39.000Z",
+          "snippet": "Senator Chris Van Hollen of Maryland has emerged as a favorite of Democrats seeking an alternative to Senator Chuck Schumer, who says he has the votes to win.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b3e15e405d07",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Sen. Van Hollen Challenges Schumer for Majority Leader",
+          "url": "https://newsmax.com/newsfront/chris-van-hollen-chuck-schumer-senate/2026/11/12/id/1276157",
+          "published": "2026-11-13T02:07:30.000Z",
+          "snippet": "Sen. Chris Van Hollen, D-Md., announced Thursday he will challenge Sen. Chuck Schumer, D-N.Y., for majority leader in the next Congress.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "49ab3a5dc46c",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "Chris Van Hollen says he will challenge Chuck Schumer for Senate majority leader",
+          "url": "https://npr.org/2026/11/12/nx-s1-6039357/chris-van-hollen-chuck-schumer-senate-majority-leader",
+          "published": "2026-11-13T03:52:25.000Z",
+          "snippet": "Van Hollen, a progressive from Maryland, said voters sent a clear message in the midterm elections — that they want \"change from the status quo.\"",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "cbbf298b7c6f",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Van Hollen says he will challenge Schumer for majority leader",
+          "url": "https://thehill.com/homenews/senate/6217923-van-hollen-challenges-schumer",
+          "published": "2026-11-13T02:43:20.000Z",
+          "snippet": "Sen. Chris Van Hollen (D-Md.) said he would challenge Senate Minority Leader Chuck Schumer (D-N.Y.) for the role of majority leader on Thursday, setting up a showdown in the upper chamber as Democrats prepare to retake the majority. In a post to the social platform X, Van Hollen called for “new…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ef8753fda708",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Sen. Chris Van Hollen says he will challenge Sen. Chuck Schumer for majority leader",
+          "url": "https://nbcnews.com/politics/congress/sen-chris-van-hollen-says-will-challenge-sen-chuck-schumer-majority-le-rcna609100",
+          "published": "2026-11-13T02:03:11.000Z",
+          "snippet": "Sen. Chris Van Hollen, D-Md., announced Thursday he will run for Senate majority leader, becoming the first to challenge Sen. Chuck Schumer, D-N.Y.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "1bbedb4dfe00",
+          "sourceId": "abcnews",
+          "sourceName": "ABC News",
+          "lean": "lean-left",
+          "title": "Maryland Sen. Van Hollen says he will challenge Sen. Schumer for Democratic leader",
+          "url": "https://abcnews.com/Politics/maryland-sen-chris-van-hollen-challenge-sen-chuck/story?id=138097994",
+          "published": "2026-11-13T13:14:56.000Z",
+          "snippet": "Maryland Democratic Sen. Chris Van Hollen says he will challenge New York Sen. Chuck Schumer for Senate majority leader in the new Congress.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "1ccdc1befbfb",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "Van Hollen launches challenge to Schumer for Senate majority leader",
+          "url": "https://ms.now/news/van-hollen-schumer-senate-majority-leader",
+          "published": "2026-11-13T01:59:00.000Z",
+          "snippet": "The Maryland senator says Democrats need a new strategy and a new leader, even after a midterm wave that gave the party a large majority in the upper chamber that few saw coming.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b5da01298b2a",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Chris Van Hollen launches bid to unseat Schumer as Senate majority leader",
+          "url": "https://washingtonexaminer.com/news/senate/4802382/chris-van-hollen-schumer-senate-majority-leader",
+          "published": "2026-11-13T02:23:05.000Z",
+          "snippet": "Sen. Chris Van Hollen (D-MD) said Thursday night that he would be challenging Sen. Chuck Schumer (D-NY) for majority leader as a growing chorus of Senate Democrats calls for a new face to lead the party in the 120th Congress. “In this election, Americans called on us to unrig an economy rigged…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6e610c3bf4e9",
+          "sourceId": "commondreams",
+          "sourceName": "Common Dreams",
+          "lean": "left",
+          "title": "'Hell Yes, Let's Go': Van Hollen Challenges Schumer for Senate Majority Leader",
+          "url": "https://commondreams.org/news/van-hollen-running-for-senate-majority-leader",
+          "published": "2026-11-13T03:30:25.000Z",
+          "snippet": "Thursday's announcement that Sen. Chris Van Hollen will challenge Senate Minority Leader Chuck Schumer to lead the upper house of Congress when Democrats retake control in January was met with cautious optimism from progressives, who underscored the mandate for change delivered by voters in last…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "40634ef77344",
+          "sourceId": "abcnews",
+          "sourceName": "ABC News",
+          "lean": "lean-left",
+          "title": "Schumer and Van Hollen face off for Senate majority leader. What do Democrats think?",
+          "url": "https://abcnews.com/Politics/schumer-van-hollen-facing-off-senate-majority-leader/story?id=138111386",
+          "published": "2026-11-13T19:02:06.000Z",
+          "snippet": "Within moments of Chris Van Hollen announcing his intent to challenge Chuck Schumer in a race to lead next year’s Senate Democratic majority, endorsements began flying.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "71c7feba4504",
+          "sourceId": "dailysignal",
+          "sourceName": "The Daily Signal",
+          "lean": "right",
+          "title": "Schumer Challenged for Senate Majority Leader",
+          "url": "https://dailysignal.com/2026/11/13/schumer-challenged-for-senate-majority-leader",
+          "published": "2026-11-13T15:02:17.000Z",
+          "snippet": "Sen. Chris Van Hollen, D-Md., announced he is challenging Sen. Chuck Schumer, D-N.Y., for the role of Senate majority leader. “In this election, Americans called on us to unrig an economy rigged against working people & fueled by political corruption,” Van Hollen wrote on X. “To deliver, we need…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "10c73e46b496",
+          "sourceId": "foxnews",
+          "sourceName": "Fox News",
+          "lean": "right",
+          "title": "Van Hollen challenges Schumer for Senate leadership after Democratic election sweep",
+          "url": "https://foxnews.com/politics/van-hollen-challenges-schumer-senate-leadership-after-democratic-election-sweep",
+          "published": "2026-11-13T02:45:42.000Z",
+          "snippet": "Chuck Schumer faces a formal challenge from Chris Van Hollen for Senate Democratic leader after Van Hollen accused him of siding with AIPAC.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "88b1649d68aa",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Van Hollen announces run for Democratic Senate leader",
+          "url": "https://upi.com/Top_News/US/2026/11/13/Chris-Van-Hollen-Democratic-Senate-leader/9501794547942",
+          "published": "2026-11-13T07:01:25.000Z",
+          "snippet": "Sen. Chris Van Hollen announced that he will run for Senate majority leader, challenging Sen. Chuck Schumer for the position.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "28ca039ce0b3",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "Nvidia CEO steps down. And, Sen. Chris Van Hollen to run for majority leader",
+          "url": "https://npr.org/2026/11/13/g-s1-153532/up-first-newsletter-nvidia-jensen-huang-colette-kress-ukraine-russia-chris-van-hollen",
+          "published": "2026-11-13T12:07:12.000Z",
+          "snippet": "Nvidia's chief financial officer has been appointed interim CEO after Jensen Huang stepped down from the role. And, Sen. Chris Van Hollen says he will challenge Chuck Schumer for majority leader.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "da9c81f81034",
+          "sourceId": "motherjones",
+          "sourceName": "Mother Jones",
+          "lean": "left",
+          "title": "Van Hollen Pledges to “Shake Things Up” in Majority Leader Announcement",
+          "url": "https://motherjones.com/politics/2026/11/van-hollen-senate-majority-leader-campaign-schumer-congress-democrats",
+          "published": "2026-11-13T22:09:47.000Z",
+          "snippet": "After a week of speculation about his intentions, Maryland Democratic Sen. Chris Van Hollen announced on Thursday that he plans to challenge Sen. Chuck Schumer (D-N.Y.) for the position of Senate Majority Leader in the 120th Congress. The Democrats’ historic sweep of both legislative chambers last…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "95828da16d21",
+          "sourceId": "washpost",
+          "sourceName": "The Washington Post",
+          "lean": "lean-left",
+          "title": "Van Hollen will challenge Schumer to lead Senate Democrats",
+          "url": "https://washingtonpost.com/politics/2026/11/12/van-hollen-announces-challenge-schumer-lead-senate",
+          "published": "2026-11-13T04:56:57.000Z",
+          "snippet": "The Maryland Democrat said the country’s election called for change but acknowledged he is an underdog for the role.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "63a35e964e0e",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Chris Van Hollen says he will run for Senate majority leader, challenging fellow Democrat Chuck Schumer – as it happened",
+          "url": "https://theguardian.com/us-news/live/2026/nov/12/mississippi-scott-colom-ukraine-donald-trump",
+          "published": "2026-11-12T18:13:23.000Z",
+          "snippet": "This live blog is now closed. Chris Van Hollen to challenge Chuck Schumer for Senate majority leader Sign up for the Breaking News US email Perhaps you saw this ad from Scott Colom, who was just elected to serve as Mississippi’s first Democratic senator since 1989: The New York Times spoke to Russ…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "7aa29c83a72a",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "Chris Van Hollen Rules Out Presidential Bid As He Seeks Majority Leader Job",
+          "url": "https://huffpost.com/entry/chris-van-hollen-rules-out-presidential-bid-majority-leader_n_6af75ed5e4b0476a159b6487",
+          "published": "2026-11-13T19:09:22.000Z",
+          "snippet": "Van Hollen is putting all his focus on a challenge to Sen. Chuck Schumer (D-N.Y.).",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "93656a498d8d",
+          "sourceId": "huffpost",
+          "sourceName": "HuffPost",
+          "lean": "left",
+          "title": "Chris Van Hollen Announces Bid For Senate Majority Leader",
+          "url": "https://huffpost.com/entry/chris-van-hollen-senate-majority-leader_n_6af670b4e4b06534290681e3",
+          "published": "2026-11-13T02:15:55.000Z",
+          "snippet": "The Maryland Democrat is making a bid to be the anti-war, progressive alternative to the Democratic establishment.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a6bdbf3baf96",
+          "sourceId": "nypost",
+          "sourceName": "New York Post",
+          "lean": "lean-right",
+          "title": "Lefty Dem Chris Van Hollen challenging Schumer for Senate Majority leader, arguing voters ‘called for change’",
+          "url": "https://nypost.com/2026/11/12/us-news/chris-van-hollen-challenging-schumer-for-senate-majority-leader",
+          "published": "2026-11-13T03:17:47.000Z",
+          "snippet": "Van Hollen’s challenge comes after he said he was considering a bid and after Schumer has said he has the necessary support to win.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "dedcf34835e3",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Schumer Allies Predict 40-Plus Votes Against Van Hollen",
+          "url": "https://newsmax.com/newsfront/schumer-allies-votes/2026/11/14/id/1276299",
+          "published": "2026-11-14T14:27:05.000Z",
+          "snippet": "Allies of Senate Democratic Leader Chuck Schumer, D-N.Y., predict he will win more than 40 votes against leadership challenger Sen. Chris Van Hollen, D-Md., and are weighing an earlier caucus vote. That tally would give Schumer more than 70% of a Senate Democratic caucus...",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6ef4276dd509",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Schumer Allies Predict 40-Plus Votes Against Van Hollen",
+          "url": "https://newsmax.com/newsfront/chuck-schumer-chris-van-hollen-senate-democratic-leadership/2026/11/14/id/1276299",
+          "published": "2026-11-14T14:27:05.000Z",
+          "snippet": "Allies of Senate Democratic Leader Chuck Schumer, D-N.Y., predict he will win more than 40 votes against leadership challenger Sen. Chris Van Hollen, D-Md., and are weighing an earlier caucus vote. That tally would give Schumer more than 70% of a Senate Democratic caucus...",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c6e54fbd2ea7",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Schumer allies voice confidence, argue Van Hollen challenge about ending ‘filibuster’",
+          "url": "https://thehill.com/homenews/senate/6220115-senate-democrats-leadership-election-update",
+          "published": "2026-11-14T11:00:00.000Z",
+          "snippet": "Senate Democratic Leader Chuck Schumer’s (N.Y.) allies are predicting he will get more than 40 votes in his leadership contest against Sen. Chris Van Hollen (D-Md.) while slamming the challenge as a “distraction.” That would be an overwhelming majority of the Senate Democratic caucus, which will…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "d35556663b63",
+          "sourceId": "washpost",
+          "sourceName": "The Washington Post",
+          "lean": "lean-left",
+          "title": "Who is Chris Van Hollen, the Democratic senator challenging Chuck Schumer?",
+          "url": "https://washingtonpost.com/politics/2026/11/11/who-is-chris-van-hollen-senator-progressives-are-pushing-instead-schumer",
+          "published": "2026-11-13T13:21:36.000Z",
+          "snippet": "Once part of the establishment, the longtime Democratic lawmaker from Maryland has launched an upstart bid for majority leader.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ac828cb1f535",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders",
+          "url": "https://theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader",
+          "published": "2026-11-13T21:28:45.000Z",
+          "snippet": "This is not a personality contest. This is a debate about the future of the Democratic party. The election for Democratic Senate leader between Chuck Schumer and Chris Van Hollen must be understood for what it is. This is not a personality contest. This is a debate about the future of the…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e78875b6a31d",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Merkley, senior Senate progressive, backs Van Hollen over Schumer",
+          "url": "https://thehill.com/the-120/6219652-merkley-supports-van-hollen-majority-leader",
+          "published": "2026-11-13T21:01:04.000Z",
+          "snippet": "Sen. Jeff Merkley (D-Ore.), the ranking member of the Senate Budget Committee and an influential progressive voice in the Senate Democratic caucus, announced Friday that he will support Sen. Chris Van Hollen (D-Md.) over Sen. Chuck Schumer (D-N.Y.) to serve as majority leader next year. “Americans…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "9c72880e771f",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "As Van Hollen wages a challenge, Senate Democrats are torn on whom to elect as their leader",
+          "url": "https://theguardian.com/us-news/2026/nov/13/democrats-midterms-senate-leader",
+          "published": "2026-11-13T21:34:14.000Z",
+          "snippet": "Maryland senator’s bid against Chuck Schumer for leadership could decide direction of the Democratic party US politics live – latest updates Ever since Donald Trump returned to the White House, Democratic officeholders and voters alike have been divided over whether their leader in the Senate…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a439d3c086b5",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "Democratic Senate leader Schumer set to face leadership challenge",
+          "url": "https://bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-13T19:03:10.000Z",
+          "snippet": "Maryland Senator Van Hollen says \"new leadership\" is needed for Democrats following the party's recent midterm successes.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "a39d7a0b2b65",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
+          "url": "https://npr.org/2026/11/13/nx-s1-6040044/dem-senate-leader-fight",
+          "published": "2026-11-13T21:06:09.000Z",
+          "snippet": "Democrats say they have a mandate to deliver change, but as the party gets ready to retake the majority in both the House and Senate, there are divides over who should lead it.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "51a6bf68b2f4",
+          "sourceId": "washpost",
+          "sourceName": "The Washington Post",
+          "lean": "lean-left",
+          "title": "Few colleagues immediately embrace Van Hollen in his bid for majority leader",
+          "url": "https://washingtonpost.com/politics/2026/11/13/few-colleagues-immediately-embrace-van-hollen-majority-leader-bid",
+          "published": "2026-11-14T00:49:26.000Z",
+          "snippet": "The Maryland Democrat said he believes there is a broad desire for change among Senate Democrats.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5278277eb06e",
+          "sourceId": "washpost",
+          "sourceName": "The Washington Post",
+          "lean": "lean-left",
+          "title": "Van Hollen ‘no longer pursuing’ possible 2028 bid as he seeks Senate leader job",
+          "url": "https://washingtonpost.com/politics/2026/11/13/van-hollen-no-longer-pursuing-possible-2028-bid-he-seeks-senate-leader-job",
+          "published": "2026-11-13T20:21:40.000Z",
+          "snippet": "Maryland Sen. Chris Van Hollen (D) said Friday he has abandoned a potential bid for the presidency and will seek to lead the Senate instead.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_1cc6c710251d",
+        "s_0e1dfcbb00f1"
+      ],
+      "familyId": "s_63a35e964e0e",
+      "subject": {
+        "storyCount": 3,
+        "sourceCount": 22,
+        "coverage": {
+          "left": 11,
+          "center": 5,
+          "right": 6,
+          "byLean": {
+            "left": 4,
+            "lean-left": 7,
+            "center": 5,
+            "lean-right": 3,
+            "right": 3
+          }
+        },
+        "lastUpdated": "2026-11-14T14:27:05.000Z",
+        "score": 5.9738
+      }
+    },
+    {
+      "id": "s_1cc6c710251d",
+      "headline": "Senate Democrats call for new leadership — but no one has an alternative",
+      "headlineFrom": {
+        "sourceId": "deseret",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Senate Minority Leader Chuck Schumer, D-N.Y., faces a seemingly rocky path to being elected as his party’s leader in their newfound Senate majority, but no one has emerged outright to challenge him — despite growing calls for new leadership.",
+      "digest": [
+        {
+          "text": "Schumer is currently running unopposed in the party’s leadership elections, which are scheduled to take place in December.",
+          "sourceId": "deseret",
+          "sourceName": "Deseret News",
+          "lean": "center",
+          "url": "https://deseret.com/politics/2026/11/12/schumer-faces-uphill-battle-in-leadership-race"
+        },
+        {
+          "text": "U.S. Senate Minority Leader Chuck Schumer, D-N.Y., is facing a challenger for the position of chamber leader in the upcoming 120th Congress.",
+          "sourceId": "centersquare",
+          "sourceName": "The Center Square",
+          "lean": "lean-right",
+          "url": "https://thecentersquare.com/national/article_ff5e8a1a-d499-465f-bfab-cfd5a6e43f07.html?a"
+        }
+      ],
+      "topic": "politics",
+      "firstSeen": "2026-11-12T16:43:57.000Z",
+      "firstBySide": {
+        "left": null,
+        "center": "2026-11-12T16:43:57.000Z",
+        "right": "2026-11-13T20:24:00.000Z"
+      },
+      "lastUpdated": "2026-11-13T20:24:00.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 0,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 0,
+          "center": 1,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 0.6149,
+      "image": "https://www.deseret.com/resizer/v2/5UUOOBLQ6JC2NFDMHDEUFEAUQU.jpg?auth=a88e709c9196a3a724fce64a72c588213b28daa74cc018965685a4083bde5a16&smart=true&width=980&height=600",
+      "articles": [
+        {
+          "id": "56b3e1a0ece4",
+          "sourceId": "centersquare",
+          "sourceName": "The Center Square",
+          "lean": "lean-right",
+          "title": "Schumer faces challenger to Senate majority leader position",
+          "url": "https://thecentersquare.com/national/article_ff5e8a1a-d499-465f-bfab-cfd5a6e43f07.html?a",
+          "published": "2026-11-13T20:24:00.000Z",
+          "snippet": "(The Center Square) – U.S. Senate Minority Leader Chuck Schumer, D-N.Y., is facing a challenger for the position of chamber leader in the upcoming 120th Congress.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "1cc6c710251d",
+          "sourceId": "deseret",
+          "sourceName": "Deseret News",
+          "lean": "center",
+          "title": "Senate Democrats call for new leadership — but no one has an alternative",
+          "url": "https://deseret.com/politics/2026/11/12/schumer-faces-uphill-battle-in-leadership-race",
+          "published": "2026-11-12T16:43:57.000Z",
+          "snippet": "Senate Minority Leader Chuck Schumer, D-N.Y., faces a seemingly rocky path to being elected as his party’s leader in their newfound Senate majority, but no one has emerged outright to challenge him — despite growing calls for new leadership. Schumer is currently running unopposed in the party’s…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_63a35e964e0e",
+        "s_0e1dfcbb00f1"
+      ],
+      "familyId": "s_63a35e964e0e",
+      "subject": {
+        "storyCount": 3,
+        "sourceCount": 22,
+        "coverage": {
+          "left": 11,
+          "center": 5,
+          "right": 6,
+          "byLean": {
+            "left": 4,
+            "lean-left": 7,
+            "center": 5,
+            "lean-right": 3,
+            "right": 3
+          }
+        },
+        "lastUpdated": "2026-11-14T14:27:05.000Z",
+        "score": 5.9738
+      }
+    },
+    {
+      "id": "s_0e1dfcbb00f1",
+      "headline": "Colom: 'Not accurate' to say Schumer recruited him",
+      "headlineFrom": {
+        "sourceId": "thehill",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Sen.-elect Scott Colom (D-Miss.) pushed back on the idea that Senate Minority Leader Chuck Schumer (D-N.Y.) personally recruited him to run for Senate, saying the people of Mississippi deserve the credit for his upset victory.",
+      "digest": [
+        {
+          "text": "The Mississippi Democrat, fresh off a historic win, also disputed Schumer’s claim that he recruited Colom.",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "url": "https://ms.now/news/scott-colom-interview-mississippi-schumer-senate-leader"
+        }
+      ],
+      "topic": "politics",
+      "firstSeen": "2026-11-13T00:29:17.000Z",
+      "firstBySide": {
+        "left": "2026-11-13T00:29:17.000Z",
+        "center": "2026-11-13T15:05:45.000Z",
+        "right": null
+      },
+      "lastUpdated": "2026-11-13T15:05:45.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 1,
+        "center": 1,
+        "right": 0,
+        "byLean": {
+          "left": 1,
+          "lean-left": 0,
+          "center": 1,
+          "lean-right": 0,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 0.4526,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26316221150293-e1794485109741.jpg?w=900",
+      "articles": [
+        {
+          "id": "0e1dfcbb00f1",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "‘I gotta know my options’: Scott Colom holds off on backing Schumer for Senate leader",
+          "url": "https://ms.now/news/scott-colom-interview-mississippi-schumer-senate-leader",
+          "published": "2026-11-13T00:29:17.000Z",
+          "snippet": "The Mississippi Democrat, fresh off a historic win, also disputed Schumer’s claim that he recruited Colom. “The people of Mississippi recruited me,” Colom told MS NOW.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "3824ef25bc4e",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Colom: 'Not accurate' to say Schumer recruited him",
+          "url": "https://thehill.com/homenews/campaign/6218515-colom-denies-schumer-recruitment",
+          "published": "2026-11-13T15:05:45.000Z",
+          "snippet": "Sen.-elect Scott Colom (D-Miss.) pushed back on the idea that Senate Minority Leader Chuck Schumer (D-N.Y.) personally recruited him to run for Senate, saying the people of Mississippi deserve the credit for his upset victory. “He did initially understand that our party has to look south for future…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_63a35e964e0e",
+        "s_1cc6c710251d"
+      ],
+      "familyId": "s_63a35e964e0e",
+      "subject": {
+        "storyCount": 3,
+        "sourceCount": 22,
+        "coverage": {
+          "left": 11,
+          "center": 5,
+          "right": 6,
+          "byLean": {
+            "left": 4,
+            "lean-left": 7,
+            "center": 5,
+            "lean-right": 3,
+            "right": 3
+          }
+        },
+        "lastUpdated": "2026-11-14T14:27:05.000Z",
+        "score": 5.9738
       }
     },
     {
@@ -2481,7 +3265,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.3782,
+      "score": 3.3549,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f18/live/9b3a5370-df98-11f1-a9ad-6774a3284d10.jpg",
       "articles": [
         {
@@ -2549,27 +3333,27 @@
         "s_a0085c7c0fdb",
         "s_c1856f586d81",
         "s_75d9fce8056c",
-        "s_e9fdae08584a",
-        "s_4cffb276cab1"
+        "s_4cffb276cab1",
+        "s_005d09d52453"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 17,
+        "sourceCount": 16,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 6,
+          "right": 5,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
             "lean-right": 3,
-            "right": 3
+            "right": 2
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
+        "score": 5.9059
       }
     },
     {
@@ -2613,7 +3397,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.8826,
+      "score": 0.8765,
       "image": "https://static01.nyt.com/images/2026/11/13/multimedia/13xp-microsoftWWK-1-lfcv/13xp-microsoftWWK-1-lfcv-mediumSquareAt3X.jpg",
       "articles": [
         {
@@ -2666,27 +3450,27 @@
         "s_dec3e0161bcd",
         "s_a0085c7c0fdb",
         "s_c1856f586d81",
-        "s_e9fdae08584a",
-        "s_4cffb276cab1"
+        "s_4cffb276cab1",
+        "s_005d09d52453"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 17,
+        "sourceCount": 16,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 6,
+          "right": 5,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
             "lean-right": 3,
-            "right": 3
+            "right": 2
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
+        "score": 5.9059
       }
     },
     {
@@ -2745,7 +3529,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.8038,
+      "score": 0.7982,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e30a/live/54c2fe10-df57-11f1-a701-fddedf244c16.jpg",
       "articles": [
         {
@@ -2827,28 +3611,28 @@
       "related": [
         "s_a0085c7c0fdb",
         "s_dec3e0161bcd",
-        "s_e9fdae08584a",
+        "s_005d09d52453",
         "s_4cffb276cab1",
         "s_75d9fce8056c"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 17,
+        "sourceCount": 16,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 6,
+          "right": 5,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
             "lean-right": 3,
-            "right": 3
+            "right": 2
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
+        "score": 5.9059
       }
     },
     {
@@ -2907,7 +3691,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.5511,
+      "score": 0.5473,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg",
       "articles": [
         {
@@ -2958,33 +3742,245 @@
       ],
       "related": [
         "s_c1856f586d81",
-        "s_e9fdae08584a",
         "s_dec3e0161bcd",
+        "s_005d09d52453",
         "s_75d9fce8056c",
         "s_4cffb276cab1"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 17,
+        "sourceCount": 16,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 6,
+          "right": 5,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
             "lean-right": 3,
-            "right": 3
+            "right": 2
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
+        "score": 5.9059
       }
     },
     {
-      "id": "s_e9fdae08584a",
+      "id": "s_4cffb276cab1",
+      "headline": "Microsoft rules out 'malicious activity' as cause for global outage",
+      "headlineFrom": {
+        "sourceId": "dw",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "A Microsoft outage disrupted Outlook and Teams worldwide, with reports from scores of countries and territories. The software giant said that it was \"not aware\" of malicious activity that could have caused the outage.",
+      "digest": [
+        {
+          "text": "Microsoft said on Friday there is “no evidence of malicious activity” related to the global disruption of its Outlook email service and other Office 365 apps.",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "url": "https://washingtonexaminer.com/policy/technology/4802492/microsoft-no-evidence-malicious-activity-outage-outlook"
+        }
+      ],
+      "topic": "tech",
+      "firstSeen": "2026-11-13T07:46:00.000Z",
+      "firstBySide": {
+        "left": null,
+        "center": "2026-11-13T07:46:00.000Z",
+        "right": "2026-11-13T13:33:25.000Z"
+      },
+      "lastUpdated": "2026-11-13T13:33:25.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 0,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 0,
+          "center": 1,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 0.4141,
+      "image": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26316685909733.jpg?w=1024",
+      "articles": [
+        {
+          "id": "805bf27931ea",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Microsoft confirms ‘no evidence of malicious activity’ in widespread outage of Outlook",
+          "url": "https://washingtonexaminer.com/policy/technology/4802492/microsoft-no-evidence-malicious-activity-outage-outlook",
+          "published": "2026-11-13T13:33:25.000Z",
+          "snippet": "Microsoft said on Friday there is “no evidence of malicious activity” related to the global disruption of its Outlook email service and other Office 365 apps. “At this time, we have no evidence of malicious activity associated with this incident,” the technology company said at 6:11 a.m. “We will…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "4cffb276cab1",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "Microsoft rules out 'malicious activity' as cause for global outage",
+          "url": "https://dw.com/en/microsoft-rules-out-malicious-activity-as-cause-for-global-outage/a-79935611?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-13T07:46:00.000Z",
+          "snippet": "A Microsoft outage disrupted Outlook and Teams worldwide, with reports from scores of countries and territories. The software giant said that it was \"not aware\" of malicious activity that could have caused the outage.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_005d09d52453",
+        "s_a0085c7c0fdb",
+        "s_c1856f586d81",
+        "s_dec3e0161bcd",
+        "s_75d9fce8056c"
+      ],
+      "familyId": "s_dec3e0161bcd",
+      "subject": {
+        "storyCount": 7,
+        "sourceCount": 16,
+        "coverage": {
+          "left": 6,
+          "center": 5,
+          "right": 5,
+          "byLean": {
+            "left": 2,
+            "lean-left": 4,
+            "center": 5,
+            "lean-right": 3,
+            "right": 2
+          }
+        },
+        "lastUpdated": "2026-11-14T16:00:30.000Z",
+        "score": 5.9059
+      }
+    },
+    {
+      "id": "s_3dfd4fa64396",
+      "headline": "Microsoft Outlook Emails Approaching Normal Levels After Outage, Company Says",
+      "headlineFrom": {
+        "sourceId": "epochtimes",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The Microsoft outage has disrupted workplaces and governments across the world.",
+      "digest": [],
+      "topic": "tech",
+      "firstSeen": "2026-11-13T16:12:30.000Z",
+      "firstBySide": {
+        "left": null,
+        "center": null,
+        "right": "2026-11-13T16:12:30.000Z"
+      },
+      "lastUpdated": "2026-11-13T16:35:28.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 0,
+        "center": 0,
+        "right": 2,
+        "byLean": {
+          "left": 0,
+          "lean-left": 0,
+          "center": 0,
+          "lean-right": 1,
+          "right": 1
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 0.3947,
+      "image": "https://cdn01.dailycaller.com/wp-content/uploads/2026/11/GettyImages-2207863979%20(1).jpg",
+      "articles": [
+        {
+          "id": "3dfd4fa64396",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Microsoft Says Email Backlog ‘Approaching Normal’ After Outage Paralyzes Outlook",
+          "url": "https://dailycaller.com/2026/11/13/microsoft-email-outlook-outage-announcement-downdetector",
+          "published": "2026-11-13T16:12:30.000Z",
+          "snippet": "‘continued recovery progress’",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "265d94fb3d6d",
+          "sourceId": "epochtimes",
+          "sourceName": "The Epoch Times",
+          "lean": "lean-right",
+          "title": "Microsoft Outlook Emails Approaching Normal Levels After Outage, Company Says",
+          "url": "https://theepochtimes.com/tech/microsoft-outlook-emails-approaching-normal-levels-after-outage-company-says-6124700",
+          "published": "2026-11-13T16:35:28.000Z",
+          "snippet": "The Microsoft outage has disrupted workplaces and governments across the world.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_005d09d52453",
+        "s_c1856f586d81",
+        "s_a0085c7c0fdb",
+        "s_dec3e0161bcd",
+        "s_75d9fce8056c"
+      ],
+      "familyId": "s_dec3e0161bcd",
+      "subject": {
+        "storyCount": 7,
+        "sourceCount": 16,
+        "coverage": {
+          "left": 6,
+          "center": 5,
+          "right": 5,
+          "byLean": {
+            "left": 2,
+            "lean-left": 4,
+            "center": 5,
+            "lean-right": 3,
+            "right": 2
+          }
+        },
+        "lastUpdated": "2026-11-14T16:00:30.000Z",
+        "score": 5.9059
+      }
+    },
+    {
+      "id": "s_005d09d52453",
       "headline": "Is Outlook down? Widespread outage hits Microsoft email and other apps",
       "headlineFrom": {
         "sourceId": "newsnation",
@@ -3011,42 +4007,35 @@
           "sourceName": "UPI",
           "lean": "center",
           "url": "https://upi.com/Top_News/US/2026/11/12/tech-microsoft-outlook/4961794513063"
-        },
-        {
-          "text": "Outage tracker Downdetector recorded nearly 130,000 reports of Outlook problems Thursday afternoon, according to the Associated Press.",
-          "sourceId": "dailywire",
-          "sourceName": "The Daily Wire",
-          "lean": "right",
-          "url": "https://dailywire.com/news/microsoft-outage-disrupts-email-workplace-apps"
         }
       ],
       "topic": "tech",
-      "firstSeen": "2026-11-12T16:33:02.000Z",
+      "firstSeen": "2026-11-12T20:07:00.000Z",
       "firstBySide": {
         "left": "2026-11-13T00:01:28.000Z",
         "center": "2026-11-12T20:07:00.000Z",
-        "right": "2026-11-12T16:33:02.000Z"
+        "right": null
       },
       "lastUpdated": "2026-11-13T03:55:49.000Z",
-      "sourceCount": 5,
-      "articleCount": 5,
+      "sourceCount": 4,
+      "articleCount": 4,
       "coverage": {
         "left": 2,
         "center": 2,
-        "right": 1,
+        "right": 0,
         "byLean": {
           "left": 0,
           "lean-left": 2,
           "center": 2,
           "lean-right": 0,
-          "right": 1
+          "right": 0
         }
       },
       "developing": false,
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.468,
+      "score": 0.3479,
       "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/6af68bebdda036.79621960.jpeg?w=900",
       "articles": [
         {
@@ -3108,260 +4097,33 @@
             "contested": [],
             "clickbait": false
           }
-        },
-        {
-          "id": "e9fdae08584a",
-          "sourceId": "dailywire",
-          "sourceName": "The Daily Wire",
-          "lean": "right",
-          "title": "Microsoft Outage Disrupts Email, Workplace Apps",
-          "url": "https://dailywire.com/news/microsoft-outage-disrupts-email-workplace-apps",
-          "published": "2026-11-12T16:33:02.000Z",
-          "snippet": "A Microsoft 365 outage disrupted access to email and workplace applications Thursday as the company worked to restore service. Outage tracker Downdetector recorded nearly 130,000 reports of Outlook problems Thursday afternoon, according to the Associated Press. Thousands of reports also involved…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
         }
       ],
       "related": [
         "s_a0085c7c0fdb",
         "s_c1856f586d81",
-        "s_3dfd4fa64396",
         "s_4cffb276cab1",
+        "s_3dfd4fa64396",
         "s_dec3e0161bcd"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 17,
+        "sourceCount": 16,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 6,
+          "right": 5,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
             "lean-right": 3,
-            "right": 3
+            "right": 2
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
-      }
-    },
-    {
-      "id": "s_4cffb276cab1",
-      "headline": "Microsoft rules out 'malicious activity' as cause for global outage",
-      "headlineFrom": {
-        "sourceId": "dw",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "A Microsoft outage disrupted Outlook and Teams worldwide, with reports from scores of countries and territories. The software giant said that it was \"not aware\" of malicious activity that could have caused the outage.",
-      "digest": [
-        {
-          "text": "Microsoft said on Friday there is “no evidence of malicious activity” related to the global disruption of its Outlook email service and other Office 365 apps.",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "url": "https://washingtonexaminer.com/policy/technology/4802492/microsoft-no-evidence-malicious-activity-outage-outlook"
-        }
-      ],
-      "topic": "tech",
-      "firstSeen": "2026-11-13T07:46:00.000Z",
-      "firstBySide": {
-        "left": null,
-        "center": "2026-11-13T07:46:00.000Z",
-        "right": "2026-11-13T13:33:25.000Z"
-      },
-      "lastUpdated": "2026-11-13T13:33:25.000Z",
-      "sourceCount": 2,
-      "articleCount": 2,
-      "coverage": {
-        "left": 0,
-        "center": 1,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 0,
-          "center": 1,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 0.417,
-      "image": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26316685909733.jpg?w=1024",
-      "articles": [
-        {
-          "id": "4cffb276cab1",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "title": "Microsoft rules out 'malicious activity' as cause for global outage",
-          "url": "https://dw.com/en/microsoft-rules-out-malicious-activity-as-cause-for-global-outage/a-79935611?maca=en-rss-en-all-1573-rdf",
-          "published": "2026-11-13T07:46:00.000Z",
-          "snippet": "A Microsoft outage disrupted Outlook and Teams worldwide, with reports from scores of countries and territories. The software giant said that it was \"not aware\" of malicious activity that could have caused the outage.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "805bf27931ea",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "title": "Microsoft confirms ‘no evidence of malicious activity’ in widespread outage of Outlook",
-          "url": "https://washingtonexaminer.com/policy/technology/4802492/microsoft-no-evidence-malicious-activity-outage-outlook",
-          "published": "2026-11-13T13:33:25.000Z",
-          "snippet": "Microsoft said on Friday there is “no evidence of malicious activity” related to the global disruption of its Outlook email service and other Office 365 apps. “At this time, we have no evidence of malicious activity associated with this incident,” the technology company said at 6:11 a.m. “We will…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_e9fdae08584a",
-        "s_a0085c7c0fdb",
-        "s_c1856f586d81",
-        "s_dec3e0161bcd",
-        "s_75d9fce8056c"
-      ],
-      "familyId": "s_dec3e0161bcd",
-      "subject": {
-        "storyCount": 7,
-        "sourceCount": 17,
-        "coverage": {
-          "left": 6,
-          "center": 5,
-          "right": 6,
-          "byLean": {
-            "left": 2,
-            "lean-left": 4,
-            "center": 5,
-            "lean-right": 3,
-            "right": 3
-          }
-        },
-        "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
-      }
-    },
-    {
-      "id": "s_3dfd4fa64396",
-      "headline": "Microsoft Outlook Emails Approaching Normal Levels After Outage, Company Says",
-      "headlineFrom": {
-        "sourceId": "epochtimes",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "The Microsoft outage has disrupted workplaces and governments across the world.",
-      "digest": [],
-      "topic": "tech",
-      "firstSeen": "2026-11-13T16:12:30.000Z",
-      "firstBySide": {
-        "left": null,
-        "center": null,
-        "right": "2026-11-13T16:12:30.000Z"
-      },
-      "lastUpdated": "2026-11-13T16:35:28.000Z",
-      "sourceCount": 2,
-      "articleCount": 2,
-      "coverage": {
-        "left": 0,
-        "center": 0,
-        "right": 2,
-        "byLean": {
-          "left": 0,
-          "lean-left": 0,
-          "center": 0,
-          "lean-right": 1,
-          "right": 1
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 0.3975,
-      "image": "https://img.theepochtimes.com/assets/uploads/2026/11/13/id6124789-2026-11-13T000859Z_1_LYNXNPEMAC00D_RTROPTP_4_NSCALE-DATA-CENTER-MICROSOFT-vs-1080x720.jpg",
-      "articles": [
-        {
-          "id": "265d94fb3d6d",
-          "sourceId": "epochtimes",
-          "sourceName": "The Epoch Times",
-          "lean": "lean-right",
-          "title": "Microsoft Outlook Emails Approaching Normal Levels After Outage, Company Says",
-          "url": "https://theepochtimes.com/tech/microsoft-outlook-emails-approaching-normal-levels-after-outage-company-says-6124700",
-          "published": "2026-11-13T16:35:28.000Z",
-          "snippet": "The Microsoft outage has disrupted workplaces and governments across the world.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "3dfd4fa64396",
-          "sourceId": "dailycaller",
-          "sourceName": "The Daily Caller",
-          "lean": "right",
-          "title": "Microsoft Says Email Backlog ‘Approaching Normal’ After Outage Paralyzes Outlook",
-          "url": "https://dailycaller.com/2026/11/13/microsoft-email-outlook-outage-announcement-downdetector",
-          "published": "2026-11-13T16:12:30.000Z",
-          "snippet": "‘continued recovery progress’",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_e9fdae08584a",
-        "s_c1856f586d81",
-        "s_a0085c7c0fdb",
-        "s_dec3e0161bcd",
-        "s_75d9fce8056c"
-      ],
-      "familyId": "s_dec3e0161bcd",
-      "subject": {
-        "storyCount": 7,
-        "sourceCount": 17,
-        "coverage": {
-          "left": 6,
-          "center": 5,
-          "right": 6,
-          "byLean": {
-            "left": 2,
-            "lean-left": 4,
-            "center": 5,
-            "lean-right": 3,
-            "right": 3
-          }
-        },
-        "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0669
+        "score": 5.9059
       }
     },
     {
@@ -3441,7 +4203,7 @@
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 4.0188,
+      "score": 3.9911,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26308242591380-e1794055865980.jpg?w=900",
       "articles": [
         {
@@ -3568,7 +4330,7 @@
           }
         },
         "lastUpdated": "2026-11-14T15:43:40.000Z",
-        "score": 4.0188
+        "score": 3.9911
       }
     },
     {
@@ -3634,7 +4396,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": "left",
-      "score": 3.8227,
+      "score": 3.7963,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26317758565404-e1794632959294.jpg?w=900",
       "articles": [
         {
@@ -3761,7 +4523,7 @@
           }
         },
         "lastUpdated": "2026-11-14T13:42:46.000Z",
-        "score": 3.8227
+        "score": 3.7963
       }
     },
     {
@@ -3834,7 +4596,7 @@
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.4925,
+      "score": 3.4684,
       "image": "https://i.guim.co.uk/img/media/c959bae56a786ff95913cb67d9c97a8fced81672/437_0_4680_3744/master/4680.jpg?width=140&quality=85&auto=format&fit=max&s=51fa3394626d131083ad4af9586ae6bb",
       "articles": [
         {
@@ -3961,7 +4723,7 @@
           }
         },
         "lastUpdated": "2026-11-14T15:18:18.000Z",
-        "score": 3.4925
+        "score": 3.4684
       }
     },
     {
@@ -4100,7 +4862,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 2.0269,
+      "score": 2.0129,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2783/live/a5cdb560-df6c-11f1-9892-87464bbcc2b8.jpg",
       "articles": [
         {
@@ -4250,7 +5012,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.7635
+        "score": 2.7444
       }
     },
     {
@@ -4290,11 +5052,25 @@
           "url": "https://dailysignal.com/2026/11/13/lutnick-to-testify-in-senate-after-nvidia-ceo-affair"
         },
         {
+          "text": "Senator Tim Scott said he had requested that the Nvidia co-founder and the commerce secretary appear before the Senate Banking Committee.",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "url": "https://nytimes.com/2026/11/12/business/jensen-huang-howard-lutnick-testify-capitol-hill.html"
+        },
+        {
           "text": "Former NVIDIA CEO Jensen Huang and Commerce Secretary Howard Lutnick have been asked to appear in front of a key Senate committee in December.",
           "sourceId": "upi",
           "sourceName": "UPI",
           "lean": "center",
           "url": "https://upi.com/Top_News/US/2026/11/13/Congress-summons-Huang-Lutnick/1171794569930"
+        },
+        {
+          "text": "Scott sent letters Thursday requesting that Huang and Lutnick voluntarily appear at separate public hearings next month, warning that the committee could subpoena Huang if he refuses to cooperate.",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "url": "https://dailywire.com/news/nvidia-scandal-hits-capitol-hill-as-senator-wants-answers-from-two-big-names"
         }
       ],
       "topic": "politics",
@@ -4302,21 +5078,21 @@
       "firstBySide": {
         "left": "2026-11-12T18:09:14.000Z",
         "center": "2026-11-13T08:02:00.000Z",
-        "right": "2026-11-13T01:52:53.000Z"
+        "right": "2026-11-12T20:12:07.000Z"
       },
       "lastUpdated": "2026-11-13T18:25:00.000Z",
-      "sourceCount": 9,
-      "articleCount": 10,
+      "sourceCount": 10,
+      "articleCount": 11,
       "coverage": {
         "left": 3,
         "center": 3,
-        "right": 3,
+        "right": 4,
         "byLean": {
           "left": 0,
           "lean-left": 3,
           "center": 3,
           "lean-right": 1,
-          "right": 2
+          "right": 3
         }
       },
       "developing": false,
@@ -4389,24 +5165,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.3886,
+      "score": 1.4361,
       "image": "https://cdnph.upi.com/ph/st/th/1171794569930/2026/upi/88d76c0307a9321f94dbe968a0bc3b76/v1.5/Former-NVIDIA-boss-Huang-Commerce-Secretary-Lutnick-summoned-by-Congress.jpg",
       "articles": [
-        {
-          "id": "6f893e58b5a9",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "Huang, Lutnick Summoned to Testify Before Congress",
-          "url": "https://newsmax.com/newsfront/jenson-huang-nvidia-howard-lutnick/2026/11/12/id/1276154",
-          "published": "2026-11-13T01:52:53.000Z",
-          "snippet": "Former Nvidia CEO Jensen Huang and Commerce Secretary Howard Lutnick have been called to testify before a Senate committee next month as lawmakers prope national security concerns surrounding Huang's relationship with a woman suspected of spying for China.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "a16f2a776abd",
           "sourceId": "dw",
@@ -4416,6 +5177,21 @@
           "url": "https://dw.com/en/us-senate-asks-huang-lutnick-to-testify-on-nvidia/a-79936707?maca=en-rss-en-all-1573-rdf",
           "published": "2026-11-13T08:02:00.000Z",
           "snippet": "Senate Banking Committee Chairman Tim Scott has asked Commerce Secretary Howard Lutnick and former Nvidia chief Jensen Huang to testify, as House Republicans demand closed-door interviews amid national security concerns.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6f893e58b5a9",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Huang, Lutnick Summoned to Testify Before Congress",
+          "url": "https://newsmax.com/newsfront/jenson-huang-nvidia-howard-lutnick/2026/11/12/id/1276154",
+          "published": "2026-11-13T01:52:53.000Z",
+          "snippet": "Former Nvidia CEO Jensen Huang and Commerce Secretary Howard Lutnick have been called to testify before a Senate committee next month as lawmakers prope national security concerns surrounding Huang's relationship with a woman suspected of spying for China.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -4438,14 +5214,14 @@
           }
         },
         {
-          "id": "04146d9a3fde",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Commerce Secretary Lutnick agrees to testify about Nvidia",
-          "url": "https://nbcnews.com/video/commerce-secretary-lutnick-agrees-to-testify-about-nvidia-273452613709",
-          "published": "2026-11-13T16:02:27.000Z",
-          "snippet": "Commerce Secretary Howard Lutnick agreed to testify before Congress over national security concerns regarding the expanding Nvidia scandal. NBC News’ Yamiche Alcindor details bipartisan concern and White House reaction.",
+          "id": "90bc8b2dcd95",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "Sen. Tim Scott calls on Lutnick and Huang to testify over national security concerns",
+          "url": "https://washingtonexaminer.com/news/senate/4802365/tim-scott-howard-lutnick-jensen-huang-testify",
+          "published": "2026-11-13T03:44:53.000Z",
+          "snippet": "Sen. Tim Scott (R-SC) called on Commerce Secretary Howard Lutnick and former Nvidia CEO Jensen Huang to testify before the Senate banking committee as a scandal involving the onetime chief executive and a Chinese spy has begun to boil over. Scott, chairman of the Senate Committee on Banking…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -4483,14 +5259,14 @@
           }
         },
         {
-          "id": "90bc8b2dcd95",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "title": "Sen. Tim Scott calls on Lutnick and Huang to testify over national security concerns",
-          "url": "https://washingtonexaminer.com/news/senate/4802365/tim-scott-howard-lutnick-jensen-huang-testify",
-          "published": "2026-11-13T03:44:53.000Z",
-          "snippet": "Sen. Tim Scott (R-SC) called on Commerce Secretary Howard Lutnick and former Nvidia CEO Jensen Huang to testify before the Senate banking committee as a scandal involving the onetime chief executive and a Chinese spy has begun to boil over. Scott, chairman of the Senate Committee on Banking…",
+          "id": "04146d9a3fde",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Commerce Secretary Lutnick agrees to testify about Nvidia",
+          "url": "https://nbcnews.com/video/commerce-secretary-lutnick-agrees-to-testify-about-nvidia-273452613709",
+          "published": "2026-11-13T16:02:27.000Z",
+          "snippet": "Commerce Secretary Howard Lutnick agreed to testify before Congress over national security concerns regarding the expanding Nvidia scandal. NBC News’ Yamiche Alcindor details bipartisan concern and White House reaction.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -4541,11 +5317,26 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "a1a789deb87d",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "Nvidia Scandal Hits Capitol Hill As Senator Wants Answers From Two Big Names",
+          "url": "https://dailywire.com/news/nvidia-scandal-hits-capitol-hill-as-senator-wants-answers-from-two-big-names",
+          "published": "2026-11-12T20:12:07.000Z",
+          "snippet": "Senate Banking Committee Chairman Tim Scott (R-SC) is demanding testimony from former Nvidia CEO Jensen Huang and Commerce Secretary Howard Lutnick as Congress investigates allegations that a businesswoman linked to the chipmaker may have helped China obtain sensitive American technology. Scott…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
         "s_8b9da3562d13",
-        "s_90666d9d64a1",
+        "s_895563c5d33f",
         "s_005485ce9cef"
       ],
       "familyId": "s_8b9da3562d13",
@@ -4565,7 +5356,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.7635
+        "score": 2.7444
       }
     },
     {
@@ -4690,7 +5481,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.9886,
+      "score": 0.9818,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2025/06/Elsewhere-Lutnick-and-Bessent_053025_AP_Evan-Vucci.jpg?w=900",
       "articles": [
         {
@@ -4771,8 +5562,8 @@
       ],
       "related": [
         "s_8b9da3562d13",
-        "s_c80b98d6db11",
-        "s_64c34093612c"
+        "s_64c34093612c",
+        "s_c80b98d6db11"
       ],
       "familyId": "s_8b9da3562d13",
       "subject": {
@@ -4791,14 +5582,14 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.7635
+        "score": 2.7444
       }
     },
     {
       "id": "s_fbd1b2c1fdd7",
-      "headline": "Why the Nvidia scandal is far from over - The Latest",
+      "headline": "Nvidia Scandal Prompts Questions of What It Means to Be a Spy",
       "headlineFrom": {
-        "sourceId": "guardian",
+        "sourceId": "nytimes",
         "kind": "selected",
         "turn": null
       },
@@ -4807,7 +5598,7 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "Jensen Huang’s resignation from the AI chipmaker Nvidia has sent shockwaves through the global economy. Huang resigned after reported affairs with an Nvidia executive and a woman alleged to be a Chinese spy.",
+      "snippet": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset. But there is much more that they are still assessing about her role.",
       "digest": [
         {
           "text": "The fallout is not over yet, with criticism mounting over the apparent lack of action from the US commerce secretary, Howard Lutnick.",
@@ -4815,13 +5606,6 @@
           "sourceName": "The Guardian",
           "lean": "lean-left",
           "url": "https://theguardian.com/news/video/2026/nov/13/why-the-nvidia-scandal-is-far-from-over-the-latest"
-        },
-        {
-          "text": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset.",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "url": "https://nytimes.com/2026/11/13/us/politics/nvidia-alice-huang-spy-china.html"
         }
       ],
       "topic": "tech",
@@ -4916,7 +5700,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.6605,
+      "score": 0.6559,
       "image": "https://i.guim.co.uk/img/media/efda49c642dc93a6160523af97a8890ea5f8d2b2/0_0_1350_1080/master/1350.jpg?width=140&quality=85&auto=format&fit=max&s=7d1ea2a1b9b5d7bf48b86bfa9406c117",
       "articles": [
         {
@@ -4951,7 +5735,7 @@
         }
       ],
       "related": [
-        "s_90666d9d64a1",
+        "s_895563c5d33f",
         "s_e8ef5d388b83",
         "s_8b9da3562d13"
       ],
@@ -4972,23 +5756,23 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.7635
+        "score": 2.7444
       }
     },
     {
       "id": "s_a48753f89bd9",
-      "headline": "Trump Goon Throws Lutnick Under Bus Over Sex-Mad CEO Scandal",
+      "headline": "Bessent Throws Lutnick Under The Bus On Trump’s Chip Export Fiasco",
       "headlineFrom": {
-        "sourceId": "dailybeast",
+        "sourceId": "dailycaller",
         "kind": "selected",
-        "turn": "left"
+        "turn": null
       },
       "summary": null,
       "keyFacts": [],
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "Evelyn Hockstein/Reuters Treasury Secretary Scott Bessent has thrown fellow top Trump official Howard Lutnick under the bus over his handling of the Nvidia scandal.",
+      "snippet": "‘Very frustrating’",
       "digest": [],
       "topic": "politics",
       "firstSeen": "2026-11-13T15:25:25.000Z",
@@ -5082,7 +5866,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.5443,
+      "score": 0.5405,
       "image": "https://thedailybeast-thedailybeast-prod.web.arc-cdn.net/resizer/v2/RSJHZJQ4WVGQVNPTQSNEBTH6AA.JPG?auth=a0d79b03ebdb10e4336811d794a2f9f63aa0789f994d08aae76f8d2807fe8c1a&smart=true&width=3375&height=1898",
       "articles": [
         {
@@ -5095,7 +5879,10 @@
           "published": "2026-11-13T15:25:25.000Z",
           "snippet": "Evelyn Hockstein/Reuters Treasury Secretary Scott Bessent has thrown fellow top Trump official Howard Lutnick under the bus over his handling of the Nvidia scandal. The intense rivalry between Bessent and the commerce secretary has been escalating behind closed doors since Trump’s return to the…",
           "flags": {
-            "loaded": [],
+            "loaded": [
+              "goon",
+              "sex-mad"
+            ],
             "contested": [],
             "clickbait": false
           }
@@ -5136,7 +5923,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.7635
+        "score": 2.7444
       }
     },
     {
@@ -5254,24 +6041,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.5203,
-      "image": "https://www.washingtonexaminer.com/wp-content/uploads/2026/09/AP26265717765492-e1790207826975.jpg?w=1024",
+      "score": 0.5167,
+      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=FAA17BFC-E045-4D8D-909D-CE2E80D04D57",
       "articles": [
-        {
-          "id": "c80b98d6db11",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "title": "‘Unprecedented’ for Treasury secretary to leave home over Iranian threat: Joe Concha",
-          "url": "https://washingtonexaminer.com/news/white-house/4801678/unprecedented-for-treasury-secretary-to-leave-home-over-iranian-threat-joe-concha",
-          "published": "2026-11-12T18:15:18.000Z",
-          "snippet": "Washington Examiner columnist Joe Concha said Iranian plots against the United States have become unprecedented, with Treasury Secretary Scott Bessent being relocated for his safety. “Well, we took out two levels of Iranian leadership at the beginning of this war, … so you know they would love…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "8f46dd64acba",
           "sourceId": "newsmax",
@@ -5281,6 +6053,21 @@
           "url": "https://newsmax.com/newsfront/scott-bessent-iran-death-threats/2026/11/13/id/1276257",
           "published": "2026-11-13T21:15:02.000Z",
           "snippet": "Treasury Secretary Scott Bessent said Friday he will not be intimidated by death threats from Iran that prompted him and his family to leave their $12.5 million Washington home and move to a military base.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c80b98d6db11",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "‘Unprecedented’ for Treasury secretary to leave home over Iranian threat: Joe Concha",
+          "url": "https://washingtonexaminer.com/news/white-house/4801678/unprecedented-for-treasury-secretary-to-leave-home-over-iranian-threat-joe-concha",
+          "published": "2026-11-12T18:15:18.000Z",
+          "snippet": "Washington Examiner columnist Joe Concha said Iranian plots against the United States have become unprecedented, with Treasury Secretary Scott Bessent being relocated for his safety. “Well, we took out two levels of Iranian leadership at the beginning of this war, … so you know they would love…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -5309,11 +6096,11 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.7635
+        "score": 2.7444
       }
     },
     {
-      "id": "s_90666d9d64a1",
+      "id": "s_895563c5d33f",
       "headline": "How Nvidia CEO Jensen Huang’s resignation impacts the market",
       "headlineFrom": {
         "sourceId": "deseret",
@@ -5335,45 +6122,38 @@
           "url": "https://nbcnews.com/now/video/the-rise-and-fall-of-former-nvidia-ceo-jensen-huang-273361477672"
         },
         {
-          "text": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
-          "sourceId": "cnbc",
-          "sourceName": "CNBC",
-          "lean": "center",
-          "url": "https://cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html"
-        },
-        {
-          "text": "News that the chipmaker’s chief executive, Jensen Huang, resigned drove Nvidia’s stock down, though the broader market rose slightly.",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "url": "https://nytimes.com/2026/11/12/business/nvidia-stock-price-jensen-huang-ceo-affair.html"
-        },
-        {
           "text": "NVIDIA announced Jensen Huang, the company's embattled president and CEO, has resigned from the company amid allegations of two extra-marital affairs.",
           "sourceId": "upi",
           "sourceName": "UPI",
           "lean": "center",
           "url": "https://upi.com/Top_News/US/2026/11/12/NVIDIA-Jensen-Huang-facing/5521794475301"
+        },
+        {
+          "text": "Reports say the artificial intelligence pioneer admitted to two extramarital affairs, including with a woman U.S. intelligence determined was a Chinese spy.",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "url": "https://ms.now/news/nvidia-jensen-huang-resigns-affair-china-spying"
         }
       ],
       "topic": "business",
-      "firstSeen": "2026-11-12T16:32:23.000Z",
+      "firstSeen": "2026-11-12T17:31:09.000Z",
       "firstBySide": {
-        "left": "2026-11-12T16:32:23.000Z",
+        "left": "2026-11-12T17:31:09.000Z",
         "center": "2026-11-12T18:19:59.000Z",
         "right": null
       },
-      "lastUpdated": "2026-11-13T21:19:04.000Z",
-      "sourceCount": 8,
-      "articleCount": 10,
+      "lastUpdated": "2026-11-13T14:50:17.000Z",
+      "sourceCount": 7,
+      "articleCount": 8,
       "coverage": {
         "left": 5,
-        "center": 3,
+        "center": 2,
         "right": 0,
         "byLean": {
           "left": 1,
           "lean-left": 4,
-          "center": 3,
+          "center": 2,
           "lean-right": 0,
           "right": 0
         }
@@ -5464,24 +6244,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.3057,
+      "score": 0.844,
       "image": "https://cdnph.upi.com/ph/st/th/5521794475301/2026/upi/59677419c3b05ed237e97fc030123a41/v1.5/Jensen-Huang-resigns-as-president-and-CEO-of-NVIDIA.jpg",
       "articles": [
-        {
-          "id": "90666d9d64a1",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Nvidia CEO Jensen Huang resigns amid Chinese spy scandal",
-          "url": "https://cbsnews.com/video/nvidia-ceo-jensen-huang-resigns-amid-chinese-spy-scandal",
-          "published": "2026-11-12T16:32:23.000Z",
-          "snippet": "Nvidia CEO Jensen Huang resigned, the company's board of directors announced. Huang's resignation came amid an investigation into his extramarital affair with a suspected Chinese spy and a report of a second affair with an executive who reported to him.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "21f85b5beb34",
           "sourceId": "cbsnews",
@@ -5498,21 +6263,6 @@
           }
         },
         {
-          "id": "895563c5d33f",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "title": "Nvidia CEO Jensen Huang resigns amid fallout from reported affair with alleged spy",
-          "url": "https://ms.now/news/nvidia-jensen-huang-resigns-affair-china-spying",
-          "published": "2026-11-12T17:31:09.000Z",
-          "snippet": "Reports say the artificial intelligence pioneer admitted to two extramarital affairs, including with a woman U.S. intelligence determined was a Chinese spy.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "42d61e71083e",
           "sourceId": "nbcnews",
           "sourceName": "NBC News",
@@ -5521,6 +6271,21 @@
           "url": "https://nbcnews.com/now/video/the-rise-and-fall-of-former-nvidia-ceo-jensen-huang-273361477672",
           "published": "2026-11-12T20:40:44.000Z",
           "snippet": "Jensen Huang, who once led the most valuable company in the world, resigned from his post as Nvidia CEO today after an affair with a suspected Chinese spy. Huang had co-founded Nvidia in 1993, and it became a juggernaut making the chips underpinning much of the AI boom.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "895563c5d33f",
+          "sourceId": "msnow",
+          "sourceName": "MS NOW",
+          "lean": "left",
+          "title": "Nvidia CEO Jensen Huang resigns amid fallout from reported affair with alleged spy",
+          "url": "https://ms.now/news/nvidia-jensen-huang-resigns-affair-china-spying",
+          "published": "2026-11-12T17:31:09.000Z",
+          "snippet": "Reports say the artificial intelligence pioneer admitted to two extramarital affairs, including with a woman U.S. intelligence determined was a Chinese spy.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -5597,37 +6362,24 @@
           "published": "2026-11-13T10:00:00.000Z",
           "snippet": "President Donald Trump and Jensen Huang didn’t meet until January 2025. Here’s how they became fast friends.",
           "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "34a277ed6a0f",
-          "sourceId": "cnbc",
-          "sourceName": "CNBC",
-          "lean": "center",
-          "title": "What's ahead for AI financing after Nvidia CEO Jensen Huang departs",
-          "url": "https://cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html",
-          "published": "2026-11-13T21:19:04.000Z",
-          "snippet": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
-          "flags": {
-            "loaded": [],
+            "loaded": [
+              "disgraced"
+            ],
             "contested": [],
             "clickbait": false
           }
         }
       ],
       "related": [
-        "s_16967c57d786",
         "s_e8ef5d388b83",
+        "s_3891ce85d172",
         "s_724664d6acb7",
         "s_fbd1b2c1fdd7",
         "s_4f079460e77c"
       ],
-      "familyId": "s_90666d9d64a1",
+      "familyId": "s_895563c5d33f",
       "subject": {
-        "storyCount": 7,
+        "storyCount": 8,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -5642,7 +6394,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
+        "score": 2.1708
       }
     },
     {
@@ -5768,24 +6520,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.7583,
+      "score": 0.7531,
       "image": null,
       "articles": [
-        {
-          "id": "4f079460e77c",
-          "sourceId": "politico",
-          "sourceName": "Politico",
-          "lean": "lean-left",
-          "title": "Jensen Huang’s Washington fallout",
-          "url": "https://politico.com/video/2026/11/13/jensen-huangs-washington-fallout-2229409",
-          "published": "2026-11-13T10:45:00.000Z",
-          "snippet": "Jensen Huang’s Washington fallout. lead image",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "a794e5f68ef6",
           "sourceId": "cnbc",
@@ -5800,15 +6537,30 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "4f079460e77c",
+          "sourceId": "politico",
+          "sourceName": "Politico",
+          "lean": "lean-left",
+          "title": "Jensen Huang’s Washington fallout",
+          "url": "https://politico.com/video/2026/11/13/jensen-huangs-washington-fallout-2229409",
+          "published": "2026-11-13T10:45:00.000Z",
+          "snippet": "Jensen Huang’s Washington fallout. lead image",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
-        "s_90666d9d64a1",
+        "s_895563c5d33f",
         "s_e8ef5d388b83"
       ],
-      "familyId": "s_90666d9d64a1",
+      "familyId": "s_895563c5d33f",
       "subject": {
-        "storyCount": 7,
+        "storyCount": 8,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -5823,219 +6575,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
-      }
-    },
-    {
-      "id": "s_16967c57d786",
-      "headline": "Trump calls for former Apple leader Tim Cook to replace Jensen Huang as Nvidia CEO",
-      "headlineFrom": {
-        "sourceId": "cbsnews",
-        "kind": "selected",
-        "turn": "left"
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Reactions are coming in from the White House and beyond after Nvidia co-founder Jensen Huang resigned as CEO of the company on Thursday following an affair with a suspected Chinese spy. President Trump suggested former Apple CEO Tim Cook as a replacement.",
-      "digest": [
-        {
-          "text": "NBC News' Allie Canal and New York Times contributor Don Clark discuss Cook's industry experience and the background of interim CEO Colette Kress.",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "url": "https://nbcnews.com/video/trump-recommends-tim-cook-for-nvidia-ceo-after-jensen-huang-resigns-273344581767"
-        },
-        {
-          "text": "Nvidia's Board of Directors has approached Rene Haas, the CEO of British chipmaker Arm, in its search for the successor to Jensen Huang, according to a report from the Financial Times.",
-          "sourceId": "foxbusiness",
-          "sourceName": "Fox Business",
-          "lean": "lean-right",
-          "url": "https://foxbusiness.com/fox-news-tech/new-candidate-emerges-replace-jensen-huang-nvidia-ceo"
-        }
-      ],
-      "topic": "tech",
-      "firstSeen": "2026-11-12T16:32:41.000Z",
-      "firstBySide": {
-        "left": "2026-11-12T16:32:41.000Z",
-        "center": null,
-        "right": "2026-11-13T18:44:27.000Z"
-      },
-      "lastUpdated": "2026-11-13T18:44:27.000Z",
-      "sourceCount": 3,
-      "articleCount": 3,
-      "coverage": {
-        "left": 2,
-        "center": 0,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 2,
-          "center": 0,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": {
-        "left": [
-          {
-            "id": "9ce1f9083d8c",
-            "sourceId": "newrepublic",
-            "sourceName": "The New Republic",
-            "lean": "left",
-            "title": "Nvidia’s Jensen Huang and the Troubling Rise of the Imperial CEO",
-            "url": "https://newrepublic.com/article/217955/nvidia-jensen-huang-troubling-rise-imperial-ceo",
-            "published": "2026-11-13T11:00:00.000Z",
-            "snippet": "Jensen Huang resigned Thursday as chief executive of Nvidia, a company that he co-founded in 1993 with the modest goal of creating 3D graphics for video games, but which now dominates the global market for the advanced…",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          },
-          {
-            "id": "fed65ab37839",
-            "sourceId": "nytimes",
-            "sourceName": "The New York Times",
-            "lean": "lean-left",
-            "title": "Jensen Huang’s Fall Is Bad for Nvidia but Good for America",
-            "url": "https://nytimes.com/2026/11/13/opinion/jensen-huang-nvidia.html",
-            "published": "2026-11-13T10:04:14.000Z",
-            "snippet": "Jensen Huang was a big reason Nvidia preserved the ability to sell chips to China. His departure from the company might change that.",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          }
-        ],
-        "center": [
-          {
-            "id": "6cfa444bb47b",
-            "sourceId": "cnbc",
-            "sourceName": "CNBC",
-            "lean": "center",
-            "title": "Analysis: Companies love a ‘rockstar’ CEO. Until they depend on one",
-            "url": "https://cnbc.com/2026/11/14/nvidia-jensen-huang-ceo-succession-risk.html",
-            "published": "2026-11-14T07:08:45.000Z",
-            "snippet": "Jensen Huang’s exit tests Nvidia’s succession planning and governance, and offers lessons for companies that elevate their CEOs to rockstar status.",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          }
-        ],
-        "right": [
-          {
-            "id": "31cbaf4d5de3",
-            "sourceId": "wsj",
-            "sourceName": "WSJ Opinion",
-            "lean": "lean-right",
-            "title": "Jensen Huang Is a White House Scandal",
-            "url": "https://wsj.com/opinion/jensen-huang-is-a-white-house-scandal-9c2136a1",
-            "published": "2026-11-12T22:43:00.000Z",
-            "snippet": "What did Trump know and when about the Nvidia CEO’s relationship with an accused Chinese spy?",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          },
-          {
-            "id": "e64f5b5d5c4e",
-            "sourceId": "freepress",
-            "sourceName": "The Free Press",
-            "lean": "lean-right",
-            "title": "Jensen Huang’s Downfall Isn’t Just About Sex",
-            "url": "https://thefp.com/p/jensen-huangs-downfall-isnt-just",
-            "published": "2026-11-12T18:47:44.000Z",
-            "snippet": "Huang’s two affairs got him ousted as the CEO of Nvidia. But if his Chinese mistress was smuggling Nvidia chips into China—and he knew about it—his problems are a lot bigger than most people thought, writes Patrick…",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          }
-        ]
-      },
-      "mostlyCoveredBy": null,
-      "score": 0.7099,
-      "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794501153757_now_current_trump_nvidia_cook_261112_S3_1920x1080-e1npn8.jpg",
-      "articles": [
-        {
-          "id": "3891ce85d172",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Trump calls for former Apple leader Tim Cook to replace Jensen Huang as Nvidia CEO",
-          "url": "https://cbsnews.com/video/trump-calls-for-tim-cook-to-replace-jensen-huang-as-nvidia-ceo",
-          "published": "2026-11-12T23:41:00.000Z",
-          "snippet": "Reactions are coming in from the White House and beyond after Nvidia co-founder Jensen Huang resigned as CEO of the company on Thursday following an affair with a suspected Chinese spy. President Trump suggested former Apple CEO Tim Cook as a replacement.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "16967c57d786",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Trump recommends Tim Cook for Nvidia CEO after Jensen Huang resigns",
-          "url": "https://nbcnews.com/video/trump-recommends-tim-cook-for-nvidia-ceo-after-jensen-huang-resigns-273344581767",
-          "published": "2026-11-12T16:32:41.000Z",
-          "snippet": "President Trump weighed in on the search for a permanent CEO shortly after Nvidia’s announcement about Jensen Huang's resignation, saying that Apple executive chair Tim Cook should take the role. NBC News' Allie Canal and New York Times contributor Don Clark discuss Cook's industry experience and…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "637794f82392",
-          "sourceId": "foxbusiness",
-          "sourceName": "Fox Business",
-          "lean": "lean-right",
-          "title": "New candidate emerges to replace Jensen Huang as Nvidia CEO",
-          "url": "https://foxbusiness.com/fox-news-tech/new-candidate-emerges-replace-jensen-huang-nvidia-ceo",
-          "published": "2026-11-13T18:44:27.000Z",
-          "snippet": "The board of Nvidia has approached Rene Haas, the CEO of British chipmaker Arm, as it searches for a replacement for ousted CEO Jensen Huang, a report said.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_90666d9d64a1",
-        "s_e8ef5d388b83",
-        "s_724664d6acb7"
-      ],
-      "familyId": "s_90666d9d64a1",
-      "subject": {
-        "storyCount": 7,
-        "sourceCount": 13,
-        "coverage": {
-          "left": 6,
-          "center": 5,
-          "right": 2,
-          "byLean": {
-            "left": 1,
-            "lean-left": 5,
-            "center": 5,
-            "lean-right": 1,
-            "right": 1
-          }
-        },
-        "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
+        "score": 2.1708
       }
     },
     {
@@ -6176,7 +6716,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.661,
+      "score": 0.6565,
       "image": "https://static.foxbusiness.com/foxbusiness.com/content/uploads/2026/11/jensen-huang.jpg",
       "articles": [
         {
@@ -6211,11 +6751,11 @@
         }
       ],
       "related": [
-        "s_90666d9d64a1"
+        "s_895563c5d33f"
       ],
-      "familyId": "s_90666d9d64a1",
+      "familyId": "s_895563c5d33f",
       "subject": {
-        "storyCount": 7,
+        "storyCount": 8,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6230,7 +6770,188 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
+        "score": 2.1708
+      }
+    },
+    {
+      "id": "s_3891ce85d172",
+      "headline": "Trump calls for former Apple leader Tim Cook to replace Jensen Huang as Nvidia CEO",
+      "headlineFrom": {
+        "sourceId": "cbsnews",
+        "kind": "selected",
+        "turn": "left"
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Reactions are coming in from the White House and beyond after Nvidia co-founder Jensen Huang resigned as CEO of the company on Thursday following an affair with a suspected Chinese spy. President Trump suggested former Apple CEO Tim Cook as a replacement.",
+      "digest": [],
+      "topic": "tech",
+      "firstSeen": "2026-11-12T23:41:00.000Z",
+      "firstBySide": {
+        "left": "2026-11-12T23:41:00.000Z",
+        "center": null,
+        "right": "2026-11-13T18:44:27.000Z"
+      },
+      "lastUpdated": "2026-11-13T18:44:27.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
+      "coverage": {
+        "left": 1,
+        "center": 0,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 0,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": {
+        "left": [
+          {
+            "id": "9ce1f9083d8c",
+            "sourceId": "newrepublic",
+            "sourceName": "The New Republic",
+            "lean": "left",
+            "title": "Nvidia’s Jensen Huang and the Troubling Rise of the Imperial CEO",
+            "url": "https://newrepublic.com/article/217955/nvidia-jensen-huang-troubling-rise-imperial-ceo",
+            "published": "2026-11-13T11:00:00.000Z",
+            "snippet": "Jensen Huang resigned Thursday as chief executive of Nvidia, a company that he co-founded in 1993 with the modest goal of creating 3D graphics for video games, but which now dominates the global market for the advanced…",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          },
+          {
+            "id": "fed65ab37839",
+            "sourceId": "nytimes",
+            "sourceName": "The New York Times",
+            "lean": "lean-left",
+            "title": "Jensen Huang’s Fall Is Bad for Nvidia but Good for America",
+            "url": "https://nytimes.com/2026/11/13/opinion/jensen-huang-nvidia.html",
+            "published": "2026-11-13T10:04:14.000Z",
+            "snippet": "Jensen Huang was a big reason Nvidia preserved the ability to sell chips to China. His departure from the company might change that.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "center": [
+          {
+            "id": "6cfa444bb47b",
+            "sourceId": "cnbc",
+            "sourceName": "CNBC",
+            "lean": "center",
+            "title": "Analysis: Companies love a ‘rockstar’ CEO. Until they depend on one",
+            "url": "https://cnbc.com/2026/11/14/nvidia-jensen-huang-ceo-succession-risk.html",
+            "published": "2026-11-14T07:08:45.000Z",
+            "snippet": "Jensen Huang’s exit tests Nvidia’s succession planning and governance, and offers lessons for companies that elevate their CEOs to rockstar status.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "right": [
+          {
+            "id": "31cbaf4d5de3",
+            "sourceId": "wsj",
+            "sourceName": "WSJ Opinion",
+            "lean": "lean-right",
+            "title": "Jensen Huang Is a White House Scandal",
+            "url": "https://wsj.com/opinion/jensen-huang-is-a-white-house-scandal-9c2136a1",
+            "published": "2026-11-12T22:43:00.000Z",
+            "snippet": "What did Trump know and when about the Nvidia CEO’s relationship with an accused Chinese spy?",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          },
+          {
+            "id": "e64f5b5d5c4e",
+            "sourceId": "freepress",
+            "sourceName": "The Free Press",
+            "lean": "lean-right",
+            "title": "Jensen Huang’s Downfall Isn’t Just About Sex",
+            "url": "https://thefp.com/p/jensen-huangs-downfall-isnt-just",
+            "published": "2026-11-12T18:47:44.000Z",
+            "snippet": "Huang’s two affairs got him ousted as the CEO of Nvidia. But if his Chinese mistress was smuggling Nvidia chips into China—and he knew about it—his problems are a lot bigger than most people thought, writes Patrick…",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ]
+      },
+      "mostlyCoveredBy": null,
+      "score": 0.5587,
+      "image": "https://static.foxbusiness.com/foxbusiness.com/content/uploads/2026/11/jensen-huang-2.jpg",
+      "articles": [
+        {
+          "id": "637794f82392",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "New candidate emerges to replace Jensen Huang as Nvidia CEO",
+          "url": "https://foxbusiness.com/fox-news-tech/new-candidate-emerges-replace-jensen-huang-nvidia-ceo",
+          "published": "2026-11-13T18:44:27.000Z",
+          "snippet": "The board of Nvidia has approached Rene Haas, the CEO of British chipmaker Arm, as it searches for a replacement for ousted CEO Jensen Huang, a report said.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "3891ce85d172",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Trump calls for former Apple leader Tim Cook to replace Jensen Huang as Nvidia CEO",
+          "url": "https://cbsnews.com/video/trump-calls-for-tim-cook-to-replace-jensen-huang-as-nvidia-ceo",
+          "published": "2026-11-12T23:41:00.000Z",
+          "snippet": "Reactions are coming in from the White House and beyond after Nvidia co-founder Jensen Huang resigned as CEO of the company on Thursday following an affair with a suspected Chinese spy. President Trump suggested former Apple CEO Tim Cook as a replacement.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_895563c5d33f",
+        "s_e8ef5d388b83"
+      ],
+      "familyId": "s_895563c5d33f",
+      "subject": {
+        "storyCount": 8,
+        "sourceCount": 13,
+        "coverage": {
+          "left": 6,
+          "center": 5,
+          "right": 2,
+          "byLean": {
+            "left": 1,
+            "lean-left": 5,
+            "center": 5,
+            "lean-right": 1,
+            "right": 1
+          }
+        },
+        "lastUpdated": "2026-11-13T23:54:36.000Z",
+        "score": 2.1708
       }
     },
     {
@@ -6364,7 +7085,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.5626,
+      "score": 0.5587,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2025/09/trump_donald_huang_jensen_nvidia_04302025_AP25120806136069-1.jpg?w=900",
       "articles": [
         {
@@ -6414,12 +7135,12 @@
         }
       ],
       "related": [
-        "s_90666d9d64a1",
+        "s_895563c5d33f",
         "s_e8ef5d388b83"
       ],
-      "familyId": "s_90666d9d64a1",
+      "familyId": "s_895563c5d33f",
       "subject": {
-        "storyCount": 7,
+        "storyCount": 8,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6434,7 +7155,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
+        "score": 2.1708
       }
     },
     {
@@ -6560,24 +7281,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.3841,
+      "score": 0.3815,
       "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=2C884B0A-0404-48A9-A20E-F6F9FA214134",
       "articles": [
-        {
-          "id": "4d7f864e70f6",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "Chinese AI Shares Tumble After Nvidia's Huang Resigns",
-          "url": "https://newsmax.com/newsfront/nvidia-jensen-huang-china/2026/11/13/id/1276183",
-          "published": "2026-11-13T12:08:09.000Z",
-          "snippet": "Investors sold Chinese AI-linked companies on Friday over worries that Jensen Huang's resignation as Nvidia CEO could usher in an even deeper technological divide between China and the U.S.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "724664d6acb7",
           "sourceId": "cbsnews",
@@ -6592,16 +7298,30 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "4d7f864e70f6",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Chinese AI Shares Tumble After Nvidia's Huang Resigns",
+          "url": "https://newsmax.com/newsfront/nvidia-jensen-huang-china/2026/11/13/id/1276183",
+          "published": "2026-11-13T12:08:09.000Z",
+          "snippet": "Investors sold Chinese AI-linked companies on Friday over worries that Jensen Huang's resignation as Nvidia CEO could usher in an even deeper technological divide between China and the U.S.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
-        "s_90666d9d64a1",
-        "s_e8ef5d388b83",
-        "s_16967c57d786"
+        "s_895563c5d33f",
+        "s_e8ef5d388b83"
       ],
-      "familyId": "s_90666d9d64a1",
+      "familyId": "s_895563c5d33f",
       "subject": {
-        "storyCount": 7,
+        "storyCount": 8,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6616,7 +7336,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
+        "score": 2.1708
       }
     },
     {
@@ -6750,7 +7470,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.3427,
+      "score": 0.3403,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/NvidiaTakeaways_Stanage_AP_MarkusSchreiber.jpg?w=900",
       "articles": [
         {
@@ -6785,15 +7505,15 @@
         }
       ],
       "related": [
-        "s_90666d9d64a1",
+        "s_895563c5d33f",
         "s_fbd1b2c1fdd7",
-        "s_16967c57d786",
+        "s_3891ce85d172",
         "s_3bac87df9e0a",
         "s_724664d6acb7"
       ],
-      "familyId": "s_90666d9d64a1",
+      "familyId": "s_895563c5d33f",
       "subject": {
-        "storyCount": 7,
+        "storyCount": 8,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6808,7 +7528,232 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.1859
+        "score": 2.1708
+      }
+    },
+    {
+      "id": "s_e1bebf0e953a",
+      "headline": "Who is interim Nvidia CEO Colette Kress?",
+      "headlineFrom": {
+        "sourceId": "newsnation",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Colette Kress is taking on the role after the resignation of CEO Jensen Huang.",
+      "digest": [
+        {
+          "text": "Ms. Kress, the company’s chief financial officer, joined Nvidia in 2013.",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "url": "https://nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html"
+        },
+        {
+          "text": "Huang co-founded Nvidia in 1993 and served as its CEO until his resignation, transforming the company from a struggling startup into one of the world's largest by market capitalization amid surging demand for its AI chips.",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "url": "https://foxbusiness.com/markets/colette-kress-named-nvidia-interim-ceo-jensen-huangs-abrupt-resignation-raises-investor-concerns"
+        }
+      ],
+      "topic": "tech",
+      "firstSeen": "2026-11-12T17:32:18.000Z",
+      "firstBySide": {
+        "left": "2026-11-12T18:23:26.000Z",
+        "center": "2026-11-12T17:32:18.000Z",
+        "right": "2026-11-12T21:50:13.000Z"
+      },
+      "lastUpdated": "2026-11-13T00:53:47.000Z",
+      "sourceCount": 3,
+      "articleCount": 4,
+      "coverage": {
+        "left": 1,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 1,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": {
+        "left": [
+          {
+            "id": "9ce1f9083d8c",
+            "sourceId": "newrepublic",
+            "sourceName": "The New Republic",
+            "lean": "left",
+            "title": "Nvidia’s Jensen Huang and the Troubling Rise of the Imperial CEO",
+            "url": "https://newrepublic.com/article/217955/nvidia-jensen-huang-troubling-rise-imperial-ceo",
+            "published": "2026-11-13T11:00:00.000Z",
+            "snippet": "Jensen Huang resigned Thursday as chief executive of Nvidia, a company that he co-founded in 1993 with the modest goal of creating 3D graphics for video games, but which now dominates the global market for the advanced…",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          },
+          {
+            "id": "fed65ab37839",
+            "sourceId": "nytimes",
+            "sourceName": "The New York Times",
+            "lean": "lean-left",
+            "title": "Jensen Huang’s Fall Is Bad for Nvidia but Good for America",
+            "url": "https://nytimes.com/2026/11/13/opinion/jensen-huang-nvidia.html",
+            "published": "2026-11-13T10:04:14.000Z",
+            "snippet": "Jensen Huang was a big reason Nvidia preserved the ability to sell chips to China. His departure from the company might change that.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "center": [
+          {
+            "id": "6cfa444bb47b",
+            "sourceId": "cnbc",
+            "sourceName": "CNBC",
+            "lean": "center",
+            "title": "Analysis: Companies love a ‘rockstar’ CEO. Until they depend on one",
+            "url": "https://cnbc.com/2026/11/14/nvidia-jensen-huang-ceo-succession-risk.html",
+            "published": "2026-11-14T07:08:45.000Z",
+            "snippet": "Jensen Huang’s exit tests Nvidia’s succession planning and governance, and offers lessons for companies that elevate their CEOs to rockstar status.",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ],
+        "right": [
+          {
+            "id": "31cbaf4d5de3",
+            "sourceId": "wsj",
+            "sourceName": "WSJ Opinion",
+            "lean": "lean-right",
+            "title": "Jensen Huang Is a White House Scandal",
+            "url": "https://wsj.com/opinion/jensen-huang-is-a-white-house-scandal-9c2136a1",
+            "published": "2026-11-12T22:43:00.000Z",
+            "snippet": "What did Trump know and when about the Nvidia CEO’s relationship with an accused Chinese spy?",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          },
+          {
+            "id": "e64f5b5d5c4e",
+            "sourceId": "freepress",
+            "sourceName": "The Free Press",
+            "lean": "lean-right",
+            "title": "Jensen Huang’s Downfall Isn’t Just About Sex",
+            "url": "https://thefp.com/p/jensen-huangs-downfall-isnt-just",
+            "published": "2026-11-12T18:47:44.000Z",
+            "snippet": "Huang’s two affairs got him ousted as the CEO of Nvidia. But if his Chinese mistress was smuggling Nvidia chips into China—and he knew about it—his problems are a lot bigger than most people thought, writes Patrick…",
+            "flags": {
+              "loaded": [],
+              "contested": [],
+              "clickbait": false
+            }
+          }
+        ]
+      },
+      "mostlyCoveredBy": null,
+      "score": 0.3018,
+      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/Untitled-November-12-2026-at-11.21.55-1.jpeg?w=900",
+      "articles": [
+        {
+          "id": "e1bebf0e953a",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "Who is interim Nvidia CEO Colette Kress?",
+          "url": "https://newsnationnow.com/business/tech/who-nvidia-colette-kress",
+          "published": "2026-11-12T17:32:18.000Z",
+          "snippet": "Colette Kress is taking on the role after the resignation of CEO Jensen Huang.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b7875371579c",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Who Is Colette Kress, the Interim Nvidia CEO Replacing Jensen Huang?",
+          "url": "https://nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html",
+          "published": "2026-11-12T18:23:26.000Z",
+          "snippet": "Ms. Kress, the company’s chief financial officer, joined Nvidia in 2013.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "710b5a6cfae4",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "Meet Nvidia’s new interim CEO: The fortune and rise of Colette Kress",
+          "url": "https://foxbusiness.com/technology/meet-nvidias-new-interim-ceo-fortune-rise-colette-kress",
+          "published": "2026-11-13T00:53:47.000Z",
+          "snippet": "Nvidia’s new interim CEO joined the chipmaker after her sons touted its gaming technology, years before its rise to the center of the AI boom.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5aeb6155a738",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "Colette Kress named Nvidia interim CEO as Jensen Huang's abrupt resignation raises investor concerns",
+          "url": "https://foxbusiness.com/markets/colette-kress-named-nvidia-interim-ceo-jensen-huangs-abrupt-resignation-raises-investor-concerns",
+          "published": "2026-11-12T21:50:13.000Z",
+          "snippet": "Colette Kress, Nvidia's longtime CFO, steps in as interim CEO after Jensen Huang's abrupt resignation, with quarterly earnings looming next week.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_895563c5d33f"
+      ],
+      "familyId": "s_895563c5d33f",
+      "subject": {
+        "storyCount": 8,
+        "sourceCount": 13,
+        "coverage": {
+          "left": 6,
+          "center": 5,
+          "right": 2,
+          "byLean": {
+            "left": 1,
+            "lean-left": 5,
+            "center": 5,
+            "lean-right": 1,
+            "right": 1
+          }
+        },
+        "lastUpdated": "2026-11-13T23:54:36.000Z",
+        "score": 2.1708
       }
     },
     {
@@ -6874,7 +7819,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": "right",
-      "score": 1.6259,
+      "score": 1.6146,
       "image": "https://cdnph.upi.com/ph/st/th/7911794618231/2026/upi_com/9d786030a4ffc73ac86a24995a052117/v1.5/US-Air-Force-responds-to-drone-activity-at-UK-military-base.jpg",
       "articles": [
         {
@@ -6971,7 +7916,7 @@
           }
         },
         "lastUpdated": "2026-11-14T04:38:46.000Z",
-        "score": 1.6259
+        "score": 1.6146
       }
     },
     {
@@ -7044,7 +7989,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": "right",
-      "score": 0.9991,
+      "score": 0.9922,
       "image": "https://cdnph.upi.com/ph/st/th/5521794552076/2026/upi/c3876edbe17f722aa763d37b7b62aca9/v1.5/US-disrupts-North-Korean-fake-video-scheme-tied-to-400-million-theft.jpg",
       "articles": [
         {
@@ -7078,21 +8023,6 @@
           }
         },
         {
-          "id": "3ee5111dd3db",
-          "sourceId": "bbc",
-          "sourceName": "BBC News",
-          "lean": "center",
-          "title": "North Korean hackers used fake video calls in $400m crypto hack, says FBI",
-          "url": "https://bbc.co.uk/news/articles/cqdj1ellpd70o?at_medium=RSS&at_campaign=rss",
-          "published": "2026-11-13T02:48:29.000Z",
-          "snippet": "More than 900 victims are thought to have fallen prey to the FaceStealer scheme in the last 18 months.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "5345bfa05ccb",
           "sourceId": "dw",
           "sourceName": "DW",
@@ -7101,6 +8031,21 @@
           "url": "https://dw.com/en/us-disrupts-north-korea-s-400-million-crypto-scam-fbi-says/a-79935957?maca=en-rss-en-all-1573-rdf",
           "published": "2026-11-13T04:19:00.000Z",
           "snippet": "The US has seized servers linked to a North Korean scam that used fake video meetings and deepfakes to steal more than $400 million in crypto, and has moved to seize $1.2 billion that was taken from Binance.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "3ee5111dd3db",
+          "sourceId": "bbc",
+          "sourceName": "BBC News",
+          "lean": "center",
+          "title": "North Korean hackers used fake video calls in $400m crypto hack, says FBI",
+          "url": "https://bbc.co.uk/news/articles/cqdj1ellpd70o?at_medium=RSS&at_campaign=rss",
+          "published": "2026-11-13T02:48:29.000Z",
+          "snippet": "More than 900 victims are thought to have fallen prey to the FaceStealer scheme in the last 18 months.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -7158,7 +8103,7 @@
           }
         },
         "lastUpdated": "2026-11-13T18:47:14.000Z",
-        "score": 1.531
+        "score": 1.5204
       }
     },
     {
@@ -7217,7 +8162,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.7483,
+      "score": 0.7432,
       "image": "https://static.foxbusiness.com/foxbusiness.com/content/uploads/2026/11/binance-richard-teng-ceo.jpg",
       "articles": [
         {
@@ -7316,7 +8261,7 @@
           }
         },
         "lastUpdated": "2026-11-13T18:47:14.000Z",
-        "score": 1.531
+        "score": 1.5204
       }
     },
     {
@@ -7411,7 +8356,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.3379,
+      "score": 1.3286,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/talaricojames_110926gn03_w.jpg?w=900",
       "articles": [
         {
@@ -7478,7 +8423,7 @@
           }
         },
         "lastUpdated": "2026-11-14T02:33:22.000Z",
-        "score": 1.3379
+        "score": 1.3286
       }
     },
     {
@@ -7573,7 +8518,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.2441,
+      "score": 1.2355,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/04/GettyImages-1243793556-e1718206186772_ccec95.jpg?w=900",
       "articles": [
         {
@@ -7685,7 +8630,7 @@
           }
         },
         "lastUpdated": "2026-11-13T19:25:40.000Z",
-        "score": 1.2441
+        "score": 1.2355
       }
     },
     {
@@ -7817,7 +8762,7 @@
         ]
       },
       "mostlyCoveredBy": "left",
-      "score": 0.9765,
+      "score": 0.9697,
       "image": "https://cdnph.upi.com/ph/st/th/5151794511741/2026/i/17945122823431/v1.5/Hegseth-awards-medal-to-soldier-who-admonished-him-at-Arlington.jpg",
       "articles": [
         {
@@ -8053,7 +8998,7 @@
           }
         },
         "lastUpdated": "2026-11-13T10:27:08.000Z",
-        "score": 0.9765
+        "score": 0.9697
       }
     }
   ],
@@ -8064,14 +9009,13 @@
     "s_6010dc376adb"
   ],
   "developing": [
-    "s_99c855d4bf03",
+    "s_e8c38895520b",
     "s_a65905ac3bc4",
-    "s_42a8fa1c8e84",
-    "s_84968006a874"
+    "s_42a8fa1c8e84"
   ],
   "perspectives": [
     "s_8b9da3562d13",
-    "s_90666d9d64a1",
+    "s_895563c5d33f",
     "s_a6bb9104a100",
     "s_6be829ecbd16",
     "s_6010dc376adb"

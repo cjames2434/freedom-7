@@ -25,6 +25,7 @@ nothing to run.
   about it, in equal numbers. The opinion roster is mirrored too.
 - **Same event, every side.** Articles about the same event are grouped
   into one story, so you can see who covered it and how each side headlined it.
+  Two outlets have to share more than a name to count as one story.
 - **Plainest headline wins.** The headline shown is the one with the least
   loaded wording ("slams", "destroys", "bombshell"), preferring outlets nearer
   the center. The word lists are side-neutral and symmetric
@@ -74,6 +75,9 @@ than 15 minutes old, a refresh starts in the background (visitors never
 wait for it), and an open page checks every couple of minutes and offers
 the new stories. Set `REFRESH_MINUTES` to change the 15, or to `0` to turn
 it off. `npm run build` still pulls the latest news by hand.
+
+The preview only answers on your own PC. To open it from another device on
+your network (a phone, say), start it with `HOST=0.0.0.0`.
 
 | Command | What it does |
 |---|---|
@@ -215,6 +219,8 @@ their stories arrive through the outlets that run them.
   Lower merges more (risk: unrelated stories grouped); higher splits more.
   0.22 was tuned on live data.
 - `minSourcesForStory`: outlets needed before a story appears (default 2).
+- `minSharedWordsForPair`: how many distinct words two outlets' articles must
+  share to count as one story when only two outlets cover it (default 3).
 - `headline`: `takeTurns` turns the left/right turn-taking on or off;
   `turnMargin` is how much less on-topic the other side's headline may be and
   still count as equally good (it may never be more loaded).

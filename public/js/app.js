@@ -1163,8 +1163,14 @@ function renderChrome() {
 }
 
 // "Updated X ago" lines; refreshed on every check so they don't go stale.
+// The site rebuilds every 15 minutes. If the data is hours old, updates have
+// stalled (an outage, or the schedule was paused), and readers should know.
+const STALE_HOURS = 3;
 function renderStamps() {
-  document.getElementById("updated").textContent = `Updated ${timeAgo(news.generatedAt)}`;
+  const stale = Date.now() - new Date(news.generatedAt).getTime() > STALE_HOURS * 36e5;
+  const updated = document.getElementById("updated");
+  updated.textContent = `Updated ${timeAgo(news.generatedAt)}${stale ? " · updates are delayed" : ""}`;
+  updated.classList.toggle("stale", stale);
   const st = news.stats;
   document.getElementById("footer-stats").textContent =
     `Updated ${timeAgo(news.generatedAt)} · ${plural(st.stories, "story", "stories")} from ${st.outletsReporting} of ${plural(st.outlets, "outlet")} over the last ${st.windowHours} hours.` +

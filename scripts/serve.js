@@ -14,6 +14,9 @@ const VISIT_PATHS = new Set(["/", "/index.html", "/data/news.json"]);
 
 const ROOT = resolve("public");
 const PORT = Number(process.env.PORT || 8080);
+// Only this PC can reach the preview. Set HOST=0.0.0.0 to open it to other
+// devices on your network (for example to try it on a phone).
+const HOST = process.env.HOST || "127.0.0.1";
 const TYPES = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -49,7 +52,7 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
   }
-}).listen(PORT, () => {
+}).listen(PORT, HOST, () => {
   console.log(`Serving ./public at http://localhost:${PORT}  (Ctrl+C to stop)`);
   console.log(
     refresher.enabled

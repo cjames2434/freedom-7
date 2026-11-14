@@ -242,3 +242,46 @@ test("a paragraph break ends a sentence even when the outlet left off the full s
   assert.equal(cleanText("<p>The vote was 52-48.</p><p>It now goes to the House.</p>"), "The vote was 52-48. It now goes to the House.");
   assert.equal(cleanText("<p>Only one paragraph here</p>"), "Only one paragraph here");
 });
+
+// --- Round of fixes: tone words, live blogs and polls, clip labels, name-only pairs ---
+
+import { nonNewsKind } from "../pipeline/opinion.js";
+import { shareEnoughWords } from "../pipeline/stories.js";
+
+test("insults and sensational words are flagged whoever they are aimed at", () => {
+  for (const word of ["goon", "loser", "bloodbath", "brags", "savaged", "humiliation", "brutal"]) {
+    const aboutLeft = analyzeHeadline(`Democrat ${word} in the Senate after the vote`);
+    const aboutRight = analyzeHeadline(`Republican ${word} in the Senate after the vote`);
+    assert.ok(aboutLeft.heat > 0, `${word} should be flagged`);
+    assert.equal(aboutLeft.heat, aboutRight.heat);
+  }
+  assert.equal(analyzeHeadline("Senate passes budget bill after overnight talks").heat, 0);
+});
+
+test("live blogs, reader polls and puzzles are not news stories", () => {
+  const kind = (title) => nonNewsKind({ url: "https://x.com/news/a", title, categories: [] })?.kind ?? "news";
+  assert.equal(kind("Live updates: Air travel recovers from ground stop; court gathers"), "other");
+  assert.equal(kind("You Vote: Who is the most likely nominee for 2028?"), "other");
+  assert.equal(kind("Mini Crossword: Saturday edition"), "other");
+  assert.equal(kind("Air travel recovers after nationwide ground stop"), "news");
+  assert.equal(kind("Poll: Voters split on the budget bill"), "news");
+});
+
+test("headline pick avoids clip and show labels at the end of a title too", () => {
+  const item = (title, lean) => ({ article: { title }, lean, centrality: 0.9, analysis: analyzeHeadline(title) });
+  for (const label of ["– video", "| Special Report", "- The Latest"]) {
+    const chosen = pickHeadline([
+      item(`Nationwide ground stop halts air traffic across the country ${label}`, "center"),
+      item("Nationwide ground stop halts air traffic across the country", "lean-right"),
+    ]);
+    assert.equal(chosen.lean, "lean-right", label);
+  }
+});
+
+test("two outlets sharing only a name do not make a story", () => {
+  const it = (sourceId, title, snippet = "") => ({ article: { sourceId, title, snippet } });
+  assert.equal(shareEnoughWords([it("a", "Ben Shapiro's new movie panned by critics"), it("b", "Ben Shapiro warns Democrats about the economy")]), false);
+  assert.equal(shareEnoughWords([it("a", "TSA agent finds live snakes in luggage at California airport"), it("b", "Airport security makes discovery in luggage at California airport")]), true);
+  // Two articles from the same outlet don't count as agreement.
+  assert.equal(shareEnoughWords([it("a", "Senate passes annual budget bill"), it("a", "Senate passes annual budget bill")]), false);
+});

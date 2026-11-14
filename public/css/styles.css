@@ -851,3 +851,6 @@ a.art-more-link:hover { color: var(--accent); }
 .search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .search-count { margin: 22px 0 0; }
 .search-list { margin-top: 10px; }
+
+/* Shown when the news has stopped updating for a few hours. */
+.dateline #updated.stale { color: var(--on-night); font-weight: 500; }

@@ -1,9 +1,12 @@
 import { analyzeHeadline } from "./language.js";
 import { classifyTopic } from "./topics.js";
+import { tokenize } from "./cluster.js";
 import { buildDigest, splitSentences } from "./digest.js";
 import { leanDistance, leanGroup, sideTurn, truncate } from "./util.js";
 
-const MEDIA_PREFIX = /^\s*(watch|video|listen|photos?|gallery|in pictures)\s*[:|—–-]/i;
+const MEDIA_PREFIX = /^\s*(watch|video|listen|photos?|gallery|in pictures|live updates?)\s*[:|—–-]/i;
+// The same kind of label at the end: "... – video", "... | Special Report", "... - The Latest".
+const MEDIA_SUFFIX = /\s[|—–-]\s*(video|watch|podcast|special report|the latest|live updates?)\s*$/i;
 
 /**
  * The headline to show for a story is the one with the least loaded wording,
@@ -34,7 +37,7 @@ export function headlineChoices(items, { takeTurns = true, turnMargin = 0.5 } = 
       lengthPenalty +
       (it.article.title.endsWith("?") ? 0.5 : 0) +
       // "Watch: ..." / "Video: ..." titles describe a clip, not the news.
-      (MEDIA_PREFIX.test(it.article.title) ? 2 : 0);
+      (MEDIA_PREFIX.test(it.article.title) || MEDIA_SUFFIX.test(it.article.title) ? 2 : 0);
     return { it, wording, cost: wording + leanDistance(it.lean) * 0.6, side: leanGroup(it.lean) };
   });
   const cheapest = (list) => list.reduce((a, b) => (b.cost < a.cost ? b : a));
@@ -124,6 +127,26 @@ export function blurbOf(snippet, max = 280, min = 90) {
   return out.length >= min ? out : truncate(text, max) || null;
 }
 
+/**
+ * Two outlets writing about the same person is not yet the same story ("Ben
+ * Shapiro's movie reviewed" and "Ben Shapiro warns Democrats" share only his
+ * name). A two-outlet group counts as a story only when the outlets' articles
+ * share at least `min` distinct words between headline and excerpt. Bigger
+ * groups are held together by the clustering itself.
+ */
+export function shareEnoughWords(items, min = 3) {
+  const words = items.map((it) => new Set(tokenize(`${it.article.title} ${it.article.snippet || ""}`)));
+  for (let i = 0; i < items.length; i++) {
+    for (let j = i + 1; j < items.length; j++) {
+      if (items[i].article.sourceId === items[j].article.sourceId) continue;
+      let shared = 0;
+      for (const w of words[i]) if (words[j].has(w)) shared++;
+      if (shared >= min) return true;
+    }
+  }
+  return false;
+}
+
 function coverageOf(sourceIds, sourcesById) {
   const byLean = { left: 0, "lean-left": 0, center: 0, "lean-right": 0, right: 0 };
   const groups = { left: 0, center: 0, right: 0 };
@@ -188,6 +211,7 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
     });
     const sourceIds = new Set(items.map((it) => it.article.sourceId));
     if (sourceIds.size < settings.minSourcesForStory) continue;
+    if (sourceIds.size === 2 && !shareEnoughWords(items, settings.minSharedWordsForPair ?? 3)) continue;
 
     // Order: most central first so the "primary" article per outlet is the most on-topic one.
     items.sort((a, b) => b.centrality - a.centrality);

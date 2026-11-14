@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T16:32:11.608Z",
+  "generatedAt": "2026-11-14T16:39:23.635Z",
   "balance": {
     "left": 7,
     "lean-left": 8,
@@ -257,7 +257,7 @@
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 86
+      "itemsThisRun": 87
     },
     {
       "id": "bbc",
@@ -269,7 +269,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 51
+      "itemsThisRun": 48
     },
     {
       "id": "thehill",

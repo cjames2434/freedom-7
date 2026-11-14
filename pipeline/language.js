@@ -25,6 +25,13 @@ const LOADED = [
   "lambasts?", "lambasted", "skewers?", "skewered", "cringe", "deranged", "lunatic",
   "radical", "extremist", "extremists", "woke", "far-left", "far-right", "ultra-maga",
   "regime", "puppet", "propaganda", "witch hunt", "hoax", "sham",
+  // Insults and name-calling, whoever they are aimed at.
+  "goons?", "thugs?", "losers?", "cron(y|ies)", "stooges?", "lackeys?", "clowns?", "snowflakes?",
+  "nepo baby", "pathetic", "shameless", "disgraced", "vile", "cringey", "sex-mad",
+  // Sensational verbs and nouns.
+  "savaged", "brutal", "brutally", "bloodbath", "beatdown", "humiliation", "brags?", "bragged", "bragging",
+  "unloads? on", "unloaded on", "sucks? up to", "grovels?", "groveling", "tantrums?", "whines?", "whining",
+  "rants?", "ranted", "ranting",
 ];
 
 // [term regex, coded-as, plainer alternative]
