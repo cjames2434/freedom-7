@@ -348,6 +348,40 @@ function pageHead(kickerText, title, intro) {
     </header>`;
 }
 
+// An outlet's own feed excerpt, unless it only repeats the headline.
+const plainKey = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+function excerptOf(a) {
+  const text = String(a.snippet || "").trim();
+  if (text.length < 40) return "";
+  const k = plainKey(text);
+  const t = plainKey(a.title);
+  return t && (k === t || k.startsWith(t) || t.startsWith(k)) && k.length < t.length + 25 ? "" : text;
+}
+
+// "What's being reported": sentences quoted from the outlets' excerpts, picked
+// by the build (pipeline/digest.js), the same number from the left and the right.
+function digestSection(s) {
+  const items = (s.digest || []).filter((d) => d && d.text);
+  if (!items.length) return "";
+  return `
+    <section class="digest" aria-labelledby="dg-h">
+      <div class="section-head"><h2 id="dg-h" class="label">What's being reported</h2><span class="mono-note">Quoted, not rewritten</span></div>
+      <ul class="digest-list">
+        ${items
+          .map((d) => {
+            const g = LEAN_GROUP[d.lean] || "center";
+            return `
+          <li class="dg dg-${g}">
+            <p class="dg-text">${esc(d.text)}</p>
+            <p class="dg-src">${outLink(d.url, esc(d.sourceName), "dg-name")}<span class="dg-lean">${esc(LEAN_LABEL[d.lean] || d.lean)}</span></p>
+          </li>`;
+          })
+          .join("")}
+      </ul>
+      <p class="note">Each sentence is an outlet's own words, taken from its feed. When both the left and the right covered the story, each gets the same number of sentences.</p>
+    </section>`;
+}
+
 function articleItem(a) {
   const flags = [
     ...(a.flags?.loaded || []).map((w) => `<span class="flag" title="Loaded or sensational wording">Loaded: <b>${esc(w)}</b></span>`),
@@ -361,6 +395,7 @@ function articleItem(a) {
     <div class="art">
       <div class="art-src"><span class="art-name">${esc(a.sourceName)}</span><span class="art-lean">${esc(LEAN_LABEL[a.lean] || a.lean)} · ${esc(timeAgo(a.published))}</span></div>
       ${outLink(a.url, esc(a.title), "art-title")}
+      ${excerptOf(a) ? `<p class="art-excerpt">${esc(excerptOf(a))}</p>` : ""}
       ${flags.length ? `<div class="flags">${flags.join("")}</div>` : ""}
     </div>`;
 }
@@ -586,6 +621,7 @@ function viewStory(id) {
           </header>
           ${isHttp(s.image) ? `<figure class="story-figure">${media(s)}<figcaption>Image from a publisher's feed</figcaption></figure>` : ""}
           ${aiBrief(s)}
+          ${digestSection(s)}
         </div>
         <aside class="story-side" aria-label="Coverage and related updates">
           <section class="panel coverage-panel" aria-labelledby="cov-h">

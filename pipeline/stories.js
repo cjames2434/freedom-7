@@ -1,5 +1,6 @@
 import { analyzeHeadline } from "./language.js";
 import { classifyTopic } from "./topics.js";
+import { buildDigest } from "./digest.js";
 import { leanDistance, leanGroup, truncate } from "./util.js";
 
 const MEDIA_PREFIX = /^\s*(watch|video|listen|photos?|gallery|in pictures)\s*[:|—–-]/i;
@@ -101,11 +102,13 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
     items.sort((a, b) => b.centrality - a.centrality);
     const chosen = pickHeadline(items);
     const earliest = items.reduce((a, b) => (a.article.published <= b.article.published ? a : b));
+    const id = `s_${earliest.article.id}`;
+    const blurb = truncate(chosen.article.snippet, 280) || null;
     const imageItem =
       items.find((it) => it.article.image && it.lean === "center") || items.find((it) => it.article.image);
 
     stories.push({
-      id: `s_${earliest.article.id}`,
+      id,
       headline: chosen.article.title,
       headlineFrom: { sourceId: chosen.article.sourceId, kind: "selected" },
       summary: null,
@@ -113,7 +116,9 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
       framing: null,
       disputed: [],
       ai: null,
-      snippet: truncate(chosen.article.snippet, 280) || null,
+      snippet: blurb,
+      // Sentences quoted from the outlets' own excerpts, balanced across sides (pipeline/digest.js).
+      digest: buildDigest(items, { shown: [chosen.article.title, blurb], seed: id, ...(settings.digest || {}) }),
       topic: classifyTopic(items.map((it) => it.article)),
       firstSeen: firstSeen.toISOString(),
       firstBySide,
@@ -138,7 +143,7 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
         title: it.article.title,
         url: it.article.url,
         published: it.article.published,
-        snippet: truncate(it.article.snippet, 220) || null,
+        snippet: truncate(it.article.snippet, 300) || null,
         flags: {
           loaded: it.analysis.loaded,
           contested: it.analysis.contested,

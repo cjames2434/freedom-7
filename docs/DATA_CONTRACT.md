@@ -57,6 +57,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `headline` | string | The headline to show. Either the AI-written neutral headline or the plainest real headline from the outlets. |
 | `headlineFrom` | object | `{ "kind": "selected", "sourceId": "npr" }` (a real outlet's headline) or `{ "kind": "ai", "model": "..." }`. Show which, for transparency. |
 | `snippet` | string \| null | Short excerpt from the outlet whose headline was picked. Use when there's no `summary`. |
+| `digest` | object[] | "What's being reported": up to 6 sentences quoted word for word from the outlets' feed excerpts, each `{ "text", "sourceId", "sourceName", "lean", "url" }`. One sentence per outlet, chosen to add facts the headline and `snippet` don't already give, never repeating each other. When both the left and the right covered the story they get the same number of sentences. Already in display order (Left, Center, Right, a round at a time). Often short or empty for small stories. Always show the outlet name with each sentence. |
 | `summary` | string \| null | AI brief, 2 to 4 sentences. `null` when AI is off or the story is small. |
 | `keyFacts` | string[] | AI: facts outlets on different sides agree on. Empty without AI. |
 | `framing` | object \| null | AI: `{ "left": string\|null, "center": string\|null, "right": string\|null }`, one sentence each on what that side emphasised. `null` without AI; individual sides are `null` when that side didn't cover it. |
@@ -89,7 +90,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `title` | string | The outlet's own headline, unchanged. |
 | `url` | string | Link to the original article. Open in a new tab. |
 | `published` | string | |
-| `snippet` | string \| null | Short feed excerpt. |
+| `snippet` | string \| null | The outlet's own feed excerpt, up to about 300 characters. Sometimes it only repeats the headline. |
 | `flags.loaded` | string[] | Sensational words in the headline, e.g. `["slams"]`. Side-neutral list. |
 | `flags.contested` | object[] | `{ "term", "codedAs": "left"\|"right", "plain": string\|null }`: a word one side prefers, with the plainer wording. |
 | `flags.clickbait` | boolean | Clickbait phrasing ("you won't believe", "here's why", "!"). |

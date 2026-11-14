@@ -823,3 +823,17 @@ a.tl-title:hover { color: var(--accent); }
 .prose .notice { font-size: 16px; }
 .prose .note { font-size: 14.5px; }
 #balance-today { scroll-margin-top: 72px; }
+
+/* Story page: each outlet's excerpt under its headline, and the quoted digest */
+.art-excerpt { margin: 7px 0 0; font-family: var(--serif); font-size: 15.5px; line-height: 1.45; color: var(--ink-2); overflow-wrap: anywhere; }
+.digest { margin-top: 36px; max-width: 860px; }
+.digest-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.dg { padding-left: 16px; border-left: 4px solid var(--center); }
+.dg-left { border-left-color: var(--left); }
+.dg-right { border-left-color: var(--right); }
+.dg-text { margin: 0; font-family: var(--serif); font-size: 19px; line-height: 1.5; color: var(--ink); overflow-wrap: anywhere; }
+.dg-src { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 7px 0 0; }
+.dg-name { font-weight: 700; font-size: 13.5px; color: var(--ink); }
+a.dg-name:hover { color: var(--accent); }
+.dg-lean { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--muted); }
+@media (max-width: 700px) { .dg-text { font-size: 17.5px; } }

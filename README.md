@@ -29,6 +29,10 @@ nothing to run (an optional AI feature costs a little; see below).
   loaded wording ("slams", "destroys", "bombshell"), preferring outlets nearer
   the center. The word lists are side-neutral and symmetric
   ([`pipeline/language.js`](pipeline/language.js)).
+- **More than a headline, still in their words.** Each story page shows every
+  outlet's own excerpt under its headline, plus a short "What's being
+  reported" list: sentences quoted from those excerpts that add facts, picked
+  by a fixed rule (no AI), the same number from the left and the right.
 - **Ranking without outrage.** Stories rank by how many outlets cover them,
   how much of the spectrum covers them, and recency. Never by clicks.
 - **Blindspots.** Stories covered mostly by one side are called out, so you

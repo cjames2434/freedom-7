@@ -32,6 +32,9 @@ rebuilt every 15 minutes by `.github/workflows/update.yml`.
 - Word lists in `pipeline/language.js` must stay side-neutral; every
   contested term needs a counterpart from the other side.
 - Ranking (`pipeline/stories.js`) must not use engagement signals.
+- The story digest (`pipeline/digest.js`) only quotes outlets' own sentences,
+  one per outlet, with equal counts from left and right when both covered
+  the story. Never paraphrase or merge them, and always show the outlet.
 - UI: no red/blue party colours for the spectrum; Left, Center, Right always
   in that order with equal weight; always show where a headline came from.
 

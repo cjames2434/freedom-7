@@ -30,6 +30,11 @@
     "maxRelated": 5
   },
 
+  "digest": {
+    "maxPerSide": 2,
+    "minNewWords": 3
+  },
+
   "perspectives": {
     "threshold": 0.12,
     "maxPerSide": 2,
