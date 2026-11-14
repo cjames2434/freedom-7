@@ -1,0 +1,72 @@
+# Keeps the news updating on time.
+#
+# GitHub's own scheduler is best-effort. On this repository it started the
+# 15-minute update only a couple of times a day. So the updates chain
+# themselves instead: each run of this workflow waits about 13 minutes, starts
+# "Update news", and then starts itself again.
+#
+# The wait is the "tick" environment's wait timer, which uses no runner while
+# it waits. One-time setup, already done for this repository:
+#   Settings -> Environments -> tick -> Wait timer: 13 minutes
+# (Without that timer this would run in a tight loop, so the job checks for it.)
+#
+# The schedule below is only a safety net: it restarts the chain if a link
+# ever breaks. Each run also re-enables both workflows, which stops GitHub
+# pausing them after 60 days without a commit.
+
+name: Keep updates on time
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "11,41 * * * *"
+
+permissions:
+  actions: write
+
+concurrency:
+  group: tick
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: tick
+    steps:
+      - name: Start the next update, then the next tick
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          THIS_RUN: ${{ github.run_id }}
+        run: |
+          api() { for attempt in 1 2 3; do gh api "$@" && return 0; sleep 10; done; return 1; }
+
+          # Safety: if the wait timer is missing, this run started straight
+          # away. Stop instead of looping as fast as GitHub allows.
+          started=$(gh run view "$THIS_RUN" --repo "$REPO" --json createdAt --jq .createdAt || true)
+          if [ -n "$started" ]; then
+            waited=$(( $(date -u +%s) - $(date -u -d "$started" +%s) ))
+            echo "Waited ${waited}s before running."
+            if [ "$waited" -lt 300 ]; then
+              echo "::error::The 'tick' environment has no wait timer (waited only ${waited}s). Not starting another tick."
+              exit 1
+            fi
+          fi
+
+          # Re-enabling also stops GitHub pausing these for inactivity.
+          api -X PUT "repos/$REPO/actions/workflows/update.yml/enable" > /dev/null || true
+          api -X PUT "repos/$REPO/actions/workflows/tick.yml/enable" > /dev/null || true
+
+          api -X POST "repos/$REPO/actions/workflows/update.yml/dispatches" -f ref=main
+
+          # Keep exactly one chain: if a newer tick is already waiting (the
+          # safety-net schedule started one), let that one carry on.
+          newer=$(gh run list --repo "$REPO" --workflow tick.yml --limit 30 --json databaseId,status \
+            --jq "[.[] | select(.status != \"completed\" and .databaseId > $THIS_RUN)] | length" || echo 0)
+          if [ "${newer:-0}" = "0" ]; then
+            api -X POST "repos/$REPO/actions/workflows/tick.yml/dispatches" -f ref=main
+            echo "Next tick started."
+          else
+            echo "A newer tick is already waiting, so this one ends here."
+          fi

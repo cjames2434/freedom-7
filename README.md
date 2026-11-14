@@ -105,7 +105,8 @@ public/data/news.json ◄─ (optional AI briefs) ◄─ match opinion in pairs 
 | `pipeline/` | The build: `fetch`, `normalize`, `opinion`, `cluster`, `stories`, `perspectives`, `language`, `topics`, `summarize` |
 | `public/` | The website (the Freedom 7 newspaper design) plus generated `data/` |
 | `docs/` | Data contract, Claude Design brief, sample data |
-| `.github/workflows/update.yml` | Rebuild every 15 minutes and deploy to GitHub Pages |
+| `.github/workflows/update.yml` | Rebuild and deploy to GitHub Pages |
+| `.github/workflows/tick.yml` | Starts an update about every 15 minutes (each run starts the next) |
 | `data/` | Local working state (last 48h of articles, whose turn each story got, AI brief cache). Not committed. |
 
 The site is fully static: the build writes JSON, and the front end only reads
@@ -130,16 +131,24 @@ GitHub Pages hosts it and GitHub Actions rebuilds it every 15 minutes.
 1. Create a **public** GitHub repository (Pages is free for public repos) and
    push this folder to its `main` branch.
 2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. **Actions → Update news → Run workflow** for the first build. After that it
-   runs every 15 minutes on its own (GitHub sometimes starts scheduled runs a
-   few minutes late). Keep the repository public: on a private one, runs this
-   often would use up the free monthly Actions minutes in about two weeks.
-4. Your site is at `https://<your-username>.github.io/<repo-name>/`.
+3. **Actions → Update news → Run workflow** for the first build.
+4. Make it update on time. GitHub's own scheduler is best-effort: here it
+   started the 15-minute update only a couple of times a day. So the updates
+   start each other instead:
+   - **Settings → Environments → New environment**, name it `tick`, tick
+     **Wait timer**, enter `13` minutes, and save.
+   - **Actions → Keep updates on time → Run workflow**, once. Each run waits 13
+     minutes (using no computing time), starts an update, and starts the next
+     run. A schedule in the same file restarts the chain if it ever breaks.
+   Keep the repository public: on a private one, runs this often would use up
+   the free monthly Actions minutes in about two weeks.
+5. Your site is at `https://<your-username>.github.io/<repo-name>/`.
 
 Notes:
-- GitHub pauses scheduled workflows in public repos after 60 days with no
-  commits. The workflow re-enables itself once a day to prevent that. If
-  updates ever stop anyway, push any commit or re-enable it under Actions.
+- GitHub pauses workflows in public repos after 60 days with no commits.
+  Every run of "Keep updates on time" re-enables both workflows to prevent
+  that. If updates ever stop anyway (the page says "updates are delayed"),
+  open **Actions → Keep updates on time → Run workflow**.
 - To get AI briefs online, add your key under **Settings → Secrets and
   variables → Actions → New repository secret** named `ANTHROPIC_API_KEY`.
   Optionally add a variable `SUMMARY_MODEL` to change the model.
