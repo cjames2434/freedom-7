@@ -30,6 +30,11 @@
     "maxRelated": 5
   },
 
+  "headline": {
+    "takeTurns": true,
+    "turnMargin": 0.5
+  },
+
   "digest": {
     "maxPerSide": 2,
     "minNewWords": 3

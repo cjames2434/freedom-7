@@ -14,6 +14,16 @@ export function leanDistance(lean) {
   return { center: 0, "lean-left": 1, "lean-right": 1, left: 2, right: 2 }[lean] ?? 1;
 }
 
+/**
+ * Whose turn it is on a story: "left" or "right", fixed by the story's id so
+ * it doesn't change between builds and comes out about half and half.
+ */
+export function sideTurn(seed) {
+  let h = 0;
+  for (const ch of String(seed)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return h % 2 === 0 ? "left" : "right";
+}
+
 export function shortHash(str, len = 10) {
   return createHash("sha1").update(str).digest("hex").slice(0, len);
 }

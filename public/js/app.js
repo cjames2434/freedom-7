@@ -282,9 +282,12 @@ function provenance(s) {
   const name = s.articles.find((a) => a.sourceId === s.headlineFrom?.sourceId)?.sourceName;
   return { icon: ICON.source, text: name ? `Plainest headline, from ${name}` : "Plainest headline among the outlets" };
 }
-function provenanceLine(s) {
+function provenanceLine(s, detail = false) {
   const p = provenance(s);
-  return `<p class="provenance">${p.icon}${esc(p.text)}</p>`;
+  // On the story page, say when the left and the right tied and took turns.
+  const turn = detail && s.headlineFrom?.kind !== "ai" && (s.headlineFrom?.turn === "left" || s.headlineFrom?.turn === "right");
+  const note = turn ? " The left and the right each had an equally plain headline here, so they take turns." : "";
+  return `<p class="provenance">${p.icon}${esc(p.text + (note ? "." : "") + note)}</p>`;
 }
 
 function blindspotBadge(s) {
@@ -613,7 +616,7 @@ function viewStory(id) {
           <header class="story-head">
             ${kicker(s)}
             <h1 class="story-hed">${esc(s.headline)}</h1>
-            ${provenanceLine(s)}
+            ${provenanceLine(s, true)}
             ${blurb(s) ? `<p class="story-dek">${esc(blurb(s))}</p>` : ""}
             <p class="story-meta">First reported ${esc(timeAgo(s.firstSeen))} · Updated ${esc(timeAgo(s.lastUpdated))} · ${plural(s.articleCount, "article")} from ${plural(s.sourceCount, "outlet")}</p>
             ${actionButtons(s)}

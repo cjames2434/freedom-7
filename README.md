@@ -29,6 +29,11 @@ nothing to run (an optional AI feature costs a little; see below).
   loaded wording ("slams", "destroys", "bombshell"), preferring outlets nearer
   the center. The word lists are side-neutral and symmetric
   ([`pipeline/language.js`](pipeline/language.js)).
+- **Left and right take turns.** When a left-leaning and a right-leaning
+  outlet both have an equally plain headline for a story, each new story goes
+  to whichever side has had fewer headlines shown, so on stories both sides
+  covered the two come out as even as possible. A turn never swaps in a more
+  loaded headline or replaces a center outlet's.
 - **More than a headline, still in their words.** Each story page shows every
   outlet's own excerpt under its headline, plus a short "What's being
   reported" list: sentences quoted from those excerpts that add facts, picked
@@ -93,7 +98,7 @@ public/data/news.json ◄─ (optional AI briefs) ◄─ match opinion in pairs 
 | `public/` | The website (placeholder UI) plus generated `data/` |
 | `docs/` | Data contract, Claude Design brief, sample data |
 | `.github/workflows/update.yml` | Hourly rebuild and deploy to GitHub Pages |
-| `data/` | Local working state (last 48h of articles, AI brief cache). Not committed. |
+| `data/` | Local working state (last 48h of articles, whose turn each story got, AI brief cache). Not committed. |
 
 The site is fully static: the build writes JSON, and the front end only reads
 JSON. That's what makes it free to host.
@@ -205,6 +210,9 @@ their stories arrive through the outlets that run them.
   Lower merges more (risk: unrelated stories grouped); higher splits more.
   0.22 was tuned on live data.
 - `minSourcesForStory`: outlets needed before a story appears (default 2).
+- `headline`: `takeTurns` turns the left/right turn-taking on or off;
+  `turnMargin` is how much less on-topic the other side's headline may be and
+  still count as equally good (it may never be more loaded).
 - `minPartisanSourcesForBlindspot`, `blindspotShare`: when a story counts
   as a blindspot (default: 3+ partisan outlets, 80% from one side).
 - `developing`: how many outlets in how many hours flags a story as developing.

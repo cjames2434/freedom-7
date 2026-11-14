@@ -22,6 +22,7 @@ import { leanGroup } from "./util.js";
 
 const STORE_PATH = "data/store.json";
 const BALANCE_HISTORY_PATH = "data/balance-history.json";
+const TURNS_PATH = "data/headline-turns.json";
 const OUT_DIR = "public/data";
 const LOCK_PATH = "data/.build.lock";
 const LOCK_STALE_MINUTES = 10;
@@ -85,6 +86,15 @@ function writeAtomic(path, data) {
   try {
     unlinkSync(tmp);
   } catch {}
+}
+
+/** Whose turn each story got last build, so headlines don't flip between builds. */
+function loadTurns() {
+  try {
+    return JSON.parse(readFileSync(TURNS_PATH, "utf8")).turns || {};
+  } catch {
+    return {};
+  }
 }
 
 function loadStore() {
@@ -202,7 +212,9 @@ async function main() {
 
   // 4. Cluster news into stories
   const clusters = clusterArticles(news, settings.cluster);
-  const stories = buildStories(clusters, news, sourcesById, settings, now);
+  const stories = buildStories(clusters, news, sourcesById, settings, now, { turns: loadTurns() });
+  const turns = Object.fromEntries(stories.filter((st) => st.headlineFrom.turn).map((st) => [st.id, st.headlineFrom.turn]));
+  writeAtomic(TURNS_PATH, JSON.stringify({ turns }));
   console.log(`Clusters: ${clusters.length}; stories with ${settings.minSourcesForStory}+ outlets: ${stories.length}`);
 
   // 5. Related stories (one subject split across several stories), then

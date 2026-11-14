@@ -14,13 +14,14 @@
 //   - at most one sentence per outlet
 //   - when both the left and the right covered the story, they get the same
 //     number of sentences (extras are dropped, as with Perspectives)
-//   - sides take turns picking, and which side picks first alternates from
-//     story to story, so neither always gets the freshest facts
+//   - sides take turns picking, and which side picks first changes from
+//     story to story (the side whose headline isn't shown, when one is),
+//     so neither always gets the freshest facts
 //   - the result is listed Left, Center, Right, in that order
 
 import { tokenize } from "./cluster.js";
 import { analyzeHeadline } from "./language.js";
-import { leanDistance, leanGroup } from "./util.js";
+import { leanDistance, leanGroup, sideTurn } from "./util.js";
 
 const SIDES = ["left", "center", "right"];
 const MIN_LEN = 60;
@@ -126,8 +127,10 @@ function overlap(a, b) {
  * items: [{ article: { sourceId, title, snippet, url }, lean, source: { name } }]
  * shown: text already on the page (headline, blurb), so the digest adds to it.
  * seed:  any stable string for the story; decides which side picks first.
+ * first: "left" or "right" to say which side picks first instead (the story
+ *        builder passes the side whose headline is not the one shown).
  */
-export function buildDigest(items, { shown = [], seed = "", maxPerSide = 2, minNewWords = 3 } = {}) {
+export function buildDigest(items, { shown = [], seed = "", first = null, maxPerSide = 2, minNewWords = 3 } = {}) {
   // Words used by two or more outlets mark what the story is about.
   const outletWords = new Map();
   for (const it of items) {
@@ -172,9 +175,7 @@ export function buildDigest(items, { shown = [], seed = "", maxPerSide = 2, minN
   };
 
   // Sides take turns. Left or right goes first depending on the story, center in between.
-  let h = 0;
-  for (const ch of String(seed)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-  const order = h % 2 === 0 ? ["left", "center", "right"] : ["right", "center", "left"];
+  const order = (first || sideTurn(seed)) === "left" ? ["left", "center", "right"] : ["right", "center", "left"];
 
   for (let round = 0; round < maxPerSide; round++) {
     for (const side of order) {

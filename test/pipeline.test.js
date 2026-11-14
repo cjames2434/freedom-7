@@ -113,3 +113,63 @@ test("headline pick avoids 'Watch:' and 'Video:' clip titles when a plain headli
   ]);
   assert.equal(chosen.article.title, "Microsoft Outlook outage disrupts email for users across the U.S.");
 });
+
+// --- Left and right take turns on equally plain headlines ---
+
+import { assignTurns, headlineChoices } from "../pipeline/stories.js";
+
+const hItem = (title, lean, centrality = 0.8) => ({ article: { title }, lean, centrality, analysis: analyzeHeadline(title) });
+const LEFT_PLAIN = "Senate passes the annual budget bill after a long debate";
+const RIGHT_PLAIN = "Senate approves annual budget bill following lengthy debate";
+
+test("equally plain left and right headlines take turns, whichever side would have won", () => {
+  const items = [hItem(LEFT_PLAIN, "lean-left"), hItem(RIGHT_PLAIN, "right")];
+  const { bestSide, rival } = headlineChoices(items);
+  assert.equal(bestSide, "left"); // nearer the center, so it wins on cost alone
+  assert.equal(rival.article.title, RIGHT_PLAIN);
+  assert.equal(pickHeadline(items, { turn: "left" }).article.title, LEFT_PLAIN);
+  assert.equal(pickHeadline(items, { turn: "right" }).article.title, RIGHT_PLAIN);
+
+  // Mirror image: the same rule the other way round.
+  const mirrored = [hItem(LEFT_PLAIN, "left"), hItem(RIGHT_PLAIN, "lean-right")];
+  assert.equal(headlineChoices(mirrored).bestSide, "right");
+  assert.equal(pickHeadline(mirrored, { turn: "left" }).article.title, LEFT_PLAIN);
+  assert.equal(pickHeadline(mirrored, { turn: "right" }).article.title, RIGHT_PLAIN);
+});
+
+test("a turn never swaps in a more loaded headline, or replaces a center outlet's", () => {
+  const loaded = "Senator SLAMS colleagues in bombshell budget bill hearing";
+  for (const [plainLean, loadedLean, turn] of [["lean-left", "lean-right", "right"], ["lean-right", "lean-left", "left"]]) {
+    const items = [hItem(LEFT_PLAIN, plainLean), hItem(loaded, loadedLean)];
+    assert.equal(headlineChoices(items).rival, null);
+    assert.equal(pickHeadline(items, { turn }).article.title, LEFT_PLAIN);
+  }
+  const withCenter = [hItem(LEFT_PLAIN, "center"), hItem(RIGHT_PLAIN, "lean-right"), hItem(RIGHT_PLAIN, "lean-left")];
+  assert.equal(headlineChoices(withCenter).rival, null);
+  assert.equal(pickHeadline(withCenter, { turn: "right" }).lean, "center");
+});
+
+test("turns even out left and right across stories and stay put between builds", () => {
+  const open = (id, bestSide, firstSeen) => ({ id, firstSeen, bothSides: true, choices: { bestSide, rival: {} } });
+  const fixed = (id, bestSide) => ({ id, firstSeen: "2026-01-01T00:00:00Z", bothSides: true, choices: { bestSide, rival: null } });
+  const count = (turns) => {
+    const n = { left: 0, right: 0 };
+    for (const side of turns.values()) n[side]++;
+    return n;
+  };
+
+  // Ten undecided stories that would all have gone to the left: now five each.
+  const ten = Array.from({ length: 10 }, (_, i) => open(`s${i}`, "left", `2026-01-01T0${i}:00:00Z`));
+  assert.deepEqual(count(assignTurns(ten)), { left: 5, right: 5 });
+  // And the same when they would all have gone to the right.
+  assert.deepEqual(count(assignTurns(ten.map((d) => open(d.id, "right", d.firstSeen)))), { left: 5, right: 5 });
+
+  // Stories one side won outright count first; the other side catches up.
+  const mixed = [fixed("f1", "left"), fixed("f2", "left"), ...ten.slice(0, 4)];
+  assert.deepEqual(count(assignTurns(mixed)), { left: 1, right: 3 });
+
+  // A story keeps the turn it had, even when new stories arrive.
+  const before = Object.fromEntries(assignTurns(ten));
+  const after = assignTurns([open("new", "left", "2025-12-31T00:00:00Z"), ...ten], before);
+  for (const d of ten) assert.equal(after.get(d.id), before[d.id]);
+});
