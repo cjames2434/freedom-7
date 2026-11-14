@@ -34,10 +34,12 @@ nothing to run (an optional AI feature costs a little; see below).
   to whichever side has had fewer headlines shown, so on stories both sides
   covered the two come out as even as possible. A turn never swaps in a more
   loaded headline or replaces a center outlet's.
-- **More than a headline, still in their words.** Each story page shows every
-  outlet's own excerpt under its headline, plus a short "What's being
-  reported" list: sentences quoted from those excerpts that add facts, picked
-  by a fixed rule (no AI), the same number from the left and the right.
+- **More than a headline, still in their words.** Each story page has a short
+  "What's being reported" list: sentences quoted from the outlets' own
+  excerpts that add facts, picked by a fixed rule (no AI), the same number
+  from the left and the right. Every outlet's full excerpt is one click away
+  ("Show excerpts"), and each outlet is listed once, with its other articles
+  on the story folded under it.
 - **Ranking without outrage.** Stories rank by how many outlets cover them,
   how much of the spectrum covers them, and recency. Never by clicks.
 - **Blindspots.** Stories covered mostly by one side are called out, so you

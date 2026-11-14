@@ -144,6 +144,23 @@ function writeSaved(list) {
   updateSavedCount();
 }
 const isSaved = (id) => readSaved().some((x) => x.id === id);
+
+// Whether story pages show each outlet's excerpt under its headline (this device only).
+const EXCERPTS_KEY = "freedom7:excerpts";
+function excerptsOn() {
+  try {
+    return localStorage.getItem(EXCERPTS_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+function setExcerpts(on) {
+  try {
+    localStorage.setItem(EXCERPTS_KEY, on ? "1" : "0");
+  } catch {
+    /* storage unavailable: the choice lasts until the page changes */
+  }
+}
 function toggleSaved(id) {
   const list = readSaved();
   const i = list.findIndex((x) => x.id === id);
@@ -284,10 +301,12 @@ function provenance(s) {
 }
 function provenanceLine(s, detail = false) {
   const p = provenance(s);
-  // On the story page, say when the left and the right tied and took turns.
-  const turn = detail && s.headlineFrom?.kind !== "ai" && (s.headlineFrom?.turn === "left" || s.headlineFrom?.turn === "right");
-  const note = turn ? " The left and the right each had an equally plain headline here, so they take turns." : "";
-  return `<p class="provenance">${p.icon}${esc(p.text + (note ? "." : "") + note)}</p>`;
+  if (!detail) return `<p class="provenance">${p.icon}${esc(p.text)}</p>`;
+  // The story page adds when it was first reported, and says when the left
+  // and the right had equally plain headlines and took turns.
+  const turn = s.headlineFrom?.kind !== "ai" && (s.headlineFrom?.turn === "left" || s.headlineFrom?.turn === "right");
+  const parts = [p.text, ...(turn ? ["Left and right tied, so they take turns"] : []), `First reported ${timeAgo(s.firstSeen)}`];
+  return `<p class="provenance">${p.icon}<span>${esc(parts.join(" · "))}</span></p>`;
 }
 
 function blindspotBadge(s) {
@@ -368,7 +387,7 @@ function digestSection(s) {
   if (!items.length) return "";
   return `
     <section class="digest" aria-labelledby="dg-h">
-      <div class="section-head"><h2 id="dg-h" class="label">What's being reported</h2><span class="mono-note">Quoted, not rewritten</span></div>
+      <div class="section-head"><h2 id="dg-h" class="label">What's being reported</h2></div>
       <ul class="digest-list">
         ${items
           .map((d) => {
@@ -381,7 +400,7 @@ function digestSection(s) {
           })
           .join("")}
       </ul>
-      <p class="note">Each sentence is an outlet's own words, taken from its feed. When both the left and the right covered the story, each gets the same number of sentences.</p>
+      <p class="note">Quoted word for word from each outlet. The left and the right get the same number of sentences.</p>
     </section>`;
 }
 
@@ -400,6 +419,13 @@ function articleItem(a) {
       ${outLink(a.url, esc(a.title), "art-title")}
       ${excerptOf(a) ? `<p class="art-excerpt">${esc(excerptOf(a))}</p>` : ""}
       ${flags.length ? `<div class="flags">${flags.join("")}</div>` : ""}
+      ${
+        a.more?.length
+          ? `<details class="art-more"><summary>${plural(a.more.length, "more article")} from ${esc(a.sourceName)}</summary><ul>${a.more
+              .map((m) => `<li>${outLink(m.url, esc(m.title), "art-more-link")}</li>`)
+              .join("")}</ul></details>`
+          : ""
+      }
     </div>`;
 }
 
@@ -605,8 +631,22 @@ function viewStory(id) {
         )}
       </div>`;
   }
+  // One entry per outlet: its most on-topic article (they arrive in that
+  // order), with the outlet's other articles tucked under it.
   const groups = { left: [], center: [], right: [] };
-  for (const a of s.articles) groups[LEAN_GROUP[a.lean] || "center"].push(a);
+  const byOutlet = new Map();
+  for (const a of s.articles) {
+    const first = byOutlet.get(a.sourceId);
+    if (first) {
+      first.more.push(a);
+      continue;
+    }
+    const entry = { ...a, more: [] };
+    byOutlet.set(a.sourceId, entry);
+    groups[LEAN_GROUP[a.lean] || "center"].push(entry);
+  }
+  const hasExcerpts = [...byOutlet.values()].some((a) => excerptOf(a));
+  const showExcerpts = excerptsOn();
 
   return `
     <article class="wrap story">
@@ -616,37 +656,36 @@ function viewStory(id) {
           <header class="story-head">
             ${kicker(s)}
             <h1 class="story-hed">${esc(s.headline)}</h1>
-            ${provenanceLine(s, true)}
             ${blurb(s) ? `<p class="story-dek">${esc(blurb(s))}</p>` : ""}
-            <p class="story-meta">First reported ${esc(timeAgo(s.firstSeen))} · Updated ${esc(timeAgo(s.lastUpdated))} · ${plural(s.articleCount, "article")} from ${plural(s.sourceCount, "outlet")}</p>
-            ${actionButtons(s)}
+            ${provenanceLine(s, true)}
             ${blindspotBadge(s)}
+            ${actionButtons(s)}
           </header>
-          ${isHttp(s.image) ? `<figure class="story-figure">${media(s)}<figcaption>Image from a publisher's feed</figcaption></figure>` : ""}
+          ${isHttp(s.image) ? `<figure class="story-figure">${media(s)}</figure>` : ""}
           ${aiBrief(s)}
           ${digestSection(s)}
         </div>
         <aside class="story-side" aria-label="Coverage and related updates">
           <section class="panel coverage-panel" aria-labelledby="cov-h">
-            <div class="section-head"><h2 id="cov-h" class="label">Who covered it</h2><span class="mono-note">Distinct outlets</span></div>
+            <div class="section-head"><h2 id="cov-h" class="label">Who covered it</h2><span class="mono-note">${plural(s.sourceCount, "outlet")}</span></div>
             ${coverageBar(s.coverage, "lg")}
-            <dl class="bylean">
-              ${LEANS.map((l) => `<div><dt>${LEAN_LABEL[l]}</dt><dd>${Number(s.coverage.byLean?.[l] ?? 0)}</dd></div>`).join("")}
-            </dl>
           </section>
           ${relatedSection(s)}
         </aside>
       </div>
-      <section class="spectrum-section" aria-labelledby="hl-h">
-        <div class="section-head"><h2 id="hl-h" class="label">Headlines across the spectrum</h2><span class="mono-note">Each outlet's own words</span></div>
+      <section class="spectrum-section headlines${showExcerpts ? " show-excerpts" : ""}" aria-labelledby="hl-h">
+        <div class="section-head">
+          <h2 id="hl-h" class="label">Headlines across the spectrum</h2>
+          ${hasExcerpts ? `<button type="button" class="text-link section-toggle" data-action="toggle-excerpts" aria-pressed="${showExcerpts}">${showExcerpts ? "Hide excerpts" : "Show excerpts"}</button>` : ""}
+        </div>
         ${spectrumColumns(groups, (g) => `No ${GROUP_LONG[g]} outlets in our roster covered this.`)}
       </section>
       ${
         s.perspectives
           ? `
       <section class="spectrum-section" aria-labelledby="op-h">
-        <div class="section-head"><h2 id="op-h" class="label">Perspectives</h2><span class="mono-note">Arguments, not reporting</span></div>
-        <p class="note">${relatedCount(s) > 0 ? "Opinion pieces about this ongoing story and its related updates" : "Opinion pieces about this story"}, the same number from each side. They never count as coverage.</p>
+        <div class="section-head"><h2 id="op-h" class="label">Perspectives</h2><span class="mono-note">Opinion, not reporting</span></div>
+        <p class="note">${relatedCount(s) > 0 ? "Opinion pieces about this ongoing story and its related updates" : "Opinion pieces about this story"}, the same number from each side.</p>
         ${perspectiveColumns(s.perspectives)}
       </section>`
           : ""
@@ -1005,7 +1044,13 @@ app.addEventListener("click", (e) => {
     toggleSaved(id);
     route();
   } else if (action === "share") shareStory(id, btn);
-  else if (action === "see-balance") document.getElementById("balance-today")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (action === "toggle-excerpts") {
+    const on = !excerptsOn();
+    setExcerpts(on);
+    btn.closest(".headlines")?.classList.toggle("show-excerpts", on);
+    btn.setAttribute("aria-pressed", String(on));
+    btn.textContent = on ? "Hide excerpts" : "Show excerpts";
+  } else if (action === "see-balance") document.getElementById("balance-today")?.scrollIntoView({ behavior: "smooth", block: "start" });
   else if (action === "show-all") {
     showAllRundown = true;
     const y = window.scrollY;
