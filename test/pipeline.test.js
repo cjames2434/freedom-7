@@ -173,3 +173,44 @@ test("turns even out left and right across stories and stay put between builds",
   const after = assignTurns([open("new", "left", "2025-12-31T00:00:00Z"), ...ten], before);
   for (const d of ten) assert.equal(after.get(d.id), before[d.id]);
 });
+
+// --- Excerpts: photo credits and broadcast sign-offs are trimmed ---
+
+import { tidySnippet } from "../pipeline/normalize.js";
+
+test("excerpts lose leading photo credits and trailing sign-offs, and nothing else", () => {
+  const body = "A tanker crashed into a docked cruise ship near the Port of New Orleans on Friday.";
+  for (const credit of ["JANE DOE / JANE DOE via REUTERS ", "Jane Doe / Getty Images ", "Getty Images ", "Photo Illustration by Jane Doe/The Outlet/Getty Images "]) {
+    assert.equal(tidySnippet(credit + body), body);
+  }
+  for (const signOff of [" Jane Doe has more.", " CBS News' Jane Van Doe and John Roe report.", " NBC News’ Jane Doe reports.", " Jane Doe anchors a special report.", " DW has the latest."]) {
+    assert.equal(tidySnippet(body + signOff), body);
+  }
+  // Ordinary sentences are left alone.
+  for (const keep of [
+    body,
+    "Getty Images will lay off a tenth of its staff, the company said.",
+    "Hiring slowed in October, the Bureau of Labor Statistics reports.",
+    "The storm made landfall on Tuesday. Officials said the damage reports are still coming in.",
+  ]) {
+    assert.equal(tidySnippet(keep), keep);
+  }
+});
+
+// --- Blindspots look at the whole subject ---
+
+import { settleBlindspots } from "../pipeline/stories.js";
+
+test("a story is not a blindspot when the other side covered the subject in a related story", () => {
+  const cov = (left, center, right) => ({ left, center, right });
+  const opts = { minPartisanSourcesForBlindspot: 3, blindspotShare: 0.8 };
+  const mk = (side, own, subject) => ({ mostlyCoveredBy: side, coverage: own, subject });
+  const stories = [
+    mk("left", cov(4, 1, 0), { storyCount: 3, coverage: cov(8, 5, 7) }), // the right covered a sibling story
+    mk("right", cov(0, 1, 4), { storyCount: 3, coverage: cov(7, 5, 8) }), // mirror image
+    mk("left", cov(4, 1, 0), { storyCount: 2, coverage: cov(6, 1, 0) }), // the whole subject is one-sided
+    mk("right", cov(0, 0, 3), { storyCount: 1, coverage: cov(0, 0, 3) }), // a story on its own
+  ];
+  settleBlindspots(stories, opts);
+  assert.deepEqual(stories.map((s) => s.mostlyCoveredBy), [null, null, "left", "right"]);
+});

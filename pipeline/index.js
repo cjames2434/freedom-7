@@ -6,10 +6,10 @@
 
 import { existsSync, mkdirSync, readFileSync, renameSync, statSync, unlinkSync, writeFileSync } from "node:fs";
 import { fetchAllSources } from "./fetch.js";
-import { normalizeItem } from "./normalize.js";
+import { normalizeItem, tidySnippet } from "./normalize.js";
 import { nonNewsKind } from "./opinion.js";
 import { clusterArticles } from "./cluster.js";
-import { buildStories } from "./stories.js";
+import { buildStories, settleBlindspots } from "./stories.js";
 import { attachPerspectives } from "./perspectives.js";
 import { linkRelated, rankSubjects } from "./related.js";
 import { buildStoryIndex } from "./storyindex.js";
@@ -200,6 +200,7 @@ async function main() {
       if (!kind) dropped++;
       continue;
     }
+    a.snippet = tidySnippet(a.snippet); // applies excerpt clean-up rules to articles stored before a rule existed
     (kind === "news" ? news : opinion).push(a);
   }
   if (news.length < (settings.safety?.minArticles ?? 30)) {
@@ -225,6 +226,7 @@ async function main() {
   console.log(`Related: ${grouped.length} groups covering ${grouped.reduce((n, f) => n + f.length, 0)} stories`);
   // Rank whole subjects by their combined coverage (re-sorts `stories`; `families` indices are pre-sort).
   rankSubjects(stories, families, { recencyHalfLifeHours: settings.recencyHalfLifeHours, now });
+  settleBlindspots(stories, settings); // not a blindspot if the other side covered the subject in a sibling story
   const perspectiveLeads = attachPerspectives(stories, news, opinion, sourcesById, { ...settings.perspectives, index: storyIndex });
   console.log(`Perspectives (opinion from both sides): ${perspectiveLeads.length} subjects`);
 

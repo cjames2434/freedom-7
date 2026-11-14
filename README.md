@@ -8,7 +8,7 @@ across the political spectrum reported it, side by side, with the plainest
 version on top.
 
 Built for a few friends: no ads, no accounts, no tracking, and it costs
-nothing to run (an optional AI feature costs a little; see below).
+nothing to run.
 
 ## How it stays neutral
 
@@ -43,12 +43,14 @@ nothing to run (an optional AI feature costs a little; see below).
 - **Ranking without outrage.** Stories rank by how many outlets cover them,
   how much of the spectrum covers them, and recency. Never by clicks.
 - **Blindspots.** Stories covered mostly by one side are called out, so you
-  can see what the other side's readers are hearing about.
+  can see what the other side's readers are hearing about. When a subject is
+  split across several related stories, it only counts if the whole subject
+  is one-sided.
 - **Developing.** Stories that several outlets published on in the last 3
   hours are flagged, for a Live-style view.
-- **Optional AI briefs.** With an API key, Claude writes a short neutral
-  summary for bigger stories, using only what the outlets reported, with
-  claims attributed and a "how each side framed it" section.
+- **No AI needed.** Everything above runs on fixed rules. (Code for optional
+  AI-written briefs is still in the repo, switched off; see "AI briefs and
+  cost".)
 
 ## Run it on your PC
 
@@ -97,9 +99,9 @@ public/data/news.json ◄─ (optional AI briefs) ◄─ match opinion in pairs 
 | `config/sources.json` | Outlets, their lean, and feed URLs |
 | `config/settings.json` | Site name, time window, clustering threshold, AI settings |
 | `pipeline/` | The build: `fetch`, `normalize`, `opinion`, `cluster`, `stories`, `perspectives`, `language`, `topics`, `summarize` |
-| `public/` | The website (placeholder UI) plus generated `data/` |
+| `public/` | The website (the Freedom 7 newspaper design) plus generated `data/` |
 | `docs/` | Data contract, Claude Design brief, sample data |
-| `.github/workflows/update.yml` | Hourly rebuild and deploy to GitHub Pages |
+| `.github/workflows/update.yml` | Rebuild every 15 minutes and deploy to GitHub Pages |
 | `data/` | Local working state (last 48h of articles, whose turn each story got, AI brief cache). Not committed. |
 
 The site is fully static: the build writes JSON, and the front end only reads
@@ -107,7 +109,7 @@ JSON. That's what makes it free to host.
 
 ## Designing the UI with Claude Design
 
-The current UI in `public/` is a working placeholder. To replace it:
+The UI in `public/` came from a Claude Design session. To redesign it:
 
 1. Run `npm run build` then `npm run sample` so the sample data is fresh.
 2. Open [`docs/DESIGN_BRIEF.md`](docs/DESIGN_BRIEF.md), paste it into Claude

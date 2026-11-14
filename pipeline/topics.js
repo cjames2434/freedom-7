@@ -17,7 +17,7 @@ const KEYWORDS = {
   politics: [
     "congress", "senate", "senator", "house speaker", "speaker johnson", "representative", "lawmaker",
     "lawmakers", "democrat", "democrats", "democratic", "republican", "republicans", "gop", "white house",
-    "president trump", "trump administration", "administration", "election", "elections", "midterm",
+    "president trump", "trump administration", "election", "elections", "midterm",
     "midterms", "campaign", "primary", "ballot", "voter", "voters", "governor", "legislation", "bill",
     "filibuster", "impeach", "cabinet", "secretary", "supreme court", "justice department", "doj",
     "executive order", "veto", "shutdown", "poll", "polls", "redistricting", "gerrymander", "partisan",
@@ -31,6 +31,8 @@ const KEYWORDS = {
     "murder", "homicide", "manslaughter", "suspect", "sheriff", "jury", "sentenced", "convicted", "trial",
     "building collapse", "collapse", "missing", "rescued", "rescue", "fire", "firefighters", "crash",
     "killed", "injured", "dead", "victims", "hijacking", "emergency landing",
+    "faa", "ground stop", "flights", "airport", "airports", "airline", "airlines", "passengers",
+    "collision", "collides", "capsized", "hospitalized", "evacuated", "evacuations",
   ],
   world: [
     "ukraine", "russia", "russian", "putin", "zelensky", "kyiv", "moscow", "israel", "israeli", "gaza",

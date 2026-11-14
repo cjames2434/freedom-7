@@ -23,8 +23,10 @@ function normalize(vec) {
  * Build vectors over news + extra articles (e.g. opinion) with one shared
  * vocabulary, plus per-story centroids and per-story distinctive names.
  *
- * @returns {{ vectors: Map<string,number>[], centroids: Map<string,number>[], names: Set<string>[], extraOffset: number }}
- *   `vectors[extraOffset + k]` is the vector of extraArticles[k].
+ * @returns {{ vectors: Map<string,number>[], centroids: Map<string,number>[], names: Set<string>[], storyIds: string[], extraOffset: number }}
+ *   `vectors[extraOffset + k]` is the vector of extraArticles[k]. `centroids[i]`
+ *   and `names[i]` belong to the story with id `storyIds[i]`: look stories up
+ *   by that id, because the `stories` array may be re-sorted after this runs.
  */
 export function buildStoryIndex(stories, newsArticles, extraArticles = [], { maxEntityShare = 0.08 } = {}) {
   const all = [...newsArticles, ...extraArticles];
@@ -56,5 +58,5 @@ export function buildStoryIndex(stories, newsArticles, extraArticles = [], { max
     return normalize(c);
   });
 
-  return { vectors, centroids, names, extraOffset: newsArticles.length };
+  return { vectors, centroids, names, storyIds: stories.map((s) => s.id), extraOffset: newsArticles.length };
 }

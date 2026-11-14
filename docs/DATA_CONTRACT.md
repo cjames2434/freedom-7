@@ -69,7 +69,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `sourceCount` | number | Distinct outlets covering it. |
 | `articleCount` | number | Articles (an outlet can have more than one). |
 | `coverage` | object | `{ "left": n, "center": n, "right": n, "byLean": { "left", "lean-left", "center", "lean-right", "right" } }`. Counts of distinct outlets. `left` = left + lean-left; `right` = right + lean-right. |
-| `mostlyCoveredBy` | `"left"` \| `"right"` \| null | Set when it's a blindspot: the side doing most of the covering. |
+| `mostlyCoveredBy` | `"left"` \| `"right"` \| null | Set when it's a blindspot: the side doing most of the covering. When the subject is split across several related stories, the whole subject must be lopsided the same way, so a story isn't flagged just because the other side wrote about it under a sibling story. |
 | `developing` | boolean | 3+ outlets published on it in the last 3 hours. Use for a "Developing" or "Live" treatment. |
 | `recentSourceCount` | number | Outlets that published on it in the last 3 hours. |
 | `perspectives` | object \| null | Balanced opinion: `{ "left": Article[], "center": Article[], "right": Article[] }`. `left` and `right` always have the same length (1 or 2); `center` has 0 to that many. `null` unless both sides wrote opinion about the subject. Shared by every story in the same related group (same `familyId`), since opinion is about the subject more than one update. These are opinion pieces, never reporting; label them that way. |

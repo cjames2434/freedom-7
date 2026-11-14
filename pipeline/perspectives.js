@@ -64,6 +64,9 @@ export function attachPerspectives(
 
   const idx = index ?? buildStoryIndex(stories, newsArticles, opinionArticles, { maxEntityShare });
   const familyKey = (story) => story.familyId ?? story.id;
+  // The index was built before the stories were ranked into their final
+  // order, so find each story by id, never by its position in `stories`.
+  const storyById = new Map(stories.map((s) => [s.id, s]));
   const pools = new Map(); // familyId -> { left, center, right }
 
   opinionArticles.forEach((op, k) => {
@@ -82,7 +85,9 @@ export function attachPerspectives(
     if (best < 0 || bestSim < threshold) return;
     const source = sourcesById.get(op.sourceId);
     if (!source) return;
-    const key = familyKey(stories[best]);
+    const story = storyById.get(idx.storyIds[best]);
+    if (!story) return;
+    const key = familyKey(story);
     if (!pools.has(key)) pools.set(key, { left: [], center: [], right: [] });
     pools.get(key)[leanGroup(source.lean)].push({ op, source, sim: bestSim });
   });

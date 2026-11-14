@@ -105,3 +105,27 @@ test("opinion roster must mirror itself too", () => {
   assert.equal(bad.ok, false);
   assert.match(bad.problems.join(";"), /opinion outlets/);
 });
+
+test("Perspectives stay with their story when the stories are re-ordered after indexing", async () => {
+  const { buildStoryIndex } = await import("../pipeline/storyindex.js");
+  const flood = [
+    art("L2", "River flooding forces evacuations in Cedar Falls", "Thousands left their homes in Cedar Falls as the river crested."),
+    art("C1", "Cedar Falls flooding prompts evacuations as river crests", "The river crested overnight in Cedar Falls."),
+    art("R1", "Evacuations ordered in Cedar Falls as flooding worsens", "Cedar Falls officials ordered evacuations."),
+  ];
+  const all = [...newsArticles, ...flood];
+  const clusters = [newsArticles, flood].map((group) => group.map((a) => ({ index: all.indexOf(a), centrality: 0.9 })));
+  const stories = buildStories(clusters, all, sourcesById, settings, now);
+  const opinion = [
+    art("L1", "Delgado Is the Wrong Pick for Treasury", "Maria Delgado's record at the Treasury should worry everyone."),
+    art("R2", "Delgado Will Bring Discipline to the Treasury", "Maria Delgado's confirmation by the Senate is good news."),
+  ];
+  const index = buildStoryIndex(stories, all, opinion);
+  stories.reverse(); // what ranking by subject does in the real build
+  attachPerspectives(stories, all, opinion, sourcesById, { threshold: 0.01, index });
+  const treasury = stories.find((s) => /Delgado/.test(s.headline));
+  const cedar = stories.find((s) => /Cedar Falls/.test(s.headline));
+  assert.equal(treasury.perspectives?.left.length, 1);
+  assert.equal(treasury.perspectives?.right.length, 1);
+  assert.equal(cedar.perspectives, null, "opinion about the Treasury pick must not land on the flood story");
+});

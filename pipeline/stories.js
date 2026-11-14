@@ -128,6 +128,20 @@ export function mostlyCoveredBy(coverage, { minPartisan = 3, share = 0.8 } = {})
 }
 
 /**
+ * One subject is often split into several stories (see related.js). A story
+ * only stays a blindspot when the whole subject is lopsided the same way:
+ * if one side covered the subject under a different story, its readers did
+ * hear about it. Run after rankSubjects, which sets `story.subject`.
+ */
+export function settleBlindspots(stories, { minPartisanSourcesForBlindspot: minPartisan, blindspotShare: share } = {}) {
+  for (const s of stories) {
+    if (!s.mostlyCoveredBy || !(s.subject?.storyCount > 1) || !s.subject.coverage) continue;
+    if (mostlyCoveredBy(s.subject.coverage, { minPartisan, share }) !== s.mostlyCoveredBy) s.mostlyCoveredBy = null;
+  }
+  return stories;
+}
+
+/**
  * Ranking. Deliberately simple and engagement-blind: a story ranks higher when
  * more outlets cover it, when outlets from more of the spectrum cover it, and
  * when it is recent. Nothing about clicks, shares or outrage.
