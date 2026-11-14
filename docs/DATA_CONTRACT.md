@@ -42,7 +42,8 @@ All times are ISO 8601 UTC strings. Arrays are never `null` (they may be empty).
   "stories": [ Story, ... ],      // sorted by subject rank (see `subject`); a subject's stories are adjacent, its lead first
   "blindspots": [ "s_abc123" ],   // ids of stories that are blindspots
   "developing": [ "s_def456" ],   // ids of developing stories, most recently updated first
-  "perspectives": [ "s_ghi789" ]  // stories with balanced opinion: one id per group of related stories (the group's top story), in rank order
+  "perspectives": [ "s_ghi789" ], // stories with balanced opinion: one id per group of related stories (the group's top story), in rank order
+  "aliases": { "s_old111": "s_abc123" } // ids of stories that merged into another: old id -> current id (often empty)
 }
 ```
 
@@ -53,7 +54,7 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 
 | Field | Type | Notes |
 |---|---|---|
-| `id` | string | Stable while the story is live. Use in URLs (`#/story/<id>`). |
+| `id` | string | Stable while the story is live, even as its articles change. Use in URLs (`#/story/<id>`). When a story merges into another, its old id appears in the top-level `aliases` map; resolve an unknown id there before showing "not found". |
 | `headline` | string | The headline to show. Either the AI-written neutral headline or the plainest real headline from the outlets. |
 | `headlineFrom` | object | `{ "kind": "selected", "sourceId": "npr", "turn": null }` (a real outlet's headline) or `{ "kind": "ai", "model": "..." }`. Show which, for transparency. `turn` is `"left"` or `"right"` when a left-leaning and a right-leaning outlet both had an equally plain headline and the two sides took turns (the value is the side whose turn it was), otherwise `null`. |
 | `snippet` | string \| null | Short excerpt from the outlet whose headline was picked, shortened to whole sentences when they fit (otherwise it ends in an ellipsis). Use when there's no `summary`. |

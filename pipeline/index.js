@@ -22,7 +22,8 @@ import { leanGroup } from "./util.js";
 
 const STORE_PATH = "data/store.json";
 const BALANCE_HISTORY_PATH = "data/balance-history.json";
-const TURNS_PATH = "data/headline-turns.json";
+const MEMORY_PATH = "data/story-memory.json";
+const OLD_TURNS_PATH = "data/headline-turns.json"; // before story-memory.json existed
 const OUT_DIR = "public/data";
 const LOCK_PATH = "data/.build.lock";
 const LOCK_STALE_MINUTES = 10;
@@ -88,13 +89,22 @@ function writeAtomic(path, data) {
   } catch {}
 }
 
-/** Whose turn each story got last build, so headlines don't flip between builds. */
-function loadTurns() {
-  try {
-    return JSON.parse(readFileSync(TURNS_PATH, "utf8")).turns || {};
-  } catch {
-    return {};
-  }
+/**
+ * What the last build remembered about stories: their ids (so links keep
+ * working as a story's articles change) and whose turn each got (so headlines
+ * don't flip between builds).
+ */
+function loadMemory() {
+  const read = (path) => {
+    try {
+      return JSON.parse(readFileSync(path, "utf8"));
+    } catch {
+      return null;
+    }
+  };
+  const memory = read(MEMORY_PATH);
+  if (memory) return { turns: memory.turns || {}, ids: memory.ids || {}, aliases: memory.aliases || {} };
+  return { turns: read(OLD_TURNS_PATH)?.turns || {}, ids: {}, aliases: {} };
 }
 
 function loadStore() {
@@ -213,9 +223,9 @@ async function main() {
 
   // 4. Cluster news into stories
   const clusters = clusterArticles(news, settings.cluster);
-  const stories = buildStories(clusters, news, sourcesById, settings, now, { turns: loadTurns() });
-  const turns = Object.fromEntries(stories.filter((st) => st.headlineFrom.turn).map((st) => [st.id, st.headlineFrom.turn]));
-  writeAtomic(TURNS_PATH, JSON.stringify({ turns }));
+  const memory = loadMemory();
+  const stories = buildStories(clusters, news, sourcesById, settings, now, memory);
+  writeAtomic(MEMORY_PATH, JSON.stringify(memory.next));
   console.log(`Clusters: ${clusters.length}; stories with ${settings.minSourcesForStory}+ outlets: ${stories.length}`);
 
   // 5. Related stories (one subject split across several stories), then
@@ -275,6 +285,7 @@ async function main() {
       .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
       .map((s) => s.id),
     perspectives: perspectiveLeads, // one id per group of related stories
+    aliases: memory.next.aliases, // ids of stories that merged into another: old id -> current id
   };
   writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));
   writeAtomic(`${OUT_DIR}/feed.xml`, buildFeed(out, { siteUrl: resolveSiteUrl(settings) }));

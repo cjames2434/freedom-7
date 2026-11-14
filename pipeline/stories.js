@@ -198,10 +198,84 @@ export function storyScore({ sourceCount, breadth, hoursSinceUpdate }, halfLifeH
 }
 
 /**
- * Turn clusters of article indices into story objects for the front end.
- * `turns` is the record of whose turn each story got last build (see assignTurns).
+ * Story ids that last. A story's id starts out as the id of its earliest
+ * article, but that article can drop out of the time window, or an earlier
+ * one can join, while the story carries on, and a changed id breaks every
+ * link to the story. So each build remembers which story every article
+ * belonged to, and a group of articles keeps the id most of them had before.
+ * When two stories merge, the smaller one's id becomes an alias of the
+ * survivor, so old links still open the story.
+ *
+ * drafts:   [{ id, items }], `id` being the default; it is replaced by the final id
+ * previous: { ids: { articleId: storyId }, aliases: { oldStoryId: storyId } }
+ * Returns { ids, aliases } to remember for the next build.
  */
-export function buildStories(clusters, articles, sourcesById, settings, now = new Date(), { turns: previousTurns = {} } = {}) {
+export function settleIds(drafts, previous = {}) {
+  const before = previous.ids || {};
+  const votes = drafts.map((d) => {
+    const count = new Map();
+    for (const it of d.items) {
+      const was = before[it.article.id];
+      if (was) count.set(was, (count.get(was) || 0) + 1);
+    }
+    return count;
+  });
+
+  // Bigger stories choose first, so the main part of a split keeps the id.
+  const order = drafts.map((_, i) => i).sort((a, b) => drafts[b].items.length - drafts[a].items.length);
+  const taken = new Set();
+  const assigned = new Array(drafts.length).fill(null);
+  for (const i of order) {
+    const best = [...votes[i]].filter(([id]) => !taken.has(id)).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
+    if (!best) continue;
+    assigned[i] = best[0];
+    taken.add(best[0]);
+  }
+  // New stories are named after their earliest article whose id is still free.
+  for (const i of order) {
+    if (assigned[i]) continue;
+    const oldestFirst = [...drafts[i].items].sort((a, b) => (a.article.published < b.article.published ? -1 : a.article.published > b.article.published ? 1 : 0));
+    let id = oldestFirst.map((it) => `s_${it.article.id}`).find((candidate) => !taken.has(candidate));
+    for (let n = 2; !id; n++) if (!taken.has(`${drafts[i].id}_${n}`)) id = `${drafts[i].id}_${n}`;
+    assigned[i] = id;
+    taken.add(id);
+  }
+  drafts.forEach((d, i) => {
+    d.id = assigned[i];
+  });
+
+  // An old id that no story kept points at the story now holding most of its articles.
+  const aliases = {};
+  const heir = new Map(); // old id -> [articles, new id]
+  votes.forEach((count, i) => {
+    for (const [old, n] of count) {
+      if (taken.has(old)) continue;
+      const current = heir.get(old);
+      if (!current || n > current[0]) heir.set(old, [n, assigned[i]]);
+    }
+  });
+  for (const [old, [, id]] of heir) aliases[old] = id;
+  // Older aliases follow their story for as long as it lasts.
+  for (const [old, target] of Object.entries(previous.aliases || {})) {
+    if (taken.has(old) || aliases[old]) continue;
+    const now = taken.has(target) ? target : aliases[target];
+    if (now) aliases[old] = now;
+  }
+
+  const ids = {};
+  for (const d of drafts) for (const it of d.items) ids[it.article.id] = d.id;
+  return { ids, aliases };
+}
+
+/**
+ * Turn clusters of article indices into story objects for the front end.
+ *
+ * `memory` is what the last build remembered: { turns, ids, aliases } (whose
+ * turn each story got, see assignTurns; and story ids, see settleIds). What
+ * to remember for the next build is left on `memory.next`.
+ */
+export function buildStories(clusters, articles, sourcesById, settings, now = new Date(), memory = {}) {
+  const previousTurns = memory.turns || {};
   const drafts = [];
   for (const cluster of clusters) {
     const items = cluster.map(({ index, centrality }) => {
@@ -237,7 +311,9 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
   // Only the stories that will be shown take part in the turn-taking.
   drafts.sort((a, b) => b.score - a.score);
   const shown = drafts.slice(0, settings.maxStories);
+  const idState = settleIds(shown, memory);
   const turns = assignTurns(shown, previousTurns);
+  memory.next = { turns: Object.fromEntries(turns), ids: idState.ids, aliases: idState.aliases };
 
   const stories = [];
   for (const { items, sourceIds, id, coverage, firstSeen, lastUpdated, score, choices } of shown) {

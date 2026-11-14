@@ -285,3 +285,50 @@ test("two outlets sharing only a name do not make a story", () => {
   // Two articles from the same outlet don't count as agreement.
   assert.equal(shareEnoughWords([it("a", "Senate passes annual budget bill"), it("a", "Senate passes annual budget bill")]), false);
 });
+
+// --- Story ids that last ---
+
+import { settleIds } from "../pipeline/stories.js";
+
+test("a story keeps its id as its articles change, and merged stories leave an alias", () => {
+  const item = (id, hour) => ({ article: { id, published: `2026-01-01T${String(hour).padStart(2, "0")}:00:00Z` } });
+  const draft = (...items) => ({ id: `s_${items[0].article.id}`, items });
+  const A = item("a", 1), B = item("b", 2), C = item("c", 3), D = item("d", 4), E = item("e", 5), F = item("f", 6);
+
+  // First build: nothing remembered, so ids are the defaults.
+  const first = [draft(A, B, C), draft(D, E)];
+  const m1 = settleIds(first);
+  assert.deepEqual(first.map((d) => d.id), ["s_a", "s_d"]);
+  assert.deepEqual(m1.aliases, {});
+
+  // The earliest article leaves the window and a new one joins: same story, same id.
+  const second = [draft(B, C, F), draft(D, E)];
+  const m2 = settleIds(second, m1);
+  assert.deepEqual(second.map((d) => d.id), ["s_a", "s_d"]);
+
+  // The two stories merge: the bigger one's id survives, the other becomes an alias.
+  const merged = [draft(B, C, F, D, E)];
+  const m3 = settleIds(merged, m2);
+  assert.equal(merged[0].id, "s_a");
+  assert.deepEqual(m3.aliases, { s_d: "s_a" });
+
+  // The alias follows the story on later builds, and goes when the story does.
+  const m4 = settleIds([draft(C, F, D, E)], m3);
+  assert.deepEqual(m4.aliases, { s_d: "s_a" });
+  const gone = [draft(item("x", 7), item("y", 8))];
+  assert.deepEqual(settleIds(gone, m4).aliases, {});
+  assert.equal(gone[0].id, "s_x");
+});
+
+test("when a story splits, the bigger part keeps the id and the other gets a new one", () => {
+  const item = (id, hour) => ({ article: { id, published: `2026-01-01T${String(hour).padStart(2, "0")}:00:00Z` } });
+  const draft = (...items) => ({ id: `s_${items[0].article.id}`, items });
+  const A = item("a", 1), B = item("b", 2), C = item("c", 3), D = item("d", 4), E = item("e", 5);
+  const m1 = settleIds([draft(A, B, C, D)]);
+  // The smaller part even contains the article the id was named after.
+  const parts = [draft(A, E), draft(B, C, D)];
+  settleIds(parts, m1);
+  assert.equal(parts[1].id, "s_a");
+  assert.notEqual(parts[0].id, "s_a");
+  assert.equal(new Set(parts.map((d) => d.id)).size, 2);
+});

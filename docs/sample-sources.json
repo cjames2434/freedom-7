@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T16:39:23.635Z",
+  "generatedAt": "2026-11-14T16:59:02.295Z",
   "balance": {
     "left": 7,
     "lean-left": 8,
@@ -294,7 +294,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 15
+      "itemsThisRun": 16
     },
     {
       "id": "csmonitor",

@@ -1013,8 +1013,12 @@ function route({ inPlace = false } = {}) {
 
   switch (page) {
     case "story": {
-      html = viewStory(arg);
-      title = byId.get(arg)?.headline || "Story not found";
+      // A story that merged into another keeps working under its old address.
+      const current = byId.has(arg) ? arg : news.aliases?.[arg];
+      const id = current && byId.has(current) ? current : arg;
+      if (id !== arg) history.replaceState(null, "", storyHref({ id }));
+      html = viewStory(id);
+      title = byId.get(id)?.headline || "Story not found";
       break;
     }
     case "topic":

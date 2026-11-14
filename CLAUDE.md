@@ -36,7 +36,8 @@ rebuilt every 15 minutes by `.github/workflows/update.yml`.
   equally plain headlines, the sides take turns (`assignTurns`), evening out
   the count on stories both covered. A turn must never swap in a more loaded
   headline or replace a center outlet's, and the rule must stay a mirror
-  image for left and right. Turns are remembered in `data/headline-turns.json`.
+  image for left and right. Turns are remembered in `data/story-memory.json`,
+  which also keeps story ids steady as a story's articles change (`settleIds`).
 - The story digest (`pipeline/digest.js`) only quotes outlets' own sentences,
   one per outlet, with equal counts from left and right when both covered
   the story. Never paraphrase or merge them, and always show the outlet.
