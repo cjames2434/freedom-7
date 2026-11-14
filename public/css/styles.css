@@ -839,3 +839,15 @@ a.dg-name:hover { color: var(--accent); }
 .art-more ul { list-style: none; margin: 10px 0 0; padding: 0 0 0 12px; border-left: 1px solid var(--rule); display: grid; gap: 10px; }
 .art-more-link { font-family: var(--serif); font-size: 15.5px; line-height: 1.3; color: var(--ink-2); overflow-wrap: anywhere; }
 a.art-more-link:hover { color: var(--accent); }
+
+/* Search */
+.search-box { margin: 18px 0 8px; max-width: 680px; }
+.search-input {
+  width: 100%; min-height: 50px; padding: 10px 14px; border-radius: 0;
+  font-family: var(--sans); font-size: 17px; color: var(--ink);
+  background: var(--paper-2); border: 1px solid var(--rule-strong);
+}
+.search-input::placeholder { color: var(--muted); }
+.search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.search-count { margin: 22px 0 0; }
+.search-list { margin-top: 10px; }

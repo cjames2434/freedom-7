@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T16:21:31.458Z",
+  "generatedAt": "2026-11-14T16:32:11.608Z",
   "site": {
     "name": "Freedom 7",
     "tagline": "Every side of the story, side by side."
@@ -47,8 +47,8 @@
     "outlets": 39,
     "outletsReporting": 39,
     "opinionOutlets": 17,
-    "articlesInWindow": 1772,
-    "opinionInWindow": 427,
+    "articlesInWindow": 1783,
+    "opinionInWindow": 424,
     "windowHours": 48,
     "stories": 150,
     "aiBriefs": 0,
@@ -56,6 +56,376 @@
     "balanceWarning": null
   },
   "stories": [
+    {
+      "id": "s_4eb29016b60a",
+      "headline": "FAA issues US national ground stop on all flights",
+      "headlineFrom": {
+        "sourceId": "dw",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The US federal aviation regulator announced a nationwide ground stop for all airports. Federal officials blamed a communications outage and said technicians are investigating.",
+      "digest": [
+        {
+          "text": "The stop marked the longest nationwide shutdown, and only the second nationwide ​ground stop of all departures, since the 9/11 terrorist attacks.",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "url": "https://theguardian.com/world/video/2026/nov/14/rare-nationwide-ground-stop-halts-us-air-traffic-video"
+        },
+        {
+          "text": "The action halted an aviation system that handles more than 2 1/2 million passengers and over 30,000 commercial flights daily.",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "url": "https://newsnationnow.com/travel/three-times-nationwide-groundstops-issued"
+        },
+        {
+          "text": "The cause remained unclear Friday, and Homeland Security Secretary Markwayne Mullin said Friday evening that investigators were looking into it, but suggested that a telecommunications issue caused the disruption.",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "url": "https://washingtonexaminer.com/policy/infrastructure/4802941/faa-imposes-nationwide-ground-stop-on-all-flights"
+        },
+        {
+          "text": "The Federal Aviation Administration ordered a nationwide ground stop Friday for all airports due a communication issue impacting all Air Route Traffic Control Centers.",
+          "sourceId": "abcnews",
+          "sourceName": "ABC News",
+          "lean": "lean-left",
+          "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848"
+        },
+        {
+          "text": "Trump administration officials blame \"overloaded\" and \"outdated\" systems for the hourslong halt to departures.",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "url": "https://dw.com/en/us-lifts-nationwide-ground-stop-for-airports-hours-after-halting-all-departures/a-79945062?maca=en-rss-en-all-1573-rdf"
+        },
+        {
+          "text": "“All departing traffic should remain ground stopped until further notice,” an air traffic control advisory posted Friday says.",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "url": "https://dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports"
+        }
+      ],
+      "topic": "us",
+      "firstSeen": "2026-11-13T15:25:24.000Z",
+      "firstBySide": {
+        "left": "2026-11-13T21:42:03.000Z",
+        "center": "2026-11-13T21:23:00.000Z",
+        "right": "2026-11-13T15:25:24.000Z"
+      },
+      "lastUpdated": "2026-11-14T15:54:44.000Z",
+      "sourceCount": 14,
+      "articleCount": 17,
+      "coverage": {
+        "left": 6,
+        "center": 3,
+        "right": 5,
+        "byLean": {
+          "left": 1,
+          "lean-left": 5,
+          "center": 3,
+          "lean-right": 3,
+          "right": 2
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 5.6528,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP23011620271107-e1793293310517.jpg?w=900",
+      "articles": [
+        {
+          "id": "4eb29016b60a",
+          "sourceId": "dailywire",
+          "sourceName": "The Daily Wire",
+          "lean": "right",
+          "title": "FAA Orders Nationwide Ground Stop At All U.S. Airports",
+          "url": "https://dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports",
+          "published": "2026-11-13T15:25:24.000Z",
+          "snippet": "The Federal Aviation Administration ordered a nationwide ground stop Friday, halting departures at all U.S. airports due to “extraordinary circumstances” and “reasons of safety.” “All departing traffic should remain ground stopped until further notice,” an air traffic control advisory posted Friday…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ad942eab29d6",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "What we know about the FAA nationwide ground stop",
+          "url": "https://npr.org/2026/11/13/nx-s1-6040388/what-we-know-about-the-faa-nationwide-ground-stop",
+          "published": "2026-11-13T22:27:38.000Z",
+          "snippet": "The Federal Aviation Administration took an extraordinary step Friday afternoon by issuing a nationwide ground stop. No planes are taking off at any airport and millions of passengers are stranded.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "212186813b08",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "FAA orders nationwide ground stop",
+          "url": "https://thehill.com/policy/transportation/6219722-faa-issues-us-flight-ground-stop",
+          "published": "2026-11-13T21:23:00.000Z",
+          "snippet": "The Federal Aviation Administration (FAA) issued a nationwide ground stop for all U.S. flights, Transportation Secretary Sean Duffy confirmed Friday. “The @FAANews [FAA] issued a nationwide ground stop for all U.S. airports following a communication issue impacting all Air Route Traffic Control…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "385073aacc0d",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "FAA issues nationwide ground stop due to 'extraordinary circumstances'",
+          "url": "https://foxbusiness.com/fox-news-us/faa-issues-nationwide-ground-stop-extraordinary-circumstances",
+          "published": "2026-11-13T21:28:37.000Z",
+          "snippet": "The Federal Aviation Administration issued a nationwide ground stop on Friday due to communication issues impacting Air Route Traffic Control Centers, the FAA said.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "bbdeb6775e8a",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Rare nationwide ground stop halts US air traffic – video",
+          "url": "https://theguardian.com/world/video/2026/nov/14/rare-nationwide-ground-stop-halts-us-air-traffic-video",
+          "published": "2026-11-14T15:54:44.000Z",
+          "snippet": "The US Federal ⁠Aviation Administration (FAA) issued a rare nationwide ground stop on Friday, halting all departures and landings across US airports for just over four hours. The stop marked the longest nationwide shutdown, and only the second nationwide ​ground stop of all departures, since the…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "b04cb4689e09",
+          "sourceId": "abcnews",
+          "sourceName": "ABC News",
+          "lean": "lean-left",
+          "title": "FAA issues rare nationwide ground stop; no indication of 'nefarious attack'",
+          "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848",
+          "published": "2026-11-14T00:15:12.000Z",
+          "snippet": "The Federal Aviation Administration ordered a nationwide ground stop Friday for all airports due a communication issue impacting all Air Route Traffic Control Centers.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "1eaa815bbc30",
+          "sourceId": "commondreams",
+          "sourceName": "Common Dreams",
+          "lean": "left",
+          "title": "Air Traffic Control Outage Blamed as FAA Orders Nationwide Ground Stop, Citing 'Extraordinary Circumstances'",
+          "url": "https://commondreams.org/news/faa-grounds-flights",
+          "published": "2026-11-13T21:42:03.000Z",
+          "snippet": "This is a developing story. Please check back for possible updates. All US flights were ordered not to take off Friday afternoon as the Federal Aviation Administration ordered a \"national ground stop.\" \"Due to extraordinary circumstances and for reasons of safety,\" said an alert from the FAA, \"by…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e3d49c8543b9",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "FAA issues US national ground stop on all flights",
+          "url": "https://dw.com/en/faa-issues-us-national-ground-stop-on-all-flights/a-79945062?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-13T22:57:00.000Z",
+          "snippet": "The US federal aviation regulator announced a nationwide ground stop for all airports. Federal officials blamed a communications outage and said technicians are investigating.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "db32800903de",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Nationwide ground stop ordered by FAA | Special Report",
+          "url": "https://cbsnews.com/video/nationwide-ground-stop-ordered-by-faa",
+          "published": "2026-11-13T21:58:24.000Z",
+          "snippet": "The FAA issues a nationwide ground stop at airports \"due to extraordinary circumstances and for reasons of safety.\"",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "4fdab4d93bac",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
+          "url": "https://dailycaller.com/2026/11/13/faa-nationwide-ground-stop-us-flight-departures-sean-duffy",
+          "published": "2026-11-13T21:41:33.000Z",
+          "snippet": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ece01d84e939",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "A Nationwide Ground Stop",
+          "url": "https://nytimes.com/2026/11/13/briefing/a-nationwide-ground-stop.html",
+          "published": "2026-11-13T22:54:25.000Z",
+          "snippet": "Also, Russia lays out its hard-line demands. Here’s the latest at the end of Friday.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "83493e8eeeee",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Early details on FAA's nationwide ground stop",
+          "url": "https://cbsnews.com/video/early-details-on-faas-nationwide-ground-stop",
+          "published": "2026-11-13T22:07:58.000Z",
+          "snippet": "The FAA has issued a nationwide ground stop on all flights.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e8d2a45f9324",
+          "sourceId": "epochtimes",
+          "sourceName": "The Epoch Times",
+          "lean": "lean-right",
+          "title": "FAA Orders Nationwide Ground Stop for All Flights; Trump Weighs In on Nvidia CEO Resignation",
+          "url": "https://theepochtimes.com/epochtv/faa-orders-nationwide-ground-stop-for-all-flights-trump-weighs-in-on-nvidia-ceo-resignation-6124949",
+          "published": "2026-11-13T23:50:29.000Z",
+          "snippet": "The Federal Aviation Administration (FAA) orders an emergency ground stop for all U.S. flights. We bring you reports of air traffic control communication issues and discuss what we know about the disruption. The alleged spy at the center of the Nvidia scandal has ties to China’s Huawei, according…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "93f6293610d2",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "title": "FAA imposes nationwide ground stop on all flights",
+          "url": "https://washingtonexaminer.com/policy/infrastructure/4802941/faa-imposes-nationwide-ground-stop-on-all-flights",
+          "published": "2026-11-13T21:06:44.000Z",
+          "snippet": "The Federal Aviation Administration halted all flight departures nationwide Friday afternoon due to a “rolling frequency outage” affecting facilities that monitor planes in the air. The cause remained unclear Friday, and Homeland Security Secretary Markwayne Mullin said Friday evening that…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "65b68c454fe6",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Latest developments on FAA's national ground stop",
+          "url": "https://cbsnews.com/video/latest-developments-on-faas-national-ground-stop",
+          "published": "2026-11-14T01:31:05.000Z",
+          "snippet": "The Federal Aviation Administration ordered a national ground stop on Friday, with officials citing \"extraordinary circumstances\" and safety concerns.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c038bb9b7f20",
+          "sourceId": "newsnation",
+          "sourceName": "NewsNation",
+          "lean": "center",
+          "title": "The 3 times nationwide ground stops have been issued",
+          "url": "https://newsnationnow.com/travel/three-times-nationwide-groundstops-issued",
+          "published": "2026-11-14T01:32:36.000Z",
+          "snippet": "The action halted an aviation system that handles more than 2 1/2 million passengers and over 30,000 commercial flights daily.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "095e45ab2b24",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "US lifts nationwide ground stop for airports hours after halting all departures",
+          "url": "https://dw.com/en/us-lifts-nationwide-ground-stop-for-airports-hours-after-halting-all-departures/a-79945062?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-14T01:41:00.000Z",
+          "snippet": "The US federal aviation regulator has lifted a nationwide ground stop for all airports. Trump administration officials blame \"overloaded\" and \"outdated\" systems for the hourslong halt to departures.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_869d144f66b8",
+        "s_e8c38895520b",
+        "s_a5bbc5a57404",
+        "s_c548896e6d88",
+        "s_e793bc484fc3"
+      ],
+      "familyId": "s_4eb29016b60a",
+      "subject": {
+        "storyCount": 14,
+        "sourceCount": 27,
+        "coverage": {
+          "left": 10,
+          "center": 7,
+          "right": 10,
+          "byLean": {
+            "left": 3,
+            "lean-left": 7,
+            "center": 7,
+            "lean-right": 6,
+            "right": 4
+          }
+        },
+        "lastUpdated": "2026-11-14T16:11:03.000Z",
+        "score": 7.0657
+      }
+    },
     {
       "id": "s_869d144f66b8",
       "headline": "FAA lifts nationwide ground stop after telecommunications outage",
@@ -133,7 +503,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 4.4219,
+      "score": 4.3767,
       "image": "https://cdnph.upi.com/ph/st/th/9251794604658/2026/upi/53fc7aafc8e5f3ed73ca4c2927aa92d6/v1.5/FAA-lifts-nationwide-ground-stop-after-telecommunications-outage.jpg",
       "articles": [
         {
@@ -294,213 +664,13 @@
         }
       ],
       "related": [
-        "s_4fdab4d93bac",
+        "s_4eb29016b60a",
         "s_e793bc484fc3",
-        "s_4eb29016b60a",
         "s_a5bbc5a57404",
-        "s_e8c38895520b"
-      ],
-      "familyId": "s_869d144f66b8",
-      "subject": {
-        "storyCount": 14,
-        "sourceCount": 27,
-        "coverage": {
-          "left": 10,
-          "center": 7,
-          "right": 10,
-          "byLean": {
-            "left": 3,
-            "lean-left": 7,
-            "center": 7,
-            "lean-right": 6,
-            "right": 4
-          }
-        },
-        "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
-      }
-    },
-    {
-      "id": "s_4fdab4d93bac",
-      "headline": "The 3 times nationwide ground stops have been issued",
-      "headlineFrom": {
-        "sourceId": "newsnation",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "The action halted an aviation system that handles more than 2 1/2 million passengers and over 30,000 commercial flights daily.",
-      "digest": [
-        {
-          "text": "Trump administration officials blame \"overloaded\" and \"outdated\" systems for the hourslong halt to departures.",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "url": "https://dw.com/en/us-lifts-nationwide-ground-stop-for-airports-hours-after-halting-all-departures/a-79945062?maca=en-rss-en-all-1573-rdf"
-        }
-      ],
-      "topic": "us",
-      "firstSeen": "2026-11-13T21:41:33.000Z",
-      "firstBySide": {
-        "left": "2026-11-13T22:07:58.000Z",
-        "center": "2026-11-14T01:32:36.000Z",
-        "right": "2026-11-13T21:41:33.000Z"
-      },
-      "lastUpdated": "2026-11-14T15:54:44.000Z",
-      "sourceCount": 7,
-      "articleCount": 8,
-      "coverage": {
-        "left": 4,
-        "center": 2,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 4,
-          "center": 2,
-          "lean-right": 0,
-          "right": 1
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 1,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 4.3854,
-      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/GettyImages-2305020762.jpg?w=900",
-      "articles": [
-        {
-          "id": "ad942eab29d6",
-          "sourceId": "npr",
-          "sourceName": "NPR",
-          "lean": "lean-left",
-          "title": "What we know about the FAA nationwide ground stop",
-          "url": "https://npr.org/2026/11/13/nx-s1-6040388/what-we-know-about-the-faa-nationwide-ground-stop",
-          "published": "2026-11-13T22:27:38.000Z",
-          "snippet": "The Federal Aviation Administration took an extraordinary step Friday afternoon by issuing a nationwide ground stop. No planes are taking off at any airport and millions of passengers are stranded.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "ece01d84e939",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "A Nationwide Ground Stop",
-          "url": "https://nytimes.com/2026/11/13/briefing/a-nationwide-ground-stop.html",
-          "published": "2026-11-13T22:54:25.000Z",
-          "snippet": "Also, Russia lays out its hard-line demands. Here’s the latest at the end of Friday.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "bbdeb6775e8a",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Rare nationwide ground stop halts US air traffic – video",
-          "url": "https://theguardian.com/world/video/2026/nov/14/rare-nationwide-ground-stop-halts-us-air-traffic-video",
-          "published": "2026-11-14T15:54:44.000Z",
-          "snippet": "The US Federal ⁠Aviation Administration (FAA) issued a rare nationwide ground stop on Friday, halting all departures and landings across US airports for just over four hours. The stop marked the longest nationwide shutdown, and only the second nationwide ​ground stop of all departures, since the…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "83493e8eeeee",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Early details on FAA's nationwide ground stop",
-          "url": "https://cbsnews.com/video/early-details-on-faas-nationwide-ground-stop",
-          "published": "2026-11-13T22:07:58.000Z",
-          "snippet": "The FAA has issued a nationwide ground stop on all flights.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "4fdab4d93bac",
-          "sourceId": "dailycaller",
-          "sourceName": "The Daily Caller",
-          "lean": "right",
-          "title": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
-          "url": "https://dailycaller.com/2026/11/13/faa-nationwide-ground-stop-us-flight-departures-sean-duffy",
-          "published": "2026-11-13T21:41:33.000Z",
-          "snippet": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c038bb9b7f20",
-          "sourceId": "newsnation",
-          "sourceName": "NewsNation",
-          "lean": "center",
-          "title": "The 3 times nationwide ground stops have been issued",
-          "url": "https://newsnationnow.com/travel/three-times-nationwide-groundstops-issued",
-          "published": "2026-11-14T01:32:36.000Z",
-          "snippet": "The action halted an aviation system that handles more than 2 1/2 million passengers and over 30,000 commercial flights daily.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "095e45ab2b24",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "title": "US lifts nationwide ground stop for airports hours after halting all departures",
-          "url": "https://dw.com/en/us-lifts-nationwide-ground-stop-for-airports-hours-after-halting-all-departures/a-79945062?maca=en-rss-en-all-1573-rdf",
-          "published": "2026-11-14T01:41:00.000Z",
-          "snippet": "The US federal aviation regulator has lifted a nationwide ground stop for all airports. Trump administration officials blame \"overloaded\" and \"outdated\" systems for the hourslong halt to departures.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c548896e6d88",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Travelers facing uncertainty amid nationwide ground stop",
-          "url": "https://cbsnews.com/video/travelers-facing-uncertainty-amid-nationwide-ground-stop",
-          "published": "2026-11-14T00:03:17.000Z",
-          "snippet": "The FAA issued a nationwide ground stop Friday, snarling travel plans for people across the country.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_4eb29016b60a",
-        "s_869d144f66b8",
         "s_e8c38895520b",
-        "s_a5bbc5a57404",
-        "s_e793bc484fc3"
+        "s_c548896e6d88"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -517,7 +687,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -583,7 +753,7 @@
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.4479,
+      "score": 3.4127,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318479850151-e1794667324516.jpg?w=900",
       "articles": [
         {
@@ -648,13 +818,13 @@
         }
       ],
       "related": [
-        "s_4fdab4d93bac",
+        "s_4eb29016b60a",
         "s_055804ec6244",
         "s_869d144f66b8",
         "s_e8c38895520b",
-        "s_4eb29016b60a"
+        "s_84968006a874"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -671,7 +841,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -723,7 +893,7 @@
       "recentSourceCount": 2,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.1174,
+      "score": 3.0855,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26317803128196-e1794608832141.jpg?w=900",
       "articles": [
         {
@@ -803,13 +973,13 @@
         }
       ],
       "related": [
-        "s_93f6293610d2",
+        "s_d84fe726182c",
         "s_e793bc484fc3",
         "s_a5bbc5a57404",
-        "s_84968006a874",
-        "s_869d144f66b8"
+        "s_4eb29016b60a",
+        "s_84968006a874"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -826,7 +996,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -892,7 +1062,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.7344,
+      "score": 2.7065,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26269583561962-e1794615179172.jpg?w=900",
       "articles": [
         {
@@ -973,12 +1143,12 @@
       ],
       "related": [
         "s_85064c46e0d6",
-        "s_4fdab4d93bac",
         "s_4eb29016b60a",
         "s_869d144f66b8",
-        "s_e8c38895520b"
+        "s_e8c38895520b",
+        "s_99c855d4bf03"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -995,7 +1165,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -1068,7 +1238,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.6956,
+      "score": 2.668,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/13/id6124994-1772688602dbda2b8af96442-copy.jpg",
       "articles": [
         {
@@ -1133,13 +1303,13 @@
         }
       ],
       "related": [
-        "s_4fdab4d93bac",
         "s_4eb29016b60a",
         "s_869d144f66b8",
         "s_2f54424c946a",
-        "s_84968006a874"
+        "s_84968006a874",
+        "s_e8c38895520b"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -1156,7 +1326,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -1200,7 +1370,7 @@
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 2.6519,
+      "score": 2.6248,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318067855910-e1794659074612.jpg?w=900",
       "articles": [
         {
@@ -1258,7 +1428,7 @@
         "s_2f54424c946a",
         "s_4eb29016b60a"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -1275,236 +1445,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
-      }
-    },
-    {
-      "id": "s_4eb29016b60a",
-      "headline": "FAA issues US national ground stop on all flights",
-      "headlineFrom": {
-        "sourceId": "dw",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "The US federal aviation regulator announced a nationwide ground stop for all airports. Federal officials blamed a communications outage and said technicians are investigating.",
-      "digest": [
-        {
-          "text": "The Federal Aviation Administration ordered a nationwide ground stop Friday for all airports due a communication issue impacting all Air Route Traffic Control Centers.",
-          "sourceId": "abcnews",
-          "sourceName": "ABC News",
-          "lean": "lean-left",
-          "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848"
-        },
-        {
-          "text": "The Federal Aviation Administration (FAA) issued a nationwide ground stop for all U.S. flights, Transportation Secretary Sean Duffy confirmed Friday.",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "url": "https://thehill.com/policy/transportation/6219722-faa-issues-us-flight-ground-stop"
-        },
-        {
-          "text": "“All departing traffic should remain ground stopped until further notice,” an air traffic control advisory posted Friday says.",
-          "sourceId": "dailywire",
-          "sourceName": "The Daily Wire",
-          "lean": "right",
-          "url": "https://dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports"
-        }
-      ],
-      "topic": "us",
-      "firstSeen": "2026-11-13T15:25:24.000Z",
-      "firstBySide": {
-        "left": "2026-11-13T21:42:03.000Z",
-        "center": "2026-11-13T21:23:00.000Z",
-        "right": "2026-11-13T15:25:24.000Z"
-      },
-      "lastUpdated": "2026-11-14T01:31:05.000Z",
-      "sourceCount": 8,
-      "articleCount": 9,
-      "coverage": {
-        "left": 3,
-        "center": 2,
-        "right": 3,
-        "byLean": {
-          "left": 1,
-          "lean-left": 2,
-          "center": 2,
-          "lean-right": 2,
-          "right": 1
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 2.0177,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP23011620271107-e1793293310517.jpg?w=900",
-      "articles": [
-        {
-          "id": "4eb29016b60a",
-          "sourceId": "dailywire",
-          "sourceName": "The Daily Wire",
-          "lean": "right",
-          "title": "FAA Orders Nationwide Ground Stop At All U.S. Airports",
-          "url": "https://dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports",
-          "published": "2026-11-13T15:25:24.000Z",
-          "snippet": "The Federal Aviation Administration ordered a nationwide ground stop Friday, halting departures at all U.S. airports due to “extraordinary circumstances” and “reasons of safety.” “All departing traffic should remain ground stopped until further notice,” an air traffic control advisory posted Friday…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "212186813b08",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "FAA orders nationwide ground stop",
-          "url": "https://thehill.com/policy/transportation/6219722-faa-issues-us-flight-ground-stop",
-          "published": "2026-11-13T21:23:00.000Z",
-          "snippet": "The Federal Aviation Administration (FAA) issued a nationwide ground stop for all U.S. flights, Transportation Secretary Sean Duffy confirmed Friday. “The @FAANews [FAA] issued a nationwide ground stop for all U.S. airports following a communication issue impacting all Air Route Traffic Control…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "385073aacc0d",
-          "sourceId": "foxbusiness",
-          "sourceName": "Fox Business",
-          "lean": "lean-right",
-          "title": "FAA issues nationwide ground stop due to 'extraordinary circumstances'",
-          "url": "https://foxbusiness.com/fox-news-us/faa-issues-nationwide-ground-stop-extraordinary-circumstances",
-          "published": "2026-11-13T21:28:37.000Z",
-          "snippet": "The Federal Aviation Administration issued a nationwide ground stop on Friday due to communication issues impacting Air Route Traffic Control Centers, the FAA said.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "1eaa815bbc30",
-          "sourceId": "commondreams",
-          "sourceName": "Common Dreams",
-          "lean": "left",
-          "title": "Air Traffic Control Outage Blamed as FAA Orders Nationwide Ground Stop, Citing 'Extraordinary Circumstances'",
-          "url": "https://commondreams.org/news/faa-grounds-flights",
-          "published": "2026-11-13T21:42:03.000Z",
-          "snippet": "This is a developing story. Please check back for possible updates. All US flights were ordered not to take off Friday afternoon as the Federal Aviation Administration ordered a \"national ground stop.\" \"Due to extraordinary circumstances and for reasons of safety,\" said an alert from the FAA, \"by…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "b04cb4689e09",
-          "sourceId": "abcnews",
-          "sourceName": "ABC News",
-          "lean": "lean-left",
-          "title": "FAA issues rare nationwide ground stop; no indication of 'nefarious attack'",
-          "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848",
-          "published": "2026-11-14T00:15:12.000Z",
-          "snippet": "The Federal Aviation Administration ordered a nationwide ground stop Friday for all airports due a communication issue impacting all Air Route Traffic Control Centers.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e8d2a45f9324",
-          "sourceId": "epochtimes",
-          "sourceName": "The Epoch Times",
-          "lean": "lean-right",
-          "title": "FAA Orders Nationwide Ground Stop for All Flights; Trump Weighs In on Nvidia CEO Resignation",
-          "url": "https://theepochtimes.com/epochtv/faa-orders-nationwide-ground-stop-for-all-flights-trump-weighs-in-on-nvidia-ceo-resignation-6124949",
-          "published": "2026-11-13T23:50:29.000Z",
-          "snippet": "The Federal Aviation Administration (FAA) orders an emergency ground stop for all U.S. flights. We bring you reports of air traffic control communication issues and discuss what we know about the disruption. The alleged spy at the center of the Nvidia scandal has ties to China’s Huawei, according…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "db32800903de",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Nationwide ground stop ordered by FAA | Special Report",
-          "url": "https://cbsnews.com/video/nationwide-ground-stop-ordered-by-faa",
-          "published": "2026-11-13T21:58:24.000Z",
-          "snippet": "The FAA issues a nationwide ground stop at airports \"due to extraordinary circumstances and for reasons of safety.\"",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e3d49c8543b9",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "title": "FAA issues US national ground stop on all flights",
-          "url": "https://dw.com/en/faa-issues-us-national-ground-stop-on-all-flights/a-79945062?maca=en-rss-en-all-1573-rdf",
-          "published": "2026-11-13T22:57:00.000Z",
-          "snippet": "The US federal aviation regulator announced a nationwide ground stop for all airports. Federal officials blamed a communications outage and said technicians are investigating.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "65b68c454fe6",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Latest developments on FAA's national ground stop",
-          "url": "https://cbsnews.com/video/latest-developments-on-faas-national-ground-stop",
-          "published": "2026-11-14T01:31:05.000Z",
-          "snippet": "The Federal Aviation Administration ordered a national ground stop on Friday, with officials citing \"extraordinary circumstances\" and safety concerns.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_4fdab4d93bac",
-        "s_869d144f66b8",
-        "s_e8c38895520b",
-        "s_a5bbc5a57404",
-        "s_93f6293610d2"
-      ],
-      "familyId": "s_869d144f66b8",
-      "subject": {
-        "storyCount": 14,
-        "sourceCount": 27,
-        "coverage": {
-          "left": 10,
-          "center": 7,
-          "right": 10,
-          "byLean": {
-            "left": 3,
-            "lean-left": 7,
-            "center": 7,
-            "lean-right": 6,
-            "right": 4
-          }
-        },
-        "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -1563,7 +1504,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.7896,
+      "score": 1.7713,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/14/id6125054-US_Nationwide_Ground_Stop_GettyImages-2304497421-1080x720.jpg",
       "articles": [
         {
@@ -1614,12 +1555,12 @@
       ],
       "related": [
         "s_81c410d47314",
-        "s_4fdab4d93bac",
         "s_4eb29016b60a",
         "s_869d144f66b8",
-        "s_e8c38895520b"
+        "s_e8c38895520b",
+        "s_c548896e6d88"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -1636,7 +1577,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -1695,7 +1636,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.7328,
+      "score": 1.7151,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/14/id6125022-IMG_9349-1080x720.jpeg",
       "articles": [
         {
@@ -1747,11 +1688,11 @@
       "related": [
         "s_4eb29016b60a",
         "s_e8c38895520b",
-        "s_4fdab4d93bac",
         "s_99c855d4bf03",
-        "s_869d144f66b8"
+        "s_869d144f66b8",
+        "s_a5bbc5a57404"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -1768,7 +1709,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -1834,7 +1775,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.6663,
+      "score": 1.6493,
       "image": "https://www.deseret.com/resizer/v2/FM5QT3U4Y5HMJJS3HMU7OKCVTI.jpeg?auth=02da2ba7a75c99305c05c53d397170b35e6eb85238023294d63af782acd77ed1&smart=true&width=980&height=600",
       "articles": [
         {
@@ -1914,13 +1855,13 @@
         }
       ],
       "related": [
-        "s_4fdab4d93bac",
         "s_4eb29016b60a",
         "s_e793bc484fc3",
         "s_869d144f66b8",
-        "s_a5bbc5a57404"
+        "s_a5bbc5a57404",
+        "s_c548896e6d88"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -1937,7 +1878,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
@@ -1996,7 +1937,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.5089,
+      "score": 1.4935,
       "image": "https://img.theepochtimes.com/assets/uploads/2026/11/14/id6125019-Nationwide_Ground_Stop_26317818708518-1080x720.jpg",
       "articles": [
         {
@@ -2034,9 +1975,10 @@
         "s_2f54424c946a",
         "s_a5bbc5a57404",
         "s_869d144f66b8",
+        "s_4eb29016b60a",
         "s_e8c38895520b"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -2053,11 +1995,150 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
-      "id": "s_93f6293610d2",
+      "id": "s_e793bc484fc3",
+      "headline": "Airspace reopened after nationwide ground stop",
+      "headlineFrom": {
+        "sourceId": "thehill",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed.",
+      "digest": [
+        {
+          "text": "The Federal Aviation Administration (FAA) lifted a nationwide ground stop about four hours after it was declared on Friday afternoon, delaying or canceling more than 11,000 US flights, according to aviation tracker FlightAware , and throwing airports into sudden chaos.",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights"
+        },
+        {
+          "text": "\"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference that began at around 8:30 p.m. EST.",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop"
+        },
+        {
+          "text": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
+          "sourceId": "justthenews",
+          "sourceName": "Just the News",
+          "lean": "lean-right",
+          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume"
+        }
+      ],
+      "topic": "politics",
+      "firstSeen": "2026-11-13T00:00:00.000Z",
+      "firstBySide": {
+        "left": "2026-11-14T00:09:06.000Z",
+        "center": "2026-11-14T01:56:50.000Z",
+        "right": "2026-11-13T00:00:00.000Z"
+      },
+      "lastUpdated": "2026-11-14T01:56:50.000Z",
+      "sourceCount": 3,
+      "articleCount": 3,
+      "coverage": {
+        "left": 1,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 1,
+          "center": 1,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 0,
+      "perspectives": null,
+      "mostlyCoveredBy": null,
+      "score": 1.2916,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318067446961-e1794621687755.jpg?w=900",
+      "articles": [
+        {
+          "id": "e793bc484fc3",
+          "sourceId": "justthenews",
+          "sourceName": "Just the News",
+          "lean": "lean-right",
+          "title": "FAA lifts hours-long ground stop, says flights can resume",
+          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume",
+          "published": "2026-11-13T00:00:00.000Z",
+          "snippet": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "278129543407",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
+          "lean": "lean-left",
+          "title": "Flights slowly resume after US aviation agency lifts nationwide ground stop",
+          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights",
+          "published": "2026-11-14T00:09:06.000Z",
+          "snippet": "Transportation secretary Sean Duffy says the airspace is now open and the problem has been identified Chaos at US airports as stoppage grinds travel plans to a halt What to know about the rare nationwide ground stop issued by the FAA Flights in the US have slowly started resuming after being…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "c570c31172b8",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Airspace reopened after nationwide ground stop",
+          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop",
+          "published": "2026-11-14T01:56:50.000Z",
+          "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed. \"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [
+        "s_869d144f66b8",
+        "s_4eb29016b60a",
+        "s_e8c38895520b",
+        "s_2f54424c946a",
+        "s_84968006a874"
+      ],
+      "familyId": "s_4eb29016b60a",
+      "subject": {
+        "storyCount": 14,
+        "sourceCount": 27,
+        "coverage": {
+          "left": 10,
+          "center": 7,
+          "right": 10,
+          "byLean": {
+            "left": 3,
+            "lean-left": 7,
+            "center": 7,
+            "lean-right": 6,
+            "right": 4
+          }
+        },
+        "lastUpdated": "2026-11-14T16:11:03.000Z",
+        "score": 7.0657
+      }
+    },
+    {
+      "id": "s_d84fe726182c",
       "headline": "Mullin: No indication of 'nefarious attack' on FAA as DHS investigates root cause of telecom outage",
       "headlineFrom": {
         "sourceId": "thehill",
@@ -2072,39 +2153,39 @@
       "snippet": "Homeland Security Secretary Markwayne Mullin stressed that Americans flying Friday are safe, even as he said the Department of Homeland Security (DHS) would continue to seek the root cause of a telecom outage that pushed the government to ground flights.",
       "digest": [
         {
-          "text": "Homeland Security Secretary Markwayne Mullin briefed reporters on the ongoing FAA ground stop on Friday, saying it was caused by a telecommunications outage with no indication of an attack.",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
+          "text": "Homeland Security Secretary Markwayne Mullin told reporters the nationwide ground stop issued by the Federal Aviation Administration was the result of a telecommunication outage.",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
           "lean": "lean-left",
-          "url": "https://cbsnews.com/video/homeland-security-secretary-markwayne-mullin-says-faa-ground-stop-caused-by-telecommunications-outage"
+          "url": "https://nbcnews.com/video/secy-mullin-says-faa-ground-stop-was-caused-by-telecommunication-outage-273475141556"
         },
         {
-          "text": "The Federal Aviation Administration halted all flight departures nationwide Friday afternoon due to a “rolling frequency outage” affecting facilities that monitor planes in the air.",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "url": "https://washingtonexaminer.com/policy/infrastructure/4802941/faa-imposes-nationwide-ground-stop-on-all-flights"
+          "text": "Department of Homeland Security Secretary Markwayne Mullin spoke to at the White House on Friday afternoon after the FAA issues a total ground stop.",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "url": "https://npr.org/2026/11/13/nx-s1-6040418/dhs-head-markwayne-mullin-says-there-is-not-a-threat-to-the-u-s-amid-faa-ground-stop"
         }
       ],
-      "topic": "politics",
-      "firstSeen": "2026-11-13T21:06:44.000Z",
+      "topic": "us",
+      "firstSeen": "2026-11-13T22:18:29.000Z",
       "firstBySide": {
         "left": "2026-11-13T22:18:29.000Z",
         "center": "2026-11-13T22:27:18.000Z",
-        "right": "2026-11-13T21:06:44.000Z"
+        "right": null
       },
       "lastUpdated": "2026-11-13T22:57:11.000Z",
-      "sourceCount": 5,
-      "articleCount": 7,
+      "sourceCount": 4,
+      "articleCount": 6,
       "coverage": {
         "left": 3,
         "center": 1,
-        "right": 1,
+        "right": 0,
         "byLean": {
           "left": 0,
           "lean-left": 3,
           "center": 1,
-          "lean-right": 1,
+          "lean-right": 0,
           "right": 0
         }
       },
@@ -2112,7 +2193,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.4188,
+      "score": 1.0511,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/08/HDSShockGloves_AP_JuliaDemareeNikhinson.jpg?w=900",
       "articles": [
         {
@@ -2204,31 +2285,16 @@
             "contested": [],
             "clickbait": false
           }
-        },
-        {
-          "id": "93f6293610d2",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "title": "FAA imposes nationwide ground stop on all flights",
-          "url": "https://washingtonexaminer.com/policy/infrastructure/4802941/faa-imposes-nationwide-ground-stop-on-all-flights",
-          "published": "2026-11-13T21:06:44.000Z",
-          "snippet": "The Federal Aviation Administration halted all flight departures nationwide Friday afternoon due to a “rolling frequency outage” affecting facilities that monitor planes in the air. The cause remained unclear Friday, and Homeland Security Secretary Markwayne Mullin said Friday evening that…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
         }
       ],
       "related": [
         "s_2f54424c946a",
         "s_4eb29016b60a",
-        "s_4fdab4d93bac",
         "s_a5bbc5a57404",
-        "s_869d144f66b8"
+        "s_869d144f66b8",
+        "s_81c410d47314"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -2245,14 +2311,14 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
+        "score": 7.0657
       }
     },
     {
-      "id": "s_e793bc484fc3",
-      "headline": "Airspace reopened after nationwide ground stop",
+      "id": "s_c548896e6d88",
+      "headline": "Travelers facing uncertainty amid nationwide ground stop",
       "headlineFrom": {
-        "sourceId": "thehill",
+        "sourceId": "cbsnews",
         "kind": "selected",
         "turn": null
       },
@@ -2261,83 +2327,46 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed.",
-      "digest": [
-        {
-          "text": "The Federal Aviation Administration (FAA) lifted a nationwide ground stop about four hours after it was declared on Friday afternoon, delaying or canceling more than 11,000 US flights, according to aviation tracker FlightAware , and throwing airports into sudden chaos.",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights"
-        },
-        {
-          "text": "\"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference that began at around 8:30 p.m. EST.",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop"
-        },
-        {
-          "text": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
-          "sourceId": "justthenews",
-          "sourceName": "Just the News",
-          "lean": "lean-right",
-          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume"
-        }
-      ],
-      "topic": "politics",
-      "firstSeen": "2026-11-13T00:00:00.000Z",
+      "snippet": "The FAA issued a nationwide ground stop Friday, snarling travel plans for people across the country.",
+      "digest": [],
+      "topic": "us",
+      "firstSeen": "2026-11-14T00:03:17.000Z",
       "firstBySide": {
-        "left": "2026-11-14T00:09:06.000Z",
-        "center": "2026-11-14T01:56:50.000Z",
-        "right": "2026-11-13T00:00:00.000Z"
+        "left": "2026-11-14T00:03:17.000Z",
+        "center": null,
+        "right": "2026-11-14T00:31:27.000Z"
       },
-      "lastUpdated": "2026-11-14T01:56:50.000Z",
-      "sourceCount": 3,
-      "articleCount": 3,
+      "lastUpdated": "2026-11-14T00:31:27.000Z",
+      "sourceCount": 2,
+      "articleCount": 2,
       "coverage": {
         "left": 1,
-        "center": 1,
+        "center": 0,
         "right": 1,
         "byLean": {
           "left": 0,
           "lean-left": 1,
-          "center": 1,
-          "lean-right": 1,
-          "right": 0
+          "center": 0,
+          "lean-right": 0,
+          "right": 1
         }
       },
       "developing": false,
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 1.305,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26318067446961-e1794621687755.jpg?w=900",
+      "score": 0.7857,
+      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=6A90C698-6B08-4469-899D-377212C912F1",
       "articles": [
         {
-          "id": "e793bc484fc3",
-          "sourceId": "justthenews",
-          "sourceName": "Just the News",
-          "lean": "lean-right",
-          "title": "FAA lifts hours-long ground stop, says flights can resume",
-          "url": "https://justthenews.com/politics-policy/transportation/faa-lifts-hours-long-ground-stop-says-flights-can-resume",
-          "published": "2026-11-13T00:00:00.000Z",
-          "snippet": "Transportation Secretary Sean Duffy told reporters in a late-night press briefing that they have partially reopened American airspace but warned that flights will only slowly resume.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "278129543407",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
+          "id": "c548896e6d88",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
           "lean": "lean-left",
-          "title": "Flights slowly resume after US aviation agency lifts nationwide ground stop",
-          "url": "https://theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights",
-          "published": "2026-11-14T00:09:06.000Z",
-          "snippet": "Transportation secretary Sean Duffy says the airspace is now open and the problem has been identified Chaos at US airports as stoppage grinds travel plans to a halt What to know about the rare nationwide ground stop issued by the FAA Flights in the US have slowly started resuming after being…",
+          "title": "Travelers facing uncertainty amid nationwide ground stop",
+          "url": "https://cbsnews.com/video/travelers-facing-uncertainty-amid-nationwide-ground-stop",
+          "published": "2026-11-14T00:03:17.000Z",
+          "snippet": "The FAA issued a nationwide ground stop Friday, snarling travel plans for people across the country.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -2345,29 +2374,31 @@
           }
         },
         {
-          "id": "c570c31172b8",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Airspace reopened after nationwide ground stop",
-          "url": "https://thehill.com/policy/transportation/6220313-faa-lifts-nationwide-ground-stop",
-          "published": "2026-11-14T01:56:50.000Z",
-          "snippet": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed. \"At 8:15 tonight Eastern Time, we've opened up the airspace,\" Duffy said to reporters in the White House briefing room during a press conference…",
+          "id": "01c7b6a3847c",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "FAA Cancels Nationwide Ground Stop After Hours of Chaos, Uncertainty",
+          "url": "https://newsmax.com/newsfront/FAA-Canceling-Nationwide-Ground-Stop-After-Hours-of-Chaos-Uncertainty/2026/11/13/id/1276277",
+          "published": "2026-11-14T00:31:27.000Z",
+          "snippet": "ederal aviation officials announced Friday night that the nationwide ground stop that paralyzed air travel for hours would be lifted as of X o'clock Eastern time, clearing the way for flights to resume after a major communications malfunction disrupted air traffic control...",
           "flags": {
-            "loaded": [],
+            "loaded": [
+              "chaos"
+            ],
             "contested": [],
             "clickbait": false
           }
         }
       ],
       "related": [
+        "s_4eb29016b60a",
         "s_869d144f66b8",
         "s_e8c38895520b",
-        "s_2f54424c946a",
-        "s_4fdab4d93bac",
-        "s_84968006a874"
+        "s_a5bbc5a57404",
+        "s_e793bc484fc3"
       ],
-      "familyId": "s_869d144f66b8",
+      "familyId": "s_4eb29016b60a",
       "subject": {
         "storyCount": 14,
         "sourceCount": 27,
@@ -2384,880 +2415,7 @@
           }
         },
         "lastUpdated": "2026-11-14T16:11:03.000Z",
-        "score": 7.1387
-      }
-    },
-    {
-      "id": "s_63a35e964e0e",
-      "headline": "Van Hollen says he will challenge Schumer for majority leader",
-      "headlineFrom": {
-        "sourceId": "newsnation",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Sen. Chris Van Hollen said he would challenge Senate Minority Leader Chuck Schumer for the role of majority leader.",
-      "digest": [
-        {
-          "text": "After a week of speculation about his intentions, Maryland Democratic Sen. Chris Van Hollen announced on Thursday that he plans to challenge Sen. Chuck Schumer (D-N.Y.) for the position of Senate Majority Leader in the 120th Congress.",
-          "sourceId": "motherjones",
-          "sourceName": "Mother Jones",
-          "lean": "left",
-          "url": "https://motherjones.com/politics/2026/11/van-hollen-senate-majority-leader-campaign-schumer-congress-democrats"
-        },
-        {
-          "text": "Sen. Jeff Merkley (D-Ore.), the ranking member of the Senate Budget Committee and an influential progressive voice in the Senate Democratic caucus, announced Friday that he will support Sen. Chris Van Hollen (D-Md.) over Sen. Chuck Schumer (D-N.Y.) to serve as majority leader next year.",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "url": "https://thehill.com/the-120/6219652-merkley-supports-van-hollen-majority-leader"
-        },
-        {
-          "text": "In response, Schumer said he welcomes discussion about the future of the caucus, noting the party will hold at least 55 seats next term.",
-          "sourceId": "dailysignal",
-          "sourceName": "The Daily Signal",
-          "lean": "right",
-          "url": "https://dailysignal.com/2026/11/13/schumer-challenged-for-senate-majority-leader"
-        },
-        {
-          "text": "The Maryland senator says Democrats need a new strategy and a new leader, even after a midterm wave that gave the party a large majority in the upper chamber that few saw coming.",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "url": "https://ms.now/news/van-hollen-schumer-senate-majority-leader"
-        },
-        {
-          "text": "Maryland Senator Van Hollen says \"new leadership\" is needed for Democrats following the party's recent midterm successes.",
-          "sourceId": "bbc",
-          "sourceName": "BBC News",
-          "lean": "center",
-          "url": "https://bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "text": "Allies of Senate Democratic Leader Chuck Schumer, D-N.Y., predict he will win more than 40 votes against leadership challenger Sen. Chris Van Hollen, D-Md., and are weighing an earlier caucus vote.",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "url": "https://newsmax.com/newsfront/schumer-allies-votes/2026/11/14/id/1276299"
-        }
-      ],
-      "topic": "politics",
-      "firstSeen": "2026-11-12T18:13:23.000Z",
-      "firstBySide": {
-        "left": "2026-11-12T18:13:23.000Z",
-        "center": "2026-11-13T02:43:20.000Z",
-        "right": "2026-11-13T02:07:30.000Z"
-      },
-      "lastUpdated": "2026-11-14T14:27:05.000Z",
-      "sourceCount": 20,
-      "articleCount": 36,
-      "coverage": {
-        "left": 11,
-        "center": 4,
-        "right": 5,
-        "byLean": {
-          "left": 4,
-          "lean-left": 7,
-          "center": 4,
-          "lean-right": 2,
-          "right": 3
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 1,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 5.9012,
-      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/vanhollenchris_062526gn03_w.jpg?w=900",
-      "articles": [
-        {
-          "id": "986f5bc76aef",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Van Hollen will challenge Schumer for Senate majority leader",
-          "url": "https://cbsnews.com/news/chris-van-hollen-challenge-chuck-schumer-senate-majority-leader-democrat",
-          "published": "2026-11-13T03:58:38.000Z",
-          "snippet": "Democratic Sen. Chris Van Hollen of Maryland announced Thursday that he will challenge Sen. Chuck Schumer for Senate majority leader.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c13906b19a6d",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Van Hollen challenges Schumer for Senate majority leader",
-          "url": "https://cbsnews.com/video/van-hollen-challenges-schumer-for-senate",
-          "published": "2026-11-13T17:47:00.000Z",
-          "snippet": "Sen. Chris Van Hollen says he plans to challenge Sen. Chuck Schumer for Senate majority leader.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "8bd1ca3007b9",
-          "sourceId": "newsnation",
-          "sourceName": "NewsNation",
-          "lean": "center",
-          "title": "Van Hollen says he will challenge Schumer for majority leader",
-          "url": "https://newsnationnow.com/politics/van-hollen-says-he-will-challenge-schumer-for-majority-leader",
-          "published": "2026-11-13T02:45:10.000Z",
-          "snippet": "Sen. Chris Van Hollen said he would challenge Senate Minority Leader Chuck Schumer for the role of majority leader.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "2d2a1d6a1823",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Chris Van Hollen to challenge Chuck Schumer for Senate majority leader",
-          "url": "https://theguardian.com/us-news/2026/nov/12/chris-van-hollen-chuck-schumer-senate-majority-leader",
-          "published": "2026-11-13T02:30:07.000Z",
-          "snippet": "Maryland Democrat challenges party leader after midterms sweep, saying: ‘The American people called for change’ Chris Van Hollen, the Democratic senator of Maryland, announced on Thursday that he is challenging Chuck Schumer for the role of Senate majority leader when Democrats regain the chamber’s…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "cd458a66cc7e",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Van Hollen says he'll challenge Schumer for Senate majority leader",
-          "url": "https://cbsnews.com/video/van-hollen-says-hell-challenge-schumer-for-senate-majority-leader",
-          "published": "2026-11-13T14:31:59.000Z",
-          "snippet": "Democratic Sen. Chris Van Hollen said he'll challenge Sen. Chuck Schumer for Senate majority leader. CBS News' Fin Gómez has more.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "49f98ea62350",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Van Hollen Challenges Schumer for Senate Majority Leader",
-          "url": "https://today.com/video/van-hollen-challenges-schumer-for-senate-majority-leader-273441349510",
-          "published": "2026-11-13T12:22:50.000Z",
-          "snippet": "Maryland Sen. Chris Van Hollen announced Thursday he will run for Senate majority leader, becoming the first to challenge Sen. Chuck Schumer for the position. NBC’s Garrett Haake reports for TODAY.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "bedad5e35459",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "Chris Van Hollen Set to Challenge Chuck Schumer for Senate Majority Leader",
-          "url": "https://nytimes.com/2026/11/12/us/politics/van-hollen-schumer-democrats-majority-leader.html",
-          "published": "2026-11-13T04:11:39.000Z",
-          "snippet": "Senator Chris Van Hollen of Maryland has emerged as a favorite of Democrats seeking an alternative to Senator Chuck Schumer, who says he has the votes to win.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "b3e15e405d07",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "Sen. Van Hollen Challenges Schumer for Majority Leader",
-          "url": "https://newsmax.com/newsfront/chris-van-hollen-chuck-schumer-senate/2026/11/12/id/1276157",
-          "published": "2026-11-13T02:07:30.000Z",
-          "snippet": "Sen. Chris Van Hollen, D-Md., announced Thursday he will challenge Sen. Chuck Schumer, D-N.Y., for majority leader in the next Congress.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "49ab3a5dc46c",
-          "sourceId": "npr",
-          "sourceName": "NPR",
-          "lean": "lean-left",
-          "title": "Chris Van Hollen says he will challenge Chuck Schumer for Senate majority leader",
-          "url": "https://npr.org/2026/11/12/nx-s1-6039357/chris-van-hollen-chuck-schumer-senate-majority-leader",
-          "published": "2026-11-13T03:52:25.000Z",
-          "snippet": "Van Hollen, a progressive from Maryland, said voters sent a clear message in the midterm elections — that they want \"change from the status quo.\"",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "cbbf298b7c6f",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Van Hollen says he will challenge Schumer for majority leader",
-          "url": "https://thehill.com/homenews/senate/6217923-van-hollen-challenges-schumer",
-          "published": "2026-11-13T02:43:20.000Z",
-          "snippet": "Sen. Chris Van Hollen (D-Md.) said he would challenge Senate Minority Leader Chuck Schumer (D-N.Y.) for the role of majority leader on Thursday, setting up a showdown in the upper chamber as Democrats prepare to retake the majority. In a post to the social platform X, Van Hollen called for “new…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "ef8753fda708",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Sen. Chris Van Hollen says he will challenge Sen. Chuck Schumer for majority leader",
-          "url": "https://nbcnews.com/politics/congress/sen-chris-van-hollen-says-will-challenge-sen-chuck-schumer-majority-le-rcna609100",
-          "published": "2026-11-13T02:03:11.000Z",
-          "snippet": "Sen. Chris Van Hollen, D-Md., announced Thursday he will run for Senate majority leader, becoming the first to challenge Sen. Chuck Schumer, D-N.Y.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "1ccdc1befbfb",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "title": "Van Hollen launches challenge to Schumer for Senate majority leader",
-          "url": "https://ms.now/news/van-hollen-schumer-senate-majority-leader",
-          "published": "2026-11-13T01:59:00.000Z",
-          "snippet": "The Maryland senator says Democrats need a new strategy and a new leader, even after a midterm wave that gave the party a large majority in the upper chamber that few saw coming.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "1bbedb4dfe00",
-          "sourceId": "abcnews",
-          "sourceName": "ABC News",
-          "lean": "lean-left",
-          "title": "Maryland Sen. Van Hollen says he will challenge Sen. Schumer for Democratic leader",
-          "url": "https://abcnews.com/Politics/maryland-sen-chris-van-hollen-challenge-sen-chuck/story?id=138097994",
-          "published": "2026-11-13T13:14:56.000Z",
-          "snippet": "Maryland Democratic Sen. Chris Van Hollen says he will challenge New York Sen. Chuck Schumer for Senate majority leader in the new Congress.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "b5da01298b2a",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "title": "Chris Van Hollen launches bid to unseat Schumer as Senate majority leader",
-          "url": "https://washingtonexaminer.com/news/senate/4802382/chris-van-hollen-schumer-senate-majority-leader",
-          "published": "2026-11-13T02:23:05.000Z",
-          "snippet": "Sen. Chris Van Hollen (D-MD) said Thursday night that he would be challenging Sen. Chuck Schumer (D-NY) for majority leader as a growing chorus of Senate Democrats calls for a new face to lead the party in the 120th Congress. “In this election, Americans called on us to unrig an economy rigged…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "6e610c3bf4e9",
-          "sourceId": "commondreams",
-          "sourceName": "Common Dreams",
-          "lean": "left",
-          "title": "'Hell Yes, Let's Go': Van Hollen Challenges Schumer for Senate Majority Leader",
-          "url": "https://commondreams.org/news/van-hollen-running-for-senate-majority-leader",
-          "published": "2026-11-13T03:30:25.000Z",
-          "snippet": "Thursday's announcement that Sen. Chris Van Hollen will challenge Senate Minority Leader Chuck Schumer to lead the upper house of Congress when Democrats retake control in January was met with cautious optimism from progressives, who underscored the mandate for change delivered by voters in last…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "40634ef77344",
-          "sourceId": "abcnews",
-          "sourceName": "ABC News",
-          "lean": "lean-left",
-          "title": "Schumer and Van Hollen face off for Senate majority leader. What do Democrats think?",
-          "url": "https://abcnews.com/Politics/schumer-van-hollen-facing-off-senate-majority-leader/story?id=138111386",
-          "published": "2026-11-13T19:02:06.000Z",
-          "snippet": "Within moments of Chris Van Hollen announcing his intent to challenge Chuck Schumer in a race to lead next year’s Senate Democratic majority, endorsements began flying.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "71c7feba4504",
-          "sourceId": "dailysignal",
-          "sourceName": "The Daily Signal",
-          "lean": "right",
-          "title": "Schumer Challenged for Senate Majority Leader",
-          "url": "https://dailysignal.com/2026/11/13/schumer-challenged-for-senate-majority-leader",
-          "published": "2026-11-13T15:02:17.000Z",
-          "snippet": "Sen. Chris Van Hollen, D-Md., announced he is challenging Sen. Chuck Schumer, D-N.Y., for the role of Senate majority leader. “In this election, Americans called on us to unrig an economy rigged against working people & fueled by political corruption,” Van Hollen wrote on X. “To deliver, we need…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "10c73e46b496",
-          "sourceId": "foxnews",
-          "sourceName": "Fox News",
-          "lean": "right",
-          "title": "Van Hollen challenges Schumer for Senate leadership after Democratic election sweep",
-          "url": "https://foxnews.com/politics/van-hollen-challenges-schumer-senate-leadership-after-democratic-election-sweep",
-          "published": "2026-11-13T02:45:42.000Z",
-          "snippet": "Chuck Schumer faces a formal challenge from Chris Van Hollen for Senate Democratic leader after Van Hollen accused him of siding with AIPAC.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "88b1649d68aa",
-          "sourceId": "upi",
-          "sourceName": "UPI",
-          "lean": "center",
-          "title": "Van Hollen announces run for Democratic Senate leader",
-          "url": "https://upi.com/Top_News/US/2026/11/13/Chris-Van-Hollen-Democratic-Senate-leader/9501794547942",
-          "published": "2026-11-13T07:01:25.000Z",
-          "snippet": "Sen. Chris Van Hollen announced that he will run for Senate majority leader, challenging Sen. Chuck Schumer for the position.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "28ca039ce0b3",
-          "sourceId": "npr",
-          "sourceName": "NPR",
-          "lean": "lean-left",
-          "title": "Nvidia CEO steps down. And, Sen. Chris Van Hollen to run for majority leader",
-          "url": "https://npr.org/2026/11/13/g-s1-153532/up-first-newsletter-nvidia-jensen-huang-colette-kress-ukraine-russia-chris-van-hollen",
-          "published": "2026-11-13T12:07:12.000Z",
-          "snippet": "Nvidia's chief financial officer has been appointed interim CEO after Jensen Huang stepped down from the role. And, Sen. Chris Van Hollen says he will challenge Chuck Schumer for majority leader.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "95828da16d21",
-          "sourceId": "washpost",
-          "sourceName": "The Washington Post",
-          "lean": "lean-left",
-          "title": "Van Hollen will challenge Schumer to lead Senate Democrats",
-          "url": "https://washingtonpost.com/politics/2026/11/12/van-hollen-announces-challenge-schumer-lead-senate",
-          "published": "2026-11-13T04:56:57.000Z",
-          "snippet": "The Maryland Democrat said the country’s election called for change but acknowledged he is an underdog for the role.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "da9c81f81034",
-          "sourceId": "motherjones",
-          "sourceName": "Mother Jones",
-          "lean": "left",
-          "title": "Van Hollen Pledges to “Shake Things Up” in Majority Leader Announcement",
-          "url": "https://motherjones.com/politics/2026/11/van-hollen-senate-majority-leader-campaign-schumer-congress-democrats",
-          "published": "2026-11-13T22:09:47.000Z",
-          "snippet": "After a week of speculation about his intentions, Maryland Democratic Sen. Chris Van Hollen announced on Thursday that he plans to challenge Sen. Chuck Schumer (D-N.Y.) for the position of Senate Majority Leader in the 120th Congress. The Democrats’ historic sweep of both legislative chambers last…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "63a35e964e0e",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "Chris Van Hollen says he will run for Senate majority leader, challenging fellow Democrat Chuck Schumer – as it happened",
-          "url": "https://theguardian.com/us-news/live/2026/nov/12/mississippi-scott-colom-ukraine-donald-trump",
-          "published": "2026-11-12T18:13:23.000Z",
-          "snippet": "This live blog is now closed. Chris Van Hollen to challenge Chuck Schumer for Senate majority leader Sign up for the Breaking News US email Perhaps you saw this ad from Scott Colom, who was just elected to serve as Mississippi’s first Democratic senator since 1989: The New York Times spoke to Russ…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "7aa29c83a72a",
-          "sourceId": "huffpost",
-          "sourceName": "HuffPost",
-          "lean": "left",
-          "title": "Chris Van Hollen Rules Out Presidential Bid As He Seeks Majority Leader Job",
-          "url": "https://huffpost.com/entry/chris-van-hollen-rules-out-presidential-bid-majority-leader_n_6af75ed5e4b0476a159b6487",
-          "published": "2026-11-13T19:09:22.000Z",
-          "snippet": "Van Hollen is putting all his focus on a challenge to Sen. Chuck Schumer (D-N.Y.).",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "93656a498d8d",
-          "sourceId": "huffpost",
-          "sourceName": "HuffPost",
-          "lean": "left",
-          "title": "Chris Van Hollen Announces Bid For Senate Majority Leader",
-          "url": "https://huffpost.com/entry/chris-van-hollen-senate-majority-leader_n_6af670b4e4b06534290681e3",
-          "published": "2026-11-13T02:15:55.000Z",
-          "snippet": "The Maryland Democrat is making a bid to be the anti-war, progressive alternative to the Democratic establishment.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "a6bdbf3baf96",
-          "sourceId": "nypost",
-          "sourceName": "New York Post",
-          "lean": "lean-right",
-          "title": "Lefty Dem Chris Van Hollen challenging Schumer for Senate Majority leader, arguing voters ‘called for change’",
-          "url": "https://nypost.com/2026/11/12/us-news/chris-van-hollen-challenging-schumer-for-senate-majority-leader",
-          "published": "2026-11-13T03:17:47.000Z",
-          "snippet": "Van Hollen’s challenge comes after he said he was considering a bid and after Schumer has said he has the necessary support to win.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "d35556663b63",
-          "sourceId": "washpost",
-          "sourceName": "The Washington Post",
-          "lean": "lean-left",
-          "title": "Who is Chris Van Hollen, the Democratic senator challenging Chuck Schumer?",
-          "url": "https://washingtonpost.com/politics/2026/11/11/who-is-chris-van-hollen-senator-progressives-are-pushing-instead-schumer",
-          "published": "2026-11-13T13:21:36.000Z",
-          "snippet": "Once part of the establishment, the longtime Democratic lawmaker from Maryland has launched an upstart bid for majority leader.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "ac828cb1f535",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders",
-          "url": "https://theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader",
-          "published": "2026-11-13T21:28:45.000Z",
-          "snippet": "This is not a personality contest. This is a debate about the future of the Democratic party The election for Democratic Senate leader between Chuck Schumer and Chris Van Hollen must be understood for what it is. This is not a personality contest. This is a debate about the future of the Democratic…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "c6e54fbd2ea7",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Schumer allies voice confidence, argue Van Hollen challenge about ending ‘filibuster’",
-          "url": "https://thehill.com/homenews/senate/6220115-senate-democrats-leadership-election-update",
-          "published": "2026-11-14T11:00:00.000Z",
-          "snippet": "Senate Democratic Leader Chuck Schumer’s (N.Y.) allies are predicting he will get more than 40 votes in his leadership contest against Sen. Chris Van Hollen (D-Md.) while slamming the challenge as a “distraction.” That would be an overwhelming majority of the Senate Democratic caucus, which will…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "dedcf34835e3",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "Schumer Allies Predict 40-Plus Votes Against Van Hollen",
-          "url": "https://newsmax.com/newsfront/schumer-allies-votes/2026/11/14/id/1276299",
-          "published": "2026-11-14T14:27:05.000Z",
-          "snippet": "Allies of Senate Democratic Leader Chuck Schumer, D-N.Y., predict he will win more than 40 votes against leadership challenger Sen. Chris Van Hollen, D-Md., and are weighing an earlier caucus vote. That tally would give Schumer more than 70% of a Senate Democratic caucus...",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e78875b6a31d",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Merkley, senior Senate progressive, backs Van Hollen over Schumer",
-          "url": "https://thehill.com/the-120/6219652-merkley-supports-van-hollen-majority-leader",
-          "published": "2026-11-13T21:01:04.000Z",
-          "snippet": "Sen. Jeff Merkley (D-Ore.), the ranking member of the Senate Budget Committee and an influential progressive voice in the Senate Democratic caucus, announced Friday that he will support Sen. Chris Van Hollen (D-Md.) over Sen. Chuck Schumer (D-N.Y.) to serve as majority leader next year. “Americans…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "9c72880e771f",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
-          "lean": "lean-left",
-          "title": "As Van Hollen wages a challenge, Senate Democrats are torn on whom to elect as their leader",
-          "url": "https://theguardian.com/us-news/2026/nov/13/democrats-midterms-senate-leader",
-          "published": "2026-11-13T21:34:14.000Z",
-          "snippet": "Maryland senator’s bid against Chuck Schumer for leadership could decide direction of the Democratic party US politics live – latest updates Ever since Donald Trump returned to the White House, Democratic officeholders and voters alike have been divided over whether their leader in the Senate…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "a439d3c086b5",
-          "sourceId": "bbc",
-          "sourceName": "BBC News",
-          "lean": "center",
-          "title": "Democratic Senate leader Schumer set to face leadership challenge",
-          "url": "https://bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss",
-          "published": "2026-11-13T19:03:10.000Z",
-          "snippet": "Maryland Senator Van Hollen says \"new leadership\" is needed for Democrats following the party's recent midterm successes.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "a39d7a0b2b65",
-          "sourceId": "npr",
-          "sourceName": "NPR",
-          "lean": "lean-left",
-          "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
-          "url": "https://npr.org/2026/11/13/nx-s1-6040044/dem-senate-leader-fight",
-          "published": "2026-11-13T21:06:09.000Z",
-          "snippet": "Democrats say they have a mandate to deliver change, but as the party gets ready to retake the majority in both the House and Senate, there are divides over who should lead it.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "51a6bf68b2f4",
-          "sourceId": "washpost",
-          "sourceName": "The Washington Post",
-          "lean": "lean-left",
-          "title": "Few colleagues immediately embrace Van Hollen in his bid for majority leader",
-          "url": "https://washingtonpost.com/politics/2026/11/13/few-colleagues-immediately-embrace-van-hollen-majority-leader-bid",
-          "published": "2026-11-14T00:49:26.000Z",
-          "snippet": "The Maryland Democrat said he believes there is a broad desire for change among Senate Democrats.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "5278277eb06e",
-          "sourceId": "washpost",
-          "sourceName": "The Washington Post",
-          "lean": "lean-left",
-          "title": "Van Hollen ‘no longer pursuing’ possible 2028 bid as he seeks Senate leader job",
-          "url": "https://washingtonpost.com/politics/2026/11/13/van-hollen-no-longer-pursuing-possible-2028-bid-he-seeks-senate-leader-job",
-          "published": "2026-11-13T20:21:40.000Z",
-          "snippet": "Maryland Sen. Chris Van Hollen (D) said Friday he has abandoned a potential bid for the presidency and will seek to lead the Senate instead.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_1cc6c710251d",
-        "s_0e1dfcbb00f1"
-      ],
-      "familyId": "s_63a35e964e0e",
-      "subject": {
-        "storyCount": 3,
-        "sourceCount": 22,
-        "coverage": {
-          "left": 11,
-          "center": 5,
-          "right": 6,
-          "byLean": {
-            "left": 4,
-            "lean-left": 7,
-            "center": 5,
-            "lean-right": 3,
-            "right": 3
-          }
-        },
-        "lastUpdated": "2026-11-14T14:27:05.000Z",
-        "score": 6.0775
-      }
-    },
-    {
-      "id": "s_1cc6c710251d",
-      "headline": "Senate Democrats call for new leadership — but no one has an alternative",
-      "headlineFrom": {
-        "sourceId": "deseret",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Senate Minority Leader Chuck Schumer, D-N.Y., faces a seemingly rocky path to being elected as his party’s leader in their newfound Senate majority, but no one has emerged outright to challenge him — despite growing calls for new leadership.",
-      "digest": [
-        {
-          "text": "Schumer is currently running unopposed in the party’s leadership elections, which are scheduled to take place in December.",
-          "sourceId": "deseret",
-          "sourceName": "Deseret News",
-          "lean": "center",
-          "url": "https://deseret.com/politics/2026/11/12/schumer-faces-uphill-battle-in-leadership-race"
-        },
-        {
-          "text": "U.S. Senate Minority Leader Chuck Schumer, D-N.Y., is facing a challenger for the position of chamber leader in the upcoming 120th Congress.",
-          "sourceId": "centersquare",
-          "sourceName": "The Center Square",
-          "lean": "lean-right",
-          "url": "https://thecentersquare.com/national/article_ff5e8a1a-d499-465f-bfab-cfd5a6e43f07.html?a"
-        }
-      ],
-      "topic": "politics",
-      "firstSeen": "2026-11-12T16:43:57.000Z",
-      "firstBySide": {
-        "left": null,
-        "center": "2026-11-12T16:43:57.000Z",
-        "right": "2026-11-13T20:24:00.000Z"
-      },
-      "lastUpdated": "2026-11-13T20:24:00.000Z",
-      "sourceCount": 2,
-      "articleCount": 2,
-      "coverage": {
-        "left": 0,
-        "center": 1,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 0,
-          "center": 1,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 0.6255,
-      "image": "https://www.deseret.com/resizer/v2/5UUOOBLQ6JC2NFDMHDEUFEAUQU.jpg?auth=a88e709c9196a3a724fce64a72c588213b28daa74cc018965685a4083bde5a16&smart=true&width=980&height=600",
-      "articles": [
-        {
-          "id": "56b3e1a0ece4",
-          "sourceId": "centersquare",
-          "sourceName": "The Center Square",
-          "lean": "lean-right",
-          "title": "Schumer faces challenger to Senate majority leader position",
-          "url": "https://thecentersquare.com/national/article_ff5e8a1a-d499-465f-bfab-cfd5a6e43f07.html?a",
-          "published": "2026-11-13T20:24:00.000Z",
-          "snippet": "(The Center Square) – U.S. Senate Minority Leader Chuck Schumer, D-N.Y., is facing a challenger for the position of chamber leader in the upcoming 120th Congress.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "1cc6c710251d",
-          "sourceId": "deseret",
-          "sourceName": "Deseret News",
-          "lean": "center",
-          "title": "Senate Democrats call for new leadership — but no one has an alternative",
-          "url": "https://deseret.com/politics/2026/11/12/schumer-faces-uphill-battle-in-leadership-race",
-          "published": "2026-11-12T16:43:57.000Z",
-          "snippet": "Senate Minority Leader Chuck Schumer, D-N.Y., faces a seemingly rocky path to being elected as his party’s leader in their newfound Senate majority, but no one has emerged outright to challenge him — despite growing calls for new leadership. Schumer is currently running unopposed in the party’s…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_63a35e964e0e",
-        "s_0e1dfcbb00f1"
-      ],
-      "familyId": "s_63a35e964e0e",
-      "subject": {
-        "storyCount": 3,
-        "sourceCount": 22,
-        "coverage": {
-          "left": 11,
-          "center": 5,
-          "right": 6,
-          "byLean": {
-            "left": 4,
-            "lean-left": 7,
-            "center": 5,
-            "lean-right": 3,
-            "right": 3
-          }
-        },
-        "lastUpdated": "2026-11-14T14:27:05.000Z",
-        "score": 6.0775
-      }
-    },
-    {
-      "id": "s_0e1dfcbb00f1",
-      "headline": "Colom: 'Not accurate' to say Schumer recruited him",
-      "headlineFrom": {
-        "sourceId": "thehill",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Sen.-elect Scott Colom (D-Miss.) pushed back on the idea that Senate Minority Leader Chuck Schumer (D-N.Y.) personally recruited him to run for Senate, saying the people of Mississippi deserve the credit for his upset victory.",
-      "digest": [
-        {
-          "text": "The Mississippi Democrat, fresh off a historic win, also disputed Schumer’s claim that he recruited Colom.",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "url": "https://ms.now/news/scott-colom-interview-mississippi-schumer-senate-leader"
-        }
-      ],
-      "topic": "politics",
-      "firstSeen": "2026-11-13T00:29:17.000Z",
-      "firstBySide": {
-        "left": "2026-11-13T00:29:17.000Z",
-        "center": "2026-11-13T15:05:45.000Z",
-        "right": null
-      },
-      "lastUpdated": "2026-11-13T15:05:45.000Z",
-      "sourceCount": 2,
-      "articleCount": 2,
-      "coverage": {
-        "left": 1,
-        "center": 1,
-        "right": 0,
-        "byLean": {
-          "left": 1,
-          "lean-left": 0,
-          "center": 1,
-          "lean-right": 0,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": null,
-      "mostlyCoveredBy": null,
-      "score": 0.4605,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26316221150293-e1794485109741.jpg?w=900",
-      "articles": [
-        {
-          "id": "3824ef25bc4e",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Colom: 'Not accurate' to say Schumer recruited him",
-          "url": "https://thehill.com/homenews/campaign/6218515-colom-denies-schumer-recruitment",
-          "published": "2026-11-13T15:05:45.000Z",
-          "snippet": "Sen.-elect Scott Colom (D-Miss.) pushed back on the idea that Senate Minority Leader Chuck Schumer (D-N.Y.) personally recruited him to run for Senate, saying the people of Mississippi deserve the credit for his upset victory. “He did initially understand that our party has to look south for future…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "0e1dfcbb00f1",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "title": "‘I gotta know my options’: Scott Colom holds off on backing Schumer for Senate leader",
-          "url": "https://ms.now/news/scott-colom-interview-mississippi-schumer-senate-leader",
-          "published": "2026-11-13T00:29:17.000Z",
-          "snippet": "The Mississippi Democrat, fresh off a historic win, also disputed Schumer’s claim that he recruited Colom. “The people of Mississippi recruited me,” Colom told MS NOW.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_63a35e964e0e",
-        "s_1cc6c710251d"
-      ],
-      "familyId": "s_63a35e964e0e",
-      "subject": {
-        "storyCount": 3,
-        "sourceCount": 22,
-        "coverage": {
-          "left": 11,
-          "center": 5,
-          "right": 6,
-          "byLean": {
-            "left": 4,
-            "lean-left": 7,
-            "center": 5,
-            "lean-right": 3,
-            "right": 3
-          }
-        },
-        "lastUpdated": "2026-11-14T14:27:05.000Z",
-        "score": 6.0775
+        "score": 7.0657
       }
     },
     {
@@ -3323,7 +2481,7 @@
       "recentSourceCount": 1,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.4131,
+      "score": 3.3782,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f18/live/9b3a5370-df98-11f1-a9ad-6774a3284d10.jpg",
       "articles": [
         {
@@ -3389,29 +2547,29 @@
       ],
       "related": [
         "s_a0085c7c0fdb",
-        "s_75d9fce8056c",
         "s_c1856f586d81",
+        "s_75d9fce8056c",
         "s_e9fdae08584a",
         "s_4cffb276cab1"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
+        "score": 6.0669
       }
     },
     {
@@ -3455,7 +2613,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.8917,
+      "score": 0.8826,
       "image": "https://static01.nyt.com/images/2026/11/13/multimedia/13xp-microsoftWWK-1-lfcv/13xp-microsoftWWK-1-lfcv-mediumSquareAt3X.jpg",
       "articles": [
         {
@@ -3514,21 +2672,21 @@
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
+        "score": 6.0669
       }
     },
     {
@@ -3552,6 +2710,13 @@
           "sourceName": "UPI",
           "lean": "center",
           "url": "https://upi.com/Top_News/World-News/2026/11/13/Microsoft-outage-continues/3861794562725"
+        },
+        {
+          "text": "Microsoft said Friday afternoon that a global outage affecting its suite of workplace products, most notably its Outlook email service, was caused by a bug introduced during a network capacity upgrade.",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "url": "https://foxbusiness.com/technology/microsoft-apologizes-after-major-outlook-outage-worldwide-blames-technical-issue"
         }
       ],
       "topic": "tech",
@@ -3559,20 +2724,20 @@
       "firstBySide": {
         "left": null,
         "center": "2026-11-13T11:43:27.000Z",
-        "right": null
+        "right": "2026-11-13T12:20:43.000Z"
       },
       "lastUpdated": "2026-11-13T18:18:28.000Z",
-      "sourceCount": 3,
-      "articleCount": 3,
+      "sourceCount": 4,
+      "articleCount": 5,
       "coverage": {
         "left": 0,
         "center": 3,
-        "right": 0,
+        "right": 1,
         "byLean": {
           "left": 0,
           "lean-left": 0,
           "center": 3,
-          "lean-right": 0,
+          "lean-right": 1,
           "right": 0
         }
       },
@@ -3580,7 +2745,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.5596,
+      "score": 0.8038,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e30a/live/54c2fe10-df57-11f1-a701-fddedf244c16.jpg",
       "articles": [
         {
@@ -3614,6 +2779,36 @@
           }
         },
         {
+          "id": "67f3b4210381",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "Microsoft apologizes after major Outlook outage worldwide, blames technical issue",
+          "url": "https://foxbusiness.com/technology/microsoft-apologizes-after-major-outlook-outage-worldwide-blames-technical-issue",
+          "published": "2026-11-13T12:20:43.000Z",
+          "snippet": "Microsoft says it has found no evidence of a cyberattack as a global outage affecting Outlook, Copilot and Exchange Online stretches into a second day.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "82498e7e6f77",
+          "sourceId": "foxbusiness",
+          "sourceName": "Fox Business",
+          "lean": "lean-right",
+          "title": "Microsoft Outlook returns for some as millions of users face second day of outages",
+          "url": "https://foxbusiness.com/technology/microsoft-outlook-returns-some-millions-users-face-second-day-outages",
+          "published": "2026-11-13T12:20:43.000Z",
+          "snippet": "Microsoft says it has found no evidence of a cyberattack as a global outage affecting Outlook, Copilot and Exchange Online stretches into a second day.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "619ff68dd266",
           "sourceId": "upi",
           "sourceName": "UPI",
@@ -3639,21 +2834,21 @@
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
+        "score": 6.0669
       }
     },
     {
@@ -3712,7 +2907,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.5568,
+      "score": 0.5511,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg",
       "articles": [
         {
@@ -3771,21 +2966,21 @@
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
+        "score": 6.0669
       }
     },
     {
@@ -3851,7 +3046,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.4728,
+      "score": 0.468,
       "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/6af68bebdda036.79621960.jpeg?w=900",
       "articles": [
         {
@@ -3940,21 +3135,21 @@
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
+        "score": 6.0669
       }
     },
     {
@@ -4006,7 +3201,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.4213,
+      "score": 0.417,
       "image": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26316685909733.jpg?w=1024",
       "articles": [
         {
@@ -4050,21 +3245,21 @@
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
+        "score": 6.0669
       }
     },
     {
@@ -4108,24 +3303,9 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.4016,
-      "image": "https://cdn01.dailycaller.com/wp-content/uploads/2026/11/GettyImages-2207863979%20(1).jpg",
+      "score": 0.3975,
+      "image": "https://img.theepochtimes.com/assets/uploads/2026/11/13/id6124789-2026-11-13T000859Z_1_LYNXNPEMAC00D_RTROPTP_4_NSCALE-DATA-CENTER-MICROSOFT-vs-1080x720.jpg",
       "articles": [
-        {
-          "id": "3dfd4fa64396",
-          "sourceId": "dailycaller",
-          "sourceName": "The Daily Caller",
-          "lean": "right",
-          "title": "Microsoft Says Email Backlog ‘Approaching Normal’ After Outage Paralyzes Outlook",
-          "url": "https://dailycaller.com/2026/11/13/microsoft-email-outlook-outage-announcement-downdetector",
-          "published": "2026-11-13T16:12:30.000Z",
-          "snippet": "‘continued recovery progress’",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "265d94fb3d6d",
           "sourceId": "epochtimes",
@@ -4140,226 +3320,48 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "3dfd4fa64396",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Microsoft Says Email Backlog ‘Approaching Normal’ After Outage Paralyzes Outlook",
+          "url": "https://dailycaller.com/2026/11/13/microsoft-email-outlook-outage-announcement-downdetector",
+          "published": "2026-11-13T16:12:30.000Z",
+          "snippet": "‘continued recovery progress’",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
         "s_e9fdae08584a",
-        "s_a0085c7c0fdb",
         "s_c1856f586d81",
+        "s_a0085c7c0fdb",
         "s_dec3e0161bcd",
         "s_75d9fce8056c"
       ],
       "familyId": "s_dec3e0161bcd",
       "subject": {
         "storyCount": 7,
-        "sourceCount": 16,
+        "sourceCount": 17,
         "coverage": {
           "left": 6,
           "center": 5,
-          "right": 5,
+          "right": 6,
           "byLean": {
             "left": 2,
             "lean-left": 4,
             "center": 5,
-            "lean-right": 2,
+            "lean-right": 3,
             "right": 3
           }
         },
         "lastUpdated": "2026-11-14T16:00:30.000Z",
-        "score": 6.0083
-      }
-    },
-    {
-      "id": "s_ddf3ed1e8dc8",
-      "headline": "Democrat flips Alaska governor's office",
-      "headlineFrom": {
-        "sourceId": "thehill",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Jonathan Kreiss-Tomkins is projected to win the Alaska governor’s office, becoming the first Democrat to win the office in more than 20 years, according to Decision Desk HQ (DDHQ).",
-      "digest": [
-        {
-          "text": "Democrats benefited from a fractured GOP field that President Donald Trump failed to whittle by endorsing Bernadette Wilson.",
-          "sourceId": "politico",
-          "sourceName": "Politico",
-          "lean": "lean-left",
-          "url": "https://politico.com/news/2026/11/14/jonathan-kreiss-tomkins-wins-alaska-governor-01166573"
-        },
-        {
-          "text": "Kreiss-Tomkins, a former state lawmaker, defeated Republican Bernadette Wilson and two others in the Last Frontier’s four-way, ranked-choice general election.",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "url": "https://thehill.com/homenews/campaign/6182120-democrat-kreiss-tomkins-wins-alaska"
-        },
-        {
-          "text": "His victory means Democrats will control the governor’s office in 30 states.",
-          "sourceId": "nypost",
-          "sourceName": "New York Post",
-          "lean": "lean-right",
-          "url": "https://nypost.com/2026/11/14/us-news/jonathan-kreiss-tomkins-becomes-first-democrat-since-1998-elected-governor-in-alaska"
-        }
-      ],
-      "topic": "politics",
-      "firstSeen": "2026-11-14T05:05:00.000Z",
-      "firstBySide": {
-        "left": "2026-11-14T05:05:00.000Z",
-        "center": "2026-11-14T05:05:12.000Z",
-        "right": "2026-11-14T07:17:04.000Z"
-      },
-      "lastUpdated": "2026-11-14T13:42:46.000Z",
-      "sourceCount": 7,
-      "articleCount": 7,
-      "coverage": {
-        "left": 5,
-        "center": 1,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 5,
-          "center": 1,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 1,
-      "perspectives": null,
-      "mostlyCoveredBy": "left",
-      "score": 3.8622,
-      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26317758565404-e1794632959294.jpg?w=900",
-      "articles": [
-        {
-          "id": "ddf3ed1e8dc8",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Democrat Jonathan Kreiss-Tomkins wins the Alaska governor’s race",
-          "url": "https://nbcnews.com/politics/2026-election/jonathan-kreiss-tomkins-democrat-wins-alaska-governor-race-rcna606558",
-          "published": "2026-11-14T05:05:00.000Z",
-          "snippet": "Democrat Jonathan Kreiss-Tomkins has won the Alaska governor’s race, NBC News projects, flipping control of the office from Republicans.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "4399d7106f1c",
-          "sourceId": "washpost",
-          "sourceName": "The Washington Post",
-          "lean": "lean-left",
-          "title": "Democrat Jonathan Kreiss-Tomkins wins Alaska governor’s race",
-          "url": "https://washingtonpost.com/politics/2026/11/14/democrat-jonathan-kreiss-tomkins-wins-alaska-governors-race",
-          "published": "2026-11-14T05:05:54.000Z",
-          "snippet": "Kreiss-Tomkins, 37, defeated three Republicans, including President Donald Trump’s preferred candidate.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "e80b4aaf1b8c",
-          "sourceId": "npr",
-          "sourceName": "NPR",
-          "lean": "lean-left",
-          "title": "Democrat Jonathan Kreiss-Tomkins wins race for Alaska governor, replaces a Republican",
-          "url": "https://npr.org/2026/11/14/g-s1-151719/midterms-alaska-governor-kreiss-tomkins",
-          "published": "2026-11-14T05:12:43.000Z",
-          "snippet": "Kreiss-Tomkins, a former state legislator, ran a campaign emphasizing bipartisanship in the the state that usually votes Republican. At 37, he'll be the youngest governor in the state's history.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "8aca2353c325",
-          "sourceId": "nypost",
-          "sourceName": "New York Post",
-          "lean": "lean-right",
-          "title": "Jonathan Kreiss-Tomkins becomes first Democrat since 1998 elected governor in Alaska",
-          "url": "https://nypost.com/2026/11/14/us-news/jonathan-kreiss-tomkins-becomes-first-democrat-since-1998-elected-governor-in-alaska",
-          "published": "2026-11-14T07:17:04.000Z",
-          "snippet": "His victory means Democrats will control the governor’s office in 30 states.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "ebbbaed15be5",
-          "sourceId": "politico",
-          "sourceName": "Politico",
-          "lean": "lean-left",
-          "title": "Democrat Jonathan Kreiss-Tomkins flips Alaska’s gubernatorial seat",
-          "url": "https://politico.com/news/2026/11/14/jonathan-kreiss-tomkins-wins-alaska-governor-01166573",
-          "published": "2026-11-14T05:07:08.000Z",
-          "snippet": "It’s the first time Alaskans have elected a Democrat to the corner office in over two decades.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "ad11a61a8434",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "Democrat flips Alaska governor's office",
-          "url": "https://thehill.com/homenews/campaign/6182120-democrat-kreiss-tomkins-wins-alaska",
-          "published": "2026-11-14T05:05:12.000Z",
-          "snippet": "Jonathan Kreiss-Tomkins is projected to win the Alaska governor’s office, becoming the first Democrat to win the office in more than 20 years, according to Decision Desk HQ (DDHQ). Kreiss-Tomkins, a former state lawmaker, defeated Republican Bernadette Wilson and two others in the Last Frontier’s…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "35bbe23ab496",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Alaska elects first Democratic governor since 1998",
-          "url": "https://cbsnews.com/news/alaska-governor-jkt-jonathan-kreiss-tomkins-election",
-          "published": "2026-11-14T13:42:46.000Z",
-          "snippet": "Jonathan Kreiss-Tomkins, also known as JKT, campaigned on issues including affordability and funding of public schools",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [],
-      "familyId": "s_ddf3ed1e8dc8",
-      "subject": {
-        "storyCount": 1,
-        "sourceCount": 7,
-        "coverage": {
-          "left": 5,
-          "center": 1,
-          "right": 1,
-          "byLean": {
-            "left": 0,
-            "lean-left": 5,
-            "center": 1,
-            "lean-right": 1,
-            "right": 0
-          }
-        },
-        "lastUpdated": "2026-11-14T13:42:46.000Z",
-        "score": 3.8622
+        "score": 6.0669
       }
     },
     {
@@ -4392,11 +3394,11 @@
           "url": "https://thehill.com/homenews/campaign/6220605-peltola-leads-alaska-senate"
         },
         {
-          "text": "Two other candidates, Republican Gerald Heikes and independent Daniel J. Sullivan Jr., had garnered 5,885 and 4,560 votes, respectively.",
-          "sourceId": "washexaminer",
-          "sourceName": "Washington Examiner",
-          "lean": "lean-right",
-          "url": "https://washingtonexaminer.com/news/campaigns/congressional/4803912/peltola-again-claim-victory-alaska-senate-race"
+          "text": "Democrat Mary Peltola has widened her lead over Republican Sen. Dan Sullivan in Alaska's still-undecided U.S. Senate race, moving within striking distance of an outright victory that would give Democrats their 56th Senate seat following sweeping midterm gains.",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "url": "https://newsmax.com/newsfront/mary-peltola-dan-sullivan-alaska-senate-race/2026/11/14/id/1276300"
         },
         {
           "text": "The race between Senator Dan S. Sullivan and Ms. Peltola, a former representative, is the only Senate contest that hasn’t been called.",
@@ -4406,11 +3408,11 @@
           "url": "https://nytimes.com/2026/11/14/us/alaska-senate-race-ranked-choice-tabulation.html"
         },
         {
-          "text": "Democrat Alaska Senate candidate Mary Peltola inched closer to victory Friday, widening her lead in the latest ballot drop in a wild-card race defined by shady tactics and scandal.",
-          "sourceId": "dailywire",
-          "sourceName": "The Daily Wire",
-          "lean": "right",
-          "url": "https://dailywire.com/news/peltola-inches-toward-victory-as-decoy-dan-drama-deepens"
+          "text": "Two other candidates, Republican Gerald Heikes and independent Daniel J. Sullivan Jr., had garnered 5,885 and 4,560 votes, respectively.",
+          "sourceId": "washexaminer",
+          "sourceName": "Washington Examiner",
+          "lean": "lean-right",
+          "url": "https://washingtonexaminer.com/news/campaigns/congressional/4803912/peltola-again-claim-victory-alaska-senate-race"
         }
       ],
       "topic": "politics",
@@ -4421,25 +3423,25 @@
         "right": "2026-11-13T11:13:30.000Z"
       },
       "lastUpdated": "2026-11-14T15:43:40.000Z",
-      "sourceCount": 5,
-      "articleCount": 6,
+      "sourceCount": 6,
+      "articleCount": 7,
       "coverage": {
         "left": 2,
         "center": 1,
-        "right": 2,
+        "right": 3,
         "byLean": {
           "left": 1,
           "lean-left": 1,
           "center": 1,
           "lean-right": 1,
-          "right": 1
+          "right": 2
         }
       },
       "developing": true,
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.7387,
+      "score": 4.0188,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26308242591380-e1794055865980.jpg?w=900",
       "articles": [
         {
@@ -4518,6 +3520,21 @@
           }
         },
         {
+          "id": "139744d4e5a2",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Peltola Nears Alaska Senate Win, Dems Eye 56th Seat",
+          "url": "https://newsmax.com/newsfront/mary-peltola-dan-sullivan-alaska-senate-race/2026/11/14/id/1276300",
+          "published": "2026-11-14T14:29:27.000Z",
+          "snippet": "Democrat Mary Peltola has widened her lead over Republican Sen. Dan Sullivan in Alaska's still-undecided U.S. Senate race, moving within striking distance of an outright victory that would give Democrats their 56th Senate seat following sweeping midterm gains.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "a65905ac3bc4",
           "sourceId": "dailywire",
           "sourceName": "The Daily Wire",
@@ -4537,21 +3554,214 @@
       "familyId": "s_a65905ac3bc4",
       "subject": {
         "storyCount": 1,
-        "sourceCount": 5,
+        "sourceCount": 6,
         "coverage": {
           "left": 2,
           "center": 1,
-          "right": 2,
+          "right": 3,
           "byLean": {
             "left": 1,
             "lean-left": 1,
             "center": 1,
             "lean-right": 1,
-            "right": 1
+            "right": 2
           }
         },
         "lastUpdated": "2026-11-14T15:43:40.000Z",
-        "score": 3.7387
+        "score": 4.0188
+      }
+    },
+    {
+      "id": "s_ddf3ed1e8dc8",
+      "headline": "Democrat flips Alaska governor's office",
+      "headlineFrom": {
+        "sourceId": "thehill",
+        "kind": "selected",
+        "turn": null
+      },
+      "summary": null,
+      "keyFacts": [],
+      "framing": null,
+      "disputed": [],
+      "ai": null,
+      "snippet": "Jonathan Kreiss-Tomkins is projected to win the Alaska governor’s office, becoming the first Democrat to win the office in more than 20 years, according to Decision Desk HQ (DDHQ).",
+      "digest": [
+        {
+          "text": "Democrats benefited from a fractured GOP field that President Donald Trump failed to whittle by endorsing Bernadette Wilson.",
+          "sourceId": "politico",
+          "sourceName": "Politico",
+          "lean": "lean-left",
+          "url": "https://politico.com/news/2026/11/14/jonathan-kreiss-tomkins-wins-alaska-governor-01166573"
+        },
+        {
+          "text": "Kreiss-Tomkins, a former state lawmaker, defeated Republican Bernadette Wilson and two others in the Last Frontier’s four-way, ranked-choice general election.",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "url": "https://thehill.com/homenews/campaign/6182120-democrat-kreiss-tomkins-wins-alaska"
+        },
+        {
+          "text": "His victory means Democrats will control the governor’s office in 30 states.",
+          "sourceId": "nypost",
+          "sourceName": "New York Post",
+          "lean": "lean-right",
+          "url": "https://nypost.com/2026/11/14/us-news/jonathan-kreiss-tomkins-becomes-first-democrat-since-1998-elected-governor-in-alaska"
+        }
+      ],
+      "topic": "politics",
+      "firstSeen": "2026-11-14T05:05:00.000Z",
+      "firstBySide": {
+        "left": "2026-11-14T05:05:00.000Z",
+        "center": "2026-11-14T05:05:12.000Z",
+        "right": "2026-11-14T07:17:04.000Z"
+      },
+      "lastUpdated": "2026-11-14T13:42:46.000Z",
+      "sourceCount": 7,
+      "articleCount": 7,
+      "coverage": {
+        "left": 5,
+        "center": 1,
+        "right": 1,
+        "byLean": {
+          "left": 0,
+          "lean-left": 5,
+          "center": 1,
+          "lean-right": 1,
+          "right": 0
+        }
+      },
+      "developing": false,
+      "recentSourceCount": 1,
+      "perspectives": null,
+      "mostlyCoveredBy": "left",
+      "score": 3.8227,
+      "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/AP26317758565404-e1794632959294.jpg?w=900",
+      "articles": [
+        {
+          "id": "ddf3ed1e8dc8",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
+          "lean": "lean-left",
+          "title": "Democrat Jonathan Kreiss-Tomkins wins the Alaska governor’s race",
+          "url": "https://nbcnews.com/politics/2026-election/jonathan-kreiss-tomkins-democrat-wins-alaska-governor-race-rcna606558",
+          "published": "2026-11-14T05:05:00.000Z",
+          "snippet": "Democrat Jonathan Kreiss-Tomkins has won the Alaska governor’s race, NBC News projects, flipping control of the office from Republicans.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "4399d7106f1c",
+          "sourceId": "washpost",
+          "sourceName": "The Washington Post",
+          "lean": "lean-left",
+          "title": "Democrat Jonathan Kreiss-Tomkins wins Alaska governor’s race",
+          "url": "https://washingtonpost.com/politics/2026/11/14/democrat-jonathan-kreiss-tomkins-wins-alaska-governors-race",
+          "published": "2026-11-14T05:05:54.000Z",
+          "snippet": "Kreiss-Tomkins, 37, defeated three Republicans, including President Donald Trump’s preferred candidate.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e80b4aaf1b8c",
+          "sourceId": "npr",
+          "sourceName": "NPR",
+          "lean": "lean-left",
+          "title": "Democrat Jonathan Kreiss-Tomkins wins race for Alaska governor, replaces a Republican",
+          "url": "https://npr.org/2026/11/14/g-s1-151719/midterms-alaska-governor-kreiss-tomkins",
+          "published": "2026-11-14T05:12:43.000Z",
+          "snippet": "Kreiss-Tomkins, a former state legislator, ran a campaign emphasizing bipartisanship in the the state that usually votes Republican. At 37, he'll be the youngest governor in the state's history.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ebbbaed15be5",
+          "sourceId": "politico",
+          "sourceName": "Politico",
+          "lean": "lean-left",
+          "title": "Democrat Jonathan Kreiss-Tomkins flips Alaska’s gubernatorial seat",
+          "url": "https://politico.com/news/2026/11/14/jonathan-kreiss-tomkins-wins-alaska-governor-01166573",
+          "published": "2026-11-14T05:07:08.000Z",
+          "snippet": "It’s the first time Alaskans have elected a Democrat to the corner office in over two decades.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "8aca2353c325",
+          "sourceId": "nypost",
+          "sourceName": "New York Post",
+          "lean": "lean-right",
+          "title": "Jonathan Kreiss-Tomkins becomes first Democrat since 1998 elected governor in Alaska",
+          "url": "https://nypost.com/2026/11/14/us-news/jonathan-kreiss-tomkins-becomes-first-democrat-since-1998-elected-governor-in-alaska",
+          "published": "2026-11-14T07:17:04.000Z",
+          "snippet": "His victory means Democrats will control the governor’s office in 30 states.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "ad11a61a8434",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "Democrat flips Alaska governor's office",
+          "url": "https://thehill.com/homenews/campaign/6182120-democrat-kreiss-tomkins-wins-alaska",
+          "published": "2026-11-14T05:05:12.000Z",
+          "snippet": "Jonathan Kreiss-Tomkins is projected to win the Alaska governor’s office, becoming the first Democrat to win the office in more than 20 years, according to Decision Desk HQ (DDHQ). Kreiss-Tomkins, a former state lawmaker, defeated Republican Bernadette Wilson and two others in the Last Frontier’s…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "35bbe23ab496",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Alaska elects first Democratic governor since 1998",
+          "url": "https://cbsnews.com/news/alaska-governor-jkt-jonathan-kreiss-tomkins-election",
+          "published": "2026-11-14T13:42:46.000Z",
+          "snippet": "Jonathan Kreiss-Tomkins, also known as JKT, campaigned on issues including affordability and funding of public schools",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        }
+      ],
+      "related": [],
+      "familyId": "s_ddf3ed1e8dc8",
+      "subject": {
+        "storyCount": 1,
+        "sourceCount": 7,
+        "coverage": {
+          "left": 5,
+          "center": 1,
+          "right": 1,
+          "byLean": {
+            "left": 0,
+            "lean-left": 5,
+            "center": 1,
+            "lean-right": 1,
+            "right": 0
+          }
+        },
+        "lastUpdated": "2026-11-14T13:42:46.000Z",
+        "score": 3.8227
       }
     },
     {
@@ -4570,25 +3780,25 @@
       "snippet": "The device was found at the BioUrja Renewables facility, prompting officials to establish a one-mile evacuation zone covering parts of Peoria and neighboring East Peoria.",
       "digest": [
         {
-          "text": "Peoria officials said a bomb was found at BioUrja Renewables and later defused; FBI said it is investigating Residents were ordered to evacuate parts of an Illinois community on Friday after the mayor there said authorities found a bomb at a local ethanol- and alcohol-production plant.",
-          "sourceId": "guardian",
-          "sourceName": "The Guardian",
+          "text": "A suspicious device at an ethanol plant in Peoria, Illinois, triggered evacuations within a 1-mile radius, with local events forced to cancel as investigations continue.",
+          "sourceId": "nbcnews",
+          "sourceName": "NBC News",
           "lean": "lean-left",
-          "url": "https://theguardian.com/us-news/2026/nov/14/peoria-illinois-evacuation-bomb"
+          "url": "https://nbcnews.com/news/us-news/evacuation-order-ethanol-plant-peoria-illinois-suspicious-device-rcna609287"
         },
         {
-          "text": "Peoria Police Chief Brad Dixon said an explosive device found at BioUrja Renewables has been rendered safe, but evacuations around the facility will remain in effect well into Saturday.",
+          "text": "According to Dixon, BioUrja notified Peoria police around 1:08 p.m. Friday that the company had received a bomb threat.",
           "sourceId": "washexaminer",
           "sourceName": "Washington Examiner",
           "lean": "lean-right",
           "url": "https://washingtonexaminer.com/news/crime/4803880/illinois-plant-bomb-force-evacuation"
         },
         {
-          "text": "A suspicious device at an ethanol plant in Peoria, Illinois, triggered evacuations within a 1-mile radius, with local events forced to cancel as investigations continue.",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
+          "text": "Residents were ordered to evacuate parts of an Illinois community on Friday after the mayor there said authorities found a bomb at a local ethanol- and alcohol-production plant.",
+          "sourceId": "guardian",
+          "sourceName": "The Guardian",
           "lean": "lean-left",
-          "url": "https://nbcnews.com/news/us-news/evacuation-order-ethanol-plant-peoria-illinois-suspicious-device-rcna609287"
+          "url": "https://theguardian.com/us-news/2026/nov/14/peoria-illinois-evacuation-bomb"
         },
         {
           "text": "A bomb threat at an ethanol plant prompted a large-scale evacuation for an entire Illinois city Friday night as officials worked to defuse the credible threat.",
@@ -4624,7 +3834,7 @@
       "recentSourceCount": 3,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 3.5286,
+      "score": 3.4925,
       "image": "https://i.guim.co.uk/img/media/c959bae56a786ff95913cb67d9c97a8fced81672/437_0_4680_3744/master/4680.jpg?width=140&quality=85&auto=format&fit=max&s=51fa3394626d131083ad4af9586ae6bb",
       "articles": [
         {
@@ -4635,7 +3845,7 @@
           "title": "Bomb found at Illinois ethanol plant, prompting evacuations",
           "url": "https://theguardian.com/us-news/2026/nov/14/peoria-illinois-evacuation-bomb",
           "published": "2026-11-14T14:13:49.000Z",
-          "snippet": "Peoria officials said a bomb was found at BioUrja Renewables and later defused; FBI said it is investigating Residents were ordered to evacuate parts of an Illinois community on Friday after the mayor there said authorities found a bomb at a local ethanol- and alcohol-production plant. The…",
+          "snippet": "Peoria officials said a bomb was found at BioUrja Renewables and later defused; FBI said it is investigating. Residents were ordered to evacuate parts of an Illinois community on Friday after the mayor there said authorities found a bomb at a local ethanol- and alcohol-production plant. The…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -4751,7 +3961,7 @@
           }
         },
         "lastUpdated": "2026-11-14T15:18:18.000Z",
-        "score": 3.5286
+        "score": 3.4925
       }
     },
     {
@@ -4890,7 +4100,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 2.0478,
+      "score": 2.0269,
       "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2783/live/a5cdb560-df6c-11f1-9892-87464bbcc2b8.jpg",
       "articles": [
         {
@@ -5040,7 +4250,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.792
+        "score": 2.7635
       }
     },
     {
@@ -5059,11 +4269,11 @@
       "snippet": "Senate Banking Committee Chairman Tim Scott has asked Commerce Secretary Howard Lutnick and former Nvidia chief Jensen Huang to testify, as House Republicans demand closed-door interviews amid national security concerns.",
       "digest": [
         {
-          "text": "Former Nvidia CEO Jensen Huang, who was also requested to testify, had previously praised the commerce secretary for his support and involvement in the industry.",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
+          "text": "Republicans on Capitol Hill are negotiating for now-resigned Nvidia CEO Jensen Huang​ to appear before Congress.",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
           "lean": "lean-left",
-          "url": "https://nbcnews.com/politics/congress/commerce-secretary-howard-lutnick-testify-pressure-nvidia-scandal-rcna609093"
+          "url": "https://cbsnews.com/news/jensen-huang-nvidia-congress-testify"
         },
         {
           "text": "Commerce Secretary Lutnick will testify before the Senate Banking Committee following revelations about Jensen Huang's affair with an alleged Chinese spy.",
@@ -5096,7 +4306,7 @@
       },
       "lastUpdated": "2026-11-13T18:25:00.000Z",
       "sourceCount": 9,
-      "articleCount": 11,
+      "articleCount": 10,
       "coverage": {
         "left": 3,
         "center": 3,
@@ -5179,7 +4389,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.403,
+      "score": 1.3886,
       "image": "https://cdnph.upi.com/ph/st/th/1171794569930/2026/upi/88d76c0307a9321f94dbe968a0bc3b76/v1.5/Former-NVIDIA-boss-Huang-Commerce-Secretary-Lutnick-summoned-by-Congress.jpg",
       "articles": [
         {
@@ -5273,21 +4483,6 @@
           }
         },
         {
-          "id": "a718841542fb",
-          "sourceId": "upi",
-          "sourceName": "UPI",
-          "lean": "center",
-          "title": "Former NVIDIA boss Huang, Commerce Secretary Lutnick summoned by Congress",
-          "url": "https://upi.com/Top_News/US/2026/11/13/Congress-summons-Huang-Lutnick/1171794569930",
-          "published": "2026-11-13T13:22:32.000Z",
-          "snippet": "Former NVIDIA CEO Jensen Huang and Commerce Secretary Howard Lutnick have been asked to appear in front of a key Senate committee in December.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "90bc8b2dcd95",
           "sourceId": "washexaminer",
           "sourceName": "Washington Examiner",
@@ -5303,6 +4498,21 @@
           }
         },
         {
+          "id": "a718841542fb",
+          "sourceId": "upi",
+          "sourceName": "UPI",
+          "lean": "center",
+          "title": "Former NVIDIA boss Huang, Commerce Secretary Lutnick summoned by Congress",
+          "url": "https://upi.com/Top_News/US/2026/11/13/Congress-summons-Huang-Lutnick/1171794569930",
+          "published": "2026-11-13T13:22:32.000Z",
+          "snippet": "Former NVIDIA CEO Jensen Huang and Commerce Secretary Howard Lutnick have been asked to appear in front of a key Senate committee in December.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
           "id": "7dbd638c5af4",
           "sourceId": "cbsnews",
           "sourceName": "CBS News",
@@ -5311,21 +4521,6 @@
           "url": "https://cbsnews.com/news/howard-lutnick-scott-bessent-nvidia-megaspeed-testimony",
           "published": "2026-11-13T15:13:00.000Z",
           "snippet": "Commerce Secretary Howard Lutnick has agreed to testify before the Senate Banking Committee on Dec. 10, according to a U.S. official.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "0aa857ad0b1c",
-          "sourceId": "nbcnews",
-          "sourceName": "NBC News",
-          "lean": "lean-left",
-          "title": "Howard Lutnick will testify as bipartisan pressure grows over Nvidia scandal",
-          "url": "https://nbcnews.com/politics/congress/commerce-secretary-howard-lutnick-testify-pressure-nvidia-scandal-rcna609093",
-          "published": "2026-11-13T02:45:27.000Z",
-          "snippet": "Former Nvidia CEO Jensen Huang, who was also requested to testify, had previously praised the commerce secretary for his support and involvement in the industry.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -5370,7 +4565,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.792
+        "score": 2.7635
       }
     },
     {
@@ -5495,7 +4690,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.9988,
+      "score": 0.9886,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2025/06/Elsewhere-Lutnick-and-Bessent_053025_AP_Evan-Vucci.jpg?w=900",
       "articles": [
         {
@@ -5576,8 +4771,8 @@
       ],
       "related": [
         "s_8b9da3562d13",
-        "s_64c34093612c",
-        "s_c80b98d6db11"
+        "s_c80b98d6db11",
+        "s_64c34093612c"
       ],
       "familyId": "s_8b9da3562d13",
       "subject": {
@@ -5596,14 +4791,14 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.792
+        "score": 2.7635
       }
     },
     {
       "id": "s_fbd1b2c1fdd7",
-      "headline": "Nvidia Scandal Prompts Questions of What It Means to Be a Spy",
+      "headline": "Why the Nvidia scandal is far from over - The Latest",
       "headlineFrom": {
-        "sourceId": "nytimes",
+        "sourceId": "guardian",
         "kind": "selected",
         "turn": null
       },
@@ -5612,7 +4807,7 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset. But there is much more that they are still assessing about her role.",
+      "snippet": "Jensen Huang’s resignation from the AI chipmaker Nvidia has sent shockwaves through the global economy. Huang resigned after reported affairs with an Nvidia executive and a woman alleged to be a Chinese spy.",
       "digest": [
         {
           "text": "The fallout is not over yet, with criticism mounting over the apparent lack of action from the US commerce secretary, Howard Lutnick.",
@@ -5620,6 +4815,13 @@
           "sourceName": "The Guardian",
           "lean": "lean-left",
           "url": "https://theguardian.com/news/video/2026/nov/13/why-the-nvidia-scandal-is-far-from-over-the-latest"
+        },
+        {
+          "text": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset.",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "url": "https://nytimes.com/2026/11/13/us/politics/nvidia-alice-huang-spy-china.html"
         }
       ],
       "topic": "tech",
@@ -5714,24 +4916,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.6673,
-      "image": "https://static01.nyt.com/images/2026/11/13/multimedia/13dc-intel-vzbm/13dc-intel-vzbm-mediumSquareAt3X.jpg",
+      "score": 0.6605,
+      "image": "https://i.guim.co.uk/img/media/efda49c642dc93a6160523af97a8890ea5f8d2b2/0_0_1350_1080/master/1350.jpg?width=140&quality=85&auto=format&fit=max&s=7d1ea2a1b9b5d7bf48b86bfa9406c117",
       "articles": [
-        {
-          "id": "6885f91116b7",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "Nvidia Scandal Prompts Questions of What It Means to Be a Spy",
-          "url": "https://nytimes.com/2026/11/13/us/politics/nvidia-alice-huang-spy-china.html",
-          "published": "2026-11-14T01:22:56.000Z",
-          "snippet": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset. But there is much more that they are still assessing about her role.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "fbd1b2c1fdd7",
           "sourceId": "guardian",
@@ -5741,6 +4928,21 @@
           "url": "https://theguardian.com/news/video/2026/nov/13/why-the-nvidia-scandal-is-far-from-over-the-latest",
           "published": "2026-11-13T19:20:53.000Z",
           "snippet": "Jensen Huang’s resignation from the AI chipmaker Nvidia has sent shockwaves through the global economy. Huang resigned after reported affairs with an Nvidia executive and a woman alleged to be a Chinese spy. The fallout is not over yet, with criticism mounting over the apparent lack of action from…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "6885f91116b7",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "title": "Nvidia Scandal Prompts Questions of What It Means to Be a Spy",
+          "url": "https://nytimes.com/2026/11/13/us/politics/nvidia-alice-huang-spy-china.html",
+          "published": "2026-11-14T01:22:56.000Z",
+          "snippet": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset. But there is much more that they are still assessing about her role.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -5770,7 +4972,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.792
+        "score": 2.7635
       }
     },
     {
@@ -5788,7 +4990,7 @@
       "ai": null,
       "snippet": "Evelyn Hockstein/Reuters Treasury Secretary Scott Bessent has thrown fellow top Trump official Howard Lutnick under the bus over his handling of the Nvidia scandal.",
       "digest": [],
-      "topic": "tech",
+      "topic": "politics",
       "firstSeen": "2026-11-13T15:25:25.000Z",
       "firstBySide": {
         "left": "2026-11-13T15:25:25.000Z",
@@ -5880,24 +5082,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.5499,
-      "image": "https://cdn01.dailycaller.com/wp-content/uploads/2026/11/GettyImages-2217854901%202.jpg",
+      "score": 0.5443,
+      "image": "https://thedailybeast-thedailybeast-prod.web.arc-cdn.net/resizer/v2/RSJHZJQ4WVGQVNPTQSNEBTH6AA.JPG?auth=a0d79b03ebdb10e4336811d794a2f9f63aa0789f994d08aae76f8d2807fe8c1a&smart=true&width=3375&height=1898",
       "articles": [
-        {
-          "id": "87333b7b2f92",
-          "sourceId": "dailycaller",
-          "sourceName": "The Daily Caller",
-          "lean": "right",
-          "title": "Bessent Throws Lutnick Under The Bus On Trump’s Chip Export Fiasco",
-          "url": "https://dailycaller.com/2026/11/13/treasury-secretary-scott-bessent-commerce-howard-lutnick-china-nvidia-ceo-jensen-huang-megaspeed",
-          "published": "2026-11-13T18:10:09.000Z",
-          "snippet": "‘Very frustrating’",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "a48753f89bd9",
           "sourceId": "dailybeast",
@@ -5907,6 +5094,21 @@
           "url": "https://thedailybeast.com/trump-goon-scott-bessent-throws-howard-lutnick-under-bus-over-sex-mad-nvidia-ceo-jensen-huang-scandal",
           "published": "2026-11-13T15:25:25.000Z",
           "snippet": "Evelyn Hockstein/Reuters Treasury Secretary Scott Bessent has thrown fellow top Trump official Howard Lutnick under the bus over his handling of the Nvidia scandal. The intense rivalry between Bessent and the commerce secretary has been escalating behind closed doors since Trump’s return to the…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "87333b7b2f92",
+          "sourceId": "dailycaller",
+          "sourceName": "The Daily Caller",
+          "lean": "right",
+          "title": "Bessent Throws Lutnick Under The Bus On Trump’s Chip Export Fiasco",
+          "url": "https://dailycaller.com/2026/11/13/treasury-secretary-scott-bessent-commerce-howard-lutnick-china-nvidia-ceo-jensen-huang-megaspeed",
+          "published": "2026-11-13T18:10:09.000Z",
+          "snippet": "‘Very frustrating’",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -5934,7 +5136,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.792
+        "score": 2.7635
       }
     },
     {
@@ -6052,24 +5254,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.5256,
-      "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=FAA17BFC-E045-4D8D-909D-CE2E80D04D57",
+      "score": 0.5203,
+      "image": "https://www.washingtonexaminer.com/wp-content/uploads/2026/09/AP26265717765492-e1790207826975.jpg?w=1024",
       "articles": [
-        {
-          "id": "8f46dd64acba",
-          "sourceId": "newsmax",
-          "sourceName": "Newsmax",
-          "lean": "right",
-          "title": "Treasury's Bessent Defiant After Iranian Death Threats",
-          "url": "https://newsmax.com/newsfront/scott-bessent-iran-death-threats/2026/11/13/id/1276257",
-          "published": "2026-11-13T21:15:02.000Z",
-          "snippet": "Treasury Secretary Scott Bessent said Friday he will not be intimidated by death threats from Iran that prompted him and his family to leave their $12.5 million Washington home and move to a military base.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "c80b98d6db11",
           "sourceId": "washexaminer",
@@ -6079,6 +5266,21 @@
           "url": "https://washingtonexaminer.com/news/white-house/4801678/unprecedented-for-treasury-secretary-to-leave-home-over-iranian-threat-joe-concha",
           "published": "2026-11-12T18:15:18.000Z",
           "snippet": "Washington Examiner columnist Joe Concha said Iranian plots against the United States have become unprecedented, with Treasury Secretary Scott Bessent being relocated for his safety. “Well, we took out two levels of Iranian leadership at the beginning of this war, … so you know they would love…",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "8f46dd64acba",
+          "sourceId": "newsmax",
+          "sourceName": "Newsmax",
+          "lean": "right",
+          "title": "Treasury's Bessent Defiant After Iranian Death Threats",
+          "url": "https://newsmax.com/newsfront/scott-bessent-iran-death-threats/2026/11/13/id/1276257",
+          "published": "2026-11-13T21:15:02.000Z",
+          "snippet": "Treasury Secretary Scott Bessent said Friday he will not be intimidated by death threats from Iran that prompted him and his family to leave their $12.5 million Washington home and move to a military base.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -6107,7 +5309,7 @@
           }
         },
         "lastUpdated": "2026-11-14T01:46:29.000Z",
-        "score": 2.792
+        "score": 2.7635
       }
     },
     {
@@ -6133,18 +5335,25 @@
           "url": "https://nbcnews.com/now/video/the-rise-and-fall-of-former-nvidia-ceo-jensen-huang-273361477672"
         },
         {
+          "text": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
+          "sourceId": "cnbc",
+          "sourceName": "CNBC",
+          "lean": "center",
+          "url": "https://cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html"
+        },
+        {
+          "text": "News that the chipmaker’s chief executive, Jensen Huang, resigned drove Nvidia’s stock down, though the broader market rose slightly.",
+          "sourceId": "nytimes",
+          "sourceName": "The New York Times",
+          "lean": "lean-left",
+          "url": "https://nytimes.com/2026/11/12/business/nvidia-stock-price-jensen-huang-ceo-affair.html"
+        },
+        {
           "text": "NVIDIA announced Jensen Huang, the company's embattled president and CEO, has resigned from the company amid allegations of two extra-marital affairs.",
           "sourceId": "upi",
           "sourceName": "UPI",
           "lean": "center",
           "url": "https://upi.com/Top_News/US/2026/11/12/NVIDIA-Jensen-Huang-facing/5521794475301"
-        },
-        {
-          "text": "Reports say the artificial intelligence pioneer admitted to two extramarital affairs, including with a woman U.S. intelligence determined was a Chinese spy.",
-          "sourceId": "msnow",
-          "sourceName": "MS NOW",
-          "lean": "left",
-          "url": "https://ms.now/news/nvidia-jensen-huang-resigns-affair-china-spying"
         }
       ],
       "topic": "business",
@@ -6154,17 +5363,17 @@
         "center": "2026-11-12T18:19:59.000Z",
         "right": null
       },
-      "lastUpdated": "2026-11-13T14:50:17.000Z",
-      "sourceCount": 7,
-      "articleCount": 9,
+      "lastUpdated": "2026-11-13T21:19:04.000Z",
+      "sourceCount": 8,
+      "articleCount": 10,
       "coverage": {
         "left": 5,
-        "center": 2,
+        "center": 3,
         "right": 0,
         "byLean": {
           "left": 1,
           "lean-left": 4,
-          "center": 2,
+          "center": 3,
           "lean-right": 0,
           "right": 0
         }
@@ -6255,7 +5464,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.8587,
+      "score": 1.3057,
       "image": "https://cdnph.upi.com/ph/st/th/5521794475301/2026/upi/59677419c3b05ed237e97fc030123a41/v1.5/Jensen-Huang-resigns-as-president-and-CEO-of-NVIDIA.jpg",
       "articles": [
         {
@@ -6392,6 +5601,21 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "34a277ed6a0f",
+          "sourceId": "cnbc",
+          "sourceName": "CNBC",
+          "lean": "center",
+          "title": "What's ahead for AI financing after Nvidia CEO Jensen Huang departs",
+          "url": "https://cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html",
+          "published": "2026-11-13T21:19:04.000Z",
+          "snippet": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
@@ -6403,7 +5627,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6418,7 +5642,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
@@ -6544,7 +5768,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.7661,
+      "score": 0.7583,
       "image": null,
       "articles": [
         {
@@ -6555,7 +5779,7 @@
           "title": "Jensen Huang’s Washington fallout",
           "url": "https://politico.com/video/2026/11/13/jensen-huangs-washington-fallout-2229409",
           "published": "2026-11-13T10:45:00.000Z",
-          "snippet": "Jensen Huang’s Washington fallout lead image",
+          "snippet": "Jensen Huang’s Washington fallout. lead image",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -6584,7 +5808,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6599,7 +5823,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
@@ -6740,7 +5964,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.7172,
+      "score": 0.7099,
       "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794501153757_now_current_trump_nvidia_cook_261112_S3_1920x1080-e1npn8.jpg",
       "articles": [
         {
@@ -6796,7 +6020,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -6811,7 +6035,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
@@ -6952,24 +6176,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.6679,
+      "score": 0.661,
       "image": "https://static.foxbusiness.com/foxbusiness.com/content/uploads/2026/11/jensen-huang.jpg",
       "articles": [
-        {
-          "id": "b8e08d98358c",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "Never bought Nvidia stock? Its slide could still hit your 401(k).",
-          "url": "https://cbsnews.com/news/nvidia-stock-slide-401k-index-funds",
-          "published": "2026-11-13T21:32:01.000Z",
-          "snippet": "Millions of Americans are exposed to Nvidia shares through their retirement plans. That's not as bad as it sounds (really!).",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "9b823a64331a",
           "sourceId": "foxbusiness",
@@ -6984,6 +6193,21 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "b8e08d98358c",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "Never bought Nvidia stock? Its slide could still hit your 401(k).",
+          "url": "https://cbsnews.com/news/nvidia-stock-slide-401k-index-funds",
+          "published": "2026-11-13T21:32:01.000Z",
+          "snippet": "Millions of Americans are exposed to Nvidia shares through their retirement plans. That's not as bad as it sounds (really!).",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
@@ -6991,7 +6215,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -7006,7 +6230,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
@@ -7140,7 +6364,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.5684,
+      "score": 0.5626,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2025/09/trump_donald_huang_jensen_nvidia_04302025_AP25120806136069-1.jpg?w=900",
       "articles": [
         {
@@ -7195,7 +6419,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -7210,7 +6434,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
@@ -7336,24 +6560,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.3881,
+      "score": 0.3841,
       "image": "https://www.newsmax.com/cmspages/getfile.aspx?guid=2C884B0A-0404-48A9-A20E-F6F9FA214134",
       "articles": [
-        {
-          "id": "724664d6acb7",
-          "sourceId": "cbsnews",
-          "sourceName": "CBS News",
-          "lean": "lean-left",
-          "title": "What could happen to AI development and chip production as Huang resigns from Nvidia",
-          "url": "https://cbsnews.com/video/what-could-happen-to-ai-development-and-chip-production-as-huang-resigns-from-nvidia",
-          "published": "2026-11-13T01:52:57.000Z",
-          "snippet": "Jensen Huang's resignation as CEO of Nvidia raises questions about the future of AI development and chipmaking.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "4d7f864e70f6",
           "sourceId": "newsmax",
@@ -7368,6 +6577,21 @@
             "contested": [],
             "clickbait": false
           }
+        },
+        {
+          "id": "724664d6acb7",
+          "sourceId": "cbsnews",
+          "sourceName": "CBS News",
+          "lean": "lean-left",
+          "title": "What could happen to AI development and chip production as Huang resigns from Nvidia",
+          "url": "https://cbsnews.com/video/what-could-happen-to-ai-development-and-chip-production-as-huang-resigns-from-nvidia",
+          "published": "2026-11-13T01:52:57.000Z",
+          "snippet": "Jensen Huang's resignation as CEO of Nvidia raises questions about the future of AI development and chipmaking.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
         }
       ],
       "related": [
@@ -7377,7 +6601,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -7392,14 +6616,14 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
       "id": "s_e8ef5d388b83",
-      "headline": "5 takeaways from Nvidia’s Jensen Huang scandal",
+      "headline": "Jensen Huang scandal casts doubt on Nvidia’s AI dominance — how we got here",
       "headlineFrom": {
-        "sourceId": "thehill",
+        "sourceId": "cnbc",
         "kind": "selected",
         "turn": null
       },
@@ -7408,14 +6632,14 @@
       "framing": null,
       "disputed": [],
       "ai": null,
-      "snippet": "Corporate America is in the midst of its most dramatic scandal in years. Jensen Huang, the CEO and co-founder of Nvidia, resigned Thursday after admitting to one extramarital affair, with a woman suspected of being a Chinese agent, and amid new reporting of a second affair, this…",
+      "snippet": "Nvidia is facing its biggest crisis in its 33 year history, with founder Jensen Huang resigning as CEO. Here's the story of the rise and fall of Jensen Huang.",
       "digest": [
         {
-          "text": "Nvidia is facing its biggest crisis in its 33 year history, with founder Jensen Huang resigning as CEO.",
-          "sourceId": "cnbc",
-          "sourceName": "CNBC",
+          "text": "Jensen Huang, the CEO and co-founder of Nvidia, resigned Thursday after admitting to one extramarital affair, with a woman suspected of being a Chinese agent, and amid new reporting of a second affair, this time with an Nvidia colleague.",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
           "lean": "center",
-          "url": "https://cnbc.com/2026/11/13/jensen-huang-scandal-casts-doubt-on-nvidias-ai-dominance-how-we-got-here.html"
+          "url": "https://thehill.com/homenews/analysis/6217604-nvidias-jensen-huang-resigned"
         }
       ],
       "topic": "business",
@@ -7526,24 +6750,9 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 0.3462,
+      "score": 0.3427,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/NvidiaTakeaways_Stanage_AP_MarkusSchreiber.jpg?w=900",
       "articles": [
-        {
-          "id": "e8ef5d388b83",
-          "sourceId": "thehill",
-          "sourceName": "The Hill",
-          "lean": "center",
-          "title": "5 takeaways from Nvidia’s Jensen Huang scandal",
-          "url": "https://thehill.com/homenews/analysis/6217604-nvidias-jensen-huang-resigned",
-          "published": "2026-11-12T22:59:47.000Z",
-          "snippet": "Corporate America is in the midst of its most dramatic scandal in years. Jensen Huang, the CEO and co-founder of Nvidia, resigned Thursday after admitting to one extramarital affair, with a woman suspected of being a Chinese agent, and amid new reporting of a second affair, this time with an Nvidia…",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
         {
           "id": "95574ec3fe25",
           "sourceId": "cnbc",
@@ -7553,6 +6762,21 @@
           "url": "https://cnbc.com/2026/11/13/jensen-huang-scandal-casts-doubt-on-nvidias-ai-dominance-how-we-got-here.html",
           "published": "2026-11-13T14:01:24.000Z",
           "snippet": "Nvidia is facing its biggest crisis in its 33 year history, with founder Jensen Huang resigning as CEO. Here's the story of the rise and fall of Jensen Huang.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "e8ef5d388b83",
+          "sourceId": "thehill",
+          "sourceName": "The Hill",
+          "lean": "center",
+          "title": "5 takeaways from Nvidia’s Jensen Huang scandal",
+          "url": "https://thehill.com/homenews/analysis/6217604-nvidias-jensen-huang-resigned",
+          "published": "2026-11-12T22:59:47.000Z",
+          "snippet": "Corporate America is in the midst of its most dramatic scandal in years. Jensen Huang, the CEO and co-founder of Nvidia, resigned Thursday after admitting to one extramarital affair, with a woman suspected of being a Chinese agent, and amid new reporting of a second affair, this time with an Nvidia…",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -7569,7 +6793,7 @@
       ],
       "familyId": "s_90666d9d64a1",
       "subject": {
-        "storyCount": 8,
+        "storyCount": 7,
         "sourceCount": 13,
         "coverage": {
           "left": 6,
@@ -7584,232 +6808,7 @@
           }
         },
         "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
-      }
-    },
-    {
-      "id": "s_e1bebf0e953a",
-      "headline": "Who is interim Nvidia CEO Colette Kress?",
-      "headlineFrom": {
-        "sourceId": "newsnation",
-        "kind": "selected",
-        "turn": null
-      },
-      "summary": null,
-      "keyFacts": [],
-      "framing": null,
-      "disputed": [],
-      "ai": null,
-      "snippet": "Colette Kress is taking on the role after the resignation of CEO Jensen Huang.",
-      "digest": [
-        {
-          "text": "Ms. Kress, the company’s chief financial officer, joined Nvidia in 2013.",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "url": "https://nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html"
-        },
-        {
-          "text": "Huang co-founded Nvidia in 1993 and served as its CEO until his resignation, transforming the company from a struggling startup into one of the world's largest by market capitalization amid surging demand for its AI chips.",
-          "sourceId": "foxbusiness",
-          "sourceName": "Fox Business",
-          "lean": "lean-right",
-          "url": "https://foxbusiness.com/markets/colette-kress-named-nvidia-interim-ceo-jensen-huangs-abrupt-resignation-raises-investor-concerns"
-        }
-      ],
-      "topic": "tech",
-      "firstSeen": "2026-11-12T17:32:18.000Z",
-      "firstBySide": {
-        "left": "2026-11-12T18:23:26.000Z",
-        "center": "2026-11-12T17:32:18.000Z",
-        "right": "2026-11-12T21:50:13.000Z"
-      },
-      "lastUpdated": "2026-11-13T00:53:47.000Z",
-      "sourceCount": 3,
-      "articleCount": 4,
-      "coverage": {
-        "left": 1,
-        "center": 1,
-        "right": 1,
-        "byLean": {
-          "left": 0,
-          "lean-left": 1,
-          "center": 1,
-          "lean-right": 1,
-          "right": 0
-        }
-      },
-      "developing": false,
-      "recentSourceCount": 0,
-      "perspectives": {
-        "left": [
-          {
-            "id": "9ce1f9083d8c",
-            "sourceId": "newrepublic",
-            "sourceName": "The New Republic",
-            "lean": "left",
-            "title": "Nvidia’s Jensen Huang and the Troubling Rise of the Imperial CEO",
-            "url": "https://newrepublic.com/article/217955/nvidia-jensen-huang-troubling-rise-imperial-ceo",
-            "published": "2026-11-13T11:00:00.000Z",
-            "snippet": "Jensen Huang resigned Thursday as chief executive of Nvidia, a company that he co-founded in 1993 with the modest goal of creating 3D graphics for video games, but which now dominates the global market for the advanced…",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          },
-          {
-            "id": "fed65ab37839",
-            "sourceId": "nytimes",
-            "sourceName": "The New York Times",
-            "lean": "lean-left",
-            "title": "Jensen Huang’s Fall Is Bad for Nvidia but Good for America",
-            "url": "https://nytimes.com/2026/11/13/opinion/jensen-huang-nvidia.html",
-            "published": "2026-11-13T10:04:14.000Z",
-            "snippet": "Jensen Huang was a big reason Nvidia preserved the ability to sell chips to China. His departure from the company might change that.",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          }
-        ],
-        "center": [
-          {
-            "id": "6cfa444bb47b",
-            "sourceId": "cnbc",
-            "sourceName": "CNBC",
-            "lean": "center",
-            "title": "Analysis: Companies love a ‘rockstar’ CEO. Until they depend on one",
-            "url": "https://cnbc.com/2026/11/14/nvidia-jensen-huang-ceo-succession-risk.html",
-            "published": "2026-11-14T07:08:45.000Z",
-            "snippet": "Jensen Huang’s exit tests Nvidia’s succession planning and governance, and offers lessons for companies that elevate their CEOs to rockstar status.",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          }
-        ],
-        "right": [
-          {
-            "id": "31cbaf4d5de3",
-            "sourceId": "wsj",
-            "sourceName": "WSJ Opinion",
-            "lean": "lean-right",
-            "title": "Jensen Huang Is a White House Scandal",
-            "url": "https://wsj.com/opinion/jensen-huang-is-a-white-house-scandal-9c2136a1",
-            "published": "2026-11-12T22:43:00.000Z",
-            "snippet": "What did Trump know and when about the Nvidia CEO’s relationship with an accused Chinese spy?",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          },
-          {
-            "id": "e64f5b5d5c4e",
-            "sourceId": "freepress",
-            "sourceName": "The Free Press",
-            "lean": "lean-right",
-            "title": "Jensen Huang’s Downfall Isn’t Just About Sex",
-            "url": "https://thefp.com/p/jensen-huangs-downfall-isnt-just",
-            "published": "2026-11-12T18:47:44.000Z",
-            "snippet": "Huang’s two affairs got him ousted as the CEO of Nvidia. But if his Chinese mistress was smuggling Nvidia chips into China—and he knew about it—his problems are a lot bigger than most people thought, writes Patrick…",
-            "flags": {
-              "loaded": [],
-              "contested": [],
-              "clickbait": false
-            }
-          }
-        ]
-      },
-      "mostlyCoveredBy": null,
-      "score": 0.307,
-      "image": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/11/Untitled-November-12-2026-at-11.21.55-1.jpeg?w=900",
-      "articles": [
-        {
-          "id": "e1bebf0e953a",
-          "sourceId": "newsnation",
-          "sourceName": "NewsNation",
-          "lean": "center",
-          "title": "Who is interim Nvidia CEO Colette Kress?",
-          "url": "https://newsnationnow.com/business/tech/who-nvidia-colette-kress",
-          "published": "2026-11-12T17:32:18.000Z",
-          "snippet": "Colette Kress is taking on the role after the resignation of CEO Jensen Huang.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "b7875371579c",
-          "sourceId": "nytimes",
-          "sourceName": "The New York Times",
-          "lean": "lean-left",
-          "title": "Who Is Colette Kress, the Interim Nvidia CEO Replacing Jensen Huang?",
-          "url": "https://nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html",
-          "published": "2026-11-12T18:23:26.000Z",
-          "snippet": "Ms. Kress, the company’s chief financial officer, joined Nvidia in 2013.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "710b5a6cfae4",
-          "sourceId": "foxbusiness",
-          "sourceName": "Fox Business",
-          "lean": "lean-right",
-          "title": "Meet Nvidia’s new interim CEO: The fortune and rise of Colette Kress",
-          "url": "https://foxbusiness.com/technology/meet-nvidias-new-interim-ceo-fortune-rise-colette-kress",
-          "published": "2026-11-13T00:53:47.000Z",
-          "snippet": "Nvidia’s new interim CEO joined the chipmaker after her sons touted its gaming technology, years before its rise to the center of the AI boom.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
-          "id": "5aeb6155a738",
-          "sourceId": "foxbusiness",
-          "sourceName": "Fox Business",
-          "lean": "lean-right",
-          "title": "Colette Kress named Nvidia interim CEO as Jensen Huang's abrupt resignation raises investor concerns",
-          "url": "https://foxbusiness.com/markets/colette-kress-named-nvidia-interim-ceo-jensen-huangs-abrupt-resignation-raises-investor-concerns",
-          "published": "2026-11-12T21:50:13.000Z",
-          "snippet": "Colette Kress, Nvidia's longtime CFO, steps in as interim CEO after Jensen Huang's abrupt resignation, with quarterly earnings looming next week.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        }
-      ],
-      "related": [
-        "s_90666d9d64a1"
-      ],
-      "familyId": "s_90666d9d64a1",
-      "subject": {
-        "storyCount": 8,
-        "sourceCount": 13,
-        "coverage": {
-          "left": 6,
-          "center": 5,
-          "right": 2,
-          "byLean": {
-            "left": 1,
-            "lean-left": 5,
-            "center": 5,
-            "lean-right": 1,
-            "right": 1
-          }
-        },
-        "lastUpdated": "2026-11-13T23:54:36.000Z",
-        "score": 2.2084
+        "score": 2.1859
       }
     },
     {
@@ -7875,7 +6874,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": "right",
-      "score": 1.6426,
+      "score": 1.6259,
       "image": "https://cdnph.upi.com/ph/st/th/7911794618231/2026/upi_com/9d786030a4ffc73ac86a24995a052117/v1.5/US-Air-Force-responds-to-drone-activity-at-UK-military-base.jpg",
       "articles": [
         {
@@ -7972,7 +6971,7 @@
           }
         },
         "lastUpdated": "2026-11-14T04:38:46.000Z",
-        "score": 1.6426
+        "score": 1.6259
       }
     },
     {
@@ -8045,7 +7044,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": "right",
-      "score": 1.0094,
+      "score": 0.9991,
       "image": "https://cdnph.upi.com/ph/st/th/5521794552076/2026/upi/c3876edbe17f722aa763d37b7b62aca9/v1.5/US-disrupts-North-Korean-fake-video-scheme-tied-to-400-million-theft.jpg",
       "articles": [
         {
@@ -8079,21 +7078,6 @@
           }
         },
         {
-          "id": "5345bfa05ccb",
-          "sourceId": "dw",
-          "sourceName": "DW",
-          "lean": "center",
-          "title": "US disrupts North Korea's $400 million crypto scam, FBI says",
-          "url": "https://dw.com/en/us-disrupts-north-korea-s-400-million-crypto-scam-fbi-says/a-79935957?maca=en-rss-en-all-1573-rdf",
-          "published": "2026-11-13T04:19:00.000Z",
-          "snippet": "The US has seized servers linked to a North Korean scam that used fake video meetings and deepfakes to steal more than $400 million in crypto, and has moved to seize $1.2 billion that was taken from Binance.",
-          "flags": {
-            "loaded": [],
-            "contested": [],
-            "clickbait": false
-          }
-        },
-        {
           "id": "3ee5111dd3db",
           "sourceId": "bbc",
           "sourceName": "BBC News",
@@ -8102,6 +7086,21 @@
           "url": "https://bbc.co.uk/news/articles/cqdj1ellpd70o?at_medium=RSS&at_campaign=rss",
           "published": "2026-11-13T02:48:29.000Z",
           "snippet": "More than 900 victims are thought to have fallen prey to the FaceStealer scheme in the last 18 months.",
+          "flags": {
+            "loaded": [],
+            "contested": [],
+            "clickbait": false
+          }
+        },
+        {
+          "id": "5345bfa05ccb",
+          "sourceId": "dw",
+          "sourceName": "DW",
+          "lean": "center",
+          "title": "US disrupts North Korea's $400 million crypto scam, FBI says",
+          "url": "https://dw.com/en/us-disrupts-north-korea-s-400-million-crypto-scam-fbi-says/a-79935957?maca=en-rss-en-all-1573-rdf",
+          "published": "2026-11-13T04:19:00.000Z",
+          "snippet": "The US has seized servers linked to a North Korean scam that used fake video meetings and deepfakes to steal more than $400 million in crypto, and has moved to seize $1.2 billion that was taken from Binance.",
           "flags": {
             "loaded": [],
             "contested": [],
@@ -8159,7 +7158,7 @@
           }
         },
         "lastUpdated": "2026-11-13T18:47:14.000Z",
-        "score": 1.5468
+        "score": 1.531
       }
     },
     {
@@ -8218,7 +7217,7 @@
       "recentSourceCount": 0,
       "perspectives": null,
       "mostlyCoveredBy": null,
-      "score": 0.7561,
+      "score": 0.7483,
       "image": "https://static.foxbusiness.com/foxbusiness.com/content/uploads/2026/11/binance-richard-teng-ceo.jpg",
       "articles": [
         {
@@ -8317,7 +7316,7 @@
           }
         },
         "lastUpdated": "2026-11-13T18:47:14.000Z",
-        "score": 1.5468
+        "score": 1.531
       }
     },
     {
@@ -8412,7 +7411,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.3517,
+      "score": 1.3379,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/11/talaricojames_110926gn03_w.jpg?w=900",
       "articles": [
         {
@@ -8479,7 +7478,7 @@
           }
         },
         "lastUpdated": "2026-11-14T02:33:22.000Z",
-        "score": 1.3517
+        "score": 1.3379
       }
     },
     {
@@ -8574,7 +7573,7 @@
         ]
       },
       "mostlyCoveredBy": null,
-      "score": 1.2569,
+      "score": 1.2441,
       "image": "https://thehill.com/wp-content/uploads/sites/2/2026/04/GettyImages-1243793556-e1718206186772_ccec95.jpg?w=900",
       "articles": [
         {
@@ -8686,7 +7685,7 @@
           }
         },
         "lastUpdated": "2026-11-13T19:25:40.000Z",
-        "score": 1.2569
+        "score": 1.2441
       }
     },
     {
@@ -8818,7 +7817,7 @@
         ]
       },
       "mostlyCoveredBy": "left",
-      "score": 0.9865,
+      "score": 0.9765,
       "image": "https://cdnph.upi.com/ph/st/th/5151794511741/2026/i/17945122823431/v1.5/Hegseth-awards-medal-to-soldier-who-admonished-him-at-Arlington.jpg",
       "articles": [
         {
@@ -9054,7 +8053,7 @@
           }
         },
         "lastUpdated": "2026-11-13T10:27:08.000Z",
-        "score": 0.9865
+        "score": 0.9765
       }
     }
   ],

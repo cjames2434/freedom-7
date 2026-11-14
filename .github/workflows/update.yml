@@ -26,7 +26,7 @@ jobs:
   # through the API once a day keeps the schedule running. This job has its
   # own narrow permission and runs no project code.
   keepalive:
-    if: github.event_name == 'schedule' && github.event.schedule == '41 6 * * *'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '41 6 * * *')
     runs-on: ubuntu-latest
     timeout-minutes: 2
     permissions:

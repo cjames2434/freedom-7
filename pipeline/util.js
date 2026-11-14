@@ -51,6 +51,10 @@ export function cleanText(s) {
   if (!s) return "";
   let t = String(s)
     .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, " ")
+    // A paragraph that ends without punctuation (a standfirst, a list item)
+    // still ends there: close it with a full stop so it doesn't run into the
+    // next paragraph as one sentence.
+    .replace(/([A-Za-z0-9)\]])\s*<\/(?:p|div|li|h[1-6])>\s*(?=<(?:p|div|li|h[1-6])\b)/gi, "$1. ")
     .replace(/<[^>]+>/g, " ");
   t = decodeEntities(decodeEntities(t)); // some feeds double-encode
   t = t

@@ -232,3 +232,13 @@ test("a shortened summary keeps whole sentences and stays the outlet's own words
   const abbr = "Sen. Jane Doe of the U.S. Senate said the bill would pass this week after months of talks between the two parties. Critics disagreed with that prediction and promised to slow it down in committee, where several amendments are already waiting for…";
   assert.equal(blurbOf(abbr), "Sen. Jane Doe of the U.S. Senate said the bill would pass this week after months of talks between the two parties.");
 });
+
+test("a paragraph break ends a sentence even when the outlet left off the full stop", () => {
+  assert.equal(
+    cleanText("<p>Officials said a device was found and defused; FBI said it is investigating</p><p>Residents were ordered to leave.</p>"),
+    "Officials said a device was found and defused; FBI said it is investigating. Residents were ordered to leave."
+  );
+  // Paragraphs that already end properly are left alone.
+  assert.equal(cleanText("<p>The vote was 52-48.</p><p>It now goes to the House.</p>"), "The vote was 52-48. It now goes to the House.");
+  assert.equal(cleanText("<p>Only one paragraph here</p>"), "Only one paragraph here");
+});

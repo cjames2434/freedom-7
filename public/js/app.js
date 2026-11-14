@@ -605,6 +605,48 @@ function perspectivesTeaser() {
     </section>`;
 }
 
+// ---------- search (in the browser, over the stories already loaded) ----------
+// A story matches when every word typed appears somewhere in its headline,
+// summary, quoted sentences, or any outlet's headline or name. Results keep
+// the site's own ranking; nothing about the search is sent anywhere.
+const searchText = new Map();
+function haystack(s) {
+  let text = searchText.get(s);
+  if (!text) {
+    text = [s.headline, s.snippet, topicLabel(s.topic), ...(s.digest || []).map((d) => d.text), ...s.articles.flatMap((a) => [a.title, a.sourceName])]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+    searchText.set(s, text);
+  }
+  return text;
+}
+function searchStories(query) {
+  const words = String(query || "").toLowerCase().split(/\s+/).filter(Boolean);
+  if (!words.length) return [];
+  return news.stories.filter((s) => words.every((w) => haystack(s).includes(w)));
+}
+function searchResults(query) {
+  const q = String(query || "").trim();
+  if (!q) return `<p class="note">Type a name, a place or a topic. Search covers the last ${Number(news.stats.windowHours)} hours of stories.</p>`;
+  const list = searchStories(q);
+  if (!list.length) return emptyState("No stories match", `Nothing in the last ${Number(news.stats.windowHours)} hours mentions ${esc(JSON.stringify(q))}. Try fewer or different words.`);
+  return `
+    <p class="mono-note search-count">${plural(list.length, "story", "stories")}, in the site's usual order</p>
+    <section class="list-section search-list">${cardGrid(list.slice(0, 60))}</section>`;
+}
+function viewSearch(query = "") {
+  return `
+    <div class="wrap">
+      ${pageHead("Search", "Find a story", "")}
+      <div class="search-box" role="search">
+        <label class="sr-only" for="search-input">Search stories</label>
+        <input id="search-input" class="search-input" type="search" data-search value="${esc(query)}" placeholder="Search stories, people, places, outlets" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      </div>
+      <div id="search-results" aria-live="polite">${searchResults(query)}</div>
+    </div>`;
+}
+
 function viewTopic(id) {
   const known = news.topics.some((t) => t.id === id);
   const list = onePerFamily(news.stories.filter((s) => s.topic === id));
@@ -1010,6 +1052,11 @@ function route({ inPlace = false } = {}) {
       nav = "saved";
       title = "Saved";
       break;
+    case "search":
+      html = viewSearch(arg || "");
+      nav = "search";
+      title = "Search";
+      break;
     default:
       html = viewHome();
       nav = "home";
@@ -1031,9 +1078,25 @@ function route({ inPlace = false } = {}) {
     app.classList.add("route-in");
   }
   firstRender = false;
+  if (page === "search" && !inPlace) {
+    const input = document.getElementById("search-input");
+    input?.focus({ preventScroll: true });
+    input?.setSelectionRange(input.value.length, input.value.length);
+  }
 }
 
 // ---------- events ----------
+// Search as you type: update the results in place and keep the address in
+// step (without adding a history entry per keystroke) so a search can be shared.
+app.addEventListener("input", (e) => {
+  const input = e.target.closest("[data-search]");
+  if (!input) return;
+  const box = document.getElementById("search-results");
+  if (box) box.innerHTML = searchResults(input.value);
+  const q = input.value.trim();
+  history.replaceState(null, "", q ? `#/search/${encodeURIComponent(q)}` : "#/search");
+});
+
 app.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-action]");
   if (!btn) return;
@@ -1147,6 +1210,7 @@ async function fetchBalance() {
 }
 
 function setData(n, s, b) {
+  searchText.clear();
   news = n;
   if (s) sources = s;
   if (b) balance = b;

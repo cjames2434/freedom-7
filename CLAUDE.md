@@ -59,7 +59,9 @@ read", opinion only via Perspectives, "Developing" instead of a red Live
 banner. Brand colours (navy, red) are for the wordmark only; the spectrum
 uses teal / stone / ochre tokens (`--left`, `--center`, `--right`). Fonts
 are self-hosted in `public/fonts/` (OFL). Extra routes beyond the list
-above: `#/live` (developing timelines) and `#/saved` (localStorage).
+above: `#/live` (developing timelines), `#/saved` (localStorage) and
+`#/search/<words>` (search in the browser over the loaded stories; nothing
+is sent anywhere).
 
 The design session keeps `public/` in step with the Freedom 7 design canvas:
 it checks the canvas for edits every few hours while it's open, and a canvas

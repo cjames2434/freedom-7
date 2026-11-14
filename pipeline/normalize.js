@@ -77,7 +77,8 @@ export function normalizeItem(item, source, { now = new Date(), windowHours = 48
   if (published > now) published = now; // clock skew / future-dated items
   if ((now - published) / 36e5 > windowHours) return null;
 
-  const snippetSource = item.contentSnippet || item.summary || item.content || item["content:encoded"] || "";
+  // The HTML form comes first so paragraph breaks are still visible to cleanText.
+  const snippetSource = item.content || item.contentSnippet || item.summary || item["content:encoded"] || "";
   const snippet = truncate(tidySnippet(cleanText(snippetSource)), 400);
 
   // Many feeds also carry the article's opening paragraphs. A capped copy is
