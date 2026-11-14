@@ -94,3 +94,19 @@ test("two outlets running the same wire sentence are quoted once", () => {
   const items = [item("c1", "center", CENTER_A), item("c2", "center", CENTER_A)];
   assert.equal(buildDigest(items, { seed: "s" }).length, 1);
 });
+
+test("the digest can quote from an article's opening paragraphs when the feed carries them", () => {
+  const mk = (sourceId, lean, title, snippet, lead) => ({
+    article: { sourceId, title, snippet, lead, url: `https://e.com/${sourceId}` },
+    lean,
+    source: { name: sourceId.toUpperCase() },
+  });
+  const items = [
+    mk("l1", "lean-left", "City council approves the downtown transit budget", "Short dek.", "The city council approved a 40 million dollar downtown transit budget on Tuesday after a six hour meeting."),
+    mk("r1", "lean-right", "Council passes downtown transit budget after long meeting", "Another dek.", "The city council passed the downtown transit budget 7 to 2, with two members objecting to its cost."),
+    mk("c1", "center", "Downtown transit budget wins city council approval", "", ""),
+  ];
+  const d = buildDigest(items, { seed: "s" });
+  assert.deepEqual(d.map((x) => x.sourceId).sort(), ["l1", "r1"]);
+  assert.ok(d.every((x) => /transit budget/.test(x.text)));
+});

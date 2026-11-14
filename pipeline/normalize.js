@@ -8,6 +8,9 @@ const CREDIT_END = /(?:Getty Images|via REUTERS|via Reuters|via AP|\/Reuters|\/A
 const SIGN_OFF =
   /([.!?]["”’]?)\s+(?:(?:[A-Z][A-Za-z]+ News|DW)[’']?s?\s+)?(?:[A-Z][\w.'’-]*\s+){0,3}(?:and\s+(?:[A-Z][\w.'’-]*\s+){1,3})?(?:reports?|(?:has|have) more|(?:has|have) the (?:latest|details)|anchors? [^.]{3,60})\.\s*$/;
 
+/** How much of an article's opening is kept for the digest to quote from. */
+const LEAD_CHARS = 900;
+
 export function tidySnippet(text) {
   let t = String(text || "");
   CREDIT_END.lastIndex = 0;
@@ -77,6 +80,13 @@ export function normalizeItem(item, source, { now = new Date(), windowHours = 48
   const snippetSource = item.contentSnippet || item.summary || item.content || item["content:encoded"] || "";
   const snippet = truncate(tidySnippet(cleanText(snippetSource)), 400);
 
+  // Many feeds also carry the article's opening paragraphs. A capped copy is
+  // kept only as a source of sentences to quote in the story digest
+  // (pipeline/digest.js). Excerpts shown on the site still come from `snippet`.
+  const bodies = [item["content:encoded"], item.content].map((b) => tidySnippet(cleanText(b || "")));
+  const body = bodies[0].length >= bodies[1].length ? bodies[0] : bodies[1];
+  const lead = body.length > snippet.length + 40 ? truncate(body, LEAD_CHARS) : "";
+
   return {
     id: shortHash(url, 12),
     sourceId: source.id,
@@ -84,6 +94,7 @@ export function normalizeItem(item, source, { now = new Date(), windowHours = 48
     url,
     published: published.toISOString(),
     snippet,
+    ...(lead ? { lead } : {}),
     image: pickImage(item),
     categories: categoriesOf(item),
   };

@@ -214,3 +214,21 @@ test("a story is not a blindspot when the other side covered the subject in a re
   settleBlindspots(stories, opts);
   assert.deepEqual(stories.map((s) => s.mostlyCoveredBy), [null, null, "left", "right"]);
 });
+
+// --- The summary under a headline ends on a whole sentence ---
+
+import { blurbOf } from "../pipeline/stories.js";
+
+test("a shortened summary keeps whole sentences and stays the outlet's own words", () => {
+  const first = "The nationwide ground stop issued by the Federal Aviation Administration on Friday afternoon has been lifted, Transportation Secretary Sean Duffy confirmed.";
+  const cut = first + " “At 8:15 tonight Eastern Time, we’ve opened up the airspace,” Duffy said to reporters in the White House briefing room during…";
+  assert.equal(blurbOf(cut), first);
+  assert.equal(blurbOf(first), first); // short and complete: untouched
+  assert.equal(blurbOf(""), null);
+  // One long cut-off sentence has no whole sentence to fall back on, so it is shortened as before.
+  const long = "Officials in the capital said on Tuesday that the review, which began last spring and covers dozens of agencies, had found no single cause…";
+  assert.ok(blurbOf(long).endsWith("…"));
+  // Abbreviations do not end a sentence.
+  const abbr = "Sen. Jane Doe of the U.S. Senate said the bill would pass this week after months of talks between the two parties. Critics disagreed with that prediction and promised to slow it down in committee, where several amendments are already waiting for…";
+  assert.equal(blurbOf(abbr), "Sen. Jane Doe of the U.S. Senate said the bill would pass this week after months of talks between the two parties.");
+});

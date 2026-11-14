@@ -196,7 +196,9 @@ function toggleListen(id) {
   const s = byId.get(id);
   if (!s) return;
   window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(`${s.headline}. ${blurb(s)}`);
+  // Headline, summary, then the quoted sentences, each with the outlet that wrote it.
+  const quoted = (s.digest || []).filter((d) => d && d.text).map((d) => `${d.sourceName} reports: ${d.text}`);
+  const u = new SpeechSynthesisUtterance([`${s.headline}.`, blurb(s), ...quoted].filter(Boolean).join(" "));
   u.onend = u.onerror = () => {
     if (speakingId === id) {
       speakingId = null;

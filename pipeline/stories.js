@@ -1,6 +1,6 @@
 import { analyzeHeadline } from "./language.js";
 import { classifyTopic } from "./topics.js";
-import { buildDigest } from "./digest.js";
+import { buildDigest, splitSentences } from "./digest.js";
 import { leanDistance, leanGroup, sideTurn, truncate } from "./util.js";
 
 const MEDIA_PREFIX = /^\s*(watch|video|listen|photos?|gallery|in pictures)\s*[:|—–-]/i;
@@ -101,6 +101,27 @@ export function assignTurns(drafts, previous = {}) {
     tally[turn]++;
   }
   return turns;
+}
+
+/**
+ * The summary shown under a headline: the outlet's excerpt, kept to whole
+ * sentences when it has to be shortened, so it doesn't stop mid-thought.
+ * Still the outlet's own words, only shorter.
+ */
+export function blurbOf(snippet, max = 280, min = 90) {
+  const text = String(snippet || "").trim();
+  if (!text) return null;
+  const cutOff = text.endsWith("…") || text.endsWith("...");
+  if (text.length <= max && !cutOff) return text;
+  const sentences = splitSentences(text);
+  if (cutOff) sentences.pop();
+  let out = "";
+  for (const sentence of sentences) {
+    const next = out ? out + " " + sentence : sentence;
+    if (next.length > max) break;
+    out = next;
+  }
+  return out.length >= min ? out : truncate(text, max) || null;
 }
 
 function coverageOf(sourceIds, sourcesById) {
@@ -214,7 +235,7 @@ export function buildStories(clusters, articles, sourcesById, settings, now = ne
     const turn = turns.get(id) || null;
     const chosen = turn && turn !== choices.bestSide ? choices.rival : choices.best;
     const chosenSide = leanGroup(chosen.lean);
-    const blurb = truncate(chosen.article.snippet, 280) || null;
+    const blurb = blurbOf(chosen.article.snippet);
     const imageItem =
       items.find((it) => it.article.image && it.lean === "center") || items.find((it) => it.article.image);
 

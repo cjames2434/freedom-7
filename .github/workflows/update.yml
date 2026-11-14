@@ -6,6 +6,7 @@ name: Update news
 on:
   schedule:
     - cron: "7,22,37,52 * * * *" # every 15 minutes (off the top of the hour, when GitHub is busiest)
+    - cron: "41 6 * * *" # once a day: also runs the keepalive job below
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -20,6 +21,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # GitHub pauses scheduled workflows in a repository with no commits for 60
+  # days, and the site would quietly stop updating. Re-enabling the workflow
+  # through the API once a day keeps the schedule running. This job has its
+  # own narrow permission and runs no project code.
+  keepalive:
+    if: github.event_name == 'schedule' && github.event.schedule == '41 6 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      actions: write
+    steps:
+      - name: Keep the schedule enabled
+        run: gh api -X PUT "repos/$GITHUB_REPOSITORY/actions/workflows/update.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15

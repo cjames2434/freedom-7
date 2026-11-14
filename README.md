@@ -134,7 +134,8 @@ GitHub Pages hosts it and GitHub Actions rebuilds it every 15 minutes.
 
 Notes:
 - GitHub pauses scheduled workflows in public repos after 60 days with no
-  commits. If updates stop, push any commit or re-enable it under Actions.
+  commits. The workflow re-enables itself once a day to prevent that. If
+  updates ever stop anyway, push any commit or re-enable it under Actions.
 - To get AI briefs online, add your key under **Settings → Secrets and
   variables → Actions → New repository secret** named `ANTHROPIC_API_KEY`.
   Optionally add a variable `SUMMARY_MODEL` to change the model.
@@ -232,7 +233,9 @@ their stories arrive through the outlets that run them.
 ## Etiquette and limits
 
 - The site shows headlines, short feed excerpts and links. It never copies
-  full articles; readers click through to the publisher.
+  full articles; readers click through to the publisher. "What's being
+  reported" quotes at most one sentence per outlet, taken from the excerpt or
+  the opening paragraphs the outlet's own feed carries.
 - Feeds are fetched every 15 minutes with an honest user agent, which is what
   RSS is for. Keep it non-commercial.
 - Story grouping is automatic and sometimes wrong (it may split one event

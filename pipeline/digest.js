@@ -114,6 +114,21 @@ export function usableSentences(snippet, title = "") {
   });
 }
 
+/** An article's usable sentences: from its excerpt, then from its opening paragraphs when the feed carries them. */
+function sentencesOf(article) {
+  const seen = new Set();
+  const out = [];
+  for (const text of [article.snippet, article.lead]) {
+    for (const s of usableSentences(text, article.title)) {
+      const key = tokenize(s).join(" ");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push(s);
+    }
+  }
+  return out;
+}
+
 function overlap(a, b) {
   if (!a.size || !b.size) return 0;
   let shared = 0;
@@ -124,7 +139,7 @@ function overlap(a, b) {
 /**
  * Pick the digest for one story.
  *
- * items: [{ article: { sourceId, title, snippet, url }, lean, source: { name } }]
+ * items: [{ article: { sourceId, title, snippet, lead?, url }, lean, source: { name } }]
  * shown: text already on the page (headline, blurb), so the digest adds to it.
  * seed:  any stable string for the story; decides which side picks first.
  * first: "left" or "right" to say which side picks first instead (the story
@@ -135,7 +150,7 @@ export function buildDigest(items, { shown = [], seed = "", first = null, maxPer
   const outletWords = new Map();
   for (const it of items) {
     const set = outletWords.get(it.article.sourceId) || new Set();
-    for (const t of tokenize(`${it.article.title} ${it.article.snippet || ""}`)) set.add(t);
+    for (const t of tokenize(`${it.article.title} ${it.article.snippet || ""} ${it.article.lead || ""}`)) set.add(t);
     outletWords.set(it.article.sourceId, set);
   }
   const outletCount = new Map();
@@ -143,7 +158,7 @@ export function buildDigest(items, { shown = [], seed = "", first = null, maxPer
 
   const candidates = [];
   for (const it of items) {
-    for (const text of usableSentences(it.article.snippet, it.article.title)) {
+    for (const text of sentencesOf(it.article)) {
       const tokens = new Set(tokenize(text));
       if (tokens.size < 5) continue;
       const onTopic = [...tokens].filter((t) => (outletCount.get(t) || 0) >= 2).length / tokens.size;
