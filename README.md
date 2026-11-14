@@ -12,8 +12,8 @@ nothing to run (an optional AI feature costs a little; see below).
 
 ## How it stays neutral
 
-- **Balanced roster.** 29 news outlets: 5 left, 6 lean-left, 7 center, 6
-  lean-right, 5 right ([`config/sources.json`](config/sources.json)). The
+- **Balanced roster.** 39 news outlets: 7 left, 8 lean-left, 9 center, 8
+  lean-right, 7 right ([`config/sources.json`](config/sources.json)). The
   roster must mirror itself; the build refuses to run if it doesn't.
 - **Opinion kept separate.** Op-eds, columns, editorials and commentary
   never count as news coverage. Outlets whose feeds are mostly commentary

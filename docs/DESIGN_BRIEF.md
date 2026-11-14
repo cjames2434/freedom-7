@@ -19,8 +19,8 @@ to persuade anyone toward any party. It gets there by showing, for every
 story, how outlets from the left, center and right each reported it, and by
 putting the plainest version on top.
 
-Each story is built automatically from 29 news outlets' RSS feeds (5 left, 6
-lean-left, 7 center, 6 lean-right, 5 right). For each story we know which
+Each story is built automatically from 39 news outlets' RSS feeds (7 left, 8
+lean-left, 9 center, 8 lean-right, 7 right). For each story we know which
 outlets covered it, each outlet's own headline, whether a headline uses
 loaded wording, whether it's developing right now, and optionally a short
 AI-written neutral brief. Separately, opinion pieces from a mirrored set of

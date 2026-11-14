@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T01:04:48.335Z",
+  "generatedAt": "2026-11-14T01:14:30.385Z",
   "balance": {
-    "left": 5,
-    "lean-left": 6,
-    "center": 7,
-    "lean-right": 6,
-    "right": 5
+    "left": 7,
+    "lean-left": 8,
+    "center": 9,
+    "lean-right": 8,
+    "right": 7
   },
   "opinionBalance": {
     "left": 4,
@@ -25,8 +25,8 @@
       "roles": [
         "news"
       ],
-      "status": "down",
-      "itemsThisRun": 0
+      "status": "ok",
+      "itemsThisRun": 40
     },
     {
       "id": "msnow",
@@ -75,6 +75,30 @@
       ],
       "status": "ok",
       "itemsThisRun": 10
+    },
+    {
+      "id": "theintercept",
+      "name": "The Intercept",
+      "lean": "left",
+      "homepage": "https://theintercept.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
+    },
+    {
+      "id": "commondreams",
+      "name": "Common Dreams",
+      "lean": "left",
+      "homepage": "https://www.commondreams.org",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 30
     },
     {
       "id": "newrepublic",
@@ -174,6 +198,18 @@
       "itemsThisRun": 25
     },
     {
+      "id": "abcnews",
+      "name": "ABC News",
+      "lean": "lean-left",
+      "homepage": "https://abcnews.go.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 50
+    },
+    {
       "id": "guardian",
       "name": "The Guardian",
       "lean": "lean-left",
@@ -215,12 +251,13 @@
       "name": "The Washington Post",
       "lean": "lean-left",
       "homepage": "https://www.washingtonpost.com",
-      "notes": "Opinions section, used for Perspectives only.",
+      "notes": null,
       "roles": [
+        "news",
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 30
+      "itemsThisRun": 88
     },
     {
       "id": "bbc",
@@ -296,6 +333,30 @@
       "itemsThisRun": 24
     },
     {
+      "id": "wsjnews",
+      "name": "The Wall Street Journal",
+      "lean": "center",
+      "homepage": "https://www.wsj.com",
+      "notes": "News pages. Raters put them at center and the opinion pages at lean right, so the opinion pages are listed separately.",
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 80
+    },
+    {
+      "id": "cnbc",
+      "name": "CNBC",
+      "lean": "center",
+      "homepage": "https://www.cnbc.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 60
+    },
+    {
       "id": "dw",
       "name": "DW",
       "lean": "center",
@@ -347,10 +408,10 @@
     },
     {
       "id": "wsj",
-      "name": "The Wall Street Journal",
+      "name": "WSJ Opinion",
       "lean": "lean-right",
       "homepage": "https://www.wsj.com",
-      "notes": "Opinion pages, used for Perspectives only. The lean is for the opinion pages; raters put the news side at center.",
+      "notes": "The Wall Street Journal's opinion pages, used for Perspectives only. Raters put them at lean right and the news pages at center, so the news pages are listed separately.",
       "roles": [
         "opinion"
       ],
@@ -392,6 +453,30 @@
       ],
       "status": "ok",
       "itemsThisRun": 25
+    },
+    {
+      "id": "epochtimes",
+      "name": "The Epoch Times",
+      "lean": "lean-right",
+      "homepage": "https://www.theepochtimes.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 40
+    },
+    {
+      "id": "justthenews",
+      "name": "Just the News",
+      "lean": "lean-right",
+      "homepage": "https://justthenews.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
     },
     {
       "id": "freepress",
@@ -453,6 +538,30 @@
       ],
       "status": "ok",
       "itemsThisRun": 40
+    },
+    {
+      "id": "freebeacon",
+      "name": "Washington Free Beacon",
+      "lean": "right",
+      "homepage": "https://freebeacon.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
+    },
+    {
+      "id": "dailysignal",
+      "name": "The Daily Signal",
+      "lean": "right",
+      "homepage": "https://www.dailysignal.com",
+      "notes": null,
+      "roles": [
+        "news"
+      ],
+      "status": "ok",
+      "itemsThisRun": 20
     },
     {
       "id": "nationalreview",
