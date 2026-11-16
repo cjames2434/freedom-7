@@ -522,8 +522,39 @@ function viewHome() {
     </section>`
         : ""
     }
+    ${showAllRundown ? "" : marketsBand()}
     ${showAllRundown ? "" : topicSections(rundown.slice(RUNDOWN_PAGE))}
     ${perspectivesTeaser()}`;
+}
+
+// One newspaper-style column: a lead story with its summary, then a few
+// headlines, under a heading with a link to the whole section.
+function sectionColumn({ key, label, list, href, moreLabel, empty = "", level = 2, size = SECTION_SIZE }) {
+  const [first, ...rest] = list.slice(0, size);
+  const h = `h${level}`;
+  return `
+          <section class="sec-col" aria-labelledby="sec-${esc(key)}">
+            <div class="section-head"><${h} id="sec-${esc(key)}" class="label">${esc(label)}</${h}><a class="sec-more" href="${href}">${esc(moreLabel)} ${ICON.arrow}</a></div>
+            ${
+              first
+                ? `
+            <article class="sec-lead">
+              <h3><a href="${storyHref(first)}">${esc(first.headline)}</a></h3>
+              ${blurb(first) ? `<p>${esc(blurb(first))}</p>` : ""}
+              <span class="mc-meta">${coverageMeta(first)} · ${esc(timeAgo(first.lastUpdated))}</span>
+            </article>`
+                : `<p class="spec-empty">${esc(empty)}</p>`
+            }
+            ${rest
+              .map(
+                (s) => `
+            <div class="sec-item">
+              <a href="${storyHref(s)}">${esc(s.headline)}</a>
+              <span class="mc-meta">${coverageMeta(s)} · ${esc(timeAgo(s.lastUpdated))}</span>
+            </div>`
+              )
+              .join("")}
+          </section>`;
 }
 
 // Newspaper-style section columns under the Rundown: the next stories in rank
@@ -536,31 +567,86 @@ function topicSections(pool) {
   return `
     <section class="wrap sections" aria-label="More stories by topic">
       <div class="section-grid">
-        ${cols
-          .map(({ t, list }) => {
-            const [first, ...rest] = list.slice(0, SECTION_SIZE);
-            return `
-          <section class="sec-col" aria-labelledby="sec-${esc(t.id)}">
-            <div class="section-head"><h2 id="sec-${esc(t.id)}" class="label">${esc(t.label)}</h2><a class="sec-more" href="${topicHref(t.id)}">All ${esc(t.label)} ${ICON.arrow}</a></div>
-            <article class="sec-lead">
-              <h3><a href="${storyHref(first)}">${esc(first.headline)}</a></h3>
-              ${blurb(first) ? `<p>${esc(blurb(first))}</p>` : ""}
-              <span class="mc-meta">${coverageMeta(first)} · ${esc(timeAgo(first.lastUpdated))}</span>
-            </article>
-            ${rest
-              .map(
-                (s) => `
-            <div class="sec-item">
-              <a href="${storyHref(s)}">${esc(s.headline)}</a>
-              <span class="mc-meta">${coverageMeta(s)} · ${esc(timeAgo(s.lastUpdated))}</span>
-            </div>`
-              )
-              .join("")}
-          </section>`;
-          })
-          .join("")}
+        ${cols.map(({ t, list }) => sectionColumn({ key: t.id, label: t.label, list, href: topicHref(t.id), moreLabel: `All ${t.label}` })).join("")}
       </div>
     </section>`;
+}
+
+// ---------- markets ----------
+// Stock-market news and the companies the site follows (pipeline/markets.js,
+// companies set in config/settings.json). A filter over the usual ranking.
+const marketCompanies = () => news.markets?.companies || [];
+const hasMarkets = () => Array.isArray(news.markets?.stories);
+const companyStories = (id) => news.stories.filter((s) => (s.companies || []).includes(id));
+const otherMarketStories = () => news.stories.filter((s) => s.market && !(s.companies || []).length);
+const marketsHref = (id) => (id ? `#/markets/${encodeURIComponent(id)}` : "#/markets");
+const listOf = (names) => (names.length < 2 ? names.join("") : `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`);
+
+function marketsBand() {
+  if (!hasMarkets()) return "";
+  const cols = [
+    ...marketCompanies().map((c) => ({
+      key: `mk-${c.id}`,
+      label: c.name,
+      list: companyStories(c.id),
+      href: marketsHref(c.id),
+      moreLabel: `All ${c.name}`,
+      empty: `No ${c.name} news in the last ${Number(news.stats.windowHours)} hours.`,
+    })),
+    {
+      key: "mk-other",
+      label: "Stocks & economy",
+      list: onePerFamily(otherMarketStories()),
+      href: marketsHref(),
+      moreLabel: "All markets",
+      empty: "Quiet on Wall Street right now.",
+    },
+  ];
+  return `
+    <section class="wrap sections markets-band" aria-labelledby="mk-h">
+      <div class="section-head"><h2 id="mk-h" class="label">Markets</h2><a class="sec-more" href="#/markets">All market news ${ICON.arrow}</a></div>
+      <div class="section-grid">${cols.map((c) => sectionColumn({ ...c, level: 3 })).join("")}</div>
+    </section>`;
+}
+
+function viewMarkets(companyId) {
+  const companies = marketCompanies();
+  const hours = Number(news.stats.windowHours);
+  if (companyId) {
+    const c = companies.find((x) => x.id === companyId);
+    const list = c ? companyStories(c.id) : [];
+    return `
+      <div class="wrap">
+        <a class="back" href="#/markets">${ICON.back}Markets</a>
+        ${pageHead("Markets", c ? c.name : "Company not found", c ? `${plural(list.length, "story", "stories")} about ${esc(c.name)} in the last ${hours} hours, ranked by how widely they're covered.` : "")}
+        ${
+          list.length
+            ? `<section class="list-section">${cardGrid(list)}</section>`
+            : emptyState(c ? `No ${c.name} news right now` : "Not a company we follow", c ? "Nothing about it in the last couple of days. Check back after the next update." : "The Markets page lists the companies the site follows.", { action: `<a class="btn" href="#/markets">Back to Markets</a>` })
+        }
+      </div>`;
+  }
+  const names = companies.map((c) => c.name);
+  const others = onePerFamily(otherMarketStories());
+  const companyBlocks = companies
+    .map((c) => {
+      const list = companyStories(c.id);
+      return `
+      <section class="list-section" aria-labelledby="mk-${esc(c.id)}-h">
+        <div class="section-head"><h2 id="mk-${esc(c.id)}-h" class="label">${esc(c.name)}</h2>${list.length ? `<a class="sec-more" href="${marketsHref(c.id)}">All ${plural(list.length, "story", "stories")} ${ICON.arrow}</a>` : ""}</div>
+        ${list.length ? cardGrid(list.slice(0, 3)) : `<p class="spec-empty">No ${esc(c.name)} news in the last ${hours} hours.</p>`}
+      </section>`;
+    })
+    .join("");
+  return `
+    <div class="wrap">
+      ${pageHead("Section", "Markets", `Big news from the stock market${names.length ? `, and every story about ${esc(listOf(names))}` : ""}, ranked by how widely it's covered. News only: no prices and no tips.`)}
+      ${companyBlocks}
+      <section class="list-section" aria-labelledby="mk-other-h">
+        <div class="section-head"><h2 id="mk-other-h" class="label">Stocks and the economy</h2><span class="mono-note">${plural(others.length, "story", "stories")}</span></div>
+        ${others.length ? cardGrid(others) : `<p class="spec-empty">Quiet on Wall Street right now. Market news picks up on weekdays, when markets are open.</p>`}
+      </section>
+    </div>`;
 }
 
 function blindspotBand() {
@@ -930,7 +1016,10 @@ function viewSources() {
 }
 
 function viewAbout() {
-  const html = document.getElementById("about-template").innerHTML;
+  const names = marketCompanies().map((c) => c.name);
+  const html = document
+    .getElementById("about-template")
+    .innerHTML.replace("<!--market-companies-->", names.length ? ` (right now ${esc(listOf(names))})` : "");
   const t = balance?.today;
   if (!t?.headlinePicks) return html;
   const n = (v) => Number(v ?? 0);
@@ -1056,6 +1145,13 @@ function route({ inPlace = false } = {}) {
       nav = "saved";
       title = "Saved";
       break;
+    case "markets": {
+      html = viewMarkets(arg || "");
+      nav = "markets";
+      topic = "markets";
+      title = arg ? `${marketCompanies().find((c) => c.id === arg)?.name || "Markets"} · Markets` : "Markets";
+      break;
+    }
     case "search":
       html = viewSearch(arg || "");
       nav = "search";
@@ -1071,7 +1167,7 @@ function route({ inPlace = false } = {}) {
   syncActionButtons();
   // The full masthead is for the front page; other pages get a compact one.
   document.body.classList.toggle("is-inner", nav !== "home");
-  document.body.classList.toggle("show-topics", nav === "home" || page === "topic");
+  document.body.classList.toggle("show-topics", nav === "home" || page === "topic" || page === "markets");
   document.title = title ? `${title} · ${news.site.name}` : `${news.site.name}: ${news.site.tagline}`;
   if (!firstRender && !inPlace) {
     window.scrollTo(0, 0);
@@ -1157,12 +1253,11 @@ function renderChrome() {
   document.getElementById("nav-wordmark").innerHTML = brandHtml(name);
   document.getElementById("site-tagline").textContent = news.site.tagline;
   document.getElementById("footer-tagline").textContent = news.site.tagline;
-  document.getElementById("topic-row").innerHTML =
-    `<a data-topic="all" href="#/">All</a>` +
-    news.topics
-      .filter((t) => news.stories.some((s) => s.topic === t.id))
-      .map((t) => `<a data-topic="${esc(t.id)}" href="${topicHref(t.id)}">${esc(t.label)}</a>`)
-      .join("");
+  const shownTopics = news.topics.filter((t) => news.stories.some((s) => s.topic === t.id));
+  const chips = shownTopics.map((t) => `<a data-topic="${esc(t.id)}" href="${topicHref(t.id)}">${esc(t.label)}</a>`);
+  // Markets comes first, so it's in view on a phone without scrolling the row.
+  if (hasMarkets()) chips.unshift(`<a data-topic="markets" href="#/markets">Markets</a>`);
+  document.getElementById("topic-row").innerHTML = `<a data-topic="all" href="#/">All</a>` + chips.join("");
   renderStamps();
 }
 

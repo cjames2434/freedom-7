@@ -43,6 +43,10 @@ nothing to run.
   on the story folded under it.
 - **Ranking without outrage.** Stories rank by how many outlets cover them,
   how much of the spectrum covers them, and recency. Never by clicks.
+- **Markets.** Stock-market news, plus every story about the companies the
+  site follows (NVIDIA and SpaceX; change them under `markets.watch` in
+  [`config/settings.json`](config/settings.json)). It only picks which stories
+  to list: they keep the same ranking and balance rules. News only, no prices.
 - **Blindspots.** Stories covered mostly by one side are called out, so you
   can see what the other side's readers are hearing about. When a subject is
   split across several related stories, it only counts if the whole subject
@@ -233,6 +237,10 @@ their stories arrive through the outlets that run them.
 - `headline`: `takeTurns` turns the left/right turn-taking on or off;
   `turnMargin` is how much less on-topic the other side's headline may be and
   still count as equally good (it may never be more loaded).
+- `markets`: the companies the Markets section follows (`watch`: an id, a
+  display name, and the words that identify it in headlines), and how many
+  outlets (`minOutlets`) and what share of them (`minShare`) must report on
+  markets for a story to count as market news.
 - `minPartisanSourcesForBlindspot`, `blindspotShare`: when a story counts
   as a blindspot (default: 3+ partisan outlets, 80% from one side).
 - `developing`: how many outlets in how many hours flags a story as developing.

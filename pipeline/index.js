@@ -11,6 +11,7 @@ import { nonNewsKind } from "./opinion.js";
 import { clusterArticles } from "./cluster.js";
 import { buildStories, settleBlindspots } from "./stories.js";
 import { attachPerspectives } from "./perspectives.js";
+import { tagMarkets } from "./markets.js";
 import { linkRelated, rankSubjects } from "./related.js";
 import { buildStoryIndex } from "./storyindex.js";
 import { addSummaries, aiEnabled } from "./summarize.js";
@@ -238,6 +239,11 @@ async function main() {
   rankSubjects(stories, families, { recencyHalfLifeHours: settings.recencyHalfLifeHours, now });
   settleBlindspots(stories, settings); // not a blindspot if the other side covered the subject in a sibling story
   const perspectiveLeads = attachPerspectives(stories, news, opinion, sourcesById, { ...settings.perspectives, index: storyIndex });
+  const markets = tagMarkets(stories, settings.markets);
+  console.log(
+    `Markets: ${markets.stories.length} stories; ` +
+      markets.companies.map((c) => `${c.name} ${stories.filter((s) => s.companies.includes(c.id)).length}`).join(", ")
+  );
   console.log(`Perspectives (opinion from both sides): ${perspectiveLeads.length} subjects`);
 
   // 6. Optional AI briefs
@@ -285,6 +291,7 @@ async function main() {
       .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
       .map((s) => s.id),
     perspectives: perspectiveLeads, // one id per group of related stories
+    markets, // { companies: [{ id, name }], stories: [ids] }: stock-market news and followed companies
     aliases: memory.next.aliases, // ids of stories that merged into another: old id -> current id
   };
   writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));

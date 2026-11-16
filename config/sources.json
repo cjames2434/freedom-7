@@ -288,7 +288,8 @@
       "homepage": "https://www.wsj.com",
       "feeds": [
         "https://feeds.content.dowjones.io/public/rss/RSSUSnews",
-        "https://feeds.content.dowjones.io/public/rss/RSSWorldNews"
+        "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+        "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"
       ],
       "notes": "News pages. Raters put them at center and the opinion pages at lean right, so the opinion pages are listed separately."
     },
@@ -299,7 +300,8 @@
       "homepage": "https://www.cnbc.com",
       "feeds": [
         "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-        "https://www.cnbc.com/id/10000113/device/rss/rss.html"
+        "https://www.cnbc.com/id/10000113/device/rss/rss.html",
+        "https://www.cnbc.com/id/15839069/device/rss/rss.html"
       ]
     },
     {

@@ -43,7 +43,11 @@ All times are ISO 8601 UTC strings. Arrays are never `null` (they may be empty).
   "blindspots": [ "s_abc123" ],   // ids of stories that are blindspots
   "developing": [ "s_def456" ],   // ids of developing stories, most recently updated first
   "perspectives": [ "s_ghi789" ], // stories with balanced opinion: one id per group of related stories (the group's top story), in rank order
-  "aliases": { "s_old111": "s_abc123" } // ids of stories that merged into another: old id -> current id (often empty)
+  "aliases": { "s_old111": "s_abc123" }, // ids of stories that merged into another: old id -> current id (often empty)
+  "markets": {                    // the Markets section
+    "companies": [ { "id": "nvidia", "name": "NVIDIA" }, { "id": "spacex", "name": "SpaceX" } ], // followed companies, from config/settings.json
+    "stories": [ "s_abc123" ]     // ids of market stories (stock-market news or a followed company), in rank order
+  }
 }
 ```
 
@@ -65,6 +69,8 @@ Topic ids: `politics`, `world`, `us` (general U.S. news), `military`,
 | `disputed` | string[] | AI: points where accounts conflict. Often empty. |
 | `ai` | object \| null | `{ "model", "generatedAt", "basedOnSources" }` when the brief is AI-written, else `null`. |
 | `topic` | string | One of the topic ids. |
+| `market` | boolean | Stock-market news, or about a followed company. Lists it in the Markets section; doesn't change its topic or rank. |
+| `companies` | string[] | Ids of followed companies (`markets.companies`) the story is about. Often empty. |
 | `firstSeen` / `lastUpdated` | string | Earliest and latest article times in the story. |
 | `firstBySide` | object | `{ "left", "center", "right" }`: when each side's outlets first published on the story (ISO string), or `null` for a side that didn't cover it. `left` includes lean-left, `right` includes lean-right. Lets a page say, neutrally, which side picked a story up first and how much later the other did. |
 | `sourceCount` | number | Distinct outlets covering it. |

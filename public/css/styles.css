@@ -854,3 +854,6 @@ a.art-more-link:hover { color: var(--accent); }
 
 /* Shown when the news has stopped updating for a few hours. */
 .dateline #updated.stale { color: var(--on-night); font-weight: 500; }
+
+/* Markets band on the front page: one heading over the columns. */
+.markets-band > .section-head { margin-bottom: 18px; align-items: center; }

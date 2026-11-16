@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T16:59:02.295Z",
+  "generatedAt": "2026-11-16T17:00:09.017Z",
   "balance": {
     "left": 7,
     "lean-left": 8,
@@ -26,7 +26,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 40
+      "itemsThisRun": 36
     },
     {
       "id": "msnow",
@@ -159,7 +159,7 @@
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 55
+      "itemsThisRun": 62
     },
     {
       "id": "npr",
@@ -257,7 +257,7 @@
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 87
+      "itemsThisRun": 52
     },
     {
       "id": "bbc",
@@ -269,7 +269,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 48
+      "itemsThisRun": 47
     },
     {
       "id": "thehill",
@@ -294,7 +294,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 16
+      "itemsThisRun": 18
     },
     {
       "id": "csmonitor",
@@ -342,7 +342,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 80
+      "itemsThisRun": 120
     },
     {
       "id": "cnbc",
@@ -354,7 +354,7 @@
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 60
+      "itemsThisRun": 90
     },
     {
       "id": "dw",

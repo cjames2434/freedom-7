@@ -35,6 +35,15 @@
     "turnMargin": 0.5
   },
 
+  "markets": {
+    "watch": [
+      { "id": "nvidia", "name": "NVIDIA", "terms": ["nvidia", "jensen huang"] },
+      { "id": "spacex", "name": "SpaceX", "terms": ["spacex", "space x", "starship", "starlink", "starshield", "falcon 9"] }
+    ],
+    "minOutlets": 2,
+    "minShare": 0.4
+  },
+
   "digest": {
     "maxPerSide": 2,
     "minNewWords": 3

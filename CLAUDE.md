@@ -64,7 +64,8 @@ read", opinion only via Perspectives, "Developing" instead of a red Live
 banner. Brand colours (navy, red) are for the wordmark only; the spectrum
 uses teal / stone / ochre tokens (`--left`, `--center`, `--right`). Fonts
 are self-hosted in `public/fonts/` (OFL). Extra routes beyond the list
-above: `#/live` (developing timelines), `#/saved` (localStorage) and
+above: `#/live` (developing timelines), `#/markets` and `#/markets/<company>`
+(stock-market news and followed companies, `pipeline/markets.js`), `#/saved` (localStorage) and
 `#/search/<words>` (search in the browser over the loaded stories; nothing
 is sent anywhere).
 
