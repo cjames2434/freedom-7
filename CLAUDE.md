@@ -12,7 +12,11 @@ A Node build (`pipeline/`) reads RSS feeds from a mirrored roster of outlets
 picks the least loaded headline, optionally adds a neutral Claude-written
 brief, and writes `public/data/news.json` + `public/data/sources.json`. The
 front end in `public/` only reads those two files. Hosted on GitHub Pages,
-rebuilt every 15 minutes by `.github/workflows/update.yml`.
+rebuilt by `.github/workflows/update.yml`. GitHub's scheduler runs that far
+less often than asked, so `.github/workflows/tick.yml` starts it about every
+15 minutes: each tick waits on the `tick` environment's 13-minute wait timer
+(a repository setting), starts an update, and starts the next tick. If the
+site stops updating, look at that chain first.
 
 ## Commands
 
@@ -82,7 +86,11 @@ colours come from the `.mark-*` rules, and it also shows a 7 whatever the name.
 
 ## Two sessions work in this folder
 
-The user runs two Claude Code sessions here at once and wants them to talk
+Since 2026-11-13 the user runs a single session here, which owns every path
+(the parallel sessions used too many tokens). The split below only applies
+again if a second session is opened.
+
+When two Claude Code sessions run here at once, the user wants them to talk
 to each other directly, without the user relaying or approving messages:
 
 - **Data/pipeline session** ("Unbiased news application") owns `pipeline/`,
