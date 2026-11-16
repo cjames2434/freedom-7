@@ -4,14 +4,17 @@
     "Leans are starter values that approximate the consensus of public media-bias raters (AllSides, Ad Fontes Media, Media Bias/Fact Check). Review and adjust them; they are not gospel.",
     "Each feed is either a plain URL (a news feed) or { \"url\": ..., \"kind\": \"opinion\" } for a feed that is mostly commentary. Opinion feeds never count as news coverage; they only feed the balanced Perspectives section.",
     "Two rosters must each mirror themselves: outlets with a news feed, and outlets with an opinion feed. Same number of 'left' as 'right', and of 'lean-left' as 'lean-right'. Run `npm run check:balance` after any edit; the build refuses to run if either is lopsided.",
-    "Feeds were last verified live on 2026-11-13, from GitHub's servers as well as at home (some publishers block hosting providers: The Washington Times does, so it is not in the roster). Run `npm run check:feeds`, or the Check feeds workflow on GitHub, to re-test them."
+    "Feeds were last verified live on 2026-11-13, from GitHub's servers as well as at home (some publishers block hosting providers: The Washington Times does, so it is not in the roster). Run `npm run check:feeds`, or the Check feeds workflow on GitHub, to re-test them.",
+    "Each outlet's owner (\"owner\") is as of November 2026; the part before \" (\" is the owner's name, and outlets with the same name are grouped on the Sources page."
   ],
+  "ownersAsOf": "November 2026",
   "sources": [
     {
       "id": "huffpost",
       "name": "HuffPost",
       "lean": "left",
       "homepage": "https://www.huffpost.com",
+      "owner": "BuzzFeed, Inc. (majority-owned by Byron Allen's family office since 2026)",
       "feeds": [
         "https://www.huffpost.com/section/politics/feed"
       ]
@@ -21,6 +24,7 @@
       "name": "MS NOW",
       "lean": "left",
       "homepage": "https://www.ms.now",
+      "owner": "Versant Media Group (spun off from Comcast in 2026)",
       "feeds": [
         "https://www.ms.now/feed"
       ],
@@ -31,6 +35,7 @@
       "name": "The Daily Beast",
       "lean": "left",
       "homepage": "https://www.thedailybeast.com",
+      "owner": "People Inc. (formerly IAC)",
       "feeds": [
         "https://www.thedailybeast.com/arc/outboundfeeds/rss/articles/"
       ]
@@ -40,6 +45,7 @@
       "name": "Vox",
       "lean": "left",
       "homepage": "https://www.vox.com",
+      "owner": "Vox Media",
       "feeds": [
         "https://www.vox.com/rss/index.xml"
       ]
@@ -49,6 +55,7 @@
       "name": "Mother Jones",
       "lean": "left",
       "homepage": "https://www.motherjones.com",
+      "owner": "The Center for Investigative Reporting (nonprofit)",
       "feeds": [
         "https://www.motherjones.com/feed/"
       ]
@@ -58,6 +65,7 @@
       "name": "The Intercept",
       "lean": "left",
       "homepage": "https://theintercept.com",
+      "owner": "Nonprofit",
       "feeds": [
         "https://theintercept.com/feed/?rss"
       ]
@@ -67,6 +75,7 @@
       "name": "Common Dreams",
       "lean": "left",
       "homepage": "https://www.commondreams.org",
+      "owner": "Nonprofit",
       "feeds": [
         "https://www.commondreams.org/feeds/news.rss"
       ]
@@ -76,6 +85,7 @@
       "name": "The New Republic",
       "lean": "left",
       "homepage": "https://newrepublic.com",
+      "owner": "Win McCormack",
       "feeds": [
         {
           "url": "https://newrepublic.com/rss.xml",
@@ -89,6 +99,7 @@
       "name": "Slate",
       "lean": "left",
       "homepage": "https://slate.com",
+      "owner": "Graham Holdings",
       "feeds": [
         {
           "url": "https://slate.com/feeds/all.rss",
@@ -102,6 +113,7 @@
       "name": "The Nation",
       "lean": "left",
       "homepage": "https://www.thenation.com",
+      "owner": "The Nation Company",
       "feeds": [
         {
           "url": "https://www.thenation.com/feed/?post_type=article",
@@ -115,6 +127,7 @@
       "name": "Jacobin",
       "lean": "left",
       "homepage": "https://jacobin.com",
+      "owner": "Independent",
       "feeds": [
         {
           "url": "https://jacobin.com/feed/",
@@ -128,6 +141,7 @@
       "name": "The New York Times",
       "lean": "lean-left",
       "homepage": "https://www.nytimes.com",
+      "owner": "The New York Times Company (public company controlled by the Ochs-Sulzberger family)",
       "feeds": [
         "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
         {
@@ -141,6 +155,7 @@
       "name": "NPR",
       "lean": "lean-left",
       "homepage": "https://www.npr.org",
+      "owner": "Nonprofit (a membership organization of public radio stations)",
       "feeds": [
         "https://feeds.npr.org/1001/rss.xml"
       ]
@@ -150,6 +165,7 @@
       "name": "CBS News",
       "lean": "lean-left",
       "homepage": "https://www.cbsnews.com",
+      "owner": "Paramount Skydance",
       "feeds": [
         "https://www.cbsnews.com/latest/rss/main"
       ]
@@ -159,6 +175,7 @@
       "name": "NBC News",
       "lean": "lean-left",
       "homepage": "https://www.nbcnews.com",
+      "owner": "Comcast (through NBCUniversal)",
       "feeds": [
         "https://feeds.nbcnews.com/nbcnews/public/news"
       ]
@@ -168,6 +185,7 @@
       "name": "ABC News",
       "lean": "lean-left",
       "homepage": "https://abcnews.go.com",
+      "owner": "The Walt Disney Company",
       "feeds": [
         "https://abcnews.go.com/abcnews/topstories",
         "https://abcnews.go.com/abcnews/politicsheadlines"
@@ -178,6 +196,7 @@
       "name": "The Guardian",
       "lean": "lean-left",
       "homepage": "https://www.theguardian.com/us",
+      "owner": "Guardian Media Group (owned by the Scott Trust)",
       "feeds": [
         "https://www.theguardian.com/us-news/rss",
         {
@@ -191,6 +210,7 @@
       "name": "Politico",
       "lean": "lean-left",
       "homepage": "https://www.politico.com",
+      "owner": "Axel Springer",
       "feeds": [
         "https://rss.politico.com/politics-news.xml"
       ]
@@ -200,6 +220,7 @@
       "name": "The Atlantic",
       "lean": "lean-left",
       "homepage": "https://www.theatlantic.com",
+      "owner": "Emerson Collective (Laurene Powell Jobs)",
       "feeds": [
         {
           "url": "https://www.theatlantic.com/feed/channel/ideas/",
@@ -213,6 +234,7 @@
       "name": "The Washington Post",
       "lean": "lean-left",
       "homepage": "https://www.washingtonpost.com",
+      "owner": "Jeff Bezos (through Nash Holdings)",
       "feeds": [
         "https://feeds.washingtonpost.com/rss/politics",
         "https://feeds.washingtonpost.com/rss/national",
@@ -227,6 +249,7 @@
       "name": "BBC News",
       "lean": "center",
       "homepage": "https://www.bbc.com/news",
+      "owner": "BBC (UK public broadcaster)",
       "feeds": [
         "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml",
         "https://feeds.bbci.co.uk/news/world/rss.xml"
@@ -237,6 +260,7 @@
       "name": "The Hill",
       "lean": "center",
       "homepage": "https://thehill.com",
+      "owner": "Nexstar Media Group",
       "feeds": [
         "https://thehill.com/news/feed/",
         {
@@ -250,6 +274,7 @@
       "name": "NewsNation",
       "lean": "center",
       "homepage": "https://www.newsnationnow.com",
+      "owner": "Nexstar Media Group",
       "feeds": [
         "https://www.newsnationnow.com/feed/"
       ]
@@ -259,6 +284,7 @@
       "name": "The Christian Science Monitor",
       "lean": "center",
       "homepage": "https://www.csmonitor.com",
+      "owner": "The First Church of Christ, Scientist",
       "feeds": [
         "https://rss.csmonitor.com/feeds/all"
       ]
@@ -268,6 +294,7 @@
       "name": "Deseret News",
       "lean": "center",
       "homepage": "https://www.deseret.com",
+      "owner": "Deseret Management Corporation (The Church of Jesus Christ of Latter-day Saints)",
       "feeds": [
         "https://www.deseret.com/arc/outboundfeeds/rss/?outputType=xml"
       ]
@@ -277,6 +304,7 @@
       "name": "UPI",
       "lean": "center",
       "homepage": "https://www.upi.com",
+      "owner": "News World Communications (founded by the Unification Church)",
       "feeds": [
         "https://rss.upi.com/news/top_news.rss"
       ]
@@ -286,6 +314,7 @@
       "name": "The Wall Street Journal",
       "lean": "center",
       "homepage": "https://www.wsj.com",
+      "owner": "News Corp (through Dow Jones)",
       "feeds": [
         "https://feeds.content.dowjones.io/public/rss/RSSUSnews",
         "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
@@ -298,6 +327,7 @@
       "name": "CNBC",
       "lean": "center",
       "homepage": "https://www.cnbc.com",
+      "owner": "Versant Media Group (spun off from Comcast in 2026)",
       "feeds": [
         "https://www.cnbc.com/id/100003114/device/rss/rss.html",
         "https://www.cnbc.com/id/10000113/device/rss/rss.html",
@@ -309,6 +339,7 @@
       "name": "DW",
       "lean": "center",
       "homepage": "https://www.dw.com/en",
+      "owner": "Deutsche Welle (Germany's public international broadcaster)",
       "feeds": [
         "https://rss.dw.com/rdf/rss-en-all"
       ]
@@ -318,6 +349,7 @@
       "name": "New York Post",
       "lean": "lean-right",
       "homepage": "https://nypost.com",
+      "owner": "News Corp",
       "feeds": [
         "https://nypost.com/news/feed/",
         {
@@ -331,6 +363,7 @@
       "name": "Washington Examiner",
       "lean": "lean-right",
       "homepage": "https://www.washingtonexaminer.com",
+      "owner": "Clarity Media Group (Philip Anschutz)",
       "feeds": [
         "https://www.washingtonexaminer.com/feed/",
         {
@@ -344,6 +377,7 @@
       "name": "The Center Square",
       "lean": "lean-right",
       "homepage": "https://www.thecentersquare.com",
+      "owner": "Franklin News Foundation (nonprofit)",
       "feeds": [
         "https://www.thecentersquare.com/search/?f=rss&t=article&c=national&l=50&s=start_time&sd=desc"
       ]
@@ -353,6 +387,7 @@
       "name": "WSJ Opinion",
       "lean": "lean-right",
       "homepage": "https://www.wsj.com",
+      "owner": "News Corp (through Dow Jones)",
       "feeds": [
         {
           "url": "https://feeds.content.dowjones.io/public/rss/RSSOpinion",
@@ -366,6 +401,7 @@
       "name": "The Dispatch",
       "lean": "lean-right",
       "homepage": "https://thedispatch.com",
+      "owner": "Independent (founded by Steve Hayes and Jonah Goldberg)",
       "feeds": [
         "https://thedispatch.com/feed/"
       ]
@@ -375,6 +411,7 @@
       "name": "Reason",
       "lean": "lean-right",
       "homepage": "https://reason.com",
+      "owner": "Reason Foundation (nonprofit)",
       "feeds": [
         "https://reason.com/feed/"
       ],
@@ -385,6 +422,7 @@
       "name": "Fox Business",
       "lean": "lean-right",
       "homepage": "https://www.foxbusiness.com",
+      "owner": "Fox Corporation",
       "feeds": [
         "https://moxie.foxbusiness.com/google-publisher/latest.xml"
       ]
@@ -394,6 +432,7 @@
       "name": "The Epoch Times",
       "lean": "lean-right",
       "homepage": "https://www.theepochtimes.com",
+      "owner": "Epoch Media Group (affiliated with the Falun Gong movement)",
       "feeds": [
         "https://feed.theepochtimes.com/us/feed"
       ]
@@ -403,6 +442,7 @@
       "name": "Just the News",
       "lean": "lean-right",
       "homepage": "https://justthenews.com",
+      "owner": "Independent (founded by John Solomon)",
       "feeds": [
         "https://justthenews.com/rss.xml"
       ]
@@ -412,6 +452,7 @@
       "name": "The Free Press",
       "lean": "lean-right",
       "homepage": "https://www.thefp.com",
+      "owner": "Paramount Skydance (since 2025)",
       "feeds": [
         {
           "url": "https://www.thefp.com/feed",
@@ -425,6 +466,7 @@
       "name": "Fox News",
       "lean": "right",
       "homepage": "https://www.foxnews.com",
+      "owner": "Fox Corporation",
       "feeds": [
         "https://moxie.foxnews.com/google-publisher/latest.xml",
         {
@@ -438,6 +480,7 @@
       "name": "Newsmax",
       "lean": "right",
       "homepage": "https://www.newsmax.com",
+      "owner": "Newsmax Inc. (public company; chairman Christopher Ruddy)",
       "feeds": [
         "https://www.newsmax.com/rss/Newsfront/16/"
       ]
@@ -447,6 +490,7 @@
       "name": "The Daily Caller",
       "lean": "right",
       "homepage": "https://dailycaller.com",
+      "owner": "Independent (co-founded by Neil Patel)",
       "feeds": [
         "https://dailycaller.com/feed/"
       ]
@@ -456,6 +500,7 @@
       "name": "The Daily Wire",
       "lean": "right",
       "homepage": "https://www.dailywire.com",
+      "owner": "Independent (co-founded by Jeremy Boreing and Ben Shapiro)",
       "feeds": [
         "https://www.dailywire.com/feeds/rss.xml"
       ]
@@ -465,6 +510,7 @@
       "name": "Washington Free Beacon",
       "lean": "right",
       "homepage": "https://freebeacon.com",
+      "owner": "Independent",
       "feeds": [
         "https://freebeacon.com/feed/"
       ]
@@ -474,6 +520,7 @@
       "name": "The Daily Signal",
       "lean": "right",
       "homepage": "https://www.dailysignal.com",
+      "owner": "The Heritage Foundation",
       "feeds": [
         "https://www.dailysignal.com/feed/"
       ]
@@ -483,6 +530,7 @@
       "name": "National Review",
       "lean": "right",
       "homepage": "https://www.nationalreview.com",
+      "owner": "National Review, Inc.",
       "feeds": [
         "https://www.nationalreview.com/news/feed/",
         {
@@ -497,6 +545,7 @@
       "name": "The Federalist",
       "lean": "right",
       "homepage": "https://thefederalist.com",
+      "owner": "FDRLST Media",
       "feeds": [
         {
           "url": "https://thefederalist.com/feed/",
@@ -510,6 +559,7 @@
       "name": "Townhall",
       "lean": "right",
       "homepage": "https://townhall.com",
+      "owner": "Salem Media Group (owned by WaterStone since 2026)",
       "feeds": [
         {
           "url": "https://townhall.com/columnists/feed",

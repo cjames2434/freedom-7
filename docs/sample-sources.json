@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T17:00:09.017Z",
+  "generatedAt": "2026-11-16T17:27:50.123Z",
   "balance": {
     "left": 7,
     "lean-left": 8,
@@ -15,6 +15,7 @@
     "lean-right": 4,
     "right": 4
   },
+  "ownersAsOf": "November 2026",
   "sources": [
     {
       "id": "huffpost",
@@ -22,6 +23,7 @@
       "lean": "left",
       "homepage": "https://www.huffpost.com",
       "notes": null,
+      "owner": "BuzzFeed, Inc. (majority-owned by Byron Allen's family office since 2026)",
       "roles": [
         "news"
       ],
@@ -34,6 +36,7 @@
       "lean": "left",
       "homepage": "https://www.ms.now",
       "notes": "Formerly MSNBC.",
+      "owner": "Versant Media Group (spun off from Comcast in 2026)",
       "roles": [
         "news"
       ],
@@ -46,6 +49,7 @@
       "lean": "left",
       "homepage": "https://www.thedailybeast.com",
       "notes": null,
+      "owner": "People Inc. (formerly IAC)",
       "roles": [
         "news"
       ],
@@ -58,6 +62,7 @@
       "lean": "left",
       "homepage": "https://www.vox.com",
       "notes": null,
+      "owner": "Vox Media",
       "roles": [
         "news"
       ],
@@ -70,6 +75,7 @@
       "lean": "left",
       "homepage": "https://www.motherjones.com",
       "notes": null,
+      "owner": "The Center for Investigative Reporting (nonprofit)",
       "roles": [
         "news"
       ],
@@ -82,6 +88,7 @@
       "lean": "left",
       "homepage": "https://theintercept.com",
       "notes": null,
+      "owner": "Nonprofit",
       "roles": [
         "news"
       ],
@@ -94,6 +101,7 @@
       "lean": "left",
       "homepage": "https://www.commondreams.org",
       "notes": null,
+      "owner": "Nonprofit",
       "roles": [
         "news"
       ],
@@ -106,6 +114,7 @@
       "lean": "left",
       "homepage": "https://newrepublic.com",
       "notes": "Opinion magazine, used for Perspectives only.",
+      "owner": "Win McCormack",
       "roles": [
         "opinion"
       ],
@@ -118,6 +127,7 @@
       "lean": "left",
       "homepage": "https://slate.com",
       "notes": "Commentary and analysis magazine, used for Perspectives only.",
+      "owner": "Graham Holdings",
       "roles": [
         "opinion"
       ],
@@ -130,6 +140,7 @@
       "lean": "left",
       "homepage": "https://www.thenation.com",
       "notes": "Opinion magazine, used for Perspectives only.",
+      "owner": "The Nation Company",
       "roles": [
         "opinion"
       ],
@@ -142,6 +153,7 @@
       "lean": "left",
       "homepage": "https://jacobin.com",
       "notes": "Opinion magazine, used for Perspectives only.",
+      "owner": "Independent",
       "roles": [
         "opinion"
       ],
@@ -154,6 +166,7 @@
       "lean": "lean-left",
       "homepage": "https://www.nytimes.com",
       "notes": null,
+      "owner": "The New York Times Company (public company controlled by the Ochs-Sulzberger family)",
       "roles": [
         "news",
         "opinion"
@@ -167,6 +180,7 @@
       "lean": "lean-left",
       "homepage": "https://www.npr.org",
       "notes": null,
+      "owner": "Nonprofit (a membership organization of public radio stations)",
       "roles": [
         "news"
       ],
@@ -179,6 +193,7 @@
       "lean": "lean-left",
       "homepage": "https://www.cbsnews.com",
       "notes": null,
+      "owner": "Paramount Skydance",
       "roles": [
         "news"
       ],
@@ -191,6 +206,7 @@
       "lean": "lean-left",
       "homepage": "https://www.nbcnews.com",
       "notes": null,
+      "owner": "Comcast (through NBCUniversal)",
       "roles": [
         "news"
       ],
@@ -203,6 +219,7 @@
       "lean": "lean-left",
       "homepage": "https://abcnews.go.com",
       "notes": null,
+      "owner": "The Walt Disney Company",
       "roles": [
         "news"
       ],
@@ -215,6 +232,7 @@
       "lean": "lean-left",
       "homepage": "https://www.theguardian.com/us",
       "notes": null,
+      "owner": "Guardian Media Group (owned by the Scott Trust)",
       "roles": [
         "news",
         "opinion"
@@ -228,6 +246,7 @@
       "lean": "lean-left",
       "homepage": "https://www.politico.com",
       "notes": null,
+      "owner": "Axel Springer",
       "roles": [
         "news"
       ],
@@ -240,6 +259,7 @@
       "lean": "lean-left",
       "homepage": "https://www.theatlantic.com",
       "notes": "Ideas section (commentary), used for Perspectives only.",
+      "owner": "Emerson Collective (Laurene Powell Jobs)",
       "roles": [
         "opinion"
       ],
@@ -252,12 +272,13 @@
       "lean": "lean-left",
       "homepage": "https://www.washingtonpost.com",
       "notes": null,
+      "owner": "Jeff Bezos (through Nash Holdings)",
       "roles": [
         "news",
         "opinion"
       ],
       "status": "ok",
-      "itemsThisRun": 52
+      "itemsThisRun": 53
     },
     {
       "id": "bbc",
@@ -265,6 +286,7 @@
       "lean": "center",
       "homepage": "https://www.bbc.com/news",
       "notes": null,
+      "owner": "BBC (UK public broadcaster)",
       "roles": [
         "news"
       ],
@@ -277,6 +299,7 @@
       "lean": "center",
       "homepage": "https://thehill.com",
       "notes": null,
+      "owner": "Nexstar Media Group",
       "roles": [
         "news",
         "opinion"
@@ -290,11 +313,12 @@
       "lean": "center",
       "homepage": "https://www.newsnationnow.com",
       "notes": null,
+      "owner": "Nexstar Media Group",
       "roles": [
         "news"
       ],
       "status": "ok",
-      "itemsThisRun": 18
+      "itemsThisRun": 17
     },
     {
       "id": "csmonitor",
@@ -302,6 +326,7 @@
       "lean": "center",
       "homepage": "https://www.csmonitor.com",
       "notes": null,
+      "owner": "The First Church of Christ, Scientist",
       "roles": [
         "news"
       ],
@@ -314,6 +339,7 @@
       "lean": "center",
       "homepage": "https://www.deseret.com",
       "notes": null,
+      "owner": "Deseret Management Corporation (The Church of Jesus Christ of Latter-day Saints)",
       "roles": [
         "news"
       ],
@@ -326,6 +352,7 @@
       "lean": "center",
       "homepage": "https://www.upi.com",
       "notes": null,
+      "owner": "News World Communications (founded by the Unification Church)",
       "roles": [
         "news"
       ],
@@ -338,6 +365,7 @@
       "lean": "center",
       "homepage": "https://www.wsj.com",
       "notes": "News pages. Raters put them at center and the opinion pages at lean right, so the opinion pages are listed separately.",
+      "owner": "News Corp (through Dow Jones)",
       "roles": [
         "news"
       ],
@@ -350,6 +378,7 @@
       "lean": "center",
       "homepage": "https://www.cnbc.com",
       "notes": null,
+      "owner": "Versant Media Group (spun off from Comcast in 2026)",
       "roles": [
         "news"
       ],
@@ -362,6 +391,7 @@
       "lean": "center",
       "homepage": "https://www.dw.com/en",
       "notes": null,
+      "owner": "Deutsche Welle (Germany's public international broadcaster)",
       "roles": [
         "news"
       ],
@@ -374,6 +404,7 @@
       "lean": "lean-right",
       "homepage": "https://nypost.com",
       "notes": null,
+      "owner": "News Corp",
       "roles": [
         "news",
         "opinion"
@@ -387,6 +418,7 @@
       "lean": "lean-right",
       "homepage": "https://www.washingtonexaminer.com",
       "notes": null,
+      "owner": "Clarity Media Group (Philip Anschutz)",
       "roles": [
         "news",
         "opinion"
@@ -400,6 +432,7 @@
       "lean": "lean-right",
       "homepage": "https://www.thecentersquare.com",
       "notes": null,
+      "owner": "Franklin News Foundation (nonprofit)",
       "roles": [
         "news"
       ],
@@ -412,6 +445,7 @@
       "lean": "lean-right",
       "homepage": "https://www.wsj.com",
       "notes": "The Wall Street Journal's opinion pages, used for Perspectives only. Raters put them at lean right and the news pages at center, so the news pages are listed separately.",
+      "owner": "News Corp (through Dow Jones)",
       "roles": [
         "opinion"
       ],
@@ -424,6 +458,7 @@
       "lean": "lean-right",
       "homepage": "https://thedispatch.com",
       "notes": null,
+      "owner": "Independent (founded by Steve Hayes and Jonah Goldberg)",
       "roles": [
         "news"
       ],
@@ -436,6 +471,7 @@
       "lean": "lean-right",
       "homepage": "https://reason.com",
       "notes": "Libertarian. Rated lean-right by most raters, though it often breaks with both parties.",
+      "owner": "Reason Foundation (nonprofit)",
       "roles": [
         "news"
       ],
@@ -448,6 +484,7 @@
       "lean": "lean-right",
       "homepage": "https://www.foxbusiness.com",
       "notes": null,
+      "owner": "Fox Corporation",
       "roles": [
         "news"
       ],
@@ -460,6 +497,7 @@
       "lean": "lean-right",
       "homepage": "https://www.theepochtimes.com",
       "notes": null,
+      "owner": "Epoch Media Group (affiliated with the Falun Gong movement)",
       "roles": [
         "news"
       ],
@@ -472,6 +510,7 @@
       "lean": "lean-right",
       "homepage": "https://justthenews.com",
       "notes": null,
+      "owner": "Independent (founded by John Solomon)",
       "roles": [
         "news"
       ],
@@ -484,6 +523,7 @@
       "lean": "lean-right",
       "homepage": "https://www.thefp.com",
       "notes": "Mostly essays and commentary, so used for Perspectives only.",
+      "owner": "Paramount Skydance (since 2025)",
       "roles": [
         "opinion"
       ],
@@ -496,6 +536,7 @@
       "lean": "right",
       "homepage": "https://www.foxnews.com",
       "notes": null,
+      "owner": "Fox Corporation",
       "roles": [
         "news",
         "opinion"
@@ -509,6 +550,7 @@
       "lean": "right",
       "homepage": "https://www.newsmax.com",
       "notes": null,
+      "owner": "Newsmax Inc. (public company; chairman Christopher Ruddy)",
       "roles": [
         "news"
       ],
@@ -521,6 +563,7 @@
       "lean": "right",
       "homepage": "https://dailycaller.com",
       "notes": null,
+      "owner": "Independent (co-founded by Neil Patel)",
       "roles": [
         "news"
       ],
@@ -533,6 +576,7 @@
       "lean": "right",
       "homepage": "https://www.dailywire.com",
       "notes": null,
+      "owner": "Independent (co-founded by Jeremy Boreing and Ben Shapiro)",
       "roles": [
         "news"
       ],
@@ -545,6 +589,7 @@
       "lean": "right",
       "homepage": "https://freebeacon.com",
       "notes": null,
+      "owner": "Independent",
       "roles": [
         "news"
       ],
@@ -557,6 +602,7 @@
       "lean": "right",
       "homepage": "https://www.dailysignal.com",
       "notes": null,
+      "owner": "The Heritage Foundation",
       "roles": [
         "news"
       ],
@@ -569,6 +615,7 @@
       "lean": "right",
       "homepage": "https://www.nationalreview.com",
       "notes": "News feed counts as coverage; the main feed (mostly commentary) is used for Perspectives only.",
+      "owner": "National Review, Inc.",
       "roles": [
         "news",
         "opinion"
@@ -582,6 +629,7 @@
       "lean": "right",
       "homepage": "https://thefederalist.com",
       "notes": "Opinion magazine, used for Perspectives only.",
+      "owner": "FDRLST Media",
       "roles": [
         "opinion"
       ],
@@ -594,6 +642,7 @@
       "lean": "right",
       "homepage": "https://townhall.com",
       "notes": "Columnists feed, used for Perspectives only.",
+      "owner": "Salem Media Group (owned by WaterStone since 2026)",
       "roles": [
         "opinion"
       ],

@@ -50,7 +50,10 @@ createServer(async (req, res) => {
     });
     res.end(body);
   } catch {
-    res.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
+    // Like GitHub Pages: a missing address gets the site's 404 page when the build wrote one.
+    const notFound = await readFile(join(ROOT, "404.html")).catch(() => null);
+    if (notFound) res.writeHead(404, { "Content-Type": TYPES[".html"], "Cache-Control": "no-store" }).end(notFound);
+    else res.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
   }
 }).listen(PORT, HOST, () => {
   console.log(`Serving ./public at http://localhost:${PORT}  (Ctrl+C to stop)`);

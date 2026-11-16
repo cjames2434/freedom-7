@@ -18,6 +18,7 @@ import { addSummaries, aiEnabled } from "./summarize.js";
 import { checkBalance, hasKind, loadSources } from "./sources.js";
 import { TOPICS } from "./topics.js";
 import { buildFeed, resolveSiteUrl } from "./feed.js";
+import { writeSharePages } from "./sharepages.js";
 import { balanceReport, updateHistory } from "./balance.js";
 import { leanGroup } from "./util.js";
 
@@ -296,6 +297,8 @@ async function main() {
   };
   writeAtomic(`${OUT_DIR}/news.json`, JSON.stringify(out));
   writeAtomic(`${OUT_DIR}/feed.xml`, buildFeed(out, { siteUrl: resolveSiteUrl(settings) }));
+  // A small page per story so shared links preview the story (pipeline/sharepages.js).
+  writeSharePages(stories, { outDir: "public", siteUrl: resolveSiteUrl(settings), siteName: settings.siteName });
 
   // Balance report: today's snapshot plus a 30-day daily history.
   const report = balanceReport(stories, { perspectiveLeads, now });
@@ -310,17 +313,25 @@ async function main() {
   );
   for (const w of report.warnings) console.warn(`  ! Balance: ${w}`);
 
+  let ownersAsOf = null;
+  try {
+    ownersAsOf = JSON.parse(readFileSync("config/sources.json", "utf8")).ownersAsOf || null;
+  } catch {
+    /* loadSources already read it once; a failure here only loses the date */
+  }
   const sourcesOut = {
     version: 1,
     generatedAt: now.toISOString(),
     balance: balance.news,
     opinionBalance: balance.opinion,
+    ownersAsOf, // when the outlets' owners were last checked, e.g. "November 2026"
     sources: sources.map((s) => ({
       id: s.id,
       name: s.name,
       lean: s.lean,
       homepage: s.homepage,
       notes: s.notes || null,
+      owner: s.owner || null,
       roles: [...new Set(s.feeds.map((f) => f.kind))],
       status: feedHealth[s.id]?.ok ? "ok" : "down",
       itemsThisRun: feedHealth[s.id]?.items ?? 0,

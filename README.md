@@ -43,6 +43,19 @@ nothing to run.
   on the story folded under it.
 - **Ranking without outrage.** Stories rank by how many outlets cover them,
   how much of the spectrum covers them, and recency. Never by clicks.
+- **Who owns the outlets.** The Sources page lists each outlet's owner
+  (checked November 2026) and groups owners with more than one outlet here,
+  such as News Corp or Paramount Skydance.
+- **Yours, on your device only.** Saved stories, followed searches (they show
+  on your front page), "new since your last visit" markers, recently viewed
+  stories and your reading balance (which sides' outlets you've opened
+  articles from) live in your browser and are never sent anywhere. None of it
+  changes the order of the news.
+- **Links that preview.** Sharing a story shares a small page of its own, so
+  messaging apps show its headline and coverage. Old links still open the
+  site after a story rolls off.
+- **Listen.** Any story, or the top stories as a short briefing, can be read
+  aloud by the browser's own voice.
 - **Markets.** Stock-market news, plus every story about the companies the
   site follows (NVIDIA and SpaceX; change them under `markets.watch` in
   [`config/settings.json`](config/settings.json)). It only picks which stories
@@ -205,6 +218,9 @@ told to use nothing else. The prompt is in
 [`pipeline/summarize.js`](pipeline/summarize.js).
 
 ## Editing the outlets
+
+Each outlet also lists its `owner`. Owners change (sales, spin-offs), so
+re-check them now and then and update `ownersAsOf` at the top of the file.
 
 Edit [`config/sources.json`](config/sources.json). Each outlet has a `lean`:
 `left`, `lean-left`, `center`, `lean-right` or `right`. The starting leans

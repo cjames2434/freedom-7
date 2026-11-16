@@ -130,6 +130,15 @@ descriptive, not verdicts on outlets:
 
 `npm run report` prints the same thing in plain words.
 
+## Share pages and `404.html`
+
+Every build also writes `public/s/<id>.html`, one small page per story with
+Open Graph tags (headline, coverage line, image), so a shared link previews
+the story in messaging apps. Each page forwards straight to `#/story/<id>`.
+`public/404.html` sends any missing address, including share pages for stories
+that have rolled off, to the right place in the site. The front end's Share
+button shares the `s/<id>.html` address.
+
 ## `feed.xml`
 
 `public/data/feed.xml` is an RSS 2.0 feed of the site itself for news-reader
@@ -147,6 +156,7 @@ head with `<link rel="alternate" type="application/rss+xml" href="data/feed.xml"
 {
   "version": 1,
   "generatedAt": "...",
+  "ownersAsOf": "November 2026", // when the owners below were last checked
   "balance": { "left": 5, "lean-left": 6, "center": 7, "lean-right": 6, "right": 5 },        // news outlets
   "opinionBalance": { "left": 4, "lean-left": 4, "center": 1, "lean-right": 4, "right": 4 }, // opinion outlets
   "sources": [
@@ -156,6 +166,7 @@ head with `<link rel="alternate" type="application/rss+xml" href="data/feed.xml"
       "lean": "lean-left",
       "homepage": "https://www.npr.org",
       "notes": null,            // or a short note, e.g. "Formerly MSNBC."
+      "owner": "Nonprofit (a membership organization of public radio stations)", // who owns it; the part before " (" is the owner's name, shared by outlets with the same owner. null if unknown
       "roles": ["news"],        // "news", "opinion", or both
       "status": "ok",           // "ok" | "down" (feed failed this build)
       "itemsThisRun": 10

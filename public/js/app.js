@@ -3,8 +3,8 @@
 // Reads data/news.json and data/sources.json (shape: docs/DATA_CONTRACT.md)
 // and renders with escaped DOM strings. No dependencies, no tracking.
 //
-// Routes: #/  #/topic/<id>  #/story/<id>  #/live  #/blindspots
-//         #/perspectives  #/sources  #/about  #/saved
+// Routes: #/  #/topic/<id>  #/story/<id>  #/live  #/blindspots  #/markets[/<company>]
+//         #/perspectives  #/sources  #/about  #/saved  #/search[/<words>]
 
 const app = document.getElementById("app");
 
@@ -86,10 +86,13 @@ function clock(iso) {
   return `${d.toLocaleDateString([], { month: "short", day: "numeric" })} ${time}`;
 }
 
-// External link, or plain text when the URL isn't http(s).
-function outLink(url, html, cls) {
+// External link, or plain text when the URL isn't http(s). `sourceId` marks a
+// link to an outlet's article, so the reader's own reading balance (kept on
+// their device, never sent anywhere) can count it.
+function outLink(url, html, cls, sourceId = "") {
   if (!isHttp(url)) return `<span class="${cls}">${html}</span>`;
-  return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${html}${ICON.ext}<span class="sr-only"> (opens in a new tab)</span></a>`;
+  const src = sourceId ? ` data-src="${esc(sourceId)}"` : "";
+  return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer"${src}>${html}${ICON.ext}<span class="sr-only"> (opens in a new tab)</span></a>`;
 }
 
 // The round "7" mission-patch mark that sits beside the wordmark. Its colours
@@ -213,7 +216,8 @@ function toggleListen(id) {
 async function shareStory(id, btn) {
   const s = byId.get(id);
   if (!s) return;
-  const url = `${location.href.split("#")[0]}#/story/${encodeURIComponent(id)}`;
+  // The story's own share page, so the link previews with its headline (pipeline/sharepages.js).
+  const url = new URL(`s/${encodeURIComponent(id)}.html`, location.href.split("#")[0]).href;
   if (navigator.share) {
     try {
       await navigator.share({ title: s.headline, url });
@@ -260,14 +264,20 @@ function syncActionButtons() {
     b.setAttribute("aria-pressed", String(on));
     b.querySelector("[data-label]").textContent = on ? "Saved" : "Save";
   });
+  app.querySelectorAll('[data-action="listen-briefing"]').forEach((b) => {
+    const on = speakingId === BRIEFING;
+    b.setAttribute("aria-pressed", String(on));
+    b.querySelector("svg").outerHTML = on ? ICON.stop : ICON.listen;
+    b.querySelector("[data-label]").textContent = on ? "Stop" : "Listen to the top stories";
+  });
 }
 
 // ---------- building blocks ----------
-function coverageBar(c, size = "sm") {
+function coverageBar(c, size = "sm", label = "") {
   const segs = GROUPS.map((g) => (c[g] > 0 ? `<span class="seg seg-${g}" style="flex:${Number(c[g])}"></span>` : "")).join("");
   return `
     <div class="coverage coverage-${size}">
-      <div class="coverage-bar" role="img" aria-label="Covered by ${plural(c.left, "left-leaning outlet")}, ${plural(c.center, "center outlet")} and ${plural(c.right, "right-leaning outlet")}">${segs}</div>
+      <div class="coverage-bar" role="img" aria-label="${label ? esc(label) : `Covered by ${plural(c.left, "left-leaning outlet")}, ${plural(c.center, "center outlet")} and ${plural(c.right, "right-leaning outlet")}`}">${segs}</div>
       <div class="coverage-legend" aria-hidden="true">
         ${GROUPS.map((g) => `<span><i class="key key-${g}"></i>${GROUP_LABEL[g]} <b>${Number(c[g])}</b></span>`).join("")}
       </div>
@@ -289,6 +299,7 @@ function kicker(s, { list = false } = {}) {
   return `
     <div class="kicker">
       <a class="tag" href="${topicHref(s.topic)}">${esc(topicLabel(s.topic))}</a>
+      ${isNew(s) ? `<span class="new-tag">New</span>` : ""}
       ${s.developing ? `<span class="dev"><i class="dot"></i>Developing</span>` : ""}
       <span>${sub ? outletsLine(sub) : plural(s.sourceCount, "outlet")}</span>
       <span>${esc(timeAgo(sub ? sub.lastUpdated : s.lastUpdated))}</span>
@@ -397,7 +408,7 @@ function digestSection(s) {
             return `
           <li class="dg dg-${g}">
             <p class="dg-text">${esc(d.text)}</p>
-            <p class="dg-src">${outLink(d.url, esc(d.sourceName), "dg-name")}<span class="dg-lean">${esc(LEAN_LABEL[d.lean] || d.lean)}</span></p>
+            <p class="dg-src">${outLink(d.url, esc(d.sourceName), "dg-name", d.sourceId)}<span class="dg-lean">${esc(LEAN_LABEL[d.lean] || d.lean)}</span></p>
           </li>`;
           })
           .join("")}
@@ -418,13 +429,13 @@ function articleItem(a) {
   return `
     <div class="art">
       <div class="art-src"><span class="art-name">${esc(a.sourceName)}</span><span class="art-lean">${esc(LEAN_LABEL[a.lean] || a.lean)} · ${esc(timeAgo(a.published))}</span></div>
-      ${outLink(a.url, esc(a.title), "art-title")}
+      ${outLink(a.url, esc(a.title), "art-title", a.sourceId)}
       ${excerptOf(a) ? `<p class="art-excerpt">${esc(excerptOf(a))}</p>` : ""}
       ${flags.length ? `<div class="flags">${flags.join("")}</div>` : ""}
       ${
         a.more?.length
           ? `<details class="art-more"><summary>${plural(a.more.length, "more article")} from ${esc(a.sourceName)}</summary><ul>${a.more
-              .map((m) => `<li>${outLink(m.url, esc(m.title), "art-more-link")}</li>`)
+              .map((m) => `<li>${outLink(m.url, esc(m.title), "art-more-link", m.sourceId)}</li>`)
               .join("")}</ul></details>`
           : ""
       }
@@ -479,6 +490,7 @@ function viewHome() {
   return `
     ${news.stats.balanceWarning ? `<div class="wrap"><p class="notice">${esc(news.stats.balanceWarning)}</p></div>` : ""}
     ${developingStrip()}
+    ${frontTools()}
     <div class="wrap front">
       <article class="lead">
         <a class="lead-media" href="${storyHref(lead)}" tabindex="-1" aria-hidden="true">${media(lead)}</a>
@@ -511,6 +523,7 @@ function viewHome() {
         </ol>
       </aside>
     </div>
+    ${followingSection()}
     ${blindspotBand()}
     ${
       rundown.length
@@ -570,6 +583,273 @@ function topicSections(pool) {
         ${cols.map(({ t, list }) => sectionColumn({ key: t.id, label: t.label, list, href: topicHref(t.id), moreLabel: `All ${t.label}` })).join("")}
       </div>
     </section>`;
+}
+
+// ---------- on this device: visits, history, reading balance, follows ----------
+// All of this lives in this browser's storage and is never sent anywhere. None
+// of it changes what the site shows first: every reader gets the same stories
+// in the same order.
+function readStore(key, fallback) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key));
+    return value ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
+function writeStore(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    /* storage unavailable: the feature quietly does nothing */
+  }
+}
+const readList = (key) => {
+  const list = readStore(key, []);
+  return Array.isArray(list) ? list.filter((x) => x && typeof x === "object") : [];
+};
+const DAY_MS = 864e5;
+const KEEP_MS = 30 * DAY_MS; // history and reading balance cover the last 30 days
+const recent = (list) => list.filter((x) => Number.isFinite(x.at) && Date.now() - x.at < KEEP_MS);
+
+// "New since your last visit". A visit ends after 30 minutes away; every story
+// the site showed during the last visit counts as already seen.
+const VISIT_KEY = "freedom7:visit";
+const VISIT_GAP_MS = 30 * 60 * 1000;
+let knownBefore = null; // story ids from the previous visit; null on a first visit
+let aliasesOf = new Map(); // current story id -> ids of stories that merged into it
+function noteVisit() {
+  const now = Date.now();
+  const stored = readStore(VISIT_KEY, {});
+  const v = stored && typeof stored === "object" ? stored : {};
+  const sameVisit = Number.isFinite(v.lastActive) && now - v.lastActive <= VISIT_GAP_MS;
+  if (!sameVisit) {
+    v.before = Array.isArray(v.seen) ? v.seen : null;
+    v.seen = [];
+  }
+  v.lastActive = now;
+  v.seen = [...new Set([...(Array.isArray(v.seen) ? v.seen : []), ...news.stories.map((s) => s.id)])].slice(-1500);
+  writeStore(VISIT_KEY, v);
+  knownBefore = Array.isArray(v.before) && v.before.length ? new Set(v.before) : null;
+  aliasesOf = new Map();
+  for (const [old, current] of Object.entries(news.aliases || {})) aliasesOf.set(current, [...(aliasesOf.get(current) || []), old]);
+}
+function isNew(s) {
+  if (!knownBefore || knownBefore.has(s.id)) return false;
+  return !(aliasesOf.get(s.id) || []).some((old) => knownBefore.has(old));
+}
+
+// Front page tools: the audio briefing, and how much is new since the last visit.
+function frontTools() {
+  const fresh = knownBefore ? news.stories.filter(isNew).length : 0;
+  const listen = canSpeak
+    ? `<button type="button" class="btn" data-action="listen-briefing" aria-pressed="false">${ICON.listen}<span data-label>Listen to the top stories</span></button>`
+    : "";
+  const note = fresh ? `<p class="since-visit"><span class="new-tag">New</span>${plural(fresh, "story", "stories")} since your last visit</p>` : "";
+  return listen || note ? `<div class="wrap front-tools">${listen}${note}</div>` : "";
+}
+
+// The audio briefing: the top stories read aloud on this device, each with the
+// outlet its headline came from. Uses the browser's own voice; nothing is sent.
+const BRIEFING = "briefing";
+const BRIEFING_SIZE = 8;
+function toggleBriefing() {
+  if (!canSpeak) return;
+  window.speechSynthesis.cancel();
+  if (speakingId === BRIEFING) {
+    speakingId = null;
+    syncActionButtons();
+    return;
+  }
+  const top = onePerFamily(news.stories).slice(0, BRIEFING_SIZE);
+  const parts = [
+    `Here are the top ${top.length} stories on ${news.site.name}.`,
+    ...top.map((s, i) => {
+      const from = s.articles.find((a) => a.sourceId === s.headlineFrom?.sourceId)?.sourceName;
+      return [`${i + 1}. ${s.headline}.`, from ? `Headline from ${from}.` : "", blurb(s)].filter(Boolean).join(" ");
+    }),
+    "That's the briefing.",
+  ];
+  speakingId = BRIEFING;
+  parts.forEach((text, i) => {
+    const u = new SpeechSynthesisUtterance(text);
+    if (i === parts.length - 1) {
+      u.onend = u.onerror = () => {
+        if (speakingId === BRIEFING) {
+          speakingId = null;
+          syncActionButtons();
+        }
+      };
+    }
+    window.speechSynthesis.speak(u);
+  });
+  syncActionButtons();
+}
+
+// When each side's outlets first published on a story (story.firstBySide).
+function firstReported(s) {
+  const f = s.firstBySide;
+  if (!f || !GROUPS.some((g) => f[g])) return "";
+  return `
+            <div class="first-reported">
+              <span class="mono-note">First reported</span>
+              <div class="coverage-legend">
+                ${GROUPS.map(
+                  (g) =>
+                    `<span><i class="key key-${g}"></i>${GROUP_LABEL[g]} <b>${f[g] ? esc(timeAgo(f[g])) : "&mdash;"}</b>${f[g] ? "" : `<span class="sr-only"> (no outlets on this side covered it)</span>`}</span>`
+                ).join("")}
+              </div>
+            </div>`;
+}
+
+// Reading history: stories opened here.
+const HISTORY_KEY = "freedom7:history";
+function recordStoryView(s) {
+  const list = recent(readList(HISTORY_KEY)).filter((x) => x.id !== s.id);
+  list.unshift({ id: s.id, headline: s.headline, topic: s.topic, at: Date.now() });
+  writeStore(HISTORY_KEY, list.slice(0, 100));
+}
+function recentlyViewed() {
+  const list = recent(readList(HISTORY_KEY)).slice(0, 15);
+  if (!list.length) return "";
+  return `
+      <section class="list-section" aria-labelledby="hist-h">
+        <div class="section-head"><h2 id="hist-h" class="label">Recently viewed</h2><span class="mono-note">Last 30 days</span></div>
+        <ul class="history-list">
+          ${list
+            .map((x) => {
+              const live = byId.get(x.id) || byId.get(news.aliases?.[x.id]);
+              return `
+          <li>
+            ${live ? `<a href="${storyHref(live)}">${esc(x.headline)}</a>` : `<span class="history-gone">${esc(x.headline)}</span>`}
+            <span class="related-meta">${esc(topicLabel(x.topic))} · viewed ${esc(timeAgo(new Date(x.at).toISOString()))}${live ? "" : " · no longer on the site"}</span>
+          </li>`;
+            })
+            .join("")}
+        </ul>
+      </section>`;
+}
+
+// Reading balance: which sides' outlets the reader has opened articles from.
+const READS_KEY = "freedom7:reads";
+let outletInfo = new Map(); // sourceId -> { name, lean }
+function indexOutlets() {
+  outletInfo = new Map();
+  for (const s of news.stories) {
+    for (const a of s.articles) outletInfo.set(a.sourceId, { name: a.sourceName, lean: a.lean });
+    for (const g of GROUPS) for (const a of s.perspectives?.[g] || []) outletInfo.set(a.sourceId, { name: a.sourceName, lean: a.lean });
+  }
+  for (const o of sources?.sources || []) outletInfo.set(o.id, { name: o.name, lean: o.lean });
+}
+function recordRead(link) {
+  const info = outletInfo.get(link.dataset.src);
+  if (!info || !LEAN_GROUP[info.lean]) return;
+  const list = recent(readList(READS_KEY));
+  list.push({ src: link.dataset.src, name: info.name, lean: info.lean, opinion: Boolean(link.closest(".opinion")), at: Date.now() });
+  writeStore(READS_KEY, list.slice(-500));
+}
+function readingBalance() {
+  const reads = recent(readList(READS_KEY)).filter((x) => LEAN_GROUP[x.lean]);
+  const bySide = (list) => {
+    const c = { left: 0, center: 0, right: 0 };
+    for (const x of list) c[LEAN_GROUP[x.lean]]++;
+    return c;
+  };
+  const newsReads = reads.filter((x) => !x.opinion);
+  const opinionReads = reads.filter((x) => x.opinion);
+  const c = bySide(newsReads);
+  const o = bySide(opinionReads);
+  const counts = new Map();
+  for (const x of newsReads) counts.set(x.name, (counts.get(x.name) || 0) + 1);
+  const top = [...counts].sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const partisan = c.left + c.right;
+  // The same test for either side: most reading came from one side's outlets.
+  const lopsided = partisan >= 6 && Math.max(c.left, c.right) >= partisan * 0.75;
+  const body = reads.length
+    ? `
+        ${
+          newsReads.length
+            ? `${coverageBar(c, "lg", `You opened ${plural(c.left, "article")} from left-leaning outlets, ${c.center} from center outlets and ${c.right} from right-leaning outlets`)}
+        <p class="reading-summary">Of the ${plural(newsReads.length, "news article")} you opened from here in the last 30 days, ${c.left} came from left-leaning outlets, ${c.center} from center outlets and ${c.right} from right-leaning outlets.</p>`
+            : ""
+        }
+        ${opinionReads.length ? `<p class="note">Opinion pieces: ${opinionReads.length} (${o.left} left, ${o.center} center, ${o.right} right).</p>` : ""}
+        ${top.length ? `<p class="note">Opened most: ${top.map(([name, n]) => `${esc(name)} (${n})`).join(", ")}.</p>` : ""}
+        ${lopsided ? `<p class="note">Most of your reading has come from one side's outlets. <a href="#/blindspots">Blindspots</a> shows what each side is covering that the other mostly isn't.</p>` : ""}
+        <p class="note"><button type="button" class="text-link" data-action="clear-history">Clear reading history</button></p>`
+    : `<p class="spec-empty">Nothing yet. When you open an outlet's article from this site, it's counted here, on this device only, so you can see which sides you've been reading.</p>`;
+  return `
+      <section class="list-section reading-balance" aria-labelledby="rb-h">
+        <div class="section-head"><h2 id="rb-h" class="label">Your reading balance</h2><span class="mono-note">Last 30 days</span></div>
+        ${body}
+      </section>`;
+}
+
+// Following: searches the reader follows show as columns on the front page.
+const FOLLOW_KEY = "freedom7:follows";
+const FOLLOW_MAX = 8;
+const followKey = (q) => String(q || "").trim().toLowerCase().replace(/\s+/g, " ");
+const readFollows = () => readList(FOLLOW_KEY).filter((x) => typeof x.q === "string" && x.q.trim());
+const isFollowing = (q) => readFollows().some((x) => followKey(x.q) === followKey(q));
+function toggleFollow(q) {
+  const key = followKey(q);
+  if (!key) return;
+  const list = readFollows();
+  const i = list.findIndex((x) => followKey(x.q) === key);
+  if (i >= 0) list.splice(i, 1);
+  else list.push({ q: String(q).trim().replace(/\s+/g, " ").slice(0, 60), at: Date.now() });
+  writeStore(FOLLOW_KEY, list.slice(-FOLLOW_MAX));
+}
+function followButton(q) {
+  const on = isFollowing(q);
+  return `
+    <div class="follow-row">
+      <button type="button" class="btn" data-action="follow" data-q="${esc(q)}" aria-pressed="${on}">${on ? "Following" : "Follow"} “${esc(q)}”</button>
+      <p class="note">${on ? "It shows on your front page." : "Follow a search to see it on your front page."} Kept on this device.</p>
+    </div>`;
+}
+function followingSection() {
+  const follows = readFollows();
+  if (!follows.length) return "";
+  const hours = Number(news.stats.windowHours);
+  return `
+    <section class="wrap sections following" aria-labelledby="fl-h">
+      <div class="section-head"><h2 id="fl-h" class="label">Following</h2><a class="sec-more" href="#/saved">Manage ${ICON.arrow}</a></div>
+      <div class="section-grid">${follows
+        .map((f, i) =>
+          sectionColumn({
+            key: `fl-${i}`,
+            label: f.q,
+            list: searchStories(f.q),
+            href: `#/search/${encodeURIComponent(f.q)}`,
+            moreLabel: "All",
+            empty: `Nothing on this in the last ${hours} hours.`,
+            level: 3,
+          })
+        )
+        .join("")}</div>
+    </section>`;
+}
+function followingList() {
+  const follows = readFollows();
+  return `
+      <section class="list-section" aria-labelledby="fol-h">
+        <div class="section-head"><h2 id="fol-h" class="label">Following</h2><span class="mono-note">${plural(follows.length, "search", "searches")}</span></div>
+        ${
+          follows.length
+            ? `<ul class="follow-list">${follows
+                .map(
+                  (f) => `
+          <li>
+            <a href="#/search/${encodeURIComponent(f.q)}">${esc(f.q)}</a>
+            <span class="related-meta">${plural(searchStories(f.q).length, "story", "stories")} right now</span>
+            <button type="button" class="text-link" data-action="unfollow" data-q="${esc(f.q)}">Unfollow</button>
+          </li>`
+                )
+                .join("")}</ul>`
+            : `<p class="spec-empty">Nothing yet. Search for a name, place or topic and press Follow, and it shows on your front page.</p>`
+        }
+      </section>`;
 }
 
 // ---------- markets ----------
@@ -716,8 +996,13 @@ function searchResults(query) {
   const q = String(query || "").trim();
   if (!q) return `<p class="note">Type a name, a place or a topic. Search covers the last ${Number(news.stats.windowHours)} hours of stories.</p>`;
   const list = searchStories(q);
-  if (!list.length) return emptyState("No stories match", `Nothing in the last ${Number(news.stats.windowHours)} hours mentions ${esc(JSON.stringify(q))}. Try fewer or different words.`);
+  if (!list.length)
+    return (
+      followButton(q) +
+      emptyState("No stories match", `Nothing in the last ${Number(news.stats.windowHours)} hours mentions ${esc(JSON.stringify(q))}. Try fewer or different words, or follow it to see it on your front page when it comes up.`)
+    );
   return `
+    ${followButton(q)}
     <p class="mono-note search-count">${plural(list.length, "story", "stories")}, in the site's usual order</p>
     <section class="list-section search-list">${cardGrid(list.slice(0, 60))}</section>`;
 }
@@ -799,6 +1084,7 @@ function viewStory(id) {
           <section class="panel coverage-panel" aria-labelledby="cov-h">
             <div class="section-head"><h2 id="cov-h" class="label">Who covered it</h2><span class="mono-note">${plural(s.sourceCount, "outlet")}</span></div>
             ${coverageBar(s.coverage, "lg")}
+            ${firstReported(s)}
           </section>
           ${relatedSection(s)}
         </aside>
@@ -913,7 +1199,7 @@ function timelinePanel(fam) {
             <span class="tl-rail" aria-hidden="true"></span>
             <div class="tl-body">
               <span class="tl-src">${esc(a.sourceName)} · ${esc(LEAN_LABEL[a.lean] || a.lean)}</span>
-              ${outLink(a.url, esc(a.title), "tl-title")}
+              ${outLink(a.url, esc(a.title), "tl-title", a.sourceId)}
             </div>
           </li>`
           )
@@ -962,6 +1248,33 @@ function viewPerspectives() {
     </div>`;
 }
 
+// Who owns the outlets. The part of `owner` before " (" names the owner, so
+// outlets with the same owner can be grouped. "Independent" and "Nonprofit"
+// describe a kind of owner, not one owner, so they aren't grouped.
+const ownerName = (owner) => String(owner || "").split(" (")[0].trim();
+function sharedOwners(list) {
+  const groups = new Map();
+  for (const s of list) {
+    const name = ownerName(s.owner);
+    if (!name || name === "Independent" || name === "Nonprofit") continue;
+    groups.set(name, [...(groups.get(name) || []), s]);
+  }
+  const shared = [...groups].filter(([, outlets]) => outlets.length > 1).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+  if (!shared.length) return "";
+  return `
+      <section class="owners" aria-labelledby="own-h">
+        <div class="section-head"><h2 id="own-h" class="label">Owners with more than one outlet here</h2>${sources.ownersAsOf ? `<span class="mono-note">As of ${esc(sources.ownersAsOf)}</span>` : ""}</div>
+        <ul class="owner-list">
+          ${shared
+            .map(
+              ([name, outlets]) => `
+          <li><span class="owner-name">${esc(name)}</span><span class="owner-outlets">${outlets.map((s) => `${esc(s.name)} <span class="owner-lean">${esc(LEAN_LABEL[s.lean] || s.lean)}</span>`).join(", ")}</span></li>`
+            )
+            .join("")}
+        </ul>
+      </section>`;
+}
+
 function viewSources() {
   if (!sources) {
     return `<div class="wrap">${pageHead("Who we read", "Sources", "")}${emptyState("Source list unavailable", "Run <code>npm run build</code> to generate it.")}</div>`;
@@ -972,7 +1285,7 @@ function viewSources() {
       ${pageHead(
         "Who we read",
         "Sources",
-        "The outlets we read, with the political lean we assign each one. The news roster is mirrored so neither side outnumbers the other. Opinion-only outlets feed Perspectives and are mirrored the same way. Leans approximate the consensus of public media-bias raters and are open to correction."
+        `The outlets we read, with the political lean we assign each one and who owns it${sources.ownersAsOf ? ` (owners as of ${esc(sources.ownersAsOf)})` : ""}. The news roster is mirrored so neither side outnumbers the other. Opinion-only outlets feed Perspectives and are mirrored the same way. Leans approximate the consensus of public media-bias raters and are open to correction.`
       )}
       <p class="balance-label">News outlets</p>
       <dl class="balance">
@@ -987,6 +1300,7 @@ function viewSources() {
       </dl>`
           : ""
       }
+      ${sharedOwners(sources.sources)}
       ${LEANS.map((lean) => {
         const list = sources.sources.filter((s) => s.lean === lean);
         if (!list.length) return "";
@@ -1003,6 +1317,7 @@ function viewSources() {
                 <span>
                   ${isHttp(s.homepage) ? `<a class="source-name" href="${esc(s.homepage)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}<span class="sr-only"> (opens in a new tab)</span></a>` : `<span class="source-name">${esc(s.name)}</span>`}
                   ${role ? `<span class="source-role">${role}</span>` : ""}
+                  ${s.owner ? `<span class="source-note source-owner">Owner: ${esc(s.owner)}</span>` : ""}
                   ${s.notes ? `<span class="source-note">${esc(s.notes)}</span>` : ""}
                 </span>
                 <span class="status ${s.status === "ok" ? "status-ok" : "status-down"}">${s.status === "ok" ? "Feed OK" : "Feed down"}</span>
@@ -1046,7 +1361,9 @@ function viewSaved() {
   const list = readSaved();
   return `
     <div class="wrap">
-      ${pageHead("On this device", "Saved", "Stories you saved are kept in this browser only. Nothing is sent anywhere. Stories roll off the site after a couple of days, so we keep the original links for you.")}
+      ${pageHead("On this device", "Saved", "Everything on this page is kept in this browser only. Nothing is sent anywhere, and none of it changes what the site shows first.")}
+      <div class="section-head saved-head"><h2 class="label">Saved stories</h2><span class="mono-note">${plural(list.length, "story", "stories")}</span></div>
+      ${list.length ? `<p class="note">Stories roll off the site after a couple of days, so the original links are kept here for you.</p>` : ""}
       ${
         list.length
           ? `<section class="list-section">${list
@@ -1061,8 +1378,11 @@ function viewSaved() {
           </article>`;
               })
               .join("")}</section>`
-          : emptyState("Nothing saved yet", "Open a story and press Save to keep it here.", { action: `<a class="btn" href="#/">Browse top stories</a>` })
+          : emptyState("Nothing saved yet", "Open a story and press Save to keep it here.", { heading: "h3", action: `<a class="btn" href="#/">Browse top stories</a>` })
       }
+      ${followingList()}
+      ${readingBalance()}
+      ${recentlyViewed()}
     </div>`;
 }
 
@@ -1106,6 +1426,7 @@ function route({ inPlace = false } = {}) {
       const current = byId.has(arg) ? arg : news.aliases?.[arg];
       const id = current && byId.has(current) ? current : arg;
       if (id !== arg) history.replaceState(null, "", storyHref({ id }));
+      if (!inPlace && byId.has(id)) recordStoryView(byId.get(id));
       html = viewStory(id);
       title = byId.get(id)?.headline || "Story not found";
       break;
@@ -1209,6 +1530,22 @@ app.addEventListener("click", (e) => {
     toggleSaved(id);
     route();
   } else if (action === "share") shareStory(id, btn);
+  else if (action === "listen-briefing") toggleBriefing();
+  else if (action === "follow") {
+    toggleFollow(btn.dataset.q);
+    const box = document.getElementById("search-results");
+    const input = document.getElementById("search-input");
+    if (box) box.innerHTML = searchResults(input ? input.value : btn.dataset.q);
+  } else if (action === "unfollow") {
+    toggleFollow(btn.dataset.q);
+    route({ inPlace: true });
+  } else if (action === "clear-history") {
+    if (window.confirm("Clear your reading history on this device?")) {
+      writeStore(HISTORY_KEY, []);
+      writeStore(READS_KEY, []);
+      route({ inPlace: true });
+    }
+  }
   else if (action === "toggle-excerpts") {
     const on = !excerptsOn();
     setExcerpts(on);
@@ -1241,7 +1578,17 @@ window.addEventListener("storage", (e) => {
     updateSavedCount();
     syncActionButtons();
   }
+  if (e.key === FOLLOW_KEY && news && (onFrontPage() || location.hash.startsWith("#/saved"))) route({ inPlace: true });
 });
+
+// Reading balance: count the outlet articles the reader opens from here (on this device only).
+function onOutboundOpen(e) {
+  if (e.type === "auxclick" && e.button !== 1) return;
+  const link = e.target.closest?.("a[data-src]");
+  if (link) recordRead(link);
+}
+document.addEventListener("click", onOutboundOpen);
+document.addEventListener("auxclick", onOutboundOpen);
 
 // ---------- start ----------
 function renderChrome() {
@@ -1321,6 +1668,8 @@ function setData(n, s, b) {
   if (b) balance = b;
   byId = new Map(news.stories.map((x) => [x.id, x]));
   indexFamilies();
+  indexOutlets();
+  noteVisit();
   renderChrome();
 }
 
@@ -1386,7 +1735,10 @@ updateBar.addEventListener("click", (e) => {
   if (e.target.closest('[data-action="apply-update"]')) applyUpdate();
 });
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") poll();
+  if (document.visibilityState === "visible") {
+    if (news) noteVisit();
+    poll();
+  }
 });
 setInterval(poll, POLL_MS);
 

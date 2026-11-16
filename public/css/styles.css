@@ -857,3 +857,39 @@ a.art-more-link:hover { color: var(--accent); }
 
 /* Markets band on the front page: one heading over the columns. */
 .markets-band > .section-head { margin-bottom: 18px; align-items: center; }
+/* "New since your last visit" and the audio briefing, at the top of the front page */
+.kicker .new-tag { color: var(--accent); font-weight: 500; }
+.front-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 18px; }
+.since-visit { margin: 0; display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.since-visit .new-tag { color: var(--accent); font-weight: 500; }
+
+/* When each side first reported a story */
+.first-reported { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.first-reported .coverage-legend { margin-top: 6px; }
+
+/* Following, reading balance and history (Saved page and front page) */
+.following > .section-head, .saved-head { margin-bottom: 14px; align-items: center; }
+.saved-head { margin-top: 30px; }
+.follow-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 18px; }
+.follow-row .note { margin: 0; }
+.follow-list, .history-list { list-style: none; margin: 0; padding: 0; }
+.follow-list li, .history-list li { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.follow-list li:last-child, .history-list li:last-child { border-bottom: 0; }
+.follow-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.follow-list .related-meta { margin-top: 0; }
+.follow-list .text-link { margin-left: auto; font-size: 13px; color: var(--muted); }
+.follow-list a, .history-list a, .history-gone { font-family: var(--serif); font-size: 18px; line-height: 1.25; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+.history-gone { color: var(--ink-2); }
+.follow-list a:hover, .history-list a:hover { color: var(--accent); }
+.reading-balance .coverage { margin-top: 16px; }
+.reading-summary { margin: 14px 0 0; font-family: var(--serif); font-size: 18px; line-height: 1.45; color: var(--ink); max-width: 760px; }
+/* Who owns the outlets (Sources page) */
+.owners { margin-top: 40px; }
+.owner-list { list-style: none; margin: 0; padding: 0; }
+.owner-list li { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 4px 20px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.owner-list li:last-child { border-bottom: 0; }
+.owner-name { font-weight: 700; font-size: 15px; color: var(--ink); }
+.owner-outlets { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.owner-lean { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.source-owner { color: var(--ink-2); }
+@media (max-width: 560px) { .owner-list li { grid-template-columns: minmax(0, 1fr); } }

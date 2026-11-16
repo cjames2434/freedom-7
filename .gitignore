@@ -6,3 +6,5 @@ node_modules/
 data/
 public/data/*.json
 public/data/feed.xml
+public/s/
+public/404.html

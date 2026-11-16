@@ -45,6 +45,9 @@ site stops updating, look at that chain first.
 - The story digest (`pipeline/digest.js`) only quotes outlets' own sentences,
   one per outlet, with equal counts from left and right when both covered
   the story. Never paraphrase or merge them, and always show the outlet.
+- On-device features (saved stories, followed searches, "new since your last
+  visit", recently viewed, the reading balance) live in localStorage only,
+  are never sent anywhere, and must never affect ranking or what's shown first.
 - UI: no red/blue party colours for the spectrum; Left, Center, Right always
   in that order with equal weight; always show where a headline came from.
 
@@ -75,6 +78,12 @@ comment that mentions @claude reaches it directly. Local preview for that
 session runs on port 8081 (`news-site-8081` in `.claude/launch.json`) so it
 doesn't collide with `npm run dev` on 8080. Routine build/test/read-only git
 commands are pre-approved in `.claude/settings.local.json` (git-ignored).
+
+The build also writes a share page per story (`public/s/<id>.html`) and
+`public/404.html` (`pipeline/sharepages.js`); the Share button uses them so
+links preview the story. Outlet owners are in `config/sources.json` (`owner`,
+`ownersAsOf`); they are facts that change, so re-check them when editing the
+roster.
 
 Layout notes: the front page has the full masthead; other pages get a compact
 one (`body.is-inner`). The main nav sticks to the top on wider screens, and

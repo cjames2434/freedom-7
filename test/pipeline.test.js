@@ -332,3 +332,9 @@ test("when a story splits, the bigger part keeps the id and the other gets a new
   assert.notEqual(parts[0].id, "s_a");
   assert.equal(new Set(parts.map((d) => d.id)).size, 2);
 });
+
+test("every outlet in the roster says who owns it", () => {
+  for (const s of loadSources("config/sources.json")) {
+    assert.ok(typeof s.owner === "string" && s.owner.trim().length > 2, `${s.id} has no owner`);
+  }
+});
